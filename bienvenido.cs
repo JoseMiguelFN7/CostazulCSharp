@@ -26,16 +26,61 @@ namespace Costazul
             {
                 archivoPuestos();
             }
+            else
+            {
+                //Actualizar el archivo de puestos.
+                String texto = "";
+                for (int i = 0; i < 5; i++)
+                {
+                    for (int j = 0; j < 500; j++)
+                    {
+                        if (sectoresCarros[i, j].getOcupantes().Count == 0)
+                        {
+                            texto += sectoresCarros[i, j].getSector() + "_" + sectoresCarros[i, j].getNumero() + "_" + "no" + "\n";
+                        }
+                        else
+                        {
+                            texto += sectoresCarros[i, j].getSector() + "_" + sectoresCarros[i, j].getNumero() + "_" + sectoresCarros[i, j].getDatosOcupante() + "\n";
+                        }
+                    }
+                    if (i != 4)
+                    {
+                        texto += "-" + "\n";
+                    }
+                }
+
+                texto += "%" + "\n";
+                for (int i = 0; i < 2; i++)
+                {
+                    for (int j = 0; j < 100; j++)
+                    {
+                        if (sectoresMotos[i, j].getOcupantes().Count == 0)
+                        {
+                            texto += sectoresMotos[i, j].getSector() + "_" + sectoresMotos[i, j].getNumero() + "_" + "no" + "\n";
+                        }
+                        else
+                        {
+                            texto += sectoresMotos[i, j].getSector() + "_" + sectoresMotos[i, j].getNumero() + "_" + sectoresMotos[i, j].getDatosOcupante() + "\n";
+                        }
+                    }
+                    if (i != 1)
+                    {
+                        texto += "-" + "\n";
+                    }
+                }
+                string ruta = Path.Combine(Application.StartupPath, "archivostxt\\Puestos.txt");
+                archivo.escribirArchivo(texto, ruta);
+            }
+
             InitializeComponent();
         }
+
         public void archivoPuestos()
         {
             string ruta = Path.Combine(Application.StartupPath, "archivostxt\\Puestos.txt");
-            Console.WriteLine(ruta);
             String texto = archivo.leerArchivo(ruta);
             if (texto == null)
             {
-                Console.WriteLine("ENTROOOOO");
                 for (int i = 0; i < 5; i++)
                 {
                     for (int j = 0; j < 500; j++)
@@ -108,8 +153,107 @@ namespace Costazul
             }
             else
             {
-                Console.WriteLine("exito");
-                //agregar 2da parte de la funcion
+                String[] separador = {"%\n"};
+                String[] arreglosCM = texto.Split(separador, StringSplitOptions.RemoveEmptyEntries);
+                String[] sectoresC = arreglosCM[0].Split('\n');
+                String[] sectoresM = arreglosCM[1].Split('\n');
+                String[] puestosP = sectoresM[0].Split('\n');
+                String[] puestosM = sectoresC[0].Split('\n');
+                String[] puestosS = sectoresC[1].Split('\n');
+                String[] puestosR = sectoresC[2].Split('\n');
+                String[] puestosG = sectoresC[3].Split('\n');
+                String[] puestosB1 = sectoresC[4].Split('\n');
+                String[] puestosB2 = sectoresM[1].Split('\n');
+                String[][] pM = new String[500][];
+                String[][] pS = new String[500][];
+                String[][] pR = new String[500][];
+                String[][] pG = new String[500][];
+                String[][] pB1 = new String[500][];
+                
+                //Carga de puestos de vehiculos al codigo
+
+                for (int i = 0; i < 500; i++)
+                {
+                    pM[i] = puestosM[i].Split('_');
+                    pS[i] = puestosS[i].Split('_');
+                    pR[i] = puestosR[i].Split('_');
+                    pG[i] = puestosG[i].Split('_');
+                    pB1[i] = puestosB1[i].Split('_');
+                }
+
+                foreach (String[] p in pM)
+                {
+                    sectoresCarros[0, Int32.Parse(p[1]) - 1] = new pEstacionamiento(p[0], Int32.Parse(p[1]));
+                    if (!p[2].Equals("no"))
+                    {
+                        sectoresCarros[0, Int32.Parse(p[1]) - 1].agregarOcupantes(p[2]);
+                    }
+                }
+
+                foreach (String[] p in pS)
+                {
+                    sectoresCarros[1, Int32.Parse(p[1]) - 1] = new pEstacionamiento(p[0], Int32.Parse(p[1]));
+                    if (!p[2].Equals("no"))
+                    {
+                        sectoresCarros[1, Int32.Parse(p[1]) - 1].agregarOcupantes(p[2]);
+                    }
+                }
+
+                foreach (String[] p in pR)
+                {
+                    sectoresCarros[2, Int32.Parse(p[1]) - 1] = new pEstacionamiento(p[0], Int32.Parse(p[1]));
+                    if (!p[2].Equals("no"))
+                    {
+                        sectoresCarros[2, Int32.Parse(p[1]) - 1].agregarOcupantes(p[2]);
+                    }
+                }
+
+                foreach (String[] p in pG)
+                {
+                    sectoresCarros[3, Int32.Parse(p[1]) - 1] = new pEstacionamiento(p[0], Int32.Parse(p[1]));
+                    if (!p[2].Equals("no"))
+                    {
+                        sectoresCarros[3, Int32.Parse(p[1]) - 1].agregarOcupantes(p[2]);
+                    }
+                }
+
+                foreach (String[] p in pB1)
+                {
+                    sectoresCarros[4, Int32.Parse(p[1]) - 1] = new pEstacionamiento(p[0], Int32.Parse(p[1]));
+                    if (!p[2].Equals("no"))
+                    {
+                        sectoresCarros[4, Int32.Parse(p[1]) - 1].agregarOcupantes(p[2]);
+                    }
+                }
+
+                //Carga de puestos de motos al codigo
+
+                String[][] pP = new String[100][];
+                String[][] pB2 = new String[100][];
+
+                for (int i = 0; i < 100; i++)
+                {
+                    pP[i] = puestosP[i].Split('_');
+                    pB2[i] = puestosB2[i].Split('_');
+                }
+
+                foreach (String[] p in pP)
+                {
+                    sectoresMotos[0, Int32.Parse(p[1]) - 1] = new pEstacionamiento(p[0], Int32.Parse(p[1]));
+                    if (!p[2].Equals("no"))
+                    {
+                        sectoresMotos[0, Int32.Parse(p[1]) - 1].agregarOcupantes(p[2]);
+                    }
+                }
+
+                foreach (String[] p in pB2)
+                {
+                    sectoresMotos[1, Int32.Parse(p[1]) - 1] = new pEstacionamiento(p[0], Int32.Parse(p[1]));
+                    if (!p[2].Equals("no"))
+                    {
+                        sectoresMotos[1, Int32.Parse(p[1]) - 1].agregarOcupantes(p[2]);
+                    }
+                }
             }
         }
     }

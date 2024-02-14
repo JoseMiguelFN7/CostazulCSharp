@@ -9,19 +9,25 @@ namespace Costazul
 {
     internal class vehiculo
     {
+        private int ID;
         private ArrayList pasajeros;
         private String tipo;
         private String placa;
         private String color;
         private String marca;
 
-        public vehiculo(ArrayList pasajeros, String tipo, String placa, String color, String marca)
+        public vehiculo(int ID, String tipo, String placa, String color, String marca)
         {
-            this.pasajeros = pasajeros;
+            this.ID = ID;
             this.tipo = tipo;
             this.placa = placa;
             this.color = color;
             this.marca = marca;
+        }
+
+        public int getID()
+        { 
+            return ID; 
         }
 
         public ArrayList getPasajeros()

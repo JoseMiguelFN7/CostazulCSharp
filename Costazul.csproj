@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="archivo.cs" />
+    <Compile Include="producto.cs" />
+    <Compile Include="compra.cs" />
+    <Compile Include="pila.cs" />
+    <Compile Include="lista.cs" />
+    <Compile Include="tienda.cs" />
+    <Compile Include="nodo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

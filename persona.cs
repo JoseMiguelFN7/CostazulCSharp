@@ -20,7 +20,7 @@ namespace Costazul
         private int mEntrada;
         private int hSalida;
         private int mSalida;
-        private ArrayList Compras;
+        private lista Compras;
 
         public persona(int id, String nombre, String apellido, String tci, String ci, String dEntrada, int hEntrada, int mEntrada, int hSalida, int mSalida)
         {
@@ -35,7 +35,7 @@ namespace Costazul
             this.mEntrada = mEntrada;
             this.hSalida = hSalida;
             this.mSalida = mSalida;
-            this.Compras = new ArrayList();
+            this.Compras = new lista();
         }
 
         public int getID()
@@ -93,7 +93,7 @@ namespace Costazul
             return mSalida;
         }
 
-        public ArrayList getCompras()
+        public lista getCompras()
         {
             return Compras;
         }

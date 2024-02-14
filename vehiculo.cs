@@ -10,7 +10,7 @@ namespace Costazul
     internal class vehiculo
     {
         private int ID;
-        private ArrayList pasajeros;
+        private lista pasajeros;
         private String tipo;
         private String placa;
         private String color;
@@ -30,7 +30,7 @@ namespace Costazul
             return ID; 
         }
 
-        public ArrayList getPasajeros()
+        public lista getPasajeros()
         {
             return pasajeros;
         }
@@ -53,11 +53,6 @@ namespace Costazul
         public String getMarca()
         {
             return marca;
-        }
-
-        public void setPasajero(persona pasajero, int index)
-        {
-            this.pasajeros[index] = pasajero;
         }
 
         public void setTipo(String tipo)

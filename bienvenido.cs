@@ -34,13 +34,13 @@ namespace Costazul
                 {
                     for (int j = 0; j < 500; j++)
                     {
-                        if (sectoresCarros[i, j].getOcupantes().Count == 0)
+                        if (sectoresCarros[i, j].getOcupantes().esVacia())
                         {
                             texto += sectoresCarros[i, j].getSector() + "_" + sectoresCarros[i, j].getNumero() + "_" + "no" + "\n";
                         }
                         else
                         {
-                            texto += sectoresCarros[i, j].getSector() + "_" + sectoresCarros[i, j].getNumero() + "_" + sectoresCarros[i, j].getDatosOcupante() + "\n";
+                            texto += sectoresCarros[i, j].getSector() + "_" + sectoresCarros[i, j].getNumero() + "_" + sectoresCarros[i, j].getOcupantes().getDatosOcupantes() + "\n";
                         }
                     }
                     if (i != 4)
@@ -54,13 +54,13 @@ namespace Costazul
                 {
                     for (int j = 0; j < 100; j++)
                     {
-                        if (sectoresMotos[i, j].getOcupantes().Count == 0)
+                        if (sectoresMotos[i, j].getOcupantes().esVacia())
                         {
                             texto += sectoresMotos[i, j].getSector() + "_" + sectoresMotos[i, j].getNumero() + "_" + "no" + "\n";
                         }
                         else
                         {
-                            texto += sectoresMotos[i, j].getSector() + "_" + sectoresMotos[i, j].getNumero() + "_" + sectoresMotos[i, j].getDatosOcupante() + "\n";
+                            texto += sectoresMotos[i, j].getSector() + "_" + sectoresMotos[i, j].getNumero() + "_" + sectoresMotos[i, j].getOcupantes().getDatosOcupantes() + "\n";
                         }
                     }
                     if (i != 1)

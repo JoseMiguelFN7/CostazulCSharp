@@ -8,3 +8,4 @@ C:\Users\José Ferreira\Desktop\Proyectos\C#\Costazul\bin\Debug\Costazul.exe
 C:\Users\José Ferreira\Desktop\Proyectos\C#\Costazul\bin\Debug\Costazul.pdb
 C:\Users\José Ferreira\Desktop\Proyectos\C#\Costazul\obj\Debug\Costazul.exe
 C:\Users\José Ferreira\Desktop\Proyectos\C#\Costazul\obj\Debug\Costazul.pdb
+C:\Users\José Ferreira\Desktop\Proyectos\C#\Costazul\obj\Debug\Costazul.menuEstacionamiento.resources

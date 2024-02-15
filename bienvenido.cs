@@ -20,6 +20,10 @@ namespace Costazul
         static Boolean primerInicio = true;
         static pEstacionamiento[,] sectoresCarros = new pEstacionamiento[5,500];
         static pEstacionamiento[,] sectoresMotos = new pEstacionamiento[2,100];
+        private static lista personas = new lista();
+        static int IDPersona;
+        static int IDVehiculo;
+
         public bienvenido()
         {
             if (primerInicio)
@@ -153,16 +157,17 @@ namespace Costazul
             }
             else
             {
-                String[] separador = {"%\n"};
-                String[] arreglosCM = texto.Split(separador, StringSplitOptions.RemoveEmptyEntries);
-                String[] sectoresC = arreglosCM[0].Split('\n');
-                String[] sectoresM = arreglosCM[1].Split('\n');
-                String[] puestosP = sectoresM[0].Split('\n');
+                String[] separador1 = { "\n%\n" };
+                String[] arreglosCM = texto.Split(separador1, StringSplitOptions.RemoveEmptyEntries);
+                String[] separador2 = { "\n-\n" };
+                String[] sectoresC = arreglosCM[0].Split(separador2, StringSplitOptions.RemoveEmptyEntries);
+                String[] sectoresM = arreglosCM[1].Split(separador2, StringSplitOptions.RemoveEmptyEntries);
                 String[] puestosM = sectoresC[0].Split('\n');
                 String[] puestosS = sectoresC[1].Split('\n');
                 String[] puestosR = sectoresC[2].Split('\n');
                 String[] puestosG = sectoresC[3].Split('\n');
                 String[] puestosB1 = sectoresC[4].Split('\n');
+                String[] puestosP = sectoresM[0].Split('\n');
                 String[] puestosB2 = sectoresM[1].Split('\n');
                 String[][] pM = new String[500][];
                 String[][] pS = new String[500][];
@@ -170,7 +175,7 @@ namespace Costazul
                 String[][] pG = new String[500][];
                 String[][] pB1 = new String[500][];
                 
-                //Carga de puestos de vehiculos al codigo
+                //Carga de puestos de vehiculos al sistema
 
                 for (int i = 0; i < 500; i++)
                 {
@@ -180,13 +185,13 @@ namespace Costazul
                     pG[i] = puestosG[i].Split('_');
                     pB1[i] = puestosB1[i].Split('_');
                 }
-
+                Console.WriteLine(pM.Length);
                 foreach (String[] p in pM)
                 {
                     sectoresCarros[0, Int32.Parse(p[1]) - 1] = new pEstacionamiento(p[0], Int32.Parse(p[1]));
                     if (!p[2].Equals("no"))
                     {
-                        sectoresCarros[0, Int32.Parse(p[1]) - 1].agregarOcupantes(p[2]);
+                        sectoresCarros[0, Int32.Parse(p[1]) - 1].agregarOcupantes(p[2], personas);
                     }
                 }
 
@@ -195,7 +200,7 @@ namespace Costazul
                     sectoresCarros[1, Int32.Parse(p[1]) - 1] = new pEstacionamiento(p[0], Int32.Parse(p[1]));
                     if (!p[2].Equals("no"))
                     {
-                        sectoresCarros[1, Int32.Parse(p[1]) - 1].agregarOcupantes(p[2]);
+                        sectoresCarros[1, Int32.Parse(p[1]) - 1].agregarOcupantes(p[2], personas);
                     }
                 }
 
@@ -204,7 +209,7 @@ namespace Costazul
                     sectoresCarros[2, Int32.Parse(p[1]) - 1] = new pEstacionamiento(p[0], Int32.Parse(p[1]));
                     if (!p[2].Equals("no"))
                     {
-                        sectoresCarros[2, Int32.Parse(p[1]) - 1].agregarOcupantes(p[2]);
+                        sectoresCarros[2, Int32.Parse(p[1]) - 1].agregarOcupantes(p[2], personas);
                     }
                 }
 
@@ -213,7 +218,7 @@ namespace Costazul
                     sectoresCarros[3, Int32.Parse(p[1]) - 1] = new pEstacionamiento(p[0], Int32.Parse(p[1]));
                     if (!p[2].Equals("no"))
                     {
-                        sectoresCarros[3, Int32.Parse(p[1]) - 1].agregarOcupantes(p[2]);
+                        sectoresCarros[3, Int32.Parse(p[1]) - 1].agregarOcupantes(p[2], personas);
                     }
                 }
 
@@ -222,11 +227,11 @@ namespace Costazul
                     sectoresCarros[4, Int32.Parse(p[1]) - 1] = new pEstacionamiento(p[0], Int32.Parse(p[1]));
                     if (!p[2].Equals("no"))
                     {
-                        sectoresCarros[4, Int32.Parse(p[1]) - 1].agregarOcupantes(p[2]);
+                        sectoresCarros[4, Int32.Parse(p[1]) - 1].agregarOcupantes(p[2], personas);
                     }
                 }
 
-                //Carga de puestos de motos al codigo
+                //Carga de puestos de motos al sistema
 
                 String[][] pP = new String[100][];
                 String[][] pB2 = new String[100][];
@@ -242,7 +247,7 @@ namespace Costazul
                     sectoresMotos[0, Int32.Parse(p[1]) - 1] = new pEstacionamiento(p[0], Int32.Parse(p[1]));
                     if (!p[2].Equals("no"))
                     {
-                        sectoresMotos[0, Int32.Parse(p[1]) - 1].agregarOcupantes(p[2]);
+                        sectoresMotos[0, Int32.Parse(p[1]) - 1].agregarOcupantes(p[2], personas);
                     }
                 }
 
@@ -251,7 +256,7 @@ namespace Costazul
                     sectoresMotos[1, Int32.Parse(p[1]) - 1] = new pEstacionamiento(p[0], Int32.Parse(p[1]));
                     if (!p[2].Equals("no"))
                     {
-                        sectoresMotos[1, Int32.Parse(p[1]) - 1].agregarOcupantes(p[2]);
+                        sectoresMotos[1, Int32.Parse(p[1]) - 1].agregarOcupantes(p[2], personas);
                     }
                 }
             }

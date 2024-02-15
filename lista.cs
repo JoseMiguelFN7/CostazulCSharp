@@ -76,8 +76,29 @@ namespace Costazul
             }
         }
 
+        public persona buscarPersonaID(int ID)
+        { //para buscar un producto en la lista
+            if (esVacia())
+            {
+                return null;
+            }
+            else
+            {
+                nodo aux = inicio;
+                while (aux != null)
+                {
+                    if (aux.getValorPersona().getID() == ID)
+                    {
+                        return aux.getValorPersona();
+                    }
+                    aux = aux.getSiguiente();
+                }
+                return null;
+            }
+        }
+
         public String getIDPasajeros()
-        {
+        { //Para conseguir los IDs de los pasajeros de un vehiculo en una string
             if (esVacia())
             {
                 return null;

@@ -35,15 +35,18 @@ namespace Costazul
             return ocupantes;
         }
 
-        public void agregarOcupantes(String listaOcupantes)
+        public void agregarOcupantes(String cadenaOcupantes, lista listaPersonas)
         { //Para cargar los ocupantes del archivo a la lista del puesto.
-            String[] arrayOcupantes = listaOcupantes.Split('~');
+            String[] arrayOcupantes = cadenaOcupantes.Split('~');
             for (int i = 0; i < arrayOcupantes.Length; i++)
             {
                 String[] oc = arrayOcupantes[i].Split('/');
-                persona o = new persona(Int32.Parse(oc[0]), oc[1], oc[2], oc[3], oc[4], oc[5], Int32.Parse(oc[6]), Int32.Parse(oc[7]), Int32.Parse(oc[8]), Int32.Parse(oc[9]));
-                o.setVehiculo(new vehiculo(Int32.Parse(oc[10]), oc[11], oc[12], oc[13], oc[14]));
-                ocupantes.agregarPersonaAlFinal(o);
+                vehiculo v = new vehiculo(Int32.Parse(oc[0]), oc[1], oc[2], oc[3], oc[4]);
+                String[] pas = oc[5].Split('%');
+                for (int j = 0; j < pas.Length; j++)
+                {
+                    v.getPasajeros().agregarPersonaAlFinal(listaPersonas.buscarPersonaID(Int32.Parse(pas[i])));
+                }
             }
         }
     }

@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="archivo.cs" />
+    <Compile Include="formTiendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formTiendas.Designer.cs">
+      <DependentUpon>formTiendas.cs</DependentUpon>
+    </Compile>
     <Compile Include="menuEstacionamiento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="bienvenido.resx">
       <DependentUpon>bienvenido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formTiendas.resx">
+      <DependentUpon>formTiendas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="menuEstacionamiento.resx">
       <DependentUpon>menuEstacionamiento.cs</DependentUpon>

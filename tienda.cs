@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Costazul
 {
-    internal class tienda
+    public class tienda
     {
         private String nombre;
         private String encargado;

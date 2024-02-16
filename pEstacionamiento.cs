@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Costazul
 {
-    internal class pEstacionamiento
+    public class pEstacionamiento
     {
         private String sector;
         private int numero;

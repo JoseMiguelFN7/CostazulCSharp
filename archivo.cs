@@ -7,7 +7,7 @@ using System.IO;
 
 namespace Costazul
 {
-    internal class archivo
+    public class archivo
     {
         public static String leerArchivo(string file)
         {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Costazul
 {
-    internal class producto
+    public class producto
     {
         private String nombre;
         private String descripcion;

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Costazul
 {
-    internal class nodo
+    public class nodo
     {
         private persona valorPersona;
         private producto valorProducto;

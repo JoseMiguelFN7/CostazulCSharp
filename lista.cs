@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Costazul
 {
-    internal class lista
+    public class lista
     {
         private nodo inicio;
         private int tamanio;

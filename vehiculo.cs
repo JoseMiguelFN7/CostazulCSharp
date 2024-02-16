@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Costazul
 {
-    internal class vehiculo
+    public class vehiculo
     {
         private int ID;
         private lista pasajeros;

@@ -86,7 +86,6 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Properties\DataSources\persona.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -106,6 +105,230 @@
   <ItemGroup>
     <None Include="Resources\costazulIcon.ico" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\sectorBambu1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sectorBambu2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sectorGuayacan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sectorPalma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sectorRoble.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sectorSaman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sectorMangle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marcoMangle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marcoSaman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marcoRoble.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marcoGuayacan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marcoB1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marcoB2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marcoP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Champions.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\City_movil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DIGITEC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ecomascotas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fashion_world.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ferremetro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fitlab.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FLB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Galaxy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GamePlanet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Girl_MissLulu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Glamour_Beauty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Go_sport.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Grupo_Selecto%27s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GSL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Her&amp;Him.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Isha_Accessories.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Karamba_ninos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Koko_Superstore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lucy_lingeries.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mario_Hernandez.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Marisol_import.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\McDonald%27s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\McPostres.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mele_Divani.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Miss_lulu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Monikerias.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Multimax.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mundo_escolar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mundo_Virtual.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nice_Toys.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nivel_surf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Oro_margarita.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Perfumes_factory.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Poker_plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rodito.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rori.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Samsung.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shoe_Box.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sigo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sporty_World.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stylo_Import.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sunglass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sweet_Ice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tarbay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tech_Star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Techzone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Unilook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wrangler.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Accessories_Galore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aero_store.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alta_vision.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AQUA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arturos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Baby_Love.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BANDOLERA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blackphone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blasco_Joyeria.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Carolina_Herrera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerere.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MapaCostazulTiendas.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

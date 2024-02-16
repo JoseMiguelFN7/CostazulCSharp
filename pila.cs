@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Costazul
 {
-    internal class pila
+    public class pila
     {
         private nodo tope;
         private int tamanio;

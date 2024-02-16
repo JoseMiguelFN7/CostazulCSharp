@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Costazul
 {
-    internal class compra
+    public class compra
     {
         private persona comprador;
         private tienda tienda;

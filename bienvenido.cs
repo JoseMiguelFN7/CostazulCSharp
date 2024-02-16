@@ -18,9 +18,9 @@ namespace Costazul
     public partial class bienvenido : Form
     {
         static Boolean primerInicio = true;
-        static pEstacionamiento[,] sectoresCarros = new pEstacionamiento[5,500];
-        static pEstacionamiento[,] sectoresMotos = new pEstacionamiento[2,100];
-        private static lista personas = new lista();
+        public static pEstacionamiento[,] sectoresCarros = new pEstacionamiento[5,500];
+        public static pEstacionamiento[,] sectoresMotos = new pEstacionamiento[2,100];
+        public static lista personas = new lista();
         static int IDPersona;
         static int IDVehiculo;
 

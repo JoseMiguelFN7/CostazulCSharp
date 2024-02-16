@@ -44,6 +44,7 @@
             this.Name = "bienvenido";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bienvenido al sistema Costazul";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.bienvenido_FormClosing);
             this.ResumeLayout(false);
 
         }

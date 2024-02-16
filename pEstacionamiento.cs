@@ -45,8 +45,9 @@ namespace Costazul
                 String[] pas = oc[5].Split('%');
                 for (int j = 0; j < pas.Length; j++)
                 {
-                    v.getPasajeros().agregarPersonaAlFinal(listaPersonas.buscarPersonaID(Int32.Parse(pas[i])));
+                    v.getPasajeros().agregarPersonaAlFinal(listaPersonas.buscarPersonaID(Int32.Parse(pas[j])));
                 }
+                ocupantes.agregarVehiculoAlFinal(v);
             }
         }
     }

@@ -13,10 +13,11 @@ namespace Costazul
 {
     public partial class menuEstacionamiento : Form
     {
-        static pEstacionamiento puestoSeleccionado = null;
-        static String sectorSeleccionado = null;
-        static Boolean hizoSeleccion;
-        static Boolean esMoto; //esta variable debe obtenerse del form de datos usuarios.
+        static pEstacionamiento puestoSeleccionado;
+        String sectorSeleccionado;
+        int indexSector;
+        bool hizoSeleccion;
+        static bool esMoto; //esta variable debe obtenerse del form de datos usuarios.
         static persona usuarioActual; //obtener variable con usuario actual del form de datos usuarios
         public menuEstacionamiento()
         {
@@ -50,6 +51,7 @@ namespace Costazul
             {
                 sectorPalma.Visible = true;
                 sectorBambu2.Visible = true;
+                labelErrorN.Text += "1 y 100.";
             }
             else
             {
@@ -58,6 +60,7 @@ namespace Costazul
                 sectorRoble.Visible = true;
                 sectorGuayacan.Visible = true;
                 sectorBambu1.Visible = true;
+                labelErrorN.Text += "1 y 500.";
             }
         }
 
@@ -140,55 +143,110 @@ namespace Costazul
         {
             rellenarComboBoxMoto();
             sectorSeleccionado = "P";
+            marcoSPalma.Visible = true;
+            marcoSMangle.Visible = false;
+            marcoSSaman.Visible = false;
+            marcoSRoble.Visible = false;
+            marcoSGuayacan.Visible = false;
+            marcoSB1.Visible = false;
+            marcoSB2.Visible = false;
+            PanelSSeleccionada.Visible = true;
         }
 
         private void sectorMangle_Click(object sender, EventArgs e)
         {
             rellenarComboBoxCarro();
             sectorSeleccionado = "M";
+            marcoSPalma.Visible = false;
+            marcoSMangle.Visible = true;
+            marcoSSaman.Visible = false;
+            marcoSRoble.Visible = false;
+            marcoSGuayacan.Visible = false;
+            marcoSB1.Visible = false;
+            marcoSB2.Visible = false;
+            PanelSSeleccionada.Visible = true;
         }
 
         private void sectorSaman_Click(object sender, EventArgs e)
         {
             rellenarComboBoxCarro();
             sectorSeleccionado = "S";
+            marcoSPalma.Visible = false;
+            marcoSMangle.Visible = false;
+            marcoSSaman.Visible = true;
+            marcoSRoble.Visible = false;
+            marcoSGuayacan.Visible = false;
+            marcoSB1.Visible = false;
+            marcoSB2.Visible = false;
+            PanelSSeleccionada.Visible = true;
         }
 
         private void sectorRoble_Click(object sender, EventArgs e)
         {
             rellenarComboBoxCarro();
             sectorSeleccionado = "R";
+            marcoSPalma.Visible = false;
+            marcoSMangle.Visible = false;
+            marcoSSaman.Visible = false;
+            marcoSRoble.Visible = true;
+            marcoSGuayacan.Visible = false;
+            marcoSB1.Visible = false;
+            marcoSB2.Visible = false;
+            PanelSSeleccionada.Visible = true;
         }
 
         private void sectorGuayacan_Click(object sender, EventArgs e)
         {
             rellenarComboBoxCarro();
             sectorSeleccionado = "G";
+            marcoSPalma.Visible = false;
+            marcoSMangle.Visible = false;
+            marcoSSaman.Visible = false;
+            marcoSRoble.Visible = false;
+            marcoSGuayacan.Visible = true;
+            marcoSB1.Visible = false;
+            marcoSB2.Visible = false;
+            PanelSSeleccionada.Visible = true;
         }
 
         private void sectorBambu1_Click(object sender, EventArgs e)
         {
             rellenarComboBoxCarro();
             sectorSeleccionado = "B1";
+            marcoSPalma.Visible = false;
+            marcoSMangle.Visible = false;
+            marcoSSaman.Visible = false;
+            marcoSRoble.Visible = false;
+            marcoSGuayacan.Visible = false;
+            marcoSB1.Visible = true;
+            marcoSB2.Visible = false;
+            PanelSSeleccionada.Visible = true;
         }
 
         private void sectorBambu2_Click(object sender, EventArgs e)
         {
             rellenarComboBoxMoto();
             sectorSeleccionado = "B2";
+            marcoSPalma.Visible = false;
+            marcoSMangle.Visible = false;
+            marcoSSaman.Visible = false;
+            marcoSRoble.Visible = false;
+            marcoSGuayacan.Visible = false;
+            marcoSB1.Visible = false;
+            marcoSB2.Visible = true;
+            PanelSSeleccionada.Visible = true;
         }
 
         private void buttonContinuar_Click(object sender, EventArgs e)
         {
             if (sectorSeleccionado != null && esNumero(comboBoxNPuestos.Text))
             {
+
                 if ((esMoto && Int32.Parse(comboBoxNPuestos.Text) > 0 && Int32.Parse(comboBoxNPuestos.Text) <= 100) || (!esMoto && Int32.Parse(comboBoxNPuestos.Text) > 0 && Int32.Parse(comboBoxNPuestos.Text) <= 500)) //Si es moto solo se permite un numero entre 0 y 100, si es otro vehiculo es entre 0 y 500.
                 {
-                    Console.WriteLine("Confirmado!");
+                    PanelErrorS.Visible = false;
+                    PanelErrorN.Visible = false;
                     int numeroSeleccionado = Int32.Parse(comboBoxNPuestos.Text);
-                    puestoSeleccionado = new pEstacionamiento(sectorSeleccionado, numeroSeleccionado);
-                    puestoSeleccionado.getOcupantes().agregarPersonaAlFinal(usuarioActual);
-                    int indexSector = 0;
                     switch (sectorSeleccionado)
                     {
                         case "P":
@@ -213,112 +271,131 @@ namespace Costazul
                             indexSector = 1;
                             break;
                     }
+
                     if (esMoto) 
                     {
-                        Console.WriteLine("doxeado");
-                        //agregar persona en tope de pila a lista de ocupantes del puesto
-                        bienvenido.sectoresMotos[indexSector, numeroSeleccionado - 1] = puestoSeleccionado;
+                        if (!bienvenido.sectoresMotos[indexSector, numeroSeleccionado - 1].getOcupantes().puestoOcupado(usuarioActual))
+                        {
+                            puestoSeleccionado = bienvenido.sectoresMotos[indexSector, numeroSeleccionado - 1];
+                            //Si numUsuariosSesion=1 meterno en la lista de ocupantes y actualizar arreglo de motos
+                        }
+                        else
+                        {
+                            //mostrar panel puesto ocupado
+                        }
+                        
                     }
                     else
                     {
-                        Console.WriteLine("no doxeado");
+                        if (!bienvenido.sectoresCarros[indexSector, numeroSeleccionado - 1].getOcupantes().puestoOcupado(usuarioActual))
+                        {
+                            puestoSeleccionado = bienvenido.sectoresCarros[indexSector, numeroSeleccionado - 1];
+                            //Si numUsuariosSesion=1 meterno en la lista de ocupantes y actualizar arreglo de motos
+                        }
+                        else
+                        {
+                            //mostrar panel puesto ocupado
+                        }
                         //agregar persona en tope de pila a lista de ocupantes del puesto
+                        //CHEQUEAR SI PUESTO ESTA OCUPADO
                         bienvenido.sectoresCarros[indexSector, numeroSeleccionado - 1] = puestoSeleccionado;
                     }
                 }
                 else
                 {
-                    Console.WriteLine("no");
+                    PanelErrorN.Visible = true;
                 }
             }
             else
             {
-                Console.WriteLine("no");
+                if (sectorSeleccionado == null)
+                {
+                    PanelErrorS.Visible = true;
+                }
+                else
+                {
+                    PanelErrorS.Visible = false;
+                }
+
+                if (!esNumero(comboBoxNPuestos.Text))
+                {
+                    PanelErrorN.Visible = true;
+                }
+                else
+                {
+                    PanelErrorN.Visible = false;
+                }
             }
         }
 
         private void sectorPalma_MouseEnter(object sender, EventArgs e)
         {
             mostrarTooltip(0);
-            marcoSPalma.Visible = true;
         }
 
         private void sectorMangle_MouseEnter(object sender, EventArgs e)
         {
             mostrarTooltip(1);
-            marcoSMangle.Visible = true;
         }
 
         private void sectorSaman_MouseEnter(object sender, EventArgs e)
         {
             mostrarTooltip(2);
-            marcoSSaman.Visible = true;
         }
 
         private void sectorRoble_MouseEnter(object sender, EventArgs e)
         {
             mostrarTooltip(3);
-            marcoSRoble.Visible = true;
         }
 
         private void sectorGuayacan_MouseEnter(object sender, EventArgs e)
         {
             mostrarTooltip(4);
-            marcoSGuayacan.Visible = true;
         }
 
         private void sectorBambu1_MouseEnter(object sender, EventArgs e)
         {
             mostrarTooltip(5);
-            marcoSB1.Visible = true;
         }
 
         private void sectorBambu2_MouseEnter(object sender, EventArgs e)
         {
             mostrarTooltip(6);
-            marcoSB2.Visible = true;
         }
 
         private void sectorPalma_MouseLeave(object sender, EventArgs e)
         {
             tooltipSector.Visible = false;
-            marcoSPalma.Visible = false;
         }
 
         private void sectorMangle_MouseLeave(object sender, EventArgs e)
         {
             tooltipSector.Visible = false;
-            marcoSMangle.Visible = false;
         }
 
         private void sectorSaman_MouseLeave(object sender, EventArgs e)
         {
             tooltipSector.Visible = false;
-            marcoSSaman.Visible = false;
         }
 
         private void sectorRoble_MouseLeave(object sender, EventArgs e)
         {
             tooltipSector.Visible = false;
-            marcoSRoble.Visible = false;
         }
 
         private void sectorGuayacan_MouseLeave(object sender, EventArgs e)
         {
             tooltipSector.Visible = false;
-            marcoSGuayacan.Visible = false;
         }
 
         private void sectorBambu1_MouseLeave(object sender, EventArgs e)
         {
             tooltipSector.Visible = false;
-            marcoSB1.Visible = false;
         }
 
         private void sectorBambu2_MouseLeave(object sender, EventArgs e)
         {
             tooltipSector.Visible = false;
-            marcoSB2.Visible = false;
         }
     }
 }

@@ -176,5 +176,73 @@ namespace Costazul
             }
             tamanio++;
         }
+
+        public void agregarVehiculoAlFinal(vehiculo v)
+        { //para agregar una vehiculo al final de la lista
+            nodo nuevo = new nodo();
+            nuevo.setValorVehiculo(v);
+            if (esVacia())
+            {
+                inicio = nuevo;
+            }
+            else
+            {
+                nodo aux = inicio;
+                while (aux.getSiguiente() != null)
+                {
+                    aux = aux.getSiguiente();
+                }
+                aux.setSiguiente(nuevo);
+            }
+            tamanio++;
+        }
+
+        public bool puestoOcupado(persona ocupanteNuevo) //metodo para saber si el puesto esta ocupado a una hora determinada
+        {
+            nodo aux = inicio;
+            while (aux != null)
+            {
+                persona ocupanteViejo = aux.getValorVehiculo().getPasajeros().getInicio().getValorPersona();
+                if (ocupanteNuevo.getDEntrada().Equals(ocupanteViejo.getDEntrada()))
+                { //Si es el mismo dia.
+                  //Primero comparamos datos de entrada:
+                    if (ocupanteNuevo.getHEntrada() == ocupanteViejo.getHEntrada())
+                    { //Si las horas de entrada coinciden.
+                      //CASOS MINUTOS: minutos iguales, entrada nueva entre entrada y salida vieja o entrada vieja entre entrada y salida nueva
+                        if ((ocupanteNuevo.getMEntrada() == ocupanteViejo.getMEntrada()) || (ocupanteNuevo.getMEntrada() > ocupanteViejo.getMEntrada() && ocupanteNuevo.getMEntrada() < ocupanteViejo.getMSalida()) || (ocupanteViejo.getMEntrada() > ocupanteNuevo.getMEntrada() && ocupanteViejo.getMEntrada() < ocupanteNuevo.getMSalida()))
+                        {
+                            return true; //esta ocupado en esas horas.
+                        }
+                    }
+                    else
+                    {
+                        //CASOS HORAS: entrada nueva entre entrada y salida vieja o entrada vieja entre entrada y salida nueva
+                        if ((ocupanteNuevo.getHEntrada() > ocupanteViejo.getHEntrada() && ocupanteNuevo.getHEntrada() < ocupanteViejo.getHSalida()) || (ocupanteViejo.getHEntrada() > ocupanteNuevo.getHEntrada() && ocupanteViejo.getHEntrada() < ocupanteNuevo.getHSalida()))
+                        {
+                            return true;//esta ocupado en esas horas.
+                        }
+                    }
+                    //Despues comparamos datos de salida:
+                    if (ocupanteNuevo.getHSalida() == ocupanteViejo.getHSalida())
+                    { //Si las horas de salida coinciden.
+                      //CASOS MINUTOS: minutos iguales, salida nueva entre entrada y salida vieja o salida vieja entre entrada y salida nueva
+                        if ((ocupanteNuevo.getMSalida() == ocupanteViejo.getMSalida()) || (ocupanteNuevo.getMSalida() > ocupanteViejo.getMEntrada() && ocupanteNuevo.getMSalida() < ocupanteViejo.getMSalida()) || (ocupanteViejo.getMSalida() > ocupanteNuevo.getMEntrada() && ocupanteViejo.getMSalida() < ocupanteNuevo.getMSalida()))
+                        {
+                            return true; //esta ocupado en esas horas.
+                        }
+                    }
+                    else
+                    {
+                        //CASOS HORAS: salida nueva entre entrada y salida vieja o salida vieja entre entrada y salida nueva
+                        if ((ocupanteNuevo.getHSalida() > ocupanteViejo.getHEntrada() && ocupanteNuevo.getHSalida() < ocupanteViejo.getHSalida()) || (ocupanteViejo.getHSalida() > ocupanteNuevo.getHEntrada() && ocupanteViejo.getHSalida() < ocupanteNuevo.getHSalida()))
+                        {
+                            return true; //esta ocupado en esas horas.
+                        }
+                    }
+                }
+                aux = aux.getSiguiente();
+            }
+            return false;
+        }
     }
 }

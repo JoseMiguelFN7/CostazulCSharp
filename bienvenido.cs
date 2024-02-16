@@ -8,6 +8,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
@@ -17,7 +18,8 @@ namespace Costazul
 {
     public partial class bienvenido : Form
     {
-        static Boolean primerInicio = true;
+        static bool primerInicio = true;
+        bool buttonPressed = false;
         public static pEstacionamiento[,] sectoresCarros = new pEstacionamiento[5,500];
         public static pEstacionamiento[,] sectoresMotos = new pEstacionamiento[2,100];
         public static lista personas = new lista();
@@ -26,6 +28,7 @@ namespace Costazul
 
         public bienvenido()
         {
+
             if (primerInicio)
             {
                 archivoPuestos();
@@ -259,6 +262,14 @@ namespace Costazul
                         sectoresMotos[1, Int32.Parse(p[1]) - 1].agregarOcupantes(p[2], personas);
                     }
                 }
+            }
+        }
+
+        private void bienvenido_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (!buttonPressed)
+            {
+                Application.Exit();
             }
         }
     }

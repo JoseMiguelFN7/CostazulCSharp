@@ -56,6 +56,18 @@
             this.labelErrorS = new System.Windows.Forms.Label();
             this.PanelSSeleccionada = new System.Windows.Forms.TableLayoutPanel();
             this.labelSSeleccionado = new System.Windows.Forms.Label();
+            this.labelPOcupado = new System.Windows.Forms.Label();
+            this.PanelPOcupado = new System.Windows.Forms.TableLayoutPanel();
+            this.PanelMarcoErrorN = new System.Windows.Forms.TableLayoutPanel();
+            this.PanelMarcoErrorS = new System.Windows.Forms.TableLayoutPanel();
+            this.PanelMarcoPOcupado = new System.Windows.Forms.TableLayoutPanel();
+            this.marcoTooltipSector = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.buttonSiCompra = new System.Windows.Forms.Button();
+            this.buttonNoCompra = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.fondo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sectorMangle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sectorPalma)).BeginInit();
@@ -76,6 +88,14 @@
             this.PanelErrorN.SuspendLayout();
             this.PanelErrorS.SuspendLayout();
             this.PanelSSeleccionada.SuspendLayout();
+            this.PanelPOcupado.SuspendLayout();
+            this.PanelMarcoErrorN.SuspendLayout();
+            this.PanelMarcoErrorS.SuspendLayout();
+            this.PanelMarcoPOcupado.SuspendLayout();
+            this.marcoTooltipSector.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // fondo
@@ -212,10 +232,10 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(33, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(411, 24);
+            this.label1.Size = new System.Drawing.Size(368, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "Por favor, indique el numero de puesto:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -328,16 +348,18 @@
             // 
             // tooltipSector
             // 
+            this.tooltipSector.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.tooltipSector.ColumnCount = 1;
             this.tooltipSector.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tooltipSector.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tooltipSector.Controls.Add(this.labelNombreSector, 0, 0);
-            this.tooltipSector.Location = new System.Drawing.Point(717, 69);
+            this.tooltipSector.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tooltipSector.Location = new System.Drawing.Point(6, 6);
             this.tooltipSector.Name = "tooltipSector";
             this.tooltipSector.RowCount = 1;
             this.tooltipSector.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tooltipSector.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tooltipSector.Size = new System.Drawing.Size(238, 62);
+            this.tooltipSector.Size = new System.Drawing.Size(221, 86);
             this.tooltipSector.TabIndex = 16;
             this.tooltipSector.Visible = false;
             // 
@@ -347,51 +369,55 @@
             this.labelNombreSector.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNombreSector.Location = new System.Drawing.Point(3, 0);
             this.labelNombreSector.Name = "labelNombreSector";
-            this.labelNombreSector.Size = new System.Drawing.Size(232, 62);
+            this.labelNombreSector.Size = new System.Drawing.Size(215, 86);
             this.labelNombreSector.TabIndex = 0;
             this.labelNombreSector.Text = "Sector...";
             this.labelNombreSector.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // PanelErrorN
             // 
+            this.PanelErrorN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.PanelErrorN.ColumnCount = 1;
             this.PanelErrorN.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.PanelErrorN.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.PanelErrorN.Controls.Add(this.labelErrorN, 0, 0);
-            this.PanelErrorN.Location = new System.Drawing.Point(1221, 161);
+            this.PanelErrorN.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelErrorN.Location = new System.Drawing.Point(6, 6);
             this.PanelErrorN.Name = "PanelErrorN";
             this.PanelErrorN.RowCount = 1;
             this.PanelErrorN.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.PanelErrorN.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.PanelErrorN.Size = new System.Drawing.Size(213, 100);
+            this.PanelErrorN.Size = new System.Drawing.Size(201, 88);
             this.PanelErrorN.TabIndex = 17;
             this.PanelErrorN.Visible = false;
             // 
             // labelErrorN
             // 
+            this.labelErrorN.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelErrorN.AutoSize = true;
-            this.labelErrorN.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelErrorN.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelErrorN.ForeColor = System.Drawing.Color.Red;
-            this.labelErrorN.Location = new System.Drawing.Point(3, 0);
+            this.labelErrorN.Location = new System.Drawing.Point(9, 23);
             this.labelErrorN.Name = "labelErrorN";
-            this.labelErrorN.Size = new System.Drawing.Size(207, 100);
+            this.labelErrorN.Size = new System.Drawing.Size(182, 42);
             this.labelErrorN.TabIndex = 0;
             this.labelErrorN.Text = "Debe seleccionar un número entre ";
             this.labelErrorN.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // PanelErrorS
             // 
+            this.PanelErrorS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.PanelErrorS.ColumnCount = 1;
             this.PanelErrorS.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.PanelErrorS.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.PanelErrorS.Controls.Add(this.labelErrorS, 0, 0);
-            this.PanelErrorS.Location = new System.Drawing.Point(395, 174);
+            this.PanelErrorS.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelErrorS.Location = new System.Drawing.Point(6, 6);
             this.PanelErrorS.Name = "PanelErrorS";
             this.PanelErrorS.RowCount = 1;
             this.PanelErrorS.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.PanelErrorS.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.PanelErrorS.Size = new System.Drawing.Size(200, 100);
+            this.PanelErrorS.Size = new System.Drawing.Size(201, 88);
             this.PanelErrorS.TabIndex = 18;
             this.PanelErrorS.Visible = false;
             // 
@@ -403,23 +429,25 @@
             this.labelErrorS.ForeColor = System.Drawing.Color.Red;
             this.labelErrorS.Location = new System.Drawing.Point(3, 0);
             this.labelErrorS.Name = "labelErrorS";
-            this.labelErrorS.Size = new System.Drawing.Size(194, 100);
+            this.labelErrorS.Size = new System.Drawing.Size(195, 88);
             this.labelErrorS.TabIndex = 0;
             this.labelErrorS.Text = "Debe seleccionar un sector";
             this.labelErrorS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // PanelSSeleccionada
             // 
+            this.PanelSSeleccionada.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.PanelSSeleccionada.ColumnCount = 1;
             this.PanelSSeleccionada.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.PanelSSeleccionada.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.PanelSSeleccionada.Controls.Add(this.labelSSeleccionado, 0, 0);
-            this.PanelSSeleccionada.Location = new System.Drawing.Point(733, 286);
+            this.PanelSSeleccionada.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelSSeleccionada.Location = new System.Drawing.Point(6, 6);
             this.PanelSSeleccionada.Name = "PanelSSeleccionada";
             this.PanelSSeleccionada.RowCount = 1;
             this.PanelSSeleccionada.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.PanelSSeleccionada.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.PanelSSeleccionada.Size = new System.Drawing.Size(200, 59);
+            this.PanelSSeleccionada.Size = new System.Drawing.Size(195, 60);
             this.PanelSSeleccionada.TabIndex = 19;
             this.PanelSSeleccionada.Visible = false;
             // 
@@ -430,20 +458,193 @@
             this.labelSSeleccionado.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSSeleccionado.Location = new System.Drawing.Point(3, 0);
             this.labelSSeleccionado.Name = "labelSSeleccionado";
-            this.labelSSeleccionado.Size = new System.Drawing.Size(194, 59);
+            this.labelSSeleccionado.Size = new System.Drawing.Size(189, 60);
             this.labelSSeleccionado.TabIndex = 0;
             this.labelSSeleccionado.Text = "Sector seleccionado";
             this.labelSSeleccionado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelPOcupado
+            // 
+            this.labelPOcupado.AutoSize = true;
+            this.labelPOcupado.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelPOcupado.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPOcupado.ForeColor = System.Drawing.Color.Red;
+            this.labelPOcupado.Location = new System.Drawing.Point(3, 3);
+            this.labelPOcupado.Margin = new System.Windows.Forms.Padding(0);
+            this.labelPOcupado.Name = "labelPOcupado";
+            this.labelPOcupado.Size = new System.Drawing.Size(532, 82);
+            this.labelPOcupado.TabIndex = 0;
+            this.labelPOcupado.Text = "Puesto ocupado, por favor seleccione otro.";
+            this.labelPOcupado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelPOcupado.Visible = false;
+            // 
+            // PanelPOcupado
+            // 
+            this.PanelPOcupado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.PanelPOcupado.ColumnCount = 1;
+            this.PanelPOcupado.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.PanelPOcupado.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.PanelPOcupado.Controls.Add(this.labelPOcupado, 0, 0);
+            this.PanelPOcupado.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelPOcupado.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PanelPOcupado.Location = new System.Drawing.Point(6, 6);
+            this.PanelPOcupado.Name = "PanelPOcupado";
+            this.PanelPOcupado.Padding = new System.Windows.Forms.Padding(3);
+            this.PanelPOcupado.RowCount = 1;
+            this.PanelPOcupado.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.PanelPOcupado.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.PanelPOcupado.Size = new System.Drawing.Size(538, 88);
+            this.PanelPOcupado.TabIndex = 20;
+            this.PanelPOcupado.Visible = false;
+            // 
+            // PanelMarcoErrorN
+            // 
+            this.PanelMarcoErrorN.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PanelMarcoErrorN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.PanelMarcoErrorN.ColumnCount = 1;
+            this.PanelMarcoErrorN.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.PanelMarcoErrorN.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.PanelMarcoErrorN.Controls.Add(this.PanelErrorN, 0, 0);
+            this.PanelMarcoErrorN.Location = new System.Drawing.Point(1209, 161);
+            this.PanelMarcoErrorN.Name = "PanelMarcoErrorN";
+            this.PanelMarcoErrorN.Padding = new System.Windows.Forms.Padding(3);
+            this.PanelMarcoErrorN.RowCount = 1;
+            this.PanelMarcoErrorN.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.PanelMarcoErrorN.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.PanelMarcoErrorN.Size = new System.Drawing.Size(213, 100);
+            this.PanelMarcoErrorN.TabIndex = 21;
+            this.PanelMarcoErrorN.Visible = false;
+            // 
+            // PanelMarcoErrorS
+            // 
+            this.PanelMarcoErrorS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.PanelMarcoErrorS.ColumnCount = 1;
+            this.PanelMarcoErrorS.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.PanelMarcoErrorS.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.PanelMarcoErrorS.Controls.Add(this.PanelErrorS, 0, 0);
+            this.PanelMarcoErrorS.Location = new System.Drawing.Point(303, 161);
+            this.PanelMarcoErrorS.Name = "PanelMarcoErrorS";
+            this.PanelMarcoErrorS.Padding = new System.Windows.Forms.Padding(3);
+            this.PanelMarcoErrorS.RowCount = 1;
+            this.PanelMarcoErrorS.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.PanelMarcoErrorS.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.PanelMarcoErrorS.Size = new System.Drawing.Size(213, 100);
+            this.PanelMarcoErrorS.TabIndex = 22;
+            this.PanelMarcoErrorS.Visible = false;
+            // 
+            // PanelMarcoPOcupado
+            // 
+            this.PanelMarcoPOcupado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.PanelMarcoPOcupado.ColumnCount = 1;
+            this.PanelMarcoPOcupado.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.PanelMarcoPOcupado.Controls.Add(this.PanelPOcupado, 0, 0);
+            this.PanelMarcoPOcupado.Location = new System.Drawing.Point(542, 161);
+            this.PanelMarcoPOcupado.Margin = new System.Windows.Forms.Padding(0);
+            this.PanelMarcoPOcupado.Name = "PanelMarcoPOcupado";
+            this.PanelMarcoPOcupado.Padding = new System.Windows.Forms.Padding(3);
+            this.PanelMarcoPOcupado.RowCount = 1;
+            this.PanelMarcoPOcupado.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.PanelMarcoPOcupado.Size = new System.Drawing.Size(550, 100);
+            this.PanelMarcoPOcupado.TabIndex = 23;
+            this.PanelMarcoPOcupado.Visible = false;
+            // 
+            // marcoTooltipSector
+            // 
+            this.marcoTooltipSector.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.marcoTooltipSector.ColumnCount = 1;
+            this.marcoTooltipSector.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.marcoTooltipSector.Controls.Add(this.tooltipSector, 0, 0);
+            this.marcoTooltipSector.Location = new System.Drawing.Point(716, 37);
+            this.marcoTooltipSector.Name = "marcoTooltipSector";
+            this.marcoTooltipSector.Padding = new System.Windows.Forms.Padding(3);
+            this.marcoTooltipSector.RowCount = 1;
+            this.marcoTooltipSector.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.marcoTooltipSector.Size = new System.Drawing.Size(233, 98);
+            this.marcoTooltipSector.TabIndex = 24;
+            this.marcoTooltipSector.Visible = false;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.PanelSSeleccionada, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(729, 280);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.Padding = new System.Windows.Forms.Padding(3);
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(207, 72);
+            this.tableLayoutPanel1.TabIndex = 25;
+            this.tableLayoutPanel1.Visible = false;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.label2, 0, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(373, 47);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(200, 100);
+            this.tableLayoutPanel2.TabIndex = 26;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Controls.Add(this.buttonSiCompra, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.buttonNoCompra, 1, 0);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 53);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(194, 44);
+            this.tableLayoutPanel3.TabIndex = 0;
+            // 
+            // buttonSiCompra
+            // 
+            this.buttonSiCompra.Location = new System.Drawing.Point(3, 3);
+            this.buttonSiCompra.Name = "buttonSiCompra";
+            this.buttonSiCompra.Size = new System.Drawing.Size(75, 23);
+            this.buttonSiCompra.TabIndex = 0;
+            this.buttonSiCompra.Text = "Sí";
+            this.buttonSiCompra.UseVisualStyleBackColor = true;
+            this.buttonSiCompra.Click += new System.EventHandler(this.buttonSiCompra_Click);
+            // 
+            // buttonNoCompra
+            // 
+            this.buttonNoCompra.Location = new System.Drawing.Point(100, 3);
+            this.buttonNoCompra.Name = "buttonNoCompra";
+            this.buttonNoCompra.Size = new System.Drawing.Size(75, 23);
+            this.buttonNoCompra.TabIndex = 1;
+            this.buttonNoCompra.Text = "No";
+            this.buttonNoCompra.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(183, 16);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "¿Desea realizar una compra?";
             // 
             // menuEstacionamiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1665, 642);
-            this.Controls.Add(this.PanelSSeleccionada);
-            this.Controls.Add(this.PanelErrorS);
-            this.Controls.Add(this.PanelErrorN);
-            this.Controls.Add(this.tooltipSector);
+            this.Controls.Add(this.tableLayoutPanel2);
+            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.marcoTooltipSector);
+            this.Controls.Add(this.PanelMarcoPOcupado);
+            this.Controls.Add(this.PanelMarcoErrorS);
+            this.Controls.Add(this.PanelMarcoErrorN);
             this.Controls.Add(this.marcoSPalma);
             this.Controls.Add(this.marcoSB2);
             this.Controls.Add(this.marcoSB1);
@@ -467,6 +668,7 @@
             this.Name = "menuEstacionamiento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Seleccione su puesto";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.menuEstacionamiento_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.fondo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sectorMangle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sectorPalma)).EndInit();
@@ -491,6 +693,16 @@
             this.PanelErrorS.PerformLayout();
             this.PanelSSeleccionada.ResumeLayout(false);
             this.PanelSSeleccionada.PerformLayout();
+            this.PanelPOcupado.ResumeLayout(false);
+            this.PanelPOcupado.PerformLayout();
+            this.PanelMarcoErrorN.ResumeLayout(false);
+            this.PanelMarcoErrorS.ResumeLayout(false);
+            this.PanelMarcoPOcupado.ResumeLayout(false);
+            this.marcoTooltipSector.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
+            this.tableLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -524,5 +736,17 @@
         private System.Windows.Forms.Label labelErrorS;
         private System.Windows.Forms.TableLayoutPanel PanelSSeleccionada;
         private System.Windows.Forms.Label labelSSeleccionado;
+        private System.Windows.Forms.Label labelPOcupado;
+        private System.Windows.Forms.TableLayoutPanel PanelPOcupado;
+        private System.Windows.Forms.TableLayoutPanel PanelMarcoErrorN;
+        private System.Windows.Forms.TableLayoutPanel PanelMarcoErrorS;
+        private System.Windows.Forms.TableLayoutPanel PanelMarcoPOcupado;
+        private System.Windows.Forms.TableLayoutPanel marcoTooltipSector;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Button buttonSiCompra;
+        private System.Windows.Forms.Button buttonNoCompra;
+        private System.Windows.Forms.Label label2;
     }
 }

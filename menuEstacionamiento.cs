@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -13,6 +14,7 @@ namespace Costazul
 {
     public partial class menuEstacionamiento : Form
     {
+        bool buttonPressed = false;
         static pEstacionamiento puestoSeleccionado;
         String sectorSeleccionado;
         int indexSector;
@@ -111,6 +113,7 @@ namespace Costazul
 
         private void mostrarTooltip(int num)
         {
+            marcoTooltipSector.Visible = true;
             tooltipSector.Visible = true;
             switch (num)
             {
@@ -244,7 +247,9 @@ namespace Costazul
 
                 if ((esMoto && Int32.Parse(comboBoxNPuestos.Text) > 0 && Int32.Parse(comboBoxNPuestos.Text) <= 100) || (!esMoto && Int32.Parse(comboBoxNPuestos.Text) > 0 && Int32.Parse(comboBoxNPuestos.Text) <= 500)) //Si es moto solo se permite un numero entre 0 y 100, si es otro vehiculo es entre 0 y 500.
                 {
+                    PanelMarcoErrorS.Visible = false;
                     PanelErrorS.Visible = false;
+                    PanelMarcoErrorN.Visible = false;
                     PanelErrorN.Visible = false;
                     int numeroSeleccionado = Int32.Parse(comboBoxNPuestos.Text);
                     switch (sectorSeleccionado)
@@ -281,20 +286,36 @@ namespace Costazul
                         }
                         else
                         {
-                            //mostrar panel puesto ocupado
+                            PanelMarcoPOcupado.Visible = true;
+                            PanelPOcupado.Visible = true;
+                            labelPOcupado.Visible = true;
+                            Thread thread = new Thread(new ThreadStart(sleep));
+                            thread.Start();
+                            thread.Join();
+                            PanelMarcoPOcupado.Visible = false;
+                            PanelPOcupado.Visible = false;
+                            labelPOcupado.Visible = false;
                         }
                         
                     }
                     else
                     {
-                        if (!bienvenido.sectoresCarros[indexSector, numeroSeleccionado - 1].getOcupantes().puestoOcupado(usuarioActual))
+                        if (false && !bienvenido.sectoresCarros[indexSector, numeroSeleccionado - 1].getOcupantes().puestoOcupado(usuarioActual))
                         {
                             puestoSeleccionado = bienvenido.sectoresCarros[indexSector, numeroSeleccionado - 1];
-                            //Si numUsuariosSesion=1 meterno en la lista de ocupantes y actualizar arreglo de motos
+                            //Si numUsuariosSesion=1 meterlo en la lista de ocupantes y actualizar arreglo de motos
                         }
                         else
                         {
-                            //mostrar panel puesto ocupado
+                            PanelMarcoPOcupado.Visible = true;
+                            PanelPOcupado.Visible = true;
+                            labelPOcupado.Visible = true;
+                            Thread thread = new Thread(new ThreadStart(sleep));
+                            thread.Start();
+                            thread.Join();
+                            PanelMarcoPOcupado.Visible = false;
+                            PanelPOcupado.Visible = false;
+                            labelPOcupado.Visible = false;
                         }
                         //agregar persona en tope de pila a lista de ocupantes del puesto
                         //CHEQUEAR SI PUESTO ESTA OCUPADO
@@ -304,28 +325,40 @@ namespace Costazul
                 else
                 {
                     PanelErrorN.Visible = true;
+                    PanelMarcoErrorN.Visible = true;
                 }
             }
             else
             {
                 if (sectorSeleccionado == null)
                 {
+                    PanelMarcoErrorS.Visible = true;
                     PanelErrorS.Visible = true;
                 }
                 else
                 {
+                    PanelMarcoErrorS.Visible = false;
                     PanelErrorS.Visible = false;
                 }
 
                 if (!esNumero(comboBoxNPuestos.Text))
                 {
+                    PanelMarcoErrorN.Visible = true;
                     PanelErrorN.Visible = true;
                 }
                 else
                 {
+                    PanelMarcoErrorN.Visible = false;
                     PanelErrorN.Visible = false;
                 }
             }
+        }
+
+        private void sleep()
+        {
+            
+            Thread.Sleep(2500);
+            
         }
 
         private void sectorPalma_MouseEnter(object sender, EventArgs e)
@@ -366,36 +399,59 @@ namespace Costazul
         private void sectorPalma_MouseLeave(object sender, EventArgs e)
         {
             tooltipSector.Visible = false;
+            marcoTooltipSector.Visible = false;
         }
 
         private void sectorMangle_MouseLeave(object sender, EventArgs e)
         {
             tooltipSector.Visible = false;
+            marcoTooltipSector.Visible = false;
         }
 
         private void sectorSaman_MouseLeave(object sender, EventArgs e)
         {
             tooltipSector.Visible = false;
+            marcoTooltipSector.Visible = false;
         }
 
         private void sectorRoble_MouseLeave(object sender, EventArgs e)
         {
             tooltipSector.Visible = false;
+            marcoTooltipSector.Visible = false;
         }
 
         private void sectorGuayacan_MouseLeave(object sender, EventArgs e)
         {
             tooltipSector.Visible = false;
+            marcoTooltipSector.Visible = false;
         }
 
         private void sectorBambu1_MouseLeave(object sender, EventArgs e)
         {
             tooltipSector.Visible = false;
+            marcoTooltipSector.Visible = false;
         }
 
         private void sectorBambu2_MouseLeave(object sender, EventArgs e)
         {
             tooltipSector.Visible = false;
+            marcoTooltipSector.Visible = false;
+        }
+
+        private void menuEstacionamiento_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (!buttonPressed)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void buttonSiCompra_Click(object sender, EventArgs e)
+        {
+            buttonPressed = true;
+            formTiendas ft = new formTiendas();
+            ft.Show();
+            //this.Close();
         }
     }
 }

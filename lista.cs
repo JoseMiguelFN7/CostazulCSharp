@@ -244,5 +244,46 @@ namespace Costazul
             }
             return false;
         }
+
+        public void agregarTiendaAlFinal(tienda t)
+        {
+            nodo nuevo = new nodo();
+            nuevo.setValorTienda(t);
+            if (esVacia())
+            {
+                inicio = nuevo;
+            }
+            else
+            {
+                nodo aux = inicio;
+                while (aux.getSiguiente() != null)
+                {
+                    aux = aux.getSiguiente();
+                }
+                aux.setSiguiente(nuevo);
+            }
+            tamanio++;
+        }
+
+        public tienda buscarTiendaLocal(int L)
+        {
+            if (esVacia())
+            {
+                return null;
+            }
+            else
+            {
+                nodo aux = inicio;
+                while (aux != null)
+                {
+                    if (aux.getValorTienda().getLocal() == L)
+                    {
+                        return aux.getValorTienda();
+                    }
+                    aux = aux.getSiguiente();
+                }
+                return null;
+            }
+        }
     }
 }

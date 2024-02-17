@@ -16,7 +16,7 @@ namespace Costazul
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new menuEstacionamiento());
+            Application.Run(new bienvenido());
         }
     }
 }

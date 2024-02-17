@@ -23,8 +23,10 @@ namespace Costazul
         public static pEstacionamiento[,] sectoresCarros = new pEstacionamiento[5,500];
         public static pEstacionamiento[,] sectoresMotos = new pEstacionamiento[2,100];
         public static lista personas = new lista();
+        public static lista tiendas = new lista();
         static int IDPersona;
         static int IDVehiculo;
+        public static string dActual= "Lunes";
 
         public bienvenido()
         {
@@ -32,6 +34,8 @@ namespace Costazul
             if (primerInicio)
             {
                 archivoPuestos();
+                cargartiendas();
+
             }
             else
             {
@@ -265,12 +269,43 @@ namespace Costazul
             }
         }
 
+        private void cargartiendas()
+        {
+            string ruta = Path.Combine(Application.StartupPath, "archivostxt\\Tiendas.txt");
+            String texto = archivo.leerArchivo(ruta);
+
+            string[] stringTiendas = texto.Split('\n');
+
+            foreach (String t in stringTiendas)
+            {
+                string[] datosTiendas = t.Split('_');
+                tiendas.agregarTiendaAlFinal(new tienda(datosTiendas[0], datosTiendas[1], datosTiendas[2], Int32.Parse(datosTiendas[3]), datosTiendas[4]));
+            }
+        }
+
         private void bienvenido_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (!buttonPressed)
             {
                 Application.Exit();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            buttonPressed = true;
+            formTiendas t = new formTiendas();
+            t.Show();
+            if (primerInicio)
+            {
+                primerInicio = false;
+                this.Hide();
+            }
+            else
+            {
+                this.Close();
+            }
+
         }
     }
 }

@@ -63,11 +63,12 @@
             this.PanelMarcoPOcupado = new System.Windows.Forms.TableLayoutPanel();
             this.marcoTooltipSector = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.PanelPregunta = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.buttonSiCompra = new System.Windows.Forms.Button();
             this.buttonNoCompra = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.LabelPregunta = new System.Windows.Forms.Label();
+            this.marcoPanelPregunta = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.fondo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sectorMangle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sectorPalma)).BeginInit();
@@ -94,8 +95,9 @@
             this.PanelMarcoPOcupado.SuspendLayout();
             this.marcoTooltipSector.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
+            this.PanelPregunta.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            this.marcoPanelPregunta.SuspendLayout();
             this.SuspendLayout();
             // 
             // fondo
@@ -578,19 +580,22 @@
             this.tableLayoutPanel1.TabIndex = 25;
             this.tableLayoutPanel1.Visible = false;
             // 
-            // tableLayoutPanel2
+            // PanelPregunta
             // 
-            this.tableLayoutPanel2.ColumnCount = 1;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.label2, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(373, 47);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(200, 100);
-            this.tableLayoutPanel2.TabIndex = 26;
+            this.PanelPregunta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.PanelPregunta.ColumnCount = 1;
+            this.PanelPregunta.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.PanelPregunta.Controls.Add(this.tableLayoutPanel3, 0, 1);
+            this.PanelPregunta.Controls.Add(this.LabelPregunta, 0, 0);
+            this.PanelPregunta.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelPregunta.Location = new System.Drawing.Point(3, 3);
+            this.PanelPregunta.Name = "PanelPregunta";
+            this.PanelPregunta.Padding = new System.Windows.Forms.Padding(3);
+            this.PanelPregunta.RowCount = 2;
+            this.PanelPregunta.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.PanelPregunta.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.PanelPregunta.Size = new System.Drawing.Size(232, 131);
+            this.PanelPregunta.TabIndex = 26;
             // 
             // tableLayoutPanel3
             // 
@@ -599,18 +604,20 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Controls.Add(this.buttonSiCompra, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.buttonNoCompra, 1, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 53);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(6, 68);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(194, 44);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(220, 57);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // buttonSiCompra
             // 
-            this.buttonSiCompra.Location = new System.Drawing.Point(3, 3);
+            this.buttonSiCompra.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonSiCompra.Location = new System.Drawing.Point(17, 13);
             this.buttonSiCompra.Name = "buttonSiCompra";
-            this.buttonSiCompra.Size = new System.Drawing.Size(75, 23);
+            this.buttonSiCompra.Size = new System.Drawing.Size(75, 31);
             this.buttonSiCompra.TabIndex = 0;
             this.buttonSiCompra.Text = "Sí";
             this.buttonSiCompra.UseVisualStyleBackColor = true;
@@ -618,28 +625,46 @@
             // 
             // buttonNoCompra
             // 
-            this.buttonNoCompra.Location = new System.Drawing.Point(100, 3);
+            this.buttonNoCompra.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonNoCompra.Location = new System.Drawing.Point(127, 13);
             this.buttonNoCompra.Name = "buttonNoCompra";
-            this.buttonNoCompra.Size = new System.Drawing.Size(75, 23);
+            this.buttonNoCompra.Size = new System.Drawing.Size(75, 31);
             this.buttonNoCompra.TabIndex = 1;
             this.buttonNoCompra.Text = "No";
             this.buttonNoCompra.UseVisualStyleBackColor = true;
+            this.buttonNoCompra.Click += new System.EventHandler(this.buttonNoCompra_Click);
             // 
-            // label2
+            // LabelPregunta
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(183, 16);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "¿Desea realizar una compra?";
+            this.LabelPregunta.AutoSize = true;
+            this.LabelPregunta.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LabelPregunta.Location = new System.Drawing.Point(6, 3);
+            this.LabelPregunta.Name = "LabelPregunta";
+            this.LabelPregunta.Size = new System.Drawing.Size(220, 62);
+            this.LabelPregunta.TabIndex = 1;
+            this.LabelPregunta.Text = "¿Desea realizar una compra?";
+            this.LabelPregunta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // marcoPanelPregunta
+            // 
+            this.marcoPanelPregunta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.marcoPanelPregunta.ColumnCount = 1;
+            this.marcoPanelPregunta.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.marcoPanelPregunta.Controls.Add(this.PanelPregunta, 0, 0);
+            this.marcoPanelPregunta.Location = new System.Drawing.Point(714, 253);
+            this.marcoPanelPregunta.Name = "marcoPanelPregunta";
+            this.marcoPanelPregunta.RowCount = 1;
+            this.marcoPanelPregunta.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.marcoPanelPregunta.Size = new System.Drawing.Size(238, 137);
+            this.marcoPanelPregunta.TabIndex = 27;
+            this.marcoPanelPregunta.Visible = false;
             // 
             // menuEstacionamiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1665, 642);
-            this.Controls.Add(this.tableLayoutPanel2);
+            this.Controls.Add(this.marcoPanelPregunta);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.marcoTooltipSector);
             this.Controls.Add(this.PanelMarcoPOcupado);
@@ -700,9 +725,10 @@
             this.PanelMarcoPOcupado.ResumeLayout(false);
             this.marcoTooltipSector.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
+            this.PanelPregunta.ResumeLayout(false);
+            this.PanelPregunta.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
+            this.marcoPanelPregunta.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -743,10 +769,11 @@
         private System.Windows.Forms.TableLayoutPanel PanelMarcoPOcupado;
         private System.Windows.Forms.TableLayoutPanel marcoTooltipSector;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.TableLayoutPanel PanelPregunta;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Button buttonSiCompra;
         private System.Windows.Forms.Button buttonNoCompra;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label LabelPregunta;
+        private System.Windows.Forms.TableLayoutPanel marcoPanelPregunta;
     }
 }

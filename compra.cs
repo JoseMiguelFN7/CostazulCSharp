@@ -27,17 +27,17 @@ namespace Costazul
             this.metodoPago = metodoPago;
         }
 
-        public persona getcomprador()
+        public persona getComprador()
         {
             return comprador;
         }
 
-        public tienda gettienda()
+        public tienda getTienda()
         {
             return tienda;
         }
 
-        public producto getproducto()
+        public producto getProducto()
         {
             return producto;
         }
@@ -52,7 +52,7 @@ namespace Costazul
             return precioTotal;
         }
 
-        public String getTipocompra()
+        public String getTipoCompra()
         {
             return tipocompra;
         }
@@ -62,17 +62,17 @@ namespace Costazul
             return metodoPago;
         }
 
-        public void setcomprador(persona comprador)
+        public void setComprador(persona comprador)
         {
             this.comprador = comprador;
         }
 
-        public void settienda(tienda tienda)
+        public void setTienda(tienda tienda)
         {
             this.tienda = tienda;
         }
 
-        public void setproducto(producto producto)
+        public void setProducto(producto producto)
         {
             this.producto = producto;
         }
@@ -87,7 +87,7 @@ namespace Costazul
             this.precioTotal = precioTotal;
         }
 
-        public void setTipocompra(String tipocompra)
+        public void setTipoCompra(String tipocompra)
         {
             this.tipocompra = tipocompra;
         }

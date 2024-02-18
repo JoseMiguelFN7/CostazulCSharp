@@ -52,7 +52,7 @@ namespace Costazul
             return local;
         }
 
-        public lista getproductos()
+        public lista getProductos()
         {
             return productos;
         }

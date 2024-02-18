@@ -15,6 +15,8 @@ namespace Costazul
 {
     public partial class formTiendas : Form
     {
+        bool buttonPressed = false;
+
         public formTiendas()
         {
             InitializeComponent();
@@ -84,10 +86,11 @@ namespace Costazul
         private void mostrarInfoTienda(int Local)
         {
             tienda t = bienvenido.tiendas.buscarTiendaLocal(Local);
+            Console.WriteLine(t.getNombre());
             labelNombre.Text = "Nombre: " + t.getNombre();
             labelEncargado.Text = "Encargado: " + t.getEncargado();
             labelUbicacion.Text = "Ubicación: " + t.getUbicacion();
-            if (bienvenido.dActual.Equals("Domingo"))
+            if (bienvenido.dia.Equals("Domingo"))
             {
                 labelHorario.Text = "Horario: 12:00 - 20:00";               
             }
@@ -940,6 +943,14 @@ namespace Costazul
         {
             pnl1.Visible = false;
             marcoPnl1.Visible = false;
+        }
+
+        private void formTiendas_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (!buttonPressed)
+            {
+                Application.Exit();
+            }
         }
     }
 }

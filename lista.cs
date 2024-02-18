@@ -157,6 +157,175 @@ namespace Costazul
             tamanio++;
         }
 
+        public producto buscarProducto(String nombreP)
+        { //para buscar un producto en la lista
+            if (esVacia())
+            {
+                return null;
+            }
+            else
+            {
+                nodo aux = inicio;
+                while (aux != null)
+                {
+                    if (aux.getValorProducto().getNombre().Equals(nombreP))
+                    {
+                        return aux.getValorProducto();
+                    }
+                    aux = aux.getSiguiente();
+                }
+                return null;
+            }
+        }
+
+        public string obtenerStringPersonas()
+        {
+            if (esVacia())
+            {
+                return null;
+            }
+            else
+            {
+                string s = "";
+                nodo aux = inicio;
+                while (aux != null)
+                {
+                    string persona = aux.getValorPersona().getID() + "_" + aux.getValorPersona().getNombre() + "_" + aux.getValorPersona().getApellido() + "_" + aux.getValorPersona().getTci() + "_" + aux.getValorPersona().getCi() + "_" + aux.getValorPersona().getDEntrada() + "_" + aux.getValorPersona().getHEntrada() + "_" + aux.getValorPersona().getMEntrada() + "_" + aux.getValorPersona().getHSalida() + "_" + aux.getValorPersona().getMSalida();
+                    
+                    string vehiculo;
+                    if (aux.getValorPersona().getVehiculo()==null)
+                    {
+                        vehiculo = "no";
+                    }
+                    else
+                    {
+                        vehiculo = aux.getValorPersona().getVehiculo().getID() + "/" + aux.getValorPersona().getVehiculo().getTipo() + "/" + aux.getValorPersona().getVehiculo().getPlaca() + "/" + aux.getValorPersona().getVehiculo().getColor() + "/" + aux.getValorPersona().getVehiculo().getMarca();
+                    }
+
+                    string compras;
+                    if (aux.getValorPersona().getCompras().esVacia())
+                    {
+                        compras = "no";
+                    }
+                    else
+                    {
+                        compras = aux.getValorPersona().getCompras().datosComprasToString();
+                    }
+
+                    if (aux.getSiguiente() != null)
+                    {
+                        s += persona + vehiculo + compras + "\n";
+                    }
+                    else
+                    {
+                        s += persona + vehiculo + compras;
+                    }
+                    aux = aux.getSiguiente();
+                }
+                return s;
+            }
+        }
+
+        public bool existeIDOcupante(int ID)
+        {
+            if (esVacia())
+            {
+                return false;
+            }
+            else
+            {
+                nodo aux = inicio;
+                while (aux != null)
+                {
+                    if (aux.getValorVehiculo().getID() == ID)
+                    {
+                        return true;
+                    }
+                    aux = aux.getSiguiente();
+                }
+                return false;
+            }
+        }
+
+        public vehiculo buscarVehiculoID(int ID)
+        {
+            if (esVacia())
+            {
+                return null;
+            }
+            else
+            {
+                nodo aux = inicio;
+                while (aux != null)
+                {
+                    if (aux.getValorVehiculo().getID() == ID)
+                    {
+                        return aux.getValorVehiculo();
+                    }
+                    aux = aux.getSiguiente();
+                }
+                return null;
+            }
+        }
+
+        public void sincronizarPasajeros()
+        {
+            if (esVacia())
+            {
+                return;
+            }
+            else
+            {
+                nodo aux = inicio;
+                while (aux != null)
+                {
+                    bool found = false;
+                    persona personaActual = aux.getValorPersona();
+                    if (personaActual.getVehiculo().getTipo().Equals("Moto"))
+                    {
+                        for (int i = 0; i < 2; i++)
+                        {
+                            for (int j = 0; j < 100; j++)
+                            {
+                                if (bienvenido.sectoresMotos[i, j].getOcupantes().existeIDOcupante(personaActual.getVehiculo().getID()))
+                                {
+                                    vehiculo v = bienvenido.sectoresMotos[i, j].getOcupantes().buscarVehiculoID(personaActual.getVehiculo().getID());
+                                    personaActual.setVehiculo(v);
+                                    found = true;
+                                    break;
+                                }
+                            }
+                            if (found)
+                            {
+                                break;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        for (int i = 0; i < 2; i++)
+                        {
+                            for (int j = 0; j < 100; j++)
+                            {
+                                if (bienvenido.sectoresCarros[i, j].getOcupantes().existeIDOcupante(personaActual.getVehiculo().getID()))
+                                {
+                                    vehiculo v = bienvenido.sectoresCarros[i, j].getOcupantes().buscarVehiculoID(personaActual.getVehiculo().getID());
+                                    personaActual.setVehiculo(v);
+                                    found = true;
+                                    break;
+                                }
+                            }
+                            if (found)
+                            {
+                                break;
+                            }
+                        }
+                    }
+                    aux = aux.getSiguiente();
+                }
+            }
+        }
+
         public void agregarCompraAlFinal(compra c)
         { //para agregar una compra al final de la lista
             nodo nuevo = new nodo();
@@ -175,6 +344,26 @@ namespace Costazul
                 aux.setSiguiente(nuevo);
             }
             tamanio++;
+        }
+
+        public String datosComprasToString()
+        { //para almacenar los datos de las compras de una persona en una string
+            if (esVacia())
+            {
+                return "no";
+            }
+            String s = "";
+            nodo aux = inicio;
+            while (aux != null)
+            {
+                s += aux.getValorCompra().getTienda().getLocal() + "/" + aux.getValorCompra().getProducto().getNombre() + "/" + aux.getValorCompra().getUnidades() + "/" + aux.getValorCompra().getPrecioTotal() + "/" + aux.getValorCompra().getTipoCompra() + "/" + aux.getValorCompra().getMetodoPago();
+                if (aux.getSiguiente() != null)
+                {
+                    s += "-";
+                }
+                aux = aux.getSiguiente();
+            }
+            return s;
         }
 
         public void agregarVehiculoAlFinal(vehiculo v)

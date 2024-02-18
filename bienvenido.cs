@@ -7,11 +7,13 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using Application = System.Windows.Forms.Application;
 
 namespace Costazul
@@ -26,15 +28,19 @@ namespace Costazul
         public static lista tiendas = new lista();
         static int IDPersona;
         static int IDVehiculo;
-        public static string dActual= "Lunes";
+        public static string dia;
+        public static int hora;
+        public static int minuto;
+
 
         public bienvenido()
         {
-
             if (primerInicio)
             {
-                archivoPuestos();
-                cargartiendas();
+                cargarPersonas();
+                cargarPuestos();
+                personas.sincronizarPasajeros(); //agrega los pasajeros que corresponden a cada vehiculo en la informacion de cada persona
+                cargarTiendas();
 
             }
             else
@@ -81,12 +87,18 @@ namespace Costazul
                 }
                 string ruta = Path.Combine(Application.StartupPath, "archivostxt\\Puestos.txt");
                 archivo.escribirArchivo(texto, ruta);
+
+                //Actualizar el archivo de personas.
+                ruta = Path.Combine(Application.StartupPath, "archivostxt\\Personas.txt");
+                texto = personas.obtenerStringPersonas();
+                archivo.escribirArchivo(texto, ruta);
             }
 
             InitializeComponent();
+            this.ClientSize = fondo.Size;
         }
 
-        public void archivoPuestos()
+        public void cargarPuestos()
         {
             string ruta = Path.Combine(Application.StartupPath, "archivostxt\\Puestos.txt");
             String texto = archivo.leerArchivo(ruta);
@@ -192,7 +204,6 @@ namespace Costazul
                     pG[i] = puestosG[i].Split('_');
                     pB1[i] = puestosB1[i].Split('_');
                 }
-                Console.WriteLine(pM.Length);
                 foreach (String[] p in pM)
                 {
                     sectoresCarros[0, Int32.Parse(p[1]) - 1] = new pEstacionamiento(p[0], Int32.Parse(p[1]));
@@ -269,7 +280,7 @@ namespace Costazul
             }
         }
 
-        private void cargartiendas()
+        private void cargarTiendas()
         {
             string ruta = Path.Combine(Application.StartupPath, "archivostxt\\Tiendas.txt");
             String texto = archivo.leerArchivo(ruta);
@@ -280,6 +291,47 @@ namespace Costazul
             {
                 string[] datosTiendas = t.Split('_');
                 tiendas.agregarTiendaAlFinal(new tienda(datosTiendas[0], datosTiendas[1], datosTiendas[2], Int32.Parse(datosTiendas[3]), datosTiendas[4]));
+            }
+        }
+
+        private void cargarPersonas()
+        {
+            string ruta = Path.Combine(Application.StartupPath, "archivostxt\\Personas.txt");
+            String s = archivo.leerArchivo(ruta);
+            if (String.IsNullOrEmpty(s))
+            {
+                archivo.escribirArchivo("", ruta); //Si no existe, lo crea
+                return;
+            }
+            String[] arrayPersonas = s.Split('\n');
+            foreach (String persona in arrayPersonas)
+            {
+                String[] datosPersona = persona.Split('_');
+                persona p = new persona(Int32.Parse(datosPersona[0]), datosPersona[1], datosPersona[2], datosPersona[3], datosPersona[4], datosPersona[5], Int32.Parse(datosPersona[6]), Int32.Parse(datosPersona[7]), Int32.Parse(datosPersona[8]), Int32.Parse(datosPersona[9]));
+                if (datosPersona[10].Equals("no"))
+                {
+                    p.setVehiculo(null);
+                }
+                else
+                {
+                    String[] datosVehiculo = datosPersona[10].Split('/');
+                    p.setVehiculo(new vehiculo(Int32.Parse(datosVehiculo[0]), datosVehiculo[1], datosVehiculo[2], datosVehiculo[3], datosVehiculo[4]));
+                }
+                if (!datosPersona[11].Equals("no"))
+                {
+                    String[] datoscompras = datosPersona[11].Split('-');
+                    foreach (String datoscompra in datoscompras)
+                    {
+                        String[] compra = datoscompra.Split('/');
+                        compra c = new compra(p, bienvenido.tiendas.buscarTiendaLocal(Int32.Parse(compra[0])), bienvenido.tiendas.buscarTiendaLocal(Int32.Parse(compra[0])).getProductos().buscarProducto(compra[1]), Int32.Parse(compra[2]), Double.Parse(compra[3]), compra[4], compra[5]);
+                        p.getCompras().agregarCompraAlFinal(c);
+                    }
+                }
+                if (p.getID() >= IDPersona)
+                {
+                    IDPersona = p.getID() + 1;
+                }
+                personas.agregarPersonaAlFinal(p);
             }
         }
 
@@ -305,7 +357,69 @@ namespace Costazul
             {
                 this.Close();
             }
+        }
 
+        private void comboBoxHora_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comboBoxMinuto.Items.Clear();
+            for (int i = 0; i < 60; i++)
+            {
+                if (i < 10)
+                {
+                    comboBoxMinuto.Items.Add("0" + i.ToString());
+                }
+                else
+                {
+                    comboBoxMinuto.Items.Add(i.ToString());
+                }
+            }
+            comboBoxMinuto.SelectedIndex = 0;
+            comboBoxMinuto.Visible = true;
+        }
+
+        private void comboBoxDia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comboBoxHora.Items.Clear();
+            if (comboBoxDia.SelectedItem.ToString().Equals("Domingo"))
+            {
+                for (int i = 12; i < 20; i++)
+                {
+                    comboBoxHora.Items.Add(i.ToString());
+                }
+            }
+            else
+            {
+                for (int i = 11; i < 21; i++)
+                {
+                    comboBoxHora.Items.Add(i.ToString());
+                }
+            }
+            comboBoxHora.SelectedIndex = 0;
+            comboBoxHora.Visible = true;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            dia = comboBoxDia.SelectedItem.ToString();
+            hora = Int32.Parse(comboBoxHora.SelectedItem.ToString());
+            minuto = Int32.Parse(comboBoxMinuto.SelectedItem.ToString());
+            buttonPressed = true;
+            formRegistroUsuarios ru = new formRegistroUsuarios();
+            ru.Show();
+            if (primerInicio)
+            {
+                primerInicio = false;
+                this.Hide();
+            }
+            else
+            {
+                this.Close();
+            }
+        }
+
+        private void comboBoxMinuto_VisibleChanged(object sender, EventArgs e)
+        {
+            buttonConfirmar.Enabled = true;
         }
     }
 }

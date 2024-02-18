@@ -90,6 +90,9 @@
     <EmbeddedResource Include="bienvenido.resx">
       <DependentUpon>bienvenido.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="formRegistroUsuarios.resx">
+      <DependentUpon>formRegistroUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formTiendas.resx">
       <DependentUpon>formTiendas.cs</DependentUpon>
     </EmbeddedResource>
@@ -344,6 +347,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\MapaCostazulTiendas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bienvenido.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

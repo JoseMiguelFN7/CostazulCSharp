@@ -281,8 +281,11 @@ namespace Costazul
                     {
                         if (!bienvenido.sectoresMotos[indexSector, numeroSeleccionado - 1].getOcupantes().puestoOcupado(usuarioActual))
                         {
-                            puestoSeleccionado = bienvenido.sectoresMotos[indexSector, numeroSeleccionado - 1];
-                            //Si numUsuariosSesion=1 meterno en la lista de ocupantes y actualizar arreglo de motos
+                            //puestoSeleccionado = bienvenido.sectoresMotos[indexSector, numeroSeleccionado - 1];
+                            //Si numUsuariosSesion=1 meterlo en la lista de ocupantes y actualizar arreglo de motos
+                            //agregar persona en tope de pila a lista de ocupantes del puesto
+                            //bienvenido.sectoresCarros[indexSector, numeroSeleccionado - 1] = puestoSeleccionado;
+                            marcoPanelPregunta.Visible = true;
                         }
                         else
                         {
@@ -300,10 +303,13 @@ namespace Costazul
                     }
                     else
                     {
-                        if (false && !bienvenido.sectoresCarros[indexSector, numeroSeleccionado - 1].getOcupantes().puestoOcupado(usuarioActual))
+                        if (true && !bienvenido.sectoresCarros[indexSector, numeroSeleccionado - 1].getOcupantes().puestoOcupado(usuarioActual))
                         {
-                            puestoSeleccionado = bienvenido.sectoresCarros[indexSector, numeroSeleccionado - 1];
+                            //puestoSeleccionado = bienvenido.sectoresCarros[indexSector, numeroSeleccionado - 1];
                             //Si numUsuariosSesion=1 meterlo en la lista de ocupantes y actualizar arreglo de motos
+                            //agregar persona en tope de pila a lista de ocupantes del puesto
+                            //bienvenido.sectoresCarros[indexSector, numeroSeleccionado - 1] = puestoSeleccionado;
+                            marcoPanelPregunta.Visible = true;
                         }
                         else
                         {
@@ -317,9 +323,6 @@ namespace Costazul
                             PanelPOcupado.Visible = false;
                             labelPOcupado.Visible = false;
                         }
-                        //agregar persona en tope de pila a lista de ocupantes del puesto
-                        //CHEQUEAR SI PUESTO ESTA OCUPADO
-                        bienvenido.sectoresCarros[indexSector, numeroSeleccionado - 1] = puestoSeleccionado;
                     }
                 }
                 else
@@ -451,7 +454,15 @@ namespace Costazul
             buttonPressed = true;
             formTiendas ft = new formTiendas();
             ft.Show();
-            //this.Close();
+            this.Close();
+        }
+
+        private void buttonNoCompra_Click(object sender, EventArgs e)
+        {
+            buttonPressed = true;
+            formRegistroUsuarios ru = new formRegistroUsuarios();
+            ru.Show();
+            this.Close();
         }
     }
 }

@@ -26,8 +26,8 @@ namespace Costazul
         public static pEstacionamiento[,] sectoresMotos = new pEstacionamiento[2,100];
         public static lista personas = new lista();
         public static lista tiendas = new lista();
-        static int IDPersona;
-        static int IDVehiculo;
+        public static int IDPersona;
+        public static int IDVehiculo;
         public static string dia;
         public static int hora;
         public static int minuto;
@@ -316,6 +316,10 @@ namespace Costazul
                 {
                     String[] datosVehiculo = datosPersona[10].Split('/');
                     p.setVehiculo(new vehiculo(Int32.Parse(datosVehiculo[0]), datosVehiculo[1], datosVehiculo[2], datosVehiculo[3], datosVehiculo[4]));
+                    if (p.getVehiculo().getID() >= bienvenido.IDVehiculo)
+                    {
+                        bienvenido.IDVehiculo = p.getVehiculo().getID() + 1;
+                    }
                 }
                 if (!datosPersona[11].Equals("no"))
                 {
@@ -343,21 +347,6 @@ namespace Costazul
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            buttonPressed = true;
-            formTiendas t = new formTiendas();
-            t.Show();
-            if (primerInicio)
-            {
-                primerInicio = false;
-                this.Hide();
-            }
-            else
-            {
-                this.Close();
-            }
-        }
 
         private void comboBoxHora_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -398,13 +387,27 @@ namespace Costazul
             comboBoxHora.Visible = true;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+
+
+
+        private void comboBoxMinuto_VisibleChanged(object sender, EventArgs e)
+        {
+            ButtonConfirmar.Enabled = true;
+        }
+
+        private void comboBoxMinuto_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
         {
             dia = comboBoxDia.SelectedItem.ToString();
             hora = Int32.Parse(comboBoxHora.SelectedItem.ToString());
             minuto = Int32.Parse(comboBoxMinuto.SelectedItem.ToString());
             buttonPressed = true;
             formRegistroUsuarios ru = new formRegistroUsuarios();
+            formTiendas t = new formTiendas();
             ru.Show();
             if (primerInicio)
             {
@@ -416,10 +419,6 @@ namespace Costazul
                 this.Close();
             }
         }
-
-        private void comboBoxMinuto_VisibleChanged(object sender, EventArgs e)
-        {
-            buttonConfirmar.Enabled = true;
-        }
+        
     }
 }

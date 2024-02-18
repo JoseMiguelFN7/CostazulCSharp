@@ -1,4 +1,6 @@
-﻿namespace Costazul
+﻿using System;
+
+namespace Costazul
 {
     partial class formRegistroUsuarios
     {
@@ -37,8 +39,8 @@
             this.LabelApellido = new System.Windows.Forms.Label();
             this.LabelDocumento = new System.Windows.Forms.Label();
             this.IndiqueHoraDeSalida = new System.Windows.Forms.Label();
-            this.comboBoxHora = new System.Windows.Forms.ComboBox();
-            this.comboBoxMinuto = new System.Windows.Forms.ComboBox();
+            this.comboBoxHoraDeSalida = new System.Windows.Forms.ComboBox();
+            this.comboBoxMinutoDeSalida = new System.Windows.Forms.ComboBox();
             this.buttonValidacionRegistro = new System.Windows.Forms.Button();
             this.fondo = new System.Windows.Forms.PictureBox();
             this.checkBoxPVehiculo = new System.Windows.Forms.CheckBox();
@@ -53,9 +55,19 @@
             this.labelCVehiculo = new System.Windows.Forms.Label();
             this.labelPVehiculo = new System.Windows.Forms.Label();
             this.labelErrorPrimerNombre = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelErrorApellido = new System.Windows.Forms.Label();
+            this.labelErrorPlaca = new System.Windows.Forms.Label();
+            this.labelErrorDocumento = new System.Windows.Forms.Label();
+            this.marcoPanelPregunta = new System.Windows.Forms.TableLayoutPanel();
+            this.panelPregunta = new System.Windows.Forms.TableLayoutPanel();
+            this.panelBotonesPregunta = new System.Windows.Forms.TableLayoutPanel();
+            this.buttonSiCompra = new System.Windows.Forms.Button();
+            this.buttonNoCompra = new System.Windows.Forms.Button();
+            this.labelPregunta = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.fondo)).BeginInit();
+            this.marcoPanelPregunta.SuspendLayout();
+            this.panelPregunta.SuspendLayout();
+            this.panelBotonesPregunta.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBoxNombre
@@ -110,7 +122,7 @@
             this.LabelPrimerNombre.Location = new System.Drawing.Point(56, 38);
             this.LabelPrimerNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LabelPrimerNombre.Name = "LabelPrimerNombre";
-            this.LabelPrimerNombre.Size = new System.Drawing.Size(230, 36);
+            this.LabelPrimerNombre.Size = new System.Drawing.Size(229, 36);
             this.LabelPrimerNombre.TabIndex = 0;
             this.LabelPrimerNombre.Text = "Primer Nombre:";
             // 
@@ -129,7 +141,7 @@
             // 
             this.LabelDocumento.BackColor = System.Drawing.Color.Transparent;
             this.LabelDocumento.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelDocumento.Location = new System.Drawing.Point(50, 219);
+            this.LabelDocumento.Location = new System.Drawing.Point(51, 219);
             this.LabelDocumento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LabelDocumento.Name = "LabelDocumento";
             this.LabelDocumento.Size = new System.Drawing.Size(172, 36);
@@ -147,32 +159,33 @@
             this.IndiqueHoraDeSalida.TabIndex = 10;
             this.IndiqueHoraDeSalida.Text = "Indique su hora de salida:";
             // 
-            // comboBoxHora
+            // comboBoxHoraDeSalida
             // 
-            this.comboBoxHora.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxHora.FormattingEnabled = true;
-            this.comboBoxHora.Location = new System.Drawing.Point(213, 393);
-            this.comboBoxHora.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBoxHora.Name = "comboBoxHora";
-            this.comboBoxHora.Size = new System.Drawing.Size(56, 24);
-            this.comboBoxHora.TabIndex = 11;
-            this.comboBoxHora.SelectedIndexChanged += new System.EventHandler(this.comboBoxHora_SelectedIndexChanged);
+            this.comboBoxHoraDeSalida.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxHoraDeSalida.FormattingEnabled = true;
+            this.comboBoxHoraDeSalida.Location = new System.Drawing.Point(213, 393);
+            this.comboBoxHoraDeSalida.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBoxHoraDeSalida.Name = "comboBoxHoraDeSalida";
+            this.comboBoxHoraDeSalida.Size = new System.Drawing.Size(56, 24);
+            this.comboBoxHoraDeSalida.TabIndex = 11;
+            this.comboBoxHoraDeSalida.SelectedIndexChanged += new System.EventHandler(this.comboBoxHora_SelectedIndexChanged);
             // 
-            // comboBoxMinuto
+            // comboBoxMinutoDeSalida
             // 
-            this.comboBoxMinuto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxMinuto.FormattingEnabled = true;
-            this.comboBoxMinuto.Location = new System.Drawing.Point(316, 393);
-            this.comboBoxMinuto.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBoxMinuto.Name = "comboBoxMinuto";
-            this.comboBoxMinuto.Size = new System.Drawing.Size(56, 24);
-            this.comboBoxMinuto.TabIndex = 12;
+            this.comboBoxMinutoDeSalida.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMinutoDeSalida.FormattingEnabled = true;
+            this.comboBoxMinutoDeSalida.Location = new System.Drawing.Point(316, 393);
+            this.comboBoxMinutoDeSalida.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBoxMinutoDeSalida.Name = "comboBoxMinutoDeSalida";
+            this.comboBoxMinutoDeSalida.Size = new System.Drawing.Size(56, 24);
+            this.comboBoxMinutoDeSalida.TabIndex = 12;
             // 
             // buttonValidacionRegistro
             // 
-            this.buttonValidacionRegistro.Location = new System.Drawing.Point(247, 777);
+            this.buttonValidacionRegistro.Location = new System.Drawing.Point(284, 828);
+            this.buttonValidacionRegistro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonValidacionRegistro.Name = "buttonValidacionRegistro";
-            this.buttonValidacionRegistro.Size = new System.Drawing.Size(114, 46);
+            this.buttonValidacionRegistro.Size = new System.Drawing.Size(129, 58);
             this.buttonValidacionRegistro.TabIndex = 13;
             this.buttonValidacionRegistro.Text = "button1";
             this.buttonValidacionRegistro.UseVisualStyleBackColor = true;
@@ -182,6 +195,7 @@
             // 
             this.fondo.Image = global::Costazul.Properties.Resources.fondo;
             this.fondo.Location = new System.Drawing.Point(0, 0);
+            this.fondo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.fondo.Name = "fondo";
             this.fondo.Size = new System.Drawing.Size(673, 900);
             this.fondo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -193,8 +207,9 @@
             this.checkBoxPVehiculo.BackColor = System.Drawing.Color.Transparent;
             this.checkBoxPVehiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxPVehiculo.Location = new System.Drawing.Point(63, 439);
+            this.checkBoxPVehiculo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBoxPVehiculo.Name = "checkBoxPVehiculo";
-            this.checkBoxPVehiculo.Size = new System.Drawing.Size(206, 38);
+            this.checkBoxPVehiculo.Size = new System.Drawing.Size(205, 38);
             this.checkBoxPVehiculo.TabIndex = 15;
             this.checkBoxPVehiculo.Text = "Posee vehículo";
             this.checkBoxPVehiculo.UseVisualStyleBackColor = false;
@@ -210,7 +225,8 @@
             "Carro pequeño (2 puertas)",
             "Moto",
             "Sedan (4 puertas)"});
-            this.comboBoxTVehiculo.Location = new System.Drawing.Point(383, 531);
+            this.comboBoxTVehiculo.Location = new System.Drawing.Point(383, 530);
+            this.comboBoxTVehiculo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxTVehiculo.Name = "comboBoxTVehiculo";
             this.comboBoxTVehiculo.Size = new System.Drawing.Size(121, 24);
             this.comboBoxTVehiculo.TabIndex = 16;
@@ -237,6 +253,7 @@
             "Yamaha",
             "Otro..."});
             this.comboBoxMarca.Location = new System.Drawing.Point(383, 628);
+            this.comboBoxMarca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxMarca.Name = "comboBoxMarca";
             this.comboBoxMarca.Size = new System.Drawing.Size(121, 24);
             this.comboBoxMarca.TabIndex = 17;
@@ -260,6 +277,7 @@
             "Rosa",
             "Verde"});
             this.comboBoxColor.Location = new System.Drawing.Point(383, 674);
+            this.comboBoxColor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxColor.Name = "comboBoxColor";
             this.comboBoxColor.Size = new System.Drawing.Size(121, 24);
             this.comboBoxColor.TabIndex = 18;
@@ -267,7 +285,8 @@
             // 
             // textBoxPlaca
             // 
-            this.textBoxPlaca.Location = new System.Drawing.Point(383, 717);
+            this.textBoxPlaca.Location = new System.Drawing.Point(383, 718);
+            this.textBoxPlaca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxPlaca.Name = "textBoxPlaca";
             this.textBoxPlaca.Size = new System.Drawing.Size(100, 22);
             this.textBoxPlaca.TabIndex = 19;
@@ -278,6 +297,7 @@
             this.comboBoxNAcomp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxNAcomp.FormattingEnabled = true;
             this.comboBoxNAcomp.Location = new System.Drawing.Point(379, 576);
+            this.comboBoxNAcomp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxNAcomp.Name = "comboBoxNAcomp";
             this.comboBoxNAcomp.Size = new System.Drawing.Size(121, 24);
             this.comboBoxNAcomp.TabIndex = 20;
@@ -289,7 +309,7 @@
             this.labelTVehiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTVehiculo.Location = new System.Drawing.Point(185, 527);
             this.labelTVehiculo.Name = "labelTVehiculo";
-            this.labelTVehiculo.Size = new System.Drawing.Size(184, 35);
+            this.labelTVehiculo.Size = new System.Drawing.Size(184, 34);
             this.labelTVehiculo.TabIndex = 21;
             this.labelTVehiculo.Text = "Tipo de vehículo";
             this.labelTVehiculo.Visible = false;
@@ -300,7 +320,7 @@
             this.labelCAcomp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCAcomp.Location = new System.Drawing.Point(55, 576);
             this.labelCAcomp.Name = "labelCAcomp";
-            this.labelCAcomp.Size = new System.Drawing.Size(306, 25);
+            this.labelCAcomp.Size = new System.Drawing.Size(307, 25);
             this.labelCAcomp.TabIndex = 22;
             this.labelCAcomp.Text = "Cantidad de acompañantes";
             this.labelCAcomp.Visible = false;
@@ -343,38 +363,129 @@
             this.labelErrorPrimerNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelErrorPrimerNombre.Location = new System.Drawing.Point(311, 78);
             this.labelErrorPrimerNombre.Name = "labelErrorPrimerNombre";
-            this.labelErrorPrimerNombre.Size = new System.Drawing.Size(270, 23);
+            this.labelErrorPrimerNombre.Size = new System.Drawing.Size(269, 23);
             this.labelErrorPrimerNombre.TabIndex = 26;
             this.labelErrorPrimerNombre.Text = "CARÁCTER NO VÁLIDO";
             this.labelErrorPrimerNombre.Visible = false;
             // 
-            // label1
+            // labelErrorApellido
             // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(311, 172);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(270, 29);
-            this.label1.TabIndex = 27;
-            this.label1.Text = "CARÁCTER NO VÁLIDO";
-            this.label1.Visible = false;
+            this.labelErrorApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelErrorApellido.Location = new System.Drawing.Point(311, 172);
+            this.labelErrorApellido.Name = "labelErrorApellido";
+            this.labelErrorApellido.Size = new System.Drawing.Size(269, 30);
+            this.labelErrorApellido.TabIndex = 27;
+            this.labelErrorApellido.Text = "CARÁCTER NO VÁLIDO";
+            this.labelErrorApellido.Visible = false;
             // 
-            // label2
+            // labelErrorPlaca
             // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(345, 268);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(236, 25);
-            this.label2.TabIndex = 28;
-            this.label2.Text = "CARÁCTER NO VÁLIDO";
-            this.label2.Visible = false;
+            this.labelErrorPlaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelErrorPlaca.Location = new System.Drawing.Point(293, 756);
+            this.labelErrorPlaca.Name = "labelErrorPlaca";
+            this.labelErrorPlaca.Size = new System.Drawing.Size(273, 25);
+            this.labelErrorPlaca.TabIndex = 28;
+            this.labelErrorPlaca.Text = "CARÁCTER NO VÁLIDO";
+            this.labelErrorPlaca.Visible = false;
+            // 
+            // labelErrorDocumento
+            // 
+            this.labelErrorDocumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelErrorDocumento.Location = new System.Drawing.Point(337, 274);
+            this.labelErrorDocumento.Name = "labelErrorDocumento";
+            this.labelErrorDocumento.Size = new System.Drawing.Size(269, 25);
+            this.labelErrorDocumento.TabIndex = 29;
+            this.labelErrorDocumento.Text = "CARÁCTER NO VÁLIDO";
+            this.labelErrorDocumento.Visible = false;
+            // 
+            // marcoPanelPregunta
+            // 
+            this.marcoPanelPregunta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.marcoPanelPregunta.ColumnCount = 1;
+            this.marcoPanelPregunta.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.marcoPanelPregunta.Controls.Add(this.panelPregunta, 0, 0);
+            this.marcoPanelPregunta.Location = new System.Drawing.Point(177, 364);
+            this.marcoPanelPregunta.Name = "marcoPanelPregunta";
+            this.marcoPanelPregunta.Padding = new System.Windows.Forms.Padding(3);
+            this.marcoPanelPregunta.RowCount = 1;
+            this.marcoPanelPregunta.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.marcoPanelPregunta.Size = new System.Drawing.Size(320, 173);
+            this.marcoPanelPregunta.TabIndex = 30;
+            this.marcoPanelPregunta.Visible = false;
+            // 
+            // panelPregunta
+            // 
+            this.panelPregunta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panelPregunta.ColumnCount = 1;
+            this.panelPregunta.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.panelPregunta.Controls.Add(this.panelBotonesPregunta, 0, 1);
+            this.panelPregunta.Controls.Add(this.labelPregunta, 0, 0);
+            this.panelPregunta.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelPregunta.Location = new System.Drawing.Point(6, 6);
+            this.panelPregunta.Name = "panelPregunta";
+            this.panelPregunta.RowCount = 2;
+            this.panelPregunta.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.panelPregunta.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.panelPregunta.Size = new System.Drawing.Size(308, 161);
+            this.panelPregunta.TabIndex = 0;
+            // 
+            // panelBotonesPregunta
+            // 
+            this.panelBotonesPregunta.ColumnCount = 2;
+            this.panelBotonesPregunta.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.panelBotonesPregunta.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.panelBotonesPregunta.Controls.Add(this.buttonSiCompra, 0, 0);
+            this.panelBotonesPregunta.Controls.Add(this.buttonNoCompra, 1, 0);
+            this.panelBotonesPregunta.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelBotonesPregunta.Location = new System.Drawing.Point(3, 83);
+            this.panelBotonesPregunta.Name = "panelBotonesPregunta";
+            this.panelBotonesPregunta.RowCount = 1;
+            this.panelBotonesPregunta.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.panelBotonesPregunta.Size = new System.Drawing.Size(302, 75);
+            this.panelBotonesPregunta.TabIndex = 0;
+            // 
+            // buttonSiCompra
+            // 
+            this.buttonSiCompra.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonSiCompra.Location = new System.Drawing.Point(25, 12);
+            this.buttonSiCompra.Name = "buttonSiCompra";
+            this.buttonSiCompra.Size = new System.Drawing.Size(100, 50);
+            this.buttonSiCompra.TabIndex = 0;
+            this.buttonSiCompra.Text = "Sí";
+            this.buttonSiCompra.UseVisualStyleBackColor = true;
+            this.buttonSiCompra.Click += new System.EventHandler(this.buttonSiCompra_Click);
+            // 
+            // buttonNoCompra
+            // 
+            this.buttonNoCompra.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonNoCompra.Location = new System.Drawing.Point(176, 12);
+            this.buttonNoCompra.Name = "buttonNoCompra";
+            this.buttonNoCompra.Size = new System.Drawing.Size(100, 50);
+            this.buttonNoCompra.TabIndex = 1;
+            this.buttonNoCompra.Text = "No";
+            this.buttonNoCompra.UseVisualStyleBackColor = true;
+            this.buttonNoCompra.Click += new System.EventHandler(this.buttonNoCompra_Click);
+            // 
+            // labelPregunta
+            // 
+            this.labelPregunta.AutoSize = true;
+            this.labelPregunta.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelPregunta.Location = new System.Drawing.Point(3, 0);
+            this.labelPregunta.Name = "labelPregunta";
+            this.labelPregunta.Size = new System.Drawing.Size(302, 80);
+            this.labelPregunta.TabIndex = 1;
+            this.labelPregunta.Text = "¿Desea realizar una compra?";
+            this.labelPregunta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // formRegistroUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(673, 900);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.marcoPanelPregunta);
+            this.Controls.Add(this.labelErrorDocumento);
+            this.Controls.Add(this.labelErrorPlaca);
+            this.Controls.Add(this.labelErrorApellido);
             this.Controls.Add(this.labelErrorPrimerNombre);
             this.Controls.Add(this.labelPVehiculo);
             this.Controls.Add(this.labelCVehiculo);
@@ -388,8 +499,8 @@
             this.Controls.Add(this.comboBoxTVehiculo);
             this.Controls.Add(this.checkBoxPVehiculo);
             this.Controls.Add(this.buttonValidacionRegistro);
-            this.Controls.Add(this.comboBoxMinuto);
-            this.Controls.Add(this.comboBoxHora);
+            this.Controls.Add(this.comboBoxMinutoDeSalida);
+            this.Controls.Add(this.comboBoxHoraDeSalida);
             this.Controls.Add(this.IndiqueHoraDeSalida);
             this.Controls.Add(this.LabelDocumento);
             this.Controls.Add(this.LabelApellido);
@@ -408,6 +519,10 @@
             this.Text = "Ingrese sus datos";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.formRegistroUsuarios_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.fondo)).EndInit();
+            this.marcoPanelPregunta.ResumeLayout(false);
+            this.panelPregunta.ResumeLayout(false);
+            this.panelPregunta.PerformLayout();
+            this.panelBotonesPregunta.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -423,8 +538,8 @@
         private System.Windows.Forms.Label LabelApellido;
         private System.Windows.Forms.Label LabelDocumento;
         private System.Windows.Forms.Label IndiqueHoraDeSalida;
-        private System.Windows.Forms.ComboBox comboBoxHora;
-        private System.Windows.Forms.ComboBox comboBoxMinuto;
+        private System.Windows.Forms.ComboBox comboBoxHoraDeSalida;
+        private System.Windows.Forms.ComboBox comboBoxMinutoDeSalida;
         private System.Windows.Forms.Button buttonValidacionRegistro;
         private System.Windows.Forms.PictureBox fondo;
         private System.Windows.Forms.CheckBox checkBoxPVehiculo;
@@ -439,7 +554,14 @@
         private System.Windows.Forms.Label labelCVehiculo;
         private System.Windows.Forms.Label labelPVehiculo;
         private System.Windows.Forms.Label labelErrorPrimerNombre;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelErrorApellido;
+        private System.Windows.Forms.Label labelErrorPlaca;
+        private System.Windows.Forms.Label labelErrorDocumento;
+        private System.Windows.Forms.TableLayoutPanel marcoPanelPregunta;
+        private System.Windows.Forms.TableLayoutPanel panelPregunta;
+        private System.Windows.Forms.TableLayoutPanel panelBotonesPregunta;
+        private System.Windows.Forms.Button buttonSiCompra;
+        private System.Windows.Forms.Button buttonNoCompra;
+        private System.Windows.Forms.Label labelPregunta;
     }
 }

@@ -15,12 +15,13 @@ namespace Costazul
     public partial class menuEstacionamiento : Form
     {
         bool buttonPressed = false;
-        public static pEstacionamiento puestoSeleccionado;
         String sectorSeleccionado;
-        int indexSector;
+        public static int indexSector;
+        public static int numeroSeleccionado;
         bool hizoSeleccion;
         static bool esMoto; //esta variable debe obtenerse del form de datos usuarios.
         static persona usuarioActual = formRegistroUsuarios.usuariosEnSesion.verTope();
+
         public menuEstacionamiento()
         {
             esMoto = false;
@@ -251,7 +252,7 @@ namespace Costazul
                     PanelErrorS.Visible = false;
                     PanelMarcoErrorN.Visible = false;
                     PanelErrorN.Visible = false;
-                    int numeroSeleccionado = Int32.Parse(comboBoxNPuestos.Text);
+                    numeroSeleccionado = Int32.Parse(comboBoxNPuestos.Text);
                     switch (sectorSeleccionado)
                     {
                         case "P":
@@ -281,11 +282,10 @@ namespace Costazul
                     {
                         if (!bienvenido.sectoresMotos[indexSector, numeroSeleccionado - 1].getOcupantes().puestoOcupado(usuarioActual))
                         {
-                            puestoSeleccionado = bienvenido.sectoresMotos[indexSector, numeroSeleccionado - 1];
                             if (formRegistroUsuarios.numUsuariosEnSesion == 1)
                             {
-                                puestoSeleccionado.getOcupantes().agregarVehiculoAlFinal(usuarioActual.getVehiculo());
-                                bienvenido.sectoresMotos[indexSector, numeroSeleccionado - 1] = puestoSeleccionado;
+                                
+                                bienvenido.sectoresMotos[indexSector, numeroSeleccionado - 1].getOcupantes().agregarVehiculoAlFinal(usuarioActual.getVehiculo());
                             }
                             marcoPanelPregunta.Visible = true;
                         }
@@ -307,11 +307,9 @@ namespace Costazul
                     {
                         if (!bienvenido.sectoresCarros[indexSector, numeroSeleccionado - 1].getOcupantes().puestoOcupado(usuarioActual))
                         {
-                            puestoSeleccionado = bienvenido.sectoresCarros[indexSector, numeroSeleccionado - 1];
                             if (formRegistroUsuarios.numUsuariosEnSesion == 1)
                             {
-                                puestoSeleccionado.getOcupantes().agregarVehiculoAlFinal(usuarioActual.getVehiculo());
-                                bienvenido.sectoresCarros[indexSector, numeroSeleccionado - 1] = puestoSeleccionado;
+                                bienvenido.sectoresCarros[indexSector, numeroSeleccionado - 1].getOcupantes().agregarVehiculoAlFinal(usuarioActual.getVehiculo());
                             }
                             marcoPanelPregunta.Visible = true;
                         }

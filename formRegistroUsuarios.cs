@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using System.Xml.Linq;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Costazul
@@ -16,11 +17,11 @@ namespace Costazul
     public partial class formRegistroUsuarios : Form
     {
         bool buttonPressed = false;
-        bool puedeVehiculo = true;
+        static bool puedeVehiculo = true;
         public static pila usuariosEnSesion = new pila();
         public static int numUsuariosEnSesion = 0;
         static vehiculo vehiculoActual = null;
-        static persona usuarioActual;
+        public static bool esMoto;
 
         public formRegistroUsuarios()
         {
@@ -38,6 +39,11 @@ namespace Costazul
             labelCVehiculo.Parent= fondo;
             labelPVehiculo.Parent = fondo;
 
+            labelErrorPrimerNombre.Parent = fondo;
+            labelErrorApellido.Parent = fondo;
+            labelErrorDocumento.Parent = fondo;
+            labelErrorPlaca.Parent = fondo;
+
             comboBoxTDocumento.SelectedIndex = 0;
             comboBoxTVehiculo.SelectedIndex = 0;
             comboBoxMarca.SelectedIndex = 0;
@@ -47,17 +53,22 @@ namespace Costazul
             {
                 for (int i = bienvenido.hora; i <= 20; i++)
                 {
-                    comboBoxHora.Items.Add(i.ToString());
+                    comboBoxHoraDeSalida.Items.Add(i.ToString());
                 }
             }
             else
             {
                 for (int i = bienvenido.hora; i <= 21; i++)
                 {
-                    comboBoxHora.Items.Add(i.ToString());
+                    comboBoxHoraDeSalida.Items.Add(i.ToString());
                 }
             }
-            comboBoxHora.SelectedIndex = 0;
+            comboBoxHoraDeSalida.SelectedIndex = 0;
+
+            if(!puedeVehiculo)
+            {
+                checkBoxPVehiculo.Enabled = false;
+            }
         }
 
         private bool esNumero(string s)
@@ -143,26 +154,26 @@ namespace Costazul
 
         private void comboBoxHora_SelectedIndexChanged(object sender, EventArgs e)
         {
-            comboBoxMinuto.Items.Clear();
-            if (Int32.Parse(comboBoxHora.SelectedItem.ToString()) == bienvenido.hora)
+            comboBoxMinutoDeSalida.Items.Clear();
+            if (Int32.Parse(comboBoxHoraDeSalida.SelectedItem.ToString()) == bienvenido.hora)
             {
                 for (int i = bienvenido.minuto; i < 60; i++)
                 {
                     if (i < 10)
                     {
-                        comboBoxMinuto.Items.Add("0" + i.ToString());
+                        comboBoxMinutoDeSalida.Items.Add("0" + i.ToString());
                     }
                     else
                     {
-                        comboBoxMinuto.Items.Add(i.ToString());
+                        comboBoxMinutoDeSalida.Items.Add(i.ToString());
                     }
                 }
             }
             else
             {
-                if (comboBoxHora.SelectedIndex == comboBoxHora.Items.Count - 1)
+                if (comboBoxHoraDeSalida.SelectedIndex == comboBoxHoraDeSalida.Items.Count - 1)
                 {
-                    comboBoxMinuto.Items.Add("00");
+                    comboBoxMinutoDeSalida.Items.Add("00");
                 }
                 else
                 {
@@ -170,17 +181,18 @@ namespace Costazul
                     {
                         if (i < 10)
                         {
-                            comboBoxMinuto.Items.Add("0" + i.ToString());
+                            comboBoxMinutoDeSalida.Items.Add("0" + i.ToString());
                         }
                         else
                         {
-                            comboBoxMinuto.Items.Add(i.ToString());
+                            comboBoxMinutoDeSalida.Items.Add(i.ToString());
                         }
                     }
                 }
             }
-            comboBoxMinuto.SelectedIndex = 0;
+            comboBoxMinutoDeSalida.SelectedIndex = 0;
         }
+
 
         private void comboBoxTVehiculo_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -230,6 +242,7 @@ namespace Costazul
 
                 labelPVehiculo.Visible = true;
                 textBoxPlaca.Visible = true;
+                puedeVehiculo = false;
             }
             else
             {
@@ -261,9 +274,122 @@ namespace Costazul
                 labelErrorPrimerNombre.Visible = false;
             }
 
-            if (true)
+
+            if(!esLetra(textBoxApellido.Text))
             {
-                //usuariosEnSesion.agregarPersonaEnLaPila(new persona())
+                labelErrorApellido.Visible = true;
+            }
+            else
+            {
+                labelErrorApellido.Visible = false;
+            }
+
+
+            if(!esNumero(textBoxNDocumento.Text))
+            {
+                labelErrorDocumento.Visible = true;
+            }
+            else
+            {
+                labelErrorDocumento.Visible = false;
+            }
+
+            bool aceptarPlaca = true;
+            if (checkBoxPVehiculo.Checked)
+            {
+                if (!placaValida(textBoxPlaca.Text))
+                {
+                    labelErrorPlaca.Visible = true;
+                    aceptarPlaca = false;
+                }
+                else
+                {
+                    labelErrorPlaca.Visible = false;
+                    aceptarPlaca = true;
+                }
+            }
+
+
+
+            if (esLetra(textBoxNombre.Text) && esLetra(textBoxApellido.Text) && esNumero(textBoxNDocumento.Text) && aceptarPlaca)
+            {
+                usuariosEnSesion.agregarPersonaEnLaPila(new persona(bienvenido.IDPersona, textBoxNombre.Text, textBoxApellido.Text, comboBoxTDocumento.SelectedItem.ToString(), textBoxNDocumento.Text, bienvenido.dia, bienvenido.hora, bienvenido.minuto, Int32.Parse(comboBoxHoraDeSalida.Text), Int32.Parse(comboBoxMinutoDeSalida.Text))); 
+                bienvenido.IDPersona++;
+
+                if (checkBoxPVehiculo.Checked)
+                {
+                    vehiculoActual = new vehiculo(bienvenido.IDVehiculo, comboBoxTVehiculo.ToString(), textBoxPlaca.Text, comboBoxColor.SelectedItem.ToString(), comboBoxMarca.SelectedItem.ToString());
+                    vehiculoActual.getPasajeros().agregarPersonaAlFinal(usuariosEnSesion.verTope());
+                    numUsuariosEnSesion = Int32.Parse(comboBoxNAcomp.SelectedItem.ToString()) + 1;
+                    if (numUsuariosEnSesion > 1)
+                    {
+                        puedeVehiculo = false;
+                    }
+                    else
+                    {
+                        usuariosEnSesion.verTope().setVehiculo(vehiculoActual);
+                    }
+                    buttonPressed = true;
+                    menuEstacionamiento me = new menuEstacionamiento();
+                    me.Show();
+                    this.Close();
+                } 
+                else
+                {           
+                    if(checkBoxPVehiculo.Enabled)
+                    {
+                        numUsuariosEnSesion = 1;
+                        usuariosEnSesion.verTope().setVehiculo(null);
+                        marcoPanelPregunta.Visible = true;
+                    } 
+                    else
+                    {
+                        if (usuariosEnSesion.getTamanio() < numUsuariosEnSesion)
+                        {
+                            vehiculoActual.getPasajeros().agregarPersonaAlFinal(usuariosEnSesion.verTope());
+                            marcoPanelPregunta.Visible = true;
+                        }
+                        else
+                        {
+                            puedeVehiculo = true;
+                            usuariosEnSesion.setVehiculoAPila(vehiculoActual);
+                            if (esMoto)
+                            {
+                                bienvenido.sectoresMotos[menuEstacionamiento.indexSector, menuEstacionamiento.numeroSeleccionado].getOcupantes().agregarVehiculoAlFinal(vehiculoActual);
+                            }
+                            else
+                            {
+                                bienvenido.sectoresCarros[menuEstacionamiento.indexSector, menuEstacionamiento.numeroSeleccionado].getOcupantes().agregarVehiculoAlFinal(vehiculoActual);
+                            }
+                            marcoPanelPregunta.Visible = true;
+                        }
+                    }
+                }
+            }   
+        }
+
+        private void buttonSiCompra_Click(object sender, EventArgs e)
+        {
+            buttonPressed = true;
+            formTiendas ft = new formTiendas();
+            ft.Show();
+            this.Close();
+        }
+
+        private void buttonNoCompra_Click(object sender, EventArgs e)
+        {
+            buttonPressed = true;
+            if (formRegistroUsuarios.numUsuariosEnSesion == 1)
+            {
+                bienvenido b = new bienvenido();
+                b.Show();
+                this.Close();
+            }
+            else
+            {
+                formRegistroUsuarios ru = new formRegistroUsuarios();
+                ru.Show();
+                this.Close();
             }
         }
     }

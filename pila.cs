@@ -66,5 +66,18 @@ namespace Costazul
                 return tope.getValorPersona();
             }
         }
+
+        public void setVehiculoAPila(vehiculo vNuevo)
+        {
+            if (!esVacia())
+            {
+                nodo aux = tope;
+                while (aux != null)
+                {
+                    aux.getValorPersona().setVehiculo(vNuevo);
+                    aux = aux.getSiguiente();
+                }
+            }
+        }
     }
 }

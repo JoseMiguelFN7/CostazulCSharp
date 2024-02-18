@@ -17,8 +17,8 @@ namespace Costazul
     {
         bool buttonPressed = false;
         bool puedeVehiculo = true;
-        pila usuariosEnSesion = new pila();
-        int numUsuariosEnSesion = 0;
+        public static pila usuariosEnSesion = new pila();
+        public static int numUsuariosEnSesion = 0;
         static vehiculo vehiculoActual = null;
         static persona usuarioActual;
 

@@ -16,6 +16,7 @@ namespace Costazul
     public partial class formTiendas : Form
     {
         bool buttonPressed = false;
+        public static tienda tiendaSeleccionada;
 
         public formTiendas()
         {
@@ -81,6 +82,14 @@ namespace Costazul
             labelL58.Parent = fondo;
             labelL59.Parent = fondo;
             labelL60.Parent = fondo;
+            pictureBoxEPalma.Parent = fondo;
+            pictureBoxEMangle.Parent = fondo;
+            pictureBoxESaman.Parent = fondo;
+            pictureBoxERoble.Parent = fondo;
+            pictureBoxEGuayacan.Parent = fondo;
+            pictureBoxEBambu.Parent = fondo;
+
+            bienvenido.tiendas.llenarComboBox(comboBoxNombreTiendas);  //llena el comboBox con los nombres de las tiendas.
         }
             
         private void mostrarInfoTienda(int Local)
@@ -951,6 +960,325 @@ namespace Costazul
             {
                 Application.Exit();
             }
+        }
+
+        private void seleccionarTienda(int local)
+        {
+            tiendaSeleccionada = bienvenido.tiendas.buscarTiendaLocal(local);
+            marcoPanelTSeleccionada.Visible = true;
+            labelTSeleccionada.Text = tiendaSeleccionada.getNombre() + " Seleccionada.";
+        }
+
+        private void labelL1_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(1);
+        }
+
+        private void labelL2_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(2);
+        }
+
+        private void labelL3_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(3);
+        }
+
+        private void labelL4_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(4);
+        }
+
+        private void labelL5_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(5);
+        }
+
+        private void labelL6_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(6);
+        }
+
+        private void labelL7_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(7);
+        }
+
+        private void labelL8_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(8);
+        }
+
+        private void labelL9_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(9);
+        }
+
+        private void labelL10_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(10);
+        }
+
+        private void labelL11_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(11);
+        }
+
+        private void labelL12_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(12);
+        }
+
+        private void labelL13_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(13);
+        }
+
+        private void labelL14_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(14);
+        }
+
+        private void labelL15_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(15);
+        }
+
+        private void labelL16_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(16);
+        }
+
+        private void labelL17_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(17);
+        }
+
+        private void labelL18_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(18);
+        }
+
+        private void labelL19_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(19);
+        }
+
+        private void labelL20_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(20);
+        }
+
+        private void labelL21_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(21);
+        }
+
+        private void labelL22_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(22);
+        }
+
+        private void labelL23_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(23);
+        }
+
+        private void labelL24_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(24);
+        }
+
+        private void labelL25_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(25);
+        }
+
+        private void labelL26_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(26);
+        }
+
+        private void labelL27_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(27);
+        }
+
+        private void labelL28_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(28);
+        }
+
+        private void labelL29_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(29);
+        }
+
+        private void labelL30_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(30);
+        }
+
+        private void labelL31_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(31);
+        }
+
+        private void labelL32_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(32);
+        }
+
+        private void labelL33_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(33);
+        }
+
+        private void labelL34_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(34);
+        }
+
+        private void labelL35_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(35);
+        }
+
+        private void labelL36_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(36);
+        }
+
+        private void labelL37_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(37);
+        }
+
+        private void labelL38_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(38);
+        }
+
+        private void labelL39_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(39);
+        }
+
+        private void labelL40_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(40);
+        }
+
+        private void labelL41_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(41);
+        }
+
+        private void labelL42_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(42);
+        }
+
+        private void labelL43_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(43);
+        }
+
+        private void labelL44_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(44);
+        }
+
+        private void labelL45_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(45);
+        }
+
+        private void labelL46_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(46);
+        }
+
+        private void labelL47_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(47);
+        }
+
+        private void labelL48_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(48);
+        }
+
+        private void labelL49_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(49);
+        }
+
+        private void labelL50_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(50);
+        }
+
+        private void labelL51_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(51);
+        }
+
+        private void labelL52_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(52);
+        }
+
+        private void labelL53_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(53);
+        }
+
+        private void labelL54_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(54);
+        }
+
+        private void labelL55_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(55);
+        }
+
+        private void labelL56_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(56);
+        }
+
+        private void labelL57_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(57);
+        }
+
+        private void labelL58_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(58);
+        }
+
+        private void labelL59_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(59);
+        }
+
+        private void labelL60_Click(object sender, EventArgs e)
+        {
+            seleccionarTienda(60);
+        }
+
+        private void comboBoxNombreTiendas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            tiendaSeleccionada = bienvenido.tiendas.buscarTiendaNombre(comboBoxNombreTiendas.Text);
+            marcoPanelTSeleccionada.Visible = true;
+            labelTSeleccionada.Text = tiendaSeleccionada.getNombre() + " Seleccionada.";
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            //agregar aqui codigo para abrir form de compra
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Costazul
 {
@@ -472,6 +473,44 @@ namespace Costazul
                     aux = aux.getSiguiente();
                 }
                 return null;
+            }
+        }
+
+        public tienda buscarTiendaNombre(string tNombre)
+        {
+            if (esVacia())
+            {
+                return null;
+            }
+            else
+            {
+                nodo aux = inicio;
+                while (aux != null)
+                {
+                    if (aux.getValorTienda().getNombre().Equals(tNombre))
+                    {
+                        return aux.getValorTienda();
+                    }
+                    aux = aux.getSiguiente();
+                }
+                return null;
+            }
+        }
+
+        public void llenarComboBox(ComboBox c)
+        {
+            if (esVacia())
+            {
+                return;
+            }
+            else
+            {
+                nodo aux = inicio;
+                while (aux != null)
+                {
+                    c.Items.Add(aux.getValorTienda().getNombre());
+                    aux = aux.getSiguiente();
+                }
             }
         }
     }

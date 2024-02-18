@@ -15,12 +15,12 @@ namespace Costazul
     public partial class menuEstacionamiento : Form
     {
         bool buttonPressed = false;
-        static pEstacionamiento puestoSeleccionado;
+        public static pEstacionamiento puestoSeleccionado;
         String sectorSeleccionado;
         int indexSector;
         bool hizoSeleccion;
         static bool esMoto; //esta variable debe obtenerse del form de datos usuarios.
-        static persona usuarioActual; //obtener variable con usuario actual del form de datos usuarios
+        static persona usuarioActual = formRegistroUsuarios.usuariosEnSesion.verTope();
         public menuEstacionamiento()
         {
             esMoto = false;
@@ -281,10 +281,12 @@ namespace Costazul
                     {
                         if (!bienvenido.sectoresMotos[indexSector, numeroSeleccionado - 1].getOcupantes().puestoOcupado(usuarioActual))
                         {
-                            //puestoSeleccionado = bienvenido.sectoresMotos[indexSector, numeroSeleccionado - 1];
-                            //Si numUsuariosSesion=1 meterlo en la lista de ocupantes y actualizar arreglo de motos
-                            //agregar persona en tope de pila a lista de ocupantes del puesto
-                            //bienvenido.sectoresCarros[indexSector, numeroSeleccionado - 1] = puestoSeleccionado;
+                            puestoSeleccionado = bienvenido.sectoresMotos[indexSector, numeroSeleccionado - 1];
+                            if (formRegistroUsuarios.numUsuariosEnSesion == 1)
+                            {
+                                puestoSeleccionado.getOcupantes().agregarVehiculoAlFinal(usuarioActual.getVehiculo());
+                                bienvenido.sectoresMotos[indexSector, numeroSeleccionado - 1] = puestoSeleccionado;
+                            }
                             marcoPanelPregunta.Visible = true;
                         }
                         else
@@ -303,12 +305,14 @@ namespace Costazul
                     }
                     else
                     {
-                        if (true && !bienvenido.sectoresCarros[indexSector, numeroSeleccionado - 1].getOcupantes().puestoOcupado(usuarioActual))
+                        if (!bienvenido.sectoresCarros[indexSector, numeroSeleccionado - 1].getOcupantes().puestoOcupado(usuarioActual))
                         {
-                            //puestoSeleccionado = bienvenido.sectoresCarros[indexSector, numeroSeleccionado - 1];
-                            //Si numUsuariosSesion=1 meterlo en la lista de ocupantes y actualizar arreglo de motos
-                            //agregar persona en tope de pila a lista de ocupantes del puesto
-                            //bienvenido.sectoresCarros[indexSector, numeroSeleccionado - 1] = puestoSeleccionado;
+                            puestoSeleccionado = bienvenido.sectoresCarros[indexSector, numeroSeleccionado - 1];
+                            if (formRegistroUsuarios.numUsuariosEnSesion == 1)
+                            {
+                                puestoSeleccionado.getOcupantes().agregarVehiculoAlFinal(usuarioActual.getVehiculo());
+                                bienvenido.sectoresCarros[indexSector, numeroSeleccionado - 1] = puestoSeleccionado;
+                            }
                             marcoPanelPregunta.Visible = true;
                         }
                         else
@@ -460,9 +464,18 @@ namespace Costazul
         private void buttonNoCompra_Click(object sender, EventArgs e)
         {
             buttonPressed = true;
-            formRegistroUsuarios ru = new formRegistroUsuarios();
-            ru.Show();
-            this.Close();
+            if (formRegistroUsuarios.numUsuariosEnSesion == 1)
+            {
+                bienvenido b = new bienvenido();
+                b.Show();
+                this.Close();
+            }
+            else
+            {
+                formRegistroUsuarios ru = new formRegistroUsuarios();
+                ru.Show();
+                this.Close();
+            }
         }
     }
 }

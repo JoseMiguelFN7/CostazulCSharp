@@ -354,5 +354,23 @@
   <ItemGroup>
     <None Include="Resources\Bienvenido.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cartelEntradaBambu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cartelEntradaGuayacan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cartelEntradaMangle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cartelEntradaPalma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cartelEntradaRoble.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cartelEntradaSaman.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

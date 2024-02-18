@@ -10,3 +10,16 @@ C:\Users\José Ferreira\Desktop\Proyectos\C#\Costazul\obj\Debug\Costazul.exe
 C:\Users\José Ferreira\Desktop\Proyectos\C#\Costazul\obj\Debug\Costazul.pdb
 C:\Users\José Ferreira\Desktop\Proyectos\C#\Costazul\obj\Debug\Costazul.menuEstacionamiento.resources
 C:\Users\José Ferreira\Desktop\Proyectos\C#\Costazul\obj\Debug\Costazul.formTiendas.resources
+C:\Users\José Ferreira\Desktop\Proyectos\C#\Costazul - copia\bin\Debug\Costazul.exe.config
+C:\Users\José Ferreira\Desktop\Proyectos\C#\Costazul - copia\bin\Debug\Costazul.exe
+C:\Users\José Ferreira\Desktop\Proyectos\C#\Costazul - copia\bin\Debug\Costazul.pdb
+C:\Users\José Ferreira\Desktop\Proyectos\C#\Costazul - copia\obj\Debug\Costazul.csproj.AssemblyReference.cache
+C:\Users\José Ferreira\Desktop\Proyectos\C#\Costazul - copia\obj\Debug\Costazul.bienvenido.resources
+C:\Users\José Ferreira\Desktop\Proyectos\C#\Costazul - copia\obj\Debug\Costazul.formTiendas.resources
+C:\Users\José Ferreira\Desktop\Proyectos\C#\Costazul - copia\obj\Debug\Costazul.menuEstacionamiento.resources
+C:\Users\José Ferreira\Desktop\Proyectos\C#\Costazul - copia\obj\Debug\Costazul.Properties.Resources.resources
+C:\Users\José Ferreira\Desktop\Proyectos\C#\Costazul - copia\obj\Debug\Costazul.csproj.GenerateResource.cache
+C:\Users\José Ferreira\Desktop\Proyectos\C#\Costazul - copia\obj\Debug\Costazul.csproj.CoreCompileInputs.cache
+C:\Users\José Ferreira\Desktop\Proyectos\C#\Costazul - copia\obj\Debug\Costazul.exe
+C:\Users\José Ferreira\Desktop\Proyectos\C#\Costazul - copia\obj\Debug\Costazul.pdb
+C:\Users\José Ferreira\Desktop\Proyectos\C#\Costazul\obj\Debug\Costazul.formRegistroUsuarios.resources

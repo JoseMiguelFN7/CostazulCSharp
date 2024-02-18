@@ -23,3 +23,4 @@ C:\Users\José Ferreira\Desktop\Proyectos\C#\Costazul - copia\obj\Debug\Costazul
 C:\Users\José Ferreira\Desktop\Proyectos\C#\Costazul - copia\obj\Debug\Costazul.exe
 C:\Users\José Ferreira\Desktop\Proyectos\C#\Costazul - copia\obj\Debug\Costazul.pdb
 C:\Users\José Ferreira\Desktop\Proyectos\C#\Costazul\obj\Debug\Costazul.formRegistroUsuarios.resources
+C:\Users\José Ferreira\Desktop\Proyectos\C#\Costazul\obj\Debug\Costazul.formCompra.resources

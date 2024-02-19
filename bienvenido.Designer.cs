@@ -34,6 +34,7 @@
             this.comboBoxHora = new System.Windows.Forms.ComboBox();
             this.comboBoxMinuto = new System.Windows.Forms.ComboBox();
             this.fondo = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.fondo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -41,7 +42,7 @@
             // 
             this.ButtonConfirmar.Enabled = false;
             this.ButtonConfirmar.Location = new System.Drawing.Point(140, 447);
-            this.ButtonConfirmar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ButtonConfirmar.Margin = new System.Windows.Forms.Padding(2);
             this.ButtonConfirmar.Name = "ButtonConfirmar";
             this.ButtonConfirmar.Size = new System.Drawing.Size(92, 31);
             this.ButtonConfirmar.TabIndex = 2;
@@ -62,7 +63,7 @@
             "Sábado",
             "Domingo"});
             this.comboBoxDia.Location = new System.Drawing.Point(29, 370);
-            this.comboBoxDia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxDia.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxDia.Name = "comboBoxDia";
             this.comboBoxDia.Size = new System.Drawing.Size(92, 21);
             this.comboBoxDia.TabIndex = 3;
@@ -73,7 +74,7 @@
             this.comboBoxHora.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxHora.FormattingEnabled = true;
             this.comboBoxHora.Location = new System.Drawing.Point(140, 370);
-            this.comboBoxHora.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxHora.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxHora.Name = "comboBoxHora";
             this.comboBoxHora.Size = new System.Drawing.Size(92, 21);
             this.comboBoxHora.TabIndex = 4;
@@ -85,7 +86,7 @@
             this.comboBoxMinuto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxMinuto.FormattingEnabled = true;
             this.comboBoxMinuto.Location = new System.Drawing.Point(248, 370);
-            this.comboBoxMinuto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxMinuto.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxMinuto.Name = "comboBoxMinuto";
             this.comboBoxMinuto.Size = new System.Drawing.Size(92, 21);
             this.comboBoxMinuto.TabIndex = 5;
@@ -97,12 +98,22 @@
             // 
             this.fondo.Image = global::Costazul.Properties.Resources.Bienvenido;
             this.fondo.Location = new System.Drawing.Point(0, 0);
-            this.fondo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fondo.Margin = new System.Windows.Forms.Padding(2);
             this.fondo.Name = "fondo";
             this.fondo.Size = new System.Drawing.Size(366, 508);
             this.fondo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.fondo.TabIndex = 6;
             this.fondo.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(103, 342);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(164, 13);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Ingrese el dia y hora actual.";
             // 
             // bienvenido
             // 
@@ -110,6 +121,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(366, 508);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBoxMinuto);
             this.Controls.Add(this.comboBoxHora);
             this.Controls.Add(this.comboBoxDia);
@@ -118,7 +130,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "bienvenido";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -126,6 +138,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.bienvenido_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.fondo)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -135,6 +148,7 @@
         private System.Windows.Forms.ComboBox comboBoxHora;
         private System.Windows.Forms.ComboBox comboBoxMinuto;
         private System.Windows.Forms.PictureBox fondo;
+        private System.Windows.Forms.Label label1;
     }
 }
 

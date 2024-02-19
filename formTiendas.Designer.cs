@@ -133,10 +133,9 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(999, 64);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
+            this.button4.Location = new System.Drawing.Point(749, 52);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(119, 23);
+            this.button4.Size = new System.Drawing.Size(89, 19);
             this.button4.TabIndex = 6;
             this.button4.Text = "Confirmar.";
             this.button4.UseVisualStyleBackColor = true;
@@ -145,10 +144,9 @@
             // comboBoxNombreTiendas
             // 
             this.comboBoxNombreTiendas.FormattingEnabled = true;
-            this.comboBoxNombreTiendas.Location = new System.Drawing.Point(827, 63);
-            this.comboBoxNombreTiendas.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBoxNombreTiendas.Location = new System.Drawing.Point(620, 51);
             this.comboBoxNombreTiendas.Name = "comboBoxNombreTiendas";
-            this.comboBoxNombreTiendas.Size = new System.Drawing.Size(137, 24);
+            this.comboBoxNombreTiendas.Size = new System.Drawing.Size(104, 21);
             this.comboBoxNombreTiendas.TabIndex = 7;
             this.comboBoxNombreTiendas.SelectedIndexChanged += new System.EventHandler(this.comboBoxNombreTiendas_SelectedIndexChanged);
             // 
@@ -156,9 +154,9 @@
             // 
             this.fondo.Image = global::Costazul.Properties.Resources.MapaCostazulTiendas;
             this.fondo.Location = new System.Drawing.Point(0, 0);
-            this.fondo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.fondo.Margin = new System.Windows.Forms.Padding(2);
             this.fondo.Name = "fondo";
-            this.fondo.Size = new System.Drawing.Size(1665, 642);
+            this.fondo.Size = new System.Drawing.Size(1249, 522);
             this.fondo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.fondo.TabIndex = 0;
             this.fondo.TabStop = false;
@@ -167,10 +165,9 @@
             // 
             this.labelL1.BackColor = System.Drawing.Color.Transparent;
             this.labelL1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL1.Location = new System.Drawing.Point(179, 143);
-            this.labelL1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL1.Location = new System.Drawing.Point(134, 116);
             this.labelL1.Name = "labelL1";
-            this.labelL1.Size = new System.Drawing.Size(103, 47);
+            this.labelL1.Size = new System.Drawing.Size(77, 38);
             this.labelL1.TabIndex = 8;
             this.labelL1.Text = "L1";
             this.labelL1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -182,10 +179,9 @@
             // 
             this.labelL2.BackColor = System.Drawing.Color.Transparent;
             this.labelL2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL2.Location = new System.Drawing.Point(349, 116);
-            this.labelL2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL2.Location = new System.Drawing.Point(262, 94);
             this.labelL2.Name = "labelL2";
-            this.labelL2.Size = new System.Drawing.Size(49, 62);
+            this.labelL2.Size = new System.Drawing.Size(37, 50);
             this.labelL2.TabIndex = 9;
             this.labelL2.Text = "L2";
             this.labelL2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -197,10 +193,9 @@
             // 
             this.labelL3.BackColor = System.Drawing.Color.Transparent;
             this.labelL3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL3.Location = new System.Drawing.Point(401, 117);
-            this.labelL3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL3.Location = new System.Drawing.Point(301, 95);
             this.labelL3.Name = "labelL3";
-            this.labelL3.Size = new System.Drawing.Size(37, 62);
+            this.labelL3.Size = new System.Drawing.Size(28, 50);
             this.labelL3.TabIndex = 10;
             this.labelL3.Text = "L3";
             this.labelL3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -212,10 +207,9 @@
             // 
             this.labelL6.BackColor = System.Drawing.Color.Transparent;
             this.labelL6.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL6.Location = new System.Drawing.Point(512, 123);
-            this.labelL6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL6.Location = new System.Drawing.Point(384, 100);
             this.labelL6.Name = "labelL6";
-            this.labelL6.Size = new System.Drawing.Size(35, 62);
+            this.labelL6.Size = new System.Drawing.Size(26, 50);
             this.labelL6.TabIndex = 11;
             this.labelL6.Text = "L6";
             this.labelL6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -227,10 +221,9 @@
             // 
             this.labelL5.BackColor = System.Drawing.Color.Transparent;
             this.labelL5.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL5.Location = new System.Drawing.Point(477, 119);
-            this.labelL5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL5.Location = new System.Drawing.Point(358, 97);
             this.labelL5.Name = "labelL5";
-            this.labelL5.Size = new System.Drawing.Size(32, 62);
+            this.labelL5.Size = new System.Drawing.Size(24, 50);
             this.labelL5.TabIndex = 12;
             this.labelL5.Text = "L5";
             this.labelL5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -242,10 +235,9 @@
             // 
             this.labelL4.BackColor = System.Drawing.Color.Transparent;
             this.labelL4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL4.Location = new System.Drawing.Point(440, 117);
-            this.labelL4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL4.Location = new System.Drawing.Point(330, 95);
             this.labelL4.Name = "labelL4";
-            this.labelL4.Size = new System.Drawing.Size(35, 62);
+            this.labelL4.Size = new System.Drawing.Size(26, 50);
             this.labelL4.TabIndex = 13;
             this.labelL4.Text = "L4";
             this.labelL4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -257,10 +249,9 @@
             // 
             this.labelL7.BackColor = System.Drawing.Color.Transparent;
             this.labelL7.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL7.Location = new System.Drawing.Point(548, 130);
-            this.labelL7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL7.Location = new System.Drawing.Point(411, 106);
             this.labelL7.Name = "labelL7";
-            this.labelL7.Size = new System.Drawing.Size(35, 62);
+            this.labelL7.Size = new System.Drawing.Size(26, 50);
             this.labelL7.TabIndex = 14;
             this.labelL7.Text = "L7";
             this.labelL7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -272,10 +263,9 @@
             // 
             this.labelL8.BackColor = System.Drawing.Color.Transparent;
             this.labelL8.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL8.Location = new System.Drawing.Point(580, 145);
-            this.labelL8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL8.Location = new System.Drawing.Point(435, 118);
             this.labelL8.Name = "labelL8";
-            this.labelL8.Size = new System.Drawing.Size(37, 60);
+            this.labelL8.Size = new System.Drawing.Size(28, 49);
             this.labelL8.TabIndex = 15;
             this.labelL8.Text = "L8";
             this.labelL8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -287,10 +277,9 @@
             // 
             this.labelL9.BackColor = System.Drawing.Color.Transparent;
             this.labelL9.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL9.Location = new System.Drawing.Point(617, 159);
-            this.labelL9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL9.Location = new System.Drawing.Point(463, 129);
             this.labelL9.Name = "labelL9";
-            this.labelL9.Size = new System.Drawing.Size(35, 62);
+            this.labelL9.Size = new System.Drawing.Size(26, 50);
             this.labelL9.TabIndex = 16;
             this.labelL9.Text = "L9";
             this.labelL9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -302,10 +291,9 @@
             // 
             this.labelL10.BackColor = System.Drawing.Color.Transparent;
             this.labelL10.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL10.Location = new System.Drawing.Point(651, 169);
-            this.labelL10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL10.Location = new System.Drawing.Point(488, 137);
             this.labelL10.Name = "labelL10";
-            this.labelL10.Size = new System.Drawing.Size(35, 62);
+            this.labelL10.Size = new System.Drawing.Size(26, 50);
             this.labelL10.TabIndex = 17;
             this.labelL10.Text = "L 10";
             this.labelL10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -317,10 +305,9 @@
             // 
             this.labelL11.BackColor = System.Drawing.Color.Transparent;
             this.labelL11.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL11.Location = new System.Drawing.Point(687, 169);
-            this.labelL11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL11.Location = new System.Drawing.Point(515, 137);
             this.labelL11.Name = "labelL11";
-            this.labelL11.Size = new System.Drawing.Size(55, 79);
+            this.labelL11.Size = new System.Drawing.Size(41, 64);
             this.labelL11.TabIndex = 18;
             this.labelL11.Text = "L11";
             this.labelL11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -332,10 +319,9 @@
             // 
             this.labelL12.BackColor = System.Drawing.Color.Transparent;
             this.labelL12.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL12.Location = new System.Drawing.Point(743, 169);
-            this.labelL12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL12.Location = new System.Drawing.Point(557, 137);
             this.labelL12.Name = "labelL12";
-            this.labelL12.Size = new System.Drawing.Size(35, 84);
+            this.labelL12.Size = new System.Drawing.Size(26, 68);
             this.labelL12.TabIndex = 19;
             this.labelL12.Text = "L 12";
             this.labelL12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -347,10 +333,9 @@
             // 
             this.labelL13.BackColor = System.Drawing.Color.Transparent;
             this.labelL13.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL13.Location = new System.Drawing.Point(781, 193);
-            this.labelL13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL13.Location = new System.Drawing.Point(586, 157);
             this.labelL13.Name = "labelL13";
-            this.labelL13.Size = new System.Drawing.Size(53, 62);
+            this.labelL13.Size = new System.Drawing.Size(40, 50);
             this.labelL13.TabIndex = 20;
             this.labelL13.Text = "L13";
             this.labelL13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -362,10 +347,9 @@
             // 
             this.labelL14.BackColor = System.Drawing.Color.Transparent;
             this.labelL14.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL14.Location = new System.Drawing.Point(841, 192);
-            this.labelL14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL14.Location = new System.Drawing.Point(631, 156);
             this.labelL14.Name = "labelL14";
-            this.labelL14.Size = new System.Drawing.Size(49, 62);
+            this.labelL14.Size = new System.Drawing.Size(37, 50);
             this.labelL14.TabIndex = 21;
             this.labelL14.Text = "L14";
             this.labelL14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -377,10 +361,9 @@
             // 
             this.labelL15.BackColor = System.Drawing.Color.Transparent;
             this.labelL15.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL15.Location = new System.Drawing.Point(900, 197);
-            this.labelL15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL15.Location = new System.Drawing.Point(675, 160);
             this.labelL15.Name = "labelL15";
-            this.labelL15.Size = new System.Drawing.Size(43, 62);
+            this.labelL15.Size = new System.Drawing.Size(32, 50);
             this.labelL15.TabIndex = 22;
             this.labelL15.Text = "L 15";
             this.labelL15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -392,10 +375,9 @@
             // 
             this.labelL16.BackColor = System.Drawing.Color.Transparent;
             this.labelL16.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL16.Location = new System.Drawing.Point(949, 197);
-            this.labelL16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL16.Location = new System.Drawing.Point(712, 160);
             this.labelL16.Name = "labelL16";
-            this.labelL16.Size = new System.Drawing.Size(47, 62);
+            this.labelL16.Size = new System.Drawing.Size(35, 50);
             this.labelL16.TabIndex = 23;
             this.labelL16.Text = "L16";
             this.labelL16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -407,10 +389,9 @@
             // 
             this.labelL17.BackColor = System.Drawing.Color.Transparent;
             this.labelL17.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL17.Location = new System.Drawing.Point(999, 176);
-            this.labelL17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL17.Location = new System.Drawing.Point(749, 143);
             this.labelL17.Name = "labelL17";
-            this.labelL17.Size = new System.Drawing.Size(40, 82);
+            this.labelL17.Size = new System.Drawing.Size(30, 67);
             this.labelL17.TabIndex = 24;
             this.labelL17.Text = "L 17";
             this.labelL17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -422,10 +403,9 @@
             // 
             this.labelL18.BackColor = System.Drawing.Color.Transparent;
             this.labelL18.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL18.Location = new System.Drawing.Point(1043, 166);
-            this.labelL18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL18.Location = new System.Drawing.Point(782, 135);
             this.labelL18.Name = "labelL18";
-            this.labelL18.Size = new System.Drawing.Size(71, 79);
+            this.labelL18.Size = new System.Drawing.Size(53, 64);
             this.labelL18.TabIndex = 25;
             this.labelL18.Text = "L18";
             this.labelL18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -437,10 +417,9 @@
             // 
             this.labelL19.BackColor = System.Drawing.Color.Transparent;
             this.labelL19.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL19.Location = new System.Drawing.Point(1119, 148);
-            this.labelL19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL19.Location = new System.Drawing.Point(839, 120);
             this.labelL19.Name = "labelL19";
-            this.labelL19.Size = new System.Drawing.Size(56, 90);
+            this.labelL19.Size = new System.Drawing.Size(42, 73);
             this.labelL19.TabIndex = 26;
             this.labelL19.Text = "L19";
             this.labelL19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -452,10 +431,9 @@
             // 
             this.labelL20.BackColor = System.Drawing.Color.Transparent;
             this.labelL20.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL20.Location = new System.Drawing.Point(1180, 148);
-            this.labelL20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL20.Location = new System.Drawing.Point(885, 120);
             this.labelL20.Name = "labelL20";
-            this.labelL20.Size = new System.Drawing.Size(40, 82);
+            this.labelL20.Size = new System.Drawing.Size(30, 67);
             this.labelL20.TabIndex = 27;
             this.labelL20.Text = "L 20";
             this.labelL20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -467,10 +445,9 @@
             // 
             this.labelL21.BackColor = System.Drawing.Color.Transparent;
             this.labelL21.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL21.Location = new System.Drawing.Point(1223, 159);
-            this.labelL21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL21.Location = new System.Drawing.Point(917, 129);
             this.labelL21.Name = "labelL21";
-            this.labelL21.Size = new System.Drawing.Size(52, 71);
+            this.labelL21.Size = new System.Drawing.Size(39, 58);
             this.labelL21.TabIndex = 28;
             this.labelL21.Text = "L21";
             this.labelL21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -482,10 +459,9 @@
             // 
             this.labelL22.BackColor = System.Drawing.Color.Transparent;
             this.labelL22.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL22.Location = new System.Drawing.Point(1279, 154);
-            this.labelL22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL22.Location = new System.Drawing.Point(959, 125);
             this.labelL22.Name = "labelL22";
-            this.labelL22.Size = new System.Drawing.Size(47, 75);
+            this.labelL22.Size = new System.Drawing.Size(35, 61);
             this.labelL22.TabIndex = 29;
             this.labelL22.Text = "L22";
             this.labelL22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -497,10 +473,9 @@
             // 
             this.labelL23.BackColor = System.Drawing.Color.Transparent;
             this.labelL23.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL23.Location = new System.Drawing.Point(1329, 143);
-            this.labelL23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL23.Location = new System.Drawing.Point(997, 116);
             this.labelL23.Name = "labelL23";
-            this.labelL23.Size = new System.Drawing.Size(35, 78);
+            this.labelL23.Size = new System.Drawing.Size(26, 63);
             this.labelL23.TabIndex = 30;
             this.labelL23.Text = "L 23";
             this.labelL23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -512,10 +487,9 @@
             // 
             this.labelL24.BackColor = System.Drawing.Color.Transparent;
             this.labelL24.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL24.Location = new System.Drawing.Point(1372, 130);
-            this.labelL24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL24.Location = new System.Drawing.Point(1029, 106);
             this.labelL24.Name = "labelL24";
-            this.labelL24.Size = new System.Drawing.Size(35, 85);
+            this.labelL24.Size = new System.Drawing.Size(26, 69);
             this.labelL24.TabIndex = 31;
             this.labelL24.Text = "L 24";
             this.labelL24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -527,10 +501,9 @@
             // 
             this.labelL25.BackColor = System.Drawing.Color.Transparent;
             this.labelL25.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL25.Location = new System.Drawing.Point(1412, 106);
-            this.labelL25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL25.Location = new System.Drawing.Point(1059, 86);
             this.labelL25.Name = "labelL25";
-            this.labelL25.Size = new System.Drawing.Size(35, 101);
+            this.labelL25.Size = new System.Drawing.Size(26, 82);
             this.labelL25.TabIndex = 32;
             this.labelL25.Text = "L 25";
             this.labelL25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -542,10 +515,9 @@
             // 
             this.labelL26.BackColor = System.Drawing.Color.Transparent;
             this.labelL26.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL26.Location = new System.Drawing.Point(1452, 102);
-            this.labelL26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL26.Location = new System.Drawing.Point(1089, 83);
             this.labelL26.Name = "labelL26";
-            this.labelL26.Size = new System.Drawing.Size(65, 95);
+            this.labelL26.Size = new System.Drawing.Size(49, 77);
             this.labelL26.TabIndex = 33;
             this.labelL26.Text = "L26";
             this.labelL26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -557,10 +529,9 @@
             // 
             this.labelL27.BackColor = System.Drawing.Color.Transparent;
             this.labelL27.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL27.Location = new System.Drawing.Point(1497, 297);
-            this.labelL27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL27.Location = new System.Drawing.Point(1123, 241);
             this.labelL27.Name = "labelL27";
-            this.labelL27.Size = new System.Drawing.Size(57, 75);
+            this.labelL27.Size = new System.Drawing.Size(43, 61);
             this.labelL27.TabIndex = 34;
             this.labelL27.Text = "L27";
             this.labelL27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -572,10 +543,9 @@
             // 
             this.labelL28.BackColor = System.Drawing.Color.Transparent;
             this.labelL28.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL28.Location = new System.Drawing.Point(1455, 320);
-            this.labelL28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL28.Location = new System.Drawing.Point(1091, 260);
             this.labelL28.Name = "labelL28";
-            this.labelL28.Size = new System.Drawing.Size(39, 62);
+            this.labelL28.Size = new System.Drawing.Size(29, 50);
             this.labelL28.TabIndex = 35;
             this.labelL28.Text = "L 28";
             this.labelL28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -587,10 +557,9 @@
             // 
             this.labelL29.BackColor = System.Drawing.Color.Transparent;
             this.labelL29.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL29.Location = new System.Drawing.Point(1408, 338);
-            this.labelL29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL29.Location = new System.Drawing.Point(1056, 275);
             this.labelL29.Name = "labelL29";
-            this.labelL29.Size = new System.Drawing.Size(39, 62);
+            this.labelL29.Size = new System.Drawing.Size(29, 50);
             this.labelL29.TabIndex = 36;
             this.labelL29.Text = "L 29";
             this.labelL29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -602,10 +571,9 @@
             // 
             this.labelL30.BackColor = System.Drawing.Color.Transparent;
             this.labelL30.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL30.Location = new System.Drawing.Point(1361, 364);
-            this.labelL30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL30.Location = new System.Drawing.Point(1021, 296);
             this.labelL30.Name = "labelL30";
-            this.labelL30.Size = new System.Drawing.Size(43, 75);
+            this.labelL30.Size = new System.Drawing.Size(32, 61);
             this.labelL30.TabIndex = 37;
             this.labelL30.Text = "L 30";
             this.labelL30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -617,10 +585,9 @@
             // 
             this.labelL31.BackColor = System.Drawing.Color.Transparent;
             this.labelL31.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL31.Location = new System.Drawing.Point(1317, 383);
-            this.labelL31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL31.Location = new System.Drawing.Point(988, 311);
             this.labelL31.Name = "labelL31";
-            this.labelL31.Size = new System.Drawing.Size(41, 73);
+            this.labelL31.Size = new System.Drawing.Size(31, 59);
             this.labelL31.TabIndex = 38;
             this.labelL31.Text = "L 31";
             this.labelL31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -632,10 +599,9 @@
             // 
             this.labelL32.BackColor = System.Drawing.Color.Transparent;
             this.labelL32.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL32.Location = new System.Drawing.Point(1231, 399);
-            this.labelL32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL32.Location = new System.Drawing.Point(923, 324);
             this.labelL32.Name = "labelL32";
-            this.labelL32.Size = new System.Drawing.Size(83, 62);
+            this.labelL32.Size = new System.Drawing.Size(62, 50);
             this.labelL32.TabIndex = 39;
             this.labelL32.Text = "L32";
             this.labelL32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -647,10 +613,9 @@
             // 
             this.labelL60.BackColor = System.Drawing.Color.Transparent;
             this.labelL60.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL60.Location = new System.Drawing.Point(1279, 276);
-            this.labelL60.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL60.Location = new System.Drawing.Point(959, 224);
             this.labelL60.Name = "labelL60";
-            this.labelL60.Size = new System.Drawing.Size(52, 62);
+            this.labelL60.Size = new System.Drawing.Size(39, 50);
             this.labelL60.TabIndex = 40;
             this.labelL60.Text = "L60";
             this.labelL60.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -662,10 +627,9 @@
             // 
             this.labelL59.BackColor = System.Drawing.Color.Transparent;
             this.labelL59.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL59.Location = new System.Drawing.Point(1227, 286);
-            this.labelL59.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL59.Location = new System.Drawing.Point(920, 232);
             this.labelL59.Name = "labelL59";
-            this.labelL59.Size = new System.Drawing.Size(48, 57);
+            this.labelL59.Size = new System.Drawing.Size(36, 46);
             this.labelL59.TabIndex = 41;
             this.labelL59.Text = "L59";
             this.labelL59.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -677,10 +641,9 @@
             // 
             this.labelL58.BackColor = System.Drawing.Color.Transparent;
             this.labelL58.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL58.Location = new System.Drawing.Point(1184, 294);
-            this.labelL58.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL58.Location = new System.Drawing.Point(888, 239);
             this.labelL58.Name = "labelL58";
-            this.labelL58.Size = new System.Drawing.Size(37, 49);
+            this.labelL58.Size = new System.Drawing.Size(28, 40);
             this.labelL58.TabIndex = 42;
             this.labelL58.Text = "L 58";
             this.labelL58.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -692,10 +655,9 @@
             // 
             this.labelL57.BackColor = System.Drawing.Color.Transparent;
             this.labelL57.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL57.Location = new System.Drawing.Point(1129, 294);
-            this.labelL57.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL57.Location = new System.Drawing.Point(847, 239);
             this.labelL57.Name = "labelL57";
-            this.labelL57.Size = new System.Drawing.Size(51, 49);
+            this.labelL57.Size = new System.Drawing.Size(38, 40);
             this.labelL57.TabIndex = 43;
             this.labelL57.Text = "L57";
             this.labelL57.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -707,10 +669,9 @@
             // 
             this.labelL33.BackColor = System.Drawing.Color.Transparent;
             this.labelL33.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL33.Location = new System.Drawing.Point(1132, 416);
-            this.labelL33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL33.Location = new System.Drawing.Point(849, 338);
             this.labelL33.Name = "labelL33";
-            this.labelL33.Size = new System.Drawing.Size(39, 62);
+            this.labelL33.Size = new System.Drawing.Size(29, 50);
             this.labelL33.TabIndex = 44;
             this.labelL33.Text = "L 33";
             this.labelL33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -722,10 +683,9 @@
             // 
             this.labelL34.BackColor = System.Drawing.Color.Transparent;
             this.labelL34.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL34.Location = new System.Drawing.Point(1095, 406);
-            this.labelL34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL34.Location = new System.Drawing.Point(821, 330);
             this.labelL34.Name = "labelL34";
-            this.labelL34.Size = new System.Drawing.Size(35, 62);
+            this.labelL34.Size = new System.Drawing.Size(26, 50);
             this.labelL34.TabIndex = 45;
             this.labelL34.Text = "L 34";
             this.labelL34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -737,10 +697,9 @@
             // 
             this.labelL35.BackColor = System.Drawing.Color.Transparent;
             this.labelL35.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL35.Location = new System.Drawing.Point(1036, 400);
-            this.labelL35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL35.Location = new System.Drawing.Point(777, 325);
             this.labelL35.Name = "labelL35";
-            this.labelL35.Size = new System.Drawing.Size(53, 62);
+            this.labelL35.Size = new System.Drawing.Size(40, 50);
             this.labelL35.TabIndex = 46;
             this.labelL35.Text = "L35";
             this.labelL35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -752,10 +711,9 @@
             // 
             this.labelL56.BackColor = System.Drawing.Color.Transparent;
             this.labelL56.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL56.Location = new System.Drawing.Point(885, 310);
-            this.labelL56.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL56.Location = new System.Drawing.Point(664, 252);
             this.labelL56.Name = "labelL56";
-            this.labelL56.Size = new System.Drawing.Size(53, 43);
+            this.labelL56.Size = new System.Drawing.Size(40, 35);
             this.labelL56.TabIndex = 47;
             this.labelL56.Text = "L56";
             this.labelL56.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -767,10 +725,9 @@
             // 
             this.labelL55.BackColor = System.Drawing.Color.Transparent;
             this.labelL55.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL55.Location = new System.Drawing.Point(840, 308);
-            this.labelL55.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL55.Location = new System.Drawing.Point(630, 250);
             this.labelL55.Name = "labelL55";
-            this.labelL55.Size = new System.Drawing.Size(44, 42);
+            this.labelL55.Size = new System.Drawing.Size(33, 34);
             this.labelL55.TabIndex = 48;
             this.labelL55.Text = "L 55";
             this.labelL55.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -782,10 +739,9 @@
             // 
             this.labelL54.BackColor = System.Drawing.Color.Transparent;
             this.labelL54.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL54.Location = new System.Drawing.Point(804, 302);
-            this.labelL54.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL54.Location = new System.Drawing.Point(603, 245);
             this.labelL54.Name = "labelL54";
-            this.labelL54.Size = new System.Drawing.Size(35, 48);
+            this.labelL54.Size = new System.Drawing.Size(26, 39);
             this.labelL54.TabIndex = 49;
             this.labelL54.Text = "L 54";
             this.labelL54.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -797,10 +753,9 @@
             // 
             this.labelL37.BackColor = System.Drawing.Color.Transparent;
             this.labelL37.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL37.Location = new System.Drawing.Point(668, 336);
-            this.labelL37.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL37.Location = new System.Drawing.Point(501, 273);
             this.labelL37.Name = "labelL37";
-            this.labelL37.Size = new System.Drawing.Size(52, 44);
+            this.labelL37.Size = new System.Drawing.Size(39, 36);
             this.labelL37.TabIndex = 50;
             this.labelL37.Text = "L37";
             this.labelL37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -812,10 +767,9 @@
             // 
             this.labelL36.BackColor = System.Drawing.Color.Transparent;
             this.labelL36.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL36.Location = new System.Drawing.Point(715, 336);
-            this.labelL36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL36.Location = new System.Drawing.Point(536, 273);
             this.labelL36.Name = "labelL36";
-            this.labelL36.Size = new System.Drawing.Size(35, 50);
+            this.labelL36.Size = new System.Drawing.Size(26, 41);
             this.labelL36.TabIndex = 51;
             this.labelL36.Text = "L 36";
             this.labelL36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -827,10 +781,9 @@
             // 
             this.labelL38.BackColor = System.Drawing.Color.Transparent;
             this.labelL38.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL38.Location = new System.Drawing.Point(625, 336);
-            this.labelL38.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL38.Location = new System.Drawing.Point(469, 273);
             this.labelL38.Name = "labelL38";
-            this.labelL38.Size = new System.Drawing.Size(44, 33);
+            this.labelL38.Size = new System.Drawing.Size(33, 27);
             this.labelL38.TabIndex = 52;
             this.labelL38.Text = "L38";
             this.labelL38.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -842,10 +795,9 @@
             // 
             this.labelL39.BackColor = System.Drawing.Color.Transparent;
             this.labelL39.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL39.Location = new System.Drawing.Point(524, 321);
-            this.labelL39.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL39.Location = new System.Drawing.Point(393, 261);
             this.labelL39.Name = "labelL39";
-            this.labelL39.Size = new System.Drawing.Size(47, 43);
+            this.labelL39.Size = new System.Drawing.Size(35, 35);
             this.labelL39.TabIndex = 53;
             this.labelL39.Text = "L39";
             this.labelL39.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -857,10 +809,9 @@
             // 
             this.labelL40.BackColor = System.Drawing.Color.Transparent;
             this.labelL40.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL40.Location = new System.Drawing.Point(475, 314);
-            this.labelL40.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL40.Location = new System.Drawing.Point(356, 255);
             this.labelL40.Name = "labelL40";
-            this.labelL40.Size = new System.Drawing.Size(48, 38);
+            this.labelL40.Size = new System.Drawing.Size(36, 31);
             this.labelL40.TabIndex = 54;
             this.labelL40.Text = "L40";
             this.labelL40.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -872,10 +823,9 @@
             // 
             this.labelL41.BackColor = System.Drawing.Color.Transparent;
             this.labelL41.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL41.Location = new System.Drawing.Point(427, 320);
-            this.labelL41.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL41.Location = new System.Drawing.Point(320, 260);
             this.labelL41.Name = "labelL41";
-            this.labelL41.Size = new System.Drawing.Size(47, 48);
+            this.labelL41.Size = new System.Drawing.Size(35, 39);
             this.labelL41.TabIndex = 55;
             this.labelL41.Text = "L41";
             this.labelL41.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -887,10 +837,9 @@
             // 
             this.labelL42.BackColor = System.Drawing.Color.Transparent;
             this.labelL42.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL42.Location = new System.Drawing.Point(393, 316);
-            this.labelL42.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL42.Location = new System.Drawing.Point(295, 257);
             this.labelL42.Name = "labelL42";
-            this.labelL42.Size = new System.Drawing.Size(32, 62);
+            this.labelL42.Size = new System.Drawing.Size(24, 50);
             this.labelL42.TabIndex = 56;
             this.labelL42.Text = "L 42";
             this.labelL42.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -902,10 +851,9 @@
             // 
             this.labelL43.BackColor = System.Drawing.Color.Transparent;
             this.labelL43.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL43.Location = new System.Drawing.Point(360, 315);
-            this.labelL43.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL43.Location = new System.Drawing.Point(270, 256);
             this.labelL43.Name = "labelL43";
-            this.labelL43.Size = new System.Drawing.Size(37, 53);
+            this.labelL43.Size = new System.Drawing.Size(28, 43);
             this.labelL43.TabIndex = 57;
             this.labelL43.Text = "L 43";
             this.labelL43.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -917,10 +865,9 @@
             // 
             this.labelL45.BackColor = System.Drawing.Color.Transparent;
             this.labelL45.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL45.Location = new System.Drawing.Point(292, 283);
-            this.labelL45.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL45.Location = new System.Drawing.Point(219, 230);
             this.labelL45.Name = "labelL45";
-            this.labelL45.Size = new System.Drawing.Size(36, 57);
+            this.labelL45.Size = new System.Drawing.Size(27, 46);
             this.labelL45.TabIndex = 59;
             this.labelL45.Text = "L 45";
             this.labelL45.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -932,10 +879,9 @@
             // 
             this.labelL44.BackColor = System.Drawing.Color.Transparent;
             this.labelL44.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL44.Location = new System.Drawing.Point(331, 306);
-            this.labelL44.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL44.Location = new System.Drawing.Point(248, 249);
             this.labelL44.Name = "labelL44";
-            this.labelL44.Size = new System.Drawing.Size(31, 50);
+            this.labelL44.Size = new System.Drawing.Size(23, 41);
             this.labelL44.TabIndex = 61;
             this.labelL44.Text = "L 44";
             this.labelL44.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -947,10 +893,9 @@
             // 
             this.labelL46.BackColor = System.Drawing.Color.Transparent;
             this.labelL46.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL46.Location = new System.Drawing.Point(180, 193);
-            this.labelL46.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL46.Location = new System.Drawing.Point(135, 157);
             this.labelL46.Name = "labelL46";
-            this.labelL46.Size = new System.Drawing.Size(99, 62);
+            this.labelL46.Size = new System.Drawing.Size(74, 50);
             this.labelL46.TabIndex = 62;
             this.labelL46.Text = "L46";
             this.labelL46.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -962,10 +907,9 @@
             // 
             this.labelL53.BackColor = System.Drawing.Color.Transparent;
             this.labelL53.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL53.Location = new System.Drawing.Point(580, 240);
-            this.labelL53.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL53.Location = new System.Drawing.Point(435, 195);
             this.labelL53.Name = "labelL53";
-            this.labelL53.Size = new System.Drawing.Size(45, 62);
+            this.labelL53.Size = new System.Drawing.Size(34, 50);
             this.labelL53.TabIndex = 63;
             this.labelL53.Text = "L53";
             this.labelL53.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -977,10 +921,9 @@
             // 
             this.labelL52.BackColor = System.Drawing.Color.Transparent;
             this.labelL52.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL52.Location = new System.Drawing.Point(544, 240);
-            this.labelL52.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL52.Location = new System.Drawing.Point(408, 195);
             this.labelL52.Name = "labelL52";
-            this.labelL52.Size = new System.Drawing.Size(35, 62);
+            this.labelL52.Size = new System.Drawing.Size(26, 50);
             this.labelL52.TabIndex = 64;
             this.labelL52.Text = "L 52";
             this.labelL52.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -992,10 +935,9 @@
             // 
             this.labelL51.BackColor = System.Drawing.Color.Transparent;
             this.labelL51.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL51.Location = new System.Drawing.Point(508, 230);
-            this.labelL51.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL51.Location = new System.Drawing.Point(381, 187);
             this.labelL51.Name = "labelL51";
-            this.labelL51.Size = new System.Drawing.Size(35, 62);
+            this.labelL51.Size = new System.Drawing.Size(26, 50);
             this.labelL51.TabIndex = 65;
             this.labelL51.Text = "L 51";
             this.labelL51.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1007,10 +949,9 @@
             // 
             this.labelL50.BackColor = System.Drawing.Color.Transparent;
             this.labelL50.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL50.Location = new System.Drawing.Point(468, 226);
-            this.labelL50.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL50.Location = new System.Drawing.Point(351, 184);
             this.labelL50.Name = "labelL50";
-            this.labelL50.Size = new System.Drawing.Size(41, 62);
+            this.labelL50.Size = new System.Drawing.Size(31, 50);
             this.labelL50.TabIndex = 66;
             this.labelL50.Text = "L 50";
             this.labelL50.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1022,10 +963,9 @@
             // 
             this.labelL49.BackColor = System.Drawing.Color.Transparent;
             this.labelL49.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL49.Location = new System.Drawing.Point(433, 222);
-            this.labelL49.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL49.Location = new System.Drawing.Point(325, 180);
             this.labelL49.Name = "labelL49";
-            this.labelL49.Size = new System.Drawing.Size(35, 58);
+            this.labelL49.Size = new System.Drawing.Size(26, 47);
             this.labelL49.TabIndex = 67;
             this.labelL49.Text = "L 49";
             this.labelL49.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1037,10 +977,9 @@
             // 
             this.labelL48.BackColor = System.Drawing.Color.Transparent;
             this.labelL48.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL48.Location = new System.Drawing.Point(397, 222);
-            this.labelL48.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL48.Location = new System.Drawing.Point(298, 180);
             this.labelL48.Name = "labelL48";
-            this.labelL48.Size = new System.Drawing.Size(35, 53);
+            this.labelL48.Size = new System.Drawing.Size(26, 43);
             this.labelL48.TabIndex = 68;
             this.labelL48.Text = "L 48";
             this.labelL48.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1052,10 +991,9 @@
             // 
             this.labelL47.BackColor = System.Drawing.Color.Transparent;
             this.labelL47.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelL47.Location = new System.Drawing.Point(360, 218);
-            this.labelL47.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelL47.Location = new System.Drawing.Point(270, 177);
             this.labelL47.Name = "labelL47";
-            this.labelL47.Size = new System.Drawing.Size(35, 44);
+            this.labelL47.Size = new System.Drawing.Size(26, 36);
             this.labelL47.TabIndex = 69;
             this.labelL47.Text = "L 47";
             this.labelL47.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1072,15 +1010,15 @@
             this.pnl1.Controls.Add(this.PanelDatosTienda, 1, 0);
             this.pnl1.Controls.Add(this.BoxLogo, 0, 0);
             this.pnl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl1.Location = new System.Drawing.Point(8, 8);
-            this.pnl1.Margin = new System.Windows.Forms.Padding(4);
+            this.pnl1.Location = new System.Drawing.Point(6, 6);
             this.pnl1.Name = "pnl1";
             this.pnl1.RowCount = 1;
             this.pnl1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.pnl1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.pnl1.Size = new System.Drawing.Size(419, 159);
+            this.pnl1.Size = new System.Drawing.Size(314, 130);
             this.pnl1.TabIndex = 70;
             this.pnl1.Visible = false;
+            this.pnl1.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl1_Paint);
             // 
             // PanelDatosTienda
             // 
@@ -1092,8 +1030,7 @@
             this.PanelDatosTienda.Controls.Add(this.labelHorario, 0, 3);
             this.PanelDatosTienda.Controls.Add(this.labelLocal, 0, 4);
             this.PanelDatosTienda.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelDatosTienda.Location = new System.Drawing.Point(213, 4);
-            this.PanelDatosTienda.Margin = new System.Windows.Forms.Padding(4);
+            this.PanelDatosTienda.Location = new System.Drawing.Point(160, 3);
             this.PanelDatosTienda.Name = "PanelDatosTienda";
             this.PanelDatosTienda.RowCount = 5;
             this.PanelDatosTienda.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -1101,17 +1038,16 @@
             this.PanelDatosTienda.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.PanelDatosTienda.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.PanelDatosTienda.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.PanelDatosTienda.Size = new System.Drawing.Size(202, 151);
+            this.PanelDatosTienda.Size = new System.Drawing.Size(151, 124);
             this.PanelDatosTienda.TabIndex = 71;
             // 
             // labelNombre
             // 
             this.labelNombre.AutoSize = true;
             this.labelNombre.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelNombre.Location = new System.Drawing.Point(4, 0);
-            this.labelNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelNombre.Location = new System.Drawing.Point(3, 0);
             this.labelNombre.Name = "labelNombre";
-            this.labelNombre.Size = new System.Drawing.Size(194, 30);
+            this.labelNombre.Size = new System.Drawing.Size(145, 24);
             this.labelNombre.TabIndex = 0;
             this.labelNombre.Text = "Nombre:";
             this.labelNombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1120,10 +1056,9 @@
             // 
             this.labelEncargado.AutoSize = true;
             this.labelEncargado.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelEncargado.Location = new System.Drawing.Point(4, 30);
-            this.labelEncargado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelEncargado.Location = new System.Drawing.Point(3, 24);
             this.labelEncargado.Name = "labelEncargado";
-            this.labelEncargado.Size = new System.Drawing.Size(194, 30);
+            this.labelEncargado.Size = new System.Drawing.Size(145, 24);
             this.labelEncargado.TabIndex = 1;
             this.labelEncargado.Text = "Encargado:";
             this.labelEncargado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1132,10 +1067,9 @@
             // 
             this.labelUbicacion.AutoSize = true;
             this.labelUbicacion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelUbicacion.Location = new System.Drawing.Point(4, 60);
-            this.labelUbicacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelUbicacion.Location = new System.Drawing.Point(3, 48);
             this.labelUbicacion.Name = "labelUbicacion";
-            this.labelUbicacion.Size = new System.Drawing.Size(194, 30);
+            this.labelUbicacion.Size = new System.Drawing.Size(145, 24);
             this.labelUbicacion.TabIndex = 2;
             this.labelUbicacion.Text = "Ubicacion:";
             this.labelUbicacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1144,10 +1078,9 @@
             // 
             this.labelHorario.AutoSize = true;
             this.labelHorario.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelHorario.Location = new System.Drawing.Point(4, 90);
-            this.labelHorario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelHorario.Location = new System.Drawing.Point(3, 72);
             this.labelHorario.Name = "labelHorario";
-            this.labelHorario.Size = new System.Drawing.Size(194, 30);
+            this.labelHorario.Size = new System.Drawing.Size(145, 24);
             this.labelHorario.TabIndex = 3;
             this.labelHorario.Text = "Horario:";
             this.labelHorario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1156,10 +1089,9 @@
             // 
             this.labelLocal.AutoSize = true;
             this.labelLocal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelLocal.Location = new System.Drawing.Point(4, 120);
-            this.labelLocal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelLocal.Location = new System.Drawing.Point(3, 96);
             this.labelLocal.Name = "labelLocal";
-            this.labelLocal.Size = new System.Drawing.Size(194, 31);
+            this.labelLocal.Size = new System.Drawing.Size(145, 28);
             this.labelLocal.TabIndex = 4;
             this.labelLocal.Text = "Local:";
             this.labelLocal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1167,10 +1099,9 @@
             // BoxLogo
             // 
             this.BoxLogo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BoxLogo.Location = new System.Drawing.Point(4, 4);
-            this.BoxLogo.Margin = new System.Windows.Forms.Padding(4);
+            this.BoxLogo.Location = new System.Drawing.Point(3, 3);
             this.BoxLogo.Name = "BoxLogo";
-            this.BoxLogo.Size = new System.Drawing.Size(201, 151);
+            this.BoxLogo.Size = new System.Drawing.Size(151, 124);
             this.BoxLogo.TabIndex = 72;
             this.BoxLogo.TabStop = false;
             // 
@@ -1181,14 +1112,13 @@
             this.marcoPnl1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.marcoPnl1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.marcoPnl1.Controls.Add(this.pnl1, 0, 0);
-            this.marcoPnl1.Location = new System.Drawing.Point(33, 445);
-            this.marcoPnl1.Margin = new System.Windows.Forms.Padding(4);
+            this.marcoPnl1.Location = new System.Drawing.Point(25, 362);
             this.marcoPnl1.Name = "marcoPnl1";
-            this.marcoPnl1.Padding = new System.Windows.Forms.Padding(4);
+            this.marcoPnl1.Padding = new System.Windows.Forms.Padding(3);
             this.marcoPnl1.RowCount = 1;
             this.marcoPnl1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.marcoPnl1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.marcoPnl1.Size = new System.Drawing.Size(435, 175);
+            this.marcoPnl1.Size = new System.Drawing.Size(326, 142);
             this.marcoPnl1.TabIndex = 71;
             this.marcoPnl1.Visible = false;
             // 
@@ -1196,9 +1126,10 @@
             // 
             this.pictureBoxEPalma.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxEPalma.Image = global::Costazul.Properties.Resources.cartelEntradaPalma;
-            this.pictureBoxEPalma.Location = new System.Drawing.Point(149, 21);
+            this.pictureBoxEPalma.Location = new System.Drawing.Point(112, 17);
+            this.pictureBoxEPalma.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxEPalma.Name = "pictureBoxEPalma";
-            this.pictureBoxEPalma.Size = new System.Drawing.Size(167, 101);
+            this.pictureBoxEPalma.Size = new System.Drawing.Size(125, 82);
             this.pictureBoxEPalma.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxEPalma.TabIndex = 72;
             this.pictureBoxEPalma.TabStop = false;
@@ -1207,9 +1138,10 @@
             // 
             this.pictureBoxEMangle.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxEMangle.Image = global::Costazul.Properties.Resources.cartelEntradaMangle;
-            this.pictureBoxEMangle.Location = new System.Drawing.Point(93, 276);
+            this.pictureBoxEMangle.Location = new System.Drawing.Point(70, 224);
+            this.pictureBoxEMangle.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxEMangle.Name = "pictureBoxEMangle";
-            this.pictureBoxEMangle.Size = new System.Drawing.Size(176, 101);
+            this.pictureBoxEMangle.Size = new System.Drawing.Size(132, 82);
             this.pictureBoxEMangle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxEMangle.TabIndex = 73;
             this.pictureBoxEMangle.TabStop = false;
@@ -1218,9 +1150,10 @@
             // 
             this.pictureBoxERoble.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxERoble.Image = global::Costazul.Properties.Resources.cartelEntradaRoble;
-            this.pictureBoxERoble.Location = new System.Drawing.Point(690, 467);
+            this.pictureBoxERoble.Location = new System.Drawing.Point(518, 379);
+            this.pictureBoxERoble.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxERoble.Name = "pictureBoxERoble";
-            this.pictureBoxERoble.Size = new System.Drawing.Size(187, 107);
+            this.pictureBoxERoble.Size = new System.Drawing.Size(140, 87);
             this.pictureBoxERoble.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxERoble.TabIndex = 74;
             this.pictureBoxERoble.TabStop = false;
@@ -1229,9 +1162,10 @@
             // 
             this.pictureBoxEGuayacan.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxEGuayacan.Image = global::Costazul.Properties.Resources.cartelEntradaGuayacan;
-            this.pictureBoxEGuayacan.Location = new System.Drawing.Point(1183, 467);
+            this.pictureBoxEGuayacan.Location = new System.Drawing.Point(887, 379);
+            this.pictureBoxEGuayacan.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxEGuayacan.Name = "pictureBoxEGuayacan";
-            this.pictureBoxEGuayacan.Size = new System.Drawing.Size(189, 108);
+            this.pictureBoxEGuayacan.Size = new System.Drawing.Size(142, 88);
             this.pictureBoxEGuayacan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxEGuayacan.TabIndex = 75;
             this.pictureBoxEGuayacan.TabStop = false;
@@ -1240,9 +1174,10 @@
             // 
             this.pictureBoxEBambu.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxEBambu.Image = global::Costazul.Properties.Resources.cartelEntradaBambu;
-            this.pictureBoxEBambu.Location = new System.Drawing.Point(1524, 93);
+            this.pictureBoxEBambu.Location = new System.Drawing.Point(1143, 76);
+            this.pictureBoxEBambu.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxEBambu.Name = "pictureBoxEBambu";
-            this.pictureBoxEBambu.Size = new System.Drawing.Size(130, 161);
+            this.pictureBoxEBambu.Size = new System.Drawing.Size(98, 131);
             this.pictureBoxEBambu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxEBambu.TabIndex = 76;
             this.pictureBoxEBambu.TabStop = false;
@@ -1251,9 +1186,10 @@
             // 
             this.pictureBoxESaman.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxESaman.Image = global::Costazul.Properties.Resources.cartelEntradaSaman;
-            this.pictureBoxESaman.Location = new System.Drawing.Point(470, 367);
+            this.pictureBoxESaman.Location = new System.Drawing.Point(352, 298);
+            this.pictureBoxESaman.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxESaman.Name = "pictureBoxESaman";
-            this.pictureBoxESaman.Size = new System.Drawing.Size(147, 84);
+            this.pictureBoxESaman.Size = new System.Drawing.Size(110, 68);
             this.pictureBoxESaman.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxESaman.TabIndex = 77;
             this.pictureBoxESaman.TabStop = false;
@@ -1264,12 +1200,13 @@
             this.marcoPanelTSeleccionada.ColumnCount = 1;
             this.marcoPanelTSeleccionada.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.marcoPanelTSeleccionada.Controls.Add(this.PanelTSeleccionada, 0, 0);
-            this.marcoPanelTSeleccionada.Location = new System.Drawing.Point(784, 102);
+            this.marcoPanelTSeleccionada.Location = new System.Drawing.Point(588, 83);
+            this.marcoPanelTSeleccionada.Margin = new System.Windows.Forms.Padding(2);
             this.marcoPanelTSeleccionada.Name = "marcoPanelTSeleccionada";
-            this.marcoPanelTSeleccionada.Padding = new System.Windows.Forms.Padding(3);
+            this.marcoPanelTSeleccionada.Padding = new System.Windows.Forms.Padding(2);
             this.marcoPanelTSeleccionada.RowCount = 1;
             this.marcoPanelTSeleccionada.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.marcoPanelTSeleccionada.Size = new System.Drawing.Size(222, 61);
+            this.marcoPanelTSeleccionada.Size = new System.Drawing.Size(166, 50);
             this.marcoPanelTSeleccionada.TabIndex = 78;
             this.marcoPanelTSeleccionada.Visible = false;
             // 
@@ -1280,30 +1217,32 @@
             this.PanelTSeleccionada.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.PanelTSeleccionada.Controls.Add(this.labelTSeleccionada, 0, 0);
             this.PanelTSeleccionada.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelTSeleccionada.Location = new System.Drawing.Point(6, 6);
+            this.PanelTSeleccionada.Location = new System.Drawing.Point(4, 4);
+            this.PanelTSeleccionada.Margin = new System.Windows.Forms.Padding(2);
             this.PanelTSeleccionada.Name = "PanelTSeleccionada";
             this.PanelTSeleccionada.RowCount = 1;
             this.PanelTSeleccionada.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.PanelTSeleccionada.Size = new System.Drawing.Size(210, 49);
+            this.PanelTSeleccionada.Size = new System.Drawing.Size(158, 42);
             this.PanelTSeleccionada.TabIndex = 79;
             // 
             // labelTSeleccionada
             // 
             this.labelTSeleccionada.AutoSize = true;
             this.labelTSeleccionada.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelTSeleccionada.Location = new System.Drawing.Point(3, 0);
+            this.labelTSeleccionada.Location = new System.Drawing.Point(2, 0);
+            this.labelTSeleccionada.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTSeleccionada.Name = "labelTSeleccionada";
-            this.labelTSeleccionada.Size = new System.Drawing.Size(204, 49);
+            this.labelTSeleccionada.Size = new System.Drawing.Size(154, 42);
             this.labelTSeleccionada.TabIndex = 0;
             this.labelTSeleccionada.Text = "... seleccionada";
             this.labelTSeleccionada.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // formTiendas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(1666, 642);
+            this.ClientSize = new System.Drawing.Size(1083, 522);
             this.Controls.Add(this.marcoPanelTSeleccionada);
             this.Controls.Add(this.pictureBoxESaman);
             this.Controls.Add(this.pictureBoxEBambu);
@@ -1376,7 +1315,7 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.fondo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "formTiendas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -1278,7 +1278,16 @@ namespace Costazul
 
         private void button4_Click(object sender, EventArgs e)
         {
-            //agregar aqui codigo para abrir form de compra
+            formCompra AbrirCompra = new formCompra();
+            AbrirCompra.Visible = true;
+
+                this.Visible = false;
+                       
+        }
+
+        private void pnl1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

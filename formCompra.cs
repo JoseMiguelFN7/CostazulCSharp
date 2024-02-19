@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Costazul.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,14 @@ namespace Costazul
     public partial class formCompra : Form
     {
         bool buttonPressed = false;
+
+        public static tienda tiendaSeleccionada;
+        persona personaActual;
+        producto productoSeleccionado;
+        int unidades;
+        double precioTotal;
+        string nombreLogoTienda;
+
         public formCompra()
         {
             InitializeComponent();
@@ -26,5 +35,13 @@ namespace Costazul
                 Application.Exit();
             }
         }
+
+        private void formCompra_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            formTiendas CancelarCompra = new formTiendas();
+            CancelarCompra.Visible = true;
+        }
+        }
     }
-}
+
+

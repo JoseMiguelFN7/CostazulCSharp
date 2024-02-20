@@ -41,20 +41,23 @@
             // ButtonConfirmar
             // 
             this.ButtonConfirmar.Enabled = false;
-            this.ButtonConfirmar.Location = new System.Drawing.Point(187, 550);
+            this.ButtonConfirmar.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonConfirmar.Location = new System.Drawing.Point(169, 533);
             this.ButtonConfirmar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ButtonConfirmar.Name = "ButtonConfirmar";
-            this.ButtonConfirmar.Size = new System.Drawing.Size(123, 38);
+            this.ButtonConfirmar.Size = new System.Drawing.Size(150, 55);
             this.ButtonConfirmar.TabIndex = 2;
-            this.ButtonConfirmar.Text = "CONFIRMAR";
+            this.ButtonConfirmar.Text = "Confirmar";
             this.ButtonConfirmar.UseVisualStyleBackColor = true;
             this.ButtonConfirmar.Click += new System.EventHandler(this.Button2_Click);
             // 
             // comboBoxDia
             // 
+            this.comboBoxDia.DropDownHeight = 90;
             this.comboBoxDia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxDia.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxDia.FormattingEnabled = true;
+            this.comboBoxDia.IntegralHeight = false;
             this.comboBoxDia.Items.AddRange(new object[] {
             "Lunes",
             "Martes",
@@ -116,11 +119,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(137, 421);
+            this.label1.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(113, 421);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(198, 17);
+            this.label1.Size = new System.Drawing.Size(263, 22);
             this.label1.TabIndex = 7;
             this.label1.Text = "Ingrese el dia y hora actual.";
             // 

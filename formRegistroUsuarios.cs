@@ -196,6 +196,14 @@ namespace Costazul
 
         private void comboBoxTVehiculo_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (comboBoxTVehiculo.SelectedIndex == 3)
+            {
+                esMoto = true;
+            }
+            else
+            {
+                esMoto = false;
+            }
             comboBoxNAcomp.Items.Clear();
             int nMaxAcomp = 0;
             switch (comboBoxTVehiculo.SelectedIndex)

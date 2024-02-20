@@ -224,7 +224,7 @@ namespace Costazul
                     }
                 }
 
-                foreach (String[] p in pR)
+                foreach (String[] p in pR) //Sector Roble
                 {
                     sectoresCarros[2, Int32.Parse(p[1]) - 1] = new pEstacionamiento(p[0], Int32.Parse(p[1]));
                     if (!p[2].Equals("no"))
@@ -233,7 +233,7 @@ namespace Costazul
                     }
                 }
 
-                foreach (String[] p in pG)
+                foreach (String[] p in pG) //Sector Guayacan
                 {
                     sectoresCarros[3, Int32.Parse(p[1]) - 1] = new pEstacionamiento(p[0], Int32.Parse(p[1]));
                     if (!p[2].Equals("no"))
@@ -242,7 +242,7 @@ namespace Costazul
                     }
                 }
 
-                foreach (String[] p in pB1)
+                foreach (String[] p in pB1) //Sector Bambu 1
                 {
                     sectoresCarros[4, Int32.Parse(p[1]) - 1] = new pEstacionamiento(p[0], Int32.Parse(p[1]));
                     if (!p[2].Equals("no"))
@@ -262,7 +262,7 @@ namespace Costazul
                     pB2[i] = puestosB2[i].Split('_');
                 }
 
-                foreach (String[] p in pP)
+                foreach (String[] p in pP) //Sector Palma
                 {
                     sectoresMotos[0, Int32.Parse(p[1]) - 1] = new pEstacionamiento(p[0], Int32.Parse(p[1]));
                     if (!p[2].Equals("no"))
@@ -271,7 +271,7 @@ namespace Costazul
                     }
                 }
 
-                foreach (String[] p in pB2)
+                foreach (String[] p in pB2) //Sector Bambu 2
                 {
                     sectoresMotos[1, Int32.Parse(p[1]) - 1] = new pEstacionamiento(p[0], Int32.Parse(p[1]));
                     if (!p[2].Equals("no"))
@@ -282,7 +282,7 @@ namespace Costazul
             }
         }
 
-        private void cargarTiendas()
+        private void cargarTiendas()  //Metodo para cargar tiendas al sistema (archivo --> sistema)
         {
             string ruta = Path.Combine(Application.StartupPath, "archivostxt\\Tiendas.txt");
             String texto = archivo.leerArchivo(ruta);
@@ -296,7 +296,7 @@ namespace Costazul
             }
         }
 
-        private void cargarPersonas()
+        private void cargarPersonas() //Metodo para cargar personas al sistema (archivo --> sistema)
         {
             string ruta = Path.Combine(Application.StartupPath, "archivostxt\\Personas.txt");
             String s = archivo.leerArchivo(ruta);

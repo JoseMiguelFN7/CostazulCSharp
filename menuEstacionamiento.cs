@@ -19,11 +19,9 @@ namespace Costazul
         public static int indexSector;
         public static int numeroSeleccionado;
         bool hizoSeleccion;
-        static bool esMoto; //esta variable debe obtenerse del form de datos usuarios.
 
         public menuEstacionamiento()
         {
-            esMoto = false;
             hizoSeleccion = false;
             InitializeComponent();
             this.ClientSize = fondo.Size; //Hace que la ventana y el fondo tengan el mismo tamaño.
@@ -49,7 +47,7 @@ namespace Costazul
             marcoSB2.Parent = sectorBambu2;
             marcoSB2.Location = new Point(0, 0);
 
-            if (esMoto)
+            if (formRegistroUsuarios.esMoto)
             {
                 sectorPalma.Visible = true;
                 sectorBambu2.Visible = true;
@@ -248,7 +246,7 @@ namespace Costazul
             if (sectorSeleccionado != null && esNumero(comboBoxNPuestos.Text))
             {
 
-                if ((esMoto && Int32.Parse(comboBoxNPuestos.Text) > 0 && Int32.Parse(comboBoxNPuestos.Text) <= 100) || (!esMoto && Int32.Parse(comboBoxNPuestos.Text) > 0 && Int32.Parse(comboBoxNPuestos.Text) <= 500)) //Si es moto solo se permite un numero entre 0 y 100, si es otro vehiculo es entre 0 y 500.
+                if ((formRegistroUsuarios.esMoto && Int32.Parse(comboBoxNPuestos.Text) > 0 && Int32.Parse(comboBoxNPuestos.Text) <= 100) || (!formRegistroUsuarios.esMoto && Int32.Parse(comboBoxNPuestos.Text) > 0 && Int32.Parse(comboBoxNPuestos.Text) <= 500)) //Si es moto solo se permite un numero entre 0 y 100, si es otro vehiculo es entre 0 y 500.
                 {
                     PanelMarcoErrorS.Visible = false;
                     PanelErrorS.Visible = false;
@@ -280,7 +278,7 @@ namespace Costazul
                             break;
                     }
 
-                    if (esMoto) 
+                    if (formRegistroUsuarios.esMoto) 
                     {
                         if (!bienvenido.sectoresMotos[indexSector, numeroSeleccionado - 1].getOcupantes().puestoOcupado(formRegistroUsuarios.usuariosEnSesion.verTope()))
                         {
@@ -467,6 +465,7 @@ namespace Costazul
             {
                 bienvenido.personas.agregarPersonaAlFinal(formRegistroUsuarios.usuariosEnSesion.sacarPersonaDePila());
                 bienvenido b = new bienvenido();
+                formRegistroUsuarios.puedeVehiculo = true;
                 b.Show();
                 this.Close();
             }

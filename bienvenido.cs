@@ -43,30 +43,12 @@ namespace Costazul
                 cargarPersonas();
                 cargarPuestos();
                 personas.sincronizarPasajeros(); //agrega los pasajeros que corresponden a cada vehiculo en la informacion de cada persona
-
-                Console.WriteLine(personas.getInicio().getValorPersona().getID());
-                Console.WriteLine(personas.getInicio().getValorPersona().getNombre());
-                Console.WriteLine(personas.getInicio().getValorPersona().getApellido());
-                Console.WriteLine(personas.getInicio().getValorPersona().getTci());
-                Console.WriteLine(personas.getInicio().getValorPersona().getCi());
-                Console.WriteLine(personas.getInicio().getValorPersona().getDEntrada());
-                Console.WriteLine(personas.getInicio().getValorPersona().getHEntrada());
-                Console.WriteLine(personas.getInicio().getValorPersona().getMEntrada());
-                Console.WriteLine(personas.getInicio().getValorPersona().getHSalida());
-                Console.WriteLine(personas.getInicio().getValorPersona().getMSalida());
-                Console.WriteLine(personas.getInicio().getValorPersona().getVehiculo().getID());
-                Console.WriteLine(personas.getInicio().getValorPersona().getVehiculo().getTipo());
-                Console.WriteLine(personas.getInicio().getValorPersona().getVehiculo().getMarca());
-                Console.WriteLine(personas.getInicio().getValorPersona().getVehiculo().getColor());
-                Console.WriteLine(personas.getInicio().getValorPersona().getVehiculo().getPlaca());
-                Console.WriteLine(personas.getInicio().getValorPersona().getVehiculo().getPasajeros().getInicio().getValorPersona().getNombre());
-                Console.WriteLine(".");
             }
             else
             {
-                //Actualizar el archivo de puestos.
+                //Actualizar el archivo de puestos. (sistema --> archivo)
                 String texto = "";
-                for (int i = 0; i < 5; i++)
+                for (int i = 0; i < 5; i++)  //SECTORES DE CARROS
                 {
                     for (int j = 0; j < 500; j++)
                     {
@@ -86,7 +68,7 @@ namespace Costazul
                 }
 
                 texto += "%" + "\n";
-                for (int i = 0; i < 2; i++)
+                for (int i = 0; i < 2; i++)  //SECTORES DE MOTOS
                 {
                     for (int j = 0; j < 100; j++)
                     {
@@ -105,12 +87,12 @@ namespace Costazul
                     }
                 }
                 string ruta = Path.Combine(Application.StartupPath, "archivostxt\\Puestos.txt");
-                archivo.escribirArchivo(texto, ruta);
+                archivo.escribirArchivo(texto, ruta);  //Sobreescribe archivo
 
-                //Actualizar el archivo de personas.
+                //Actualizar el archivo de personas.  (sistema --> archivo)
                 ruta = Path.Combine(Application.StartupPath, "archivostxt\\Personas.txt");
                 texto = personas.obtenerStringPersonas();
-                archivo.escribirArchivo(texto, ruta);
+                archivo.escribirArchivo(texto, ruta); //Sobreescribe archivo
             }
 
             InitializeComponent();
@@ -118,13 +100,13 @@ namespace Costazul
             label1.Parent = fondo;
         }
 
-        public void cargarPuestos()
+        public void cargarPuestos() //Metodo para cargar puestos archivos --> sistema
         {
             string ruta = Path.Combine(Application.StartupPath, "archivostxt\\Puestos.txt");
             String texto = archivo.leerArchivo(ruta);
-            if (texto == null)
+            if (texto == null) //Si el archivo esta vacio, lo llena con la info necesaria.
             {
-                for (int i = 0; i < 5; i++)
+                for (int i = 0; i < 5; i++)  //carros
                 {
                     for (int j = 0; j < 500; j++)
                     {
@@ -146,11 +128,11 @@ namespace Costazul
                                 texto = "B1";
                                 break;
                         }
-                        sectoresCarros[i,j] = new pEstacionamiento(texto, j + 1);
+                        sectoresCarros[i,j] = new pEstacionamiento(texto, j + 1); //crea los puestos de carros vacios
                     }
                 }
 
-                for (int i = 0; i < 2; i++)
+                for (int i = 0; i < 2; i++)  //motos
                 {
                     for (int j = 0; j < 100; j++)
                     {
@@ -163,12 +145,12 @@ namespace Costazul
                                 texto = "B2";
                                 break;
                         }
-                        sectoresMotos[i,j] = new pEstacionamiento(texto, j + 1);
+                        sectoresMotos[i,j] = new pEstacionamiento(texto, j + 1); //crea los puestos de motos vacios
                     }
                 }
 
                 texto = "";
-                for (int i = 0; i < 5; i++)
+                for (int i = 0; i < 5; i++) //crea la string de los puestos de carros que iran en el archivo
                 {
                     for (int j = 0; j < 500; j++)
                     {
@@ -180,7 +162,7 @@ namespace Costazul
                     }
                 }
                 texto += "%" + "\n";
-                for (int i = 0; i < 2; i++)
+                for (int i = 0; i < 2; i++) //crea la string de los puestos de motos que iran en el archivo
                 {
                     for (int j = 0; j < 100; j++)
                     {
@@ -192,11 +174,11 @@ namespace Costazul
                     }
                 }
 
-                archivo.escribirArchivo(texto, ruta);
+                archivo.escribirArchivo(texto, ruta); //sobreescribe el archivo
             }
-            else
+            else //Si el archivo esta lleno, carga su info al sistema
             {
-                String[] separador1 = { "\n%\n" };
+                String[] separador1 = { "\n%\n" }; //Splits necesarios para segmentar las strings y tener los datos.
                 String[] arreglosCM = texto.Split(separador1, StringSplitOptions.RemoveEmptyEntries);
                 String[] separador2 = { "\n-\n" };
                 String[] sectoresC = arreglosCM[0].Split(separador2, StringSplitOptions.RemoveEmptyEntries);
@@ -224,7 +206,7 @@ namespace Costazul
                     pG[i] = puestosG[i].Split('_');
                     pB1[i] = puestosB1[i].Split('_');
                 }
-                foreach (String[] p in pM)
+                foreach (String[] p in pM)  //Sector Mangle
                 {
                     sectoresCarros[0, Int32.Parse(p[1]) - 1] = new pEstacionamiento(p[0], Int32.Parse(p[1]));
                     if (!p[2].Equals("no"))
@@ -233,7 +215,7 @@ namespace Costazul
                     }
                 }
 
-                foreach (String[] p in pS)
+                foreach (String[] p in pS) //Sector Mangle
                 {
                     sectoresCarros[1, Int32.Parse(p[1]) - 1] = new pEstacionamiento(p[0], Int32.Parse(p[1]));
                     if (!p[2].Equals("no"))

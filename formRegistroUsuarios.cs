@@ -17,7 +17,7 @@ namespace Costazul
     public partial class formRegistroUsuarios : Form
     {
         bool buttonPressed = false;
-        static bool puedeVehiculo = true;
+        public static bool puedeVehiculo = true;
         public static pila usuariosEnSesion = new pila();
         public static int numUsuariosEnSesion = 0;
         static vehiculo vehiculoActual;
@@ -387,6 +387,7 @@ namespace Costazul
                 {
                     bienvenido.personas.agregarPersonaAlFinal(usuariosEnSesion.sacarPersonaDePila());
                 }
+                puedeVehiculo = true;
                 bienvenido b = new bienvenido();
                 b.Show();
                 this.Close();

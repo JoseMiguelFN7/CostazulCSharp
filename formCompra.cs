@@ -180,6 +180,7 @@ namespace Costazul
                 {
                     bienvenido.personas.agregarPersonaAlFinal(formRegistroUsuarios.usuariosEnSesion.sacarPersonaDePila());
                 }
+                formRegistroUsuarios.puedeVehiculo = true;
                 bienvenido b = new bienvenido();
                 b.Show();
                 this.Close();

@@ -53,6 +53,7 @@
             // comboBoxDia
             // 
             this.comboBoxDia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxDia.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxDia.FormattingEnabled = true;
             this.comboBoxDia.Items.AddRange(new object[] {
             "Lunes",
@@ -65,7 +66,7 @@
             this.comboBoxDia.Location = new System.Drawing.Point(39, 455);
             this.comboBoxDia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxDia.Name = "comboBoxDia";
-            this.comboBoxDia.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxDia.Size = new System.Drawing.Size(128, 32);
             this.comboBoxDia.TabIndex = 3;
             this.comboBoxDia.SelectedIndexChanged += new System.EventHandler(this.comboBoxDia_SelectedIndexChanged);
             // 
@@ -73,12 +74,13 @@
             // 
             this.comboBoxHora.DropDownHeight = 90;
             this.comboBoxHora.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxHora.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxHora.FormattingEnabled = true;
             this.comboBoxHora.IntegralHeight = false;
-            this.comboBoxHora.Location = new System.Drawing.Point(187, 455);
+            this.comboBoxHora.Location = new System.Drawing.Point(239, 455);
             this.comboBoxHora.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxHora.Name = "comboBoxHora";
-            this.comboBoxHora.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxHora.Size = new System.Drawing.Size(84, 32);
             this.comboBoxHora.TabIndex = 4;
             this.comboBoxHora.Visible = false;
             this.comboBoxHora.SelectedIndexChanged += new System.EventHandler(this.comboBoxHora_SelectedIndexChanged);
@@ -87,12 +89,13 @@
             // 
             this.comboBoxMinuto.DropDownHeight = 90;
             this.comboBoxMinuto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMinuto.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxMinuto.FormattingEnabled = true;
             this.comboBoxMinuto.IntegralHeight = false;
-            this.comboBoxMinuto.Location = new System.Drawing.Point(331, 455);
+            this.comboBoxMinuto.Location = new System.Drawing.Point(352, 455);
             this.comboBoxMinuto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxMinuto.Name = "comboBoxMinuto";
-            this.comboBoxMinuto.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxMinuto.Size = new System.Drawing.Size(78, 32);
             this.comboBoxMinuto.TabIndex = 5;
             this.comboBoxMinuto.Visible = false;
             this.comboBoxMinuto.SelectedIndexChanged += new System.EventHandler(this.comboBoxMinuto_SelectedIndexChanged);

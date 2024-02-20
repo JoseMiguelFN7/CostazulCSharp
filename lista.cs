@@ -508,7 +508,10 @@ namespace Costazul
                 nodo aux = inicio;
                 while (aux != null)
                 {
-                    c.Items.Add(aux.getValorTienda().getNombre());
+                    if (aux.getValorTienda().getLocal() <= 60)
+                    {
+                        c.Items.Add(aux.getValorTienda().getNombre());
+                    }
                     aux = aux.getSiguiente();
                 }
             }

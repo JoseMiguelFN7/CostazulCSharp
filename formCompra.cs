@@ -31,6 +31,7 @@ namespace Costazul
             labelNameTienda.Text = tiendaSeleccionada.getNombre();
             tiendaSeleccionada.getProductos().llenarComboBoxProductos(comboBoxProductos);
             comboBoxProductos.SelectedIndex = 0;
+            BoxLogo2.Parent = fondo;
             BoxLogo2.Image = LogoTienda;
             groupBoxTCompra.Parent = fondo;
             labelPdto.Parent = fondo;

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formTiendas));
-            this.eventLog1 = new System.Diagnostics.EventLog();
             this.buttonConfirmar = new System.Windows.Forms.Button();
             this.comboBoxNombreTiendas = new System.Windows.Forms.ComboBox();
             this.fondo = new System.Windows.Forms.PictureBox();
@@ -111,7 +110,6 @@
             this.marcoPanelTSeleccionada = new System.Windows.Forms.TableLayoutPanel();
             this.PanelTSeleccionada = new System.Windows.Forms.TableLayoutPanel();
             this.labelTSeleccionada = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fondo)).BeginInit();
             this.pnl1.SuspendLayout();
             this.PanelDatosTienda.SuspendLayout();
@@ -127,28 +125,28 @@
             this.PanelTSeleccionada.SuspendLayout();
             this.SuspendLayout();
             // 
-            // eventLog1
-            // 
-            this.eventLog1.SynchronizingObject = this;
-            // 
             // buttonConfirmar
             // 
-            this.buttonConfirmar.Location = new System.Drawing.Point(999, 64);
-            this.buttonConfirmar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonConfirmar.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonConfirmar.Location = new System.Drawing.Point(1029, 49);
+            this.buttonConfirmar.Margin = new System.Windows.Forms.Padding(4);
             this.buttonConfirmar.Name = "buttonConfirmar";
-            this.buttonConfirmar.Size = new System.Drawing.Size(119, 23);
+            this.buttonConfirmar.Size = new System.Drawing.Size(142, 58);
             this.buttonConfirmar.TabIndex = 6;
-            this.buttonConfirmar.Text = "Confirmar.";
+            this.buttonConfirmar.Text = "Confirmar";
             this.buttonConfirmar.UseVisualStyleBackColor = true;
             this.buttonConfirmar.Click += new System.EventHandler(this.buttonConfirmar_Click);
             // 
             // comboBoxNombreTiendas
             // 
+            this.comboBoxNombreTiendas.DropDownHeight = 200;
+            this.comboBoxNombreTiendas.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxNombreTiendas.FormattingEnabled = true;
-            this.comboBoxNombreTiendas.Location = new System.Drawing.Point(827, 63);
-            this.comboBoxNombreTiendas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxNombreTiendas.IntegralHeight = false;
+            this.comboBoxNombreTiendas.Location = new System.Drawing.Point(784, 63);
+            this.comboBoxNombreTiendas.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxNombreTiendas.Name = "comboBoxNombreTiendas";
-            this.comboBoxNombreTiendas.Size = new System.Drawing.Size(137, 24);
+            this.comboBoxNombreTiendas.Size = new System.Drawing.Size(218, 32);
             this.comboBoxNombreTiendas.TabIndex = 7;
             this.comboBoxNombreTiendas.SelectedIndexChanged += new System.EventHandler(this.comboBoxNombreTiendas_SelectedIndexChanged);
             // 
@@ -1073,7 +1071,7 @@
             this.pnl1.Controls.Add(this.BoxLogo, 0, 0);
             this.pnl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl1.Location = new System.Drawing.Point(8, 8);
-            this.pnl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl1.Margin = new System.Windows.Forms.Padding(4);
             this.pnl1.Name = "pnl1";
             this.pnl1.RowCount = 1;
             this.pnl1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -1093,7 +1091,7 @@
             this.PanelDatosTienda.Controls.Add(this.labelLocal, 0, 4);
             this.PanelDatosTienda.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelDatosTienda.Location = new System.Drawing.Point(213, 4);
-            this.PanelDatosTienda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PanelDatosTienda.Margin = new System.Windows.Forms.Padding(4);
             this.PanelDatosTienda.Name = "PanelDatosTienda";
             this.PanelDatosTienda.RowCount = 5;
             this.PanelDatosTienda.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -1108,6 +1106,7 @@
             // 
             this.labelNombre.AutoSize = true;
             this.labelNombre.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelNombre.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNombre.Location = new System.Drawing.Point(4, 0);
             this.labelNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelNombre.Name = "labelNombre";
@@ -1120,6 +1119,7 @@
             // 
             this.labelEncargado.AutoSize = true;
             this.labelEncargado.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelEncargado.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelEncargado.Location = new System.Drawing.Point(4, 30);
             this.labelEncargado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelEncargado.Name = "labelEncargado";
@@ -1132,6 +1132,7 @@
             // 
             this.labelUbicacion.AutoSize = true;
             this.labelUbicacion.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelUbicacion.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUbicacion.Location = new System.Drawing.Point(4, 60);
             this.labelUbicacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelUbicacion.Name = "labelUbicacion";
@@ -1144,6 +1145,7 @@
             // 
             this.labelHorario.AutoSize = true;
             this.labelHorario.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelHorario.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHorario.Location = new System.Drawing.Point(4, 90);
             this.labelHorario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelHorario.Name = "labelHorario";
@@ -1156,6 +1158,7 @@
             // 
             this.labelLocal.AutoSize = true;
             this.labelLocal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelLocal.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLocal.Location = new System.Drawing.Point(4, 120);
             this.labelLocal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelLocal.Name = "labelLocal";
@@ -1168,9 +1171,10 @@
             // 
             this.BoxLogo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BoxLogo.Location = new System.Drawing.Point(4, 4);
-            this.BoxLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BoxLogo.Margin = new System.Windows.Forms.Padding(4);
             this.BoxLogo.Name = "BoxLogo";
             this.BoxLogo.Size = new System.Drawing.Size(201, 151);
+            this.BoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.BoxLogo.TabIndex = 72;
             this.BoxLogo.TabStop = false;
             // 
@@ -1182,9 +1186,9 @@
             this.marcoPnl1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.marcoPnl1.Controls.Add(this.pnl1, 0, 0);
             this.marcoPnl1.Location = new System.Drawing.Point(33, 446);
-            this.marcoPnl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.marcoPnl1.Margin = new System.Windows.Forms.Padding(4);
             this.marcoPnl1.Name = "marcoPnl1";
-            this.marcoPnl1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.marcoPnl1.Padding = new System.Windows.Forms.Padding(4);
             this.marcoPnl1.RowCount = 1;
             this.marcoPnl1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.marcoPnl1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -1273,7 +1277,7 @@
             this.marcoPanelTSeleccionada.Location = new System.Drawing.Point(784, 102);
             this.marcoPanelTSeleccionada.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.marcoPanelTSeleccionada.Name = "marcoPanelTSeleccionada";
-            this.marcoPanelTSeleccionada.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.marcoPanelTSeleccionada.Padding = new System.Windows.Forms.Padding(3);
             this.marcoPanelTSeleccionada.RowCount = 1;
             this.marcoPanelTSeleccionada.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.marcoPanelTSeleccionada.Size = new System.Drawing.Size(221, 62);
@@ -1287,21 +1291,22 @@
             this.PanelTSeleccionada.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.PanelTSeleccionada.Controls.Add(this.labelTSeleccionada, 0, 0);
             this.PanelTSeleccionada.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelTSeleccionada.Location = new System.Drawing.Point(6, 4);
+            this.PanelTSeleccionada.Location = new System.Drawing.Point(6, 5);
             this.PanelTSeleccionada.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PanelTSeleccionada.Name = "PanelTSeleccionada";
             this.PanelTSeleccionada.RowCount = 1;
             this.PanelTSeleccionada.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.PanelTSeleccionada.Size = new System.Drawing.Size(209, 54);
+            this.PanelTSeleccionada.Size = new System.Drawing.Size(209, 52);
             this.PanelTSeleccionada.TabIndex = 79;
             // 
             // labelTSeleccionada
             // 
+            this.labelTSeleccionada.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelTSeleccionada.AutoSize = true;
-            this.labelTSeleccionada.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelTSeleccionada.Location = new System.Drawing.Point(3, 0);
+            this.labelTSeleccionada.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTSeleccionada.Location = new System.Drawing.Point(42, 15);
             this.labelTSeleccionada.Name = "labelTSeleccionada";
-            this.labelTSeleccionada.Size = new System.Drawing.Size(203, 54);
+            this.labelTSeleccionada.Size = new System.Drawing.Size(125, 21);
             this.labelTSeleccionada.TabIndex = 0;
             this.labelTSeleccionada.Text = "... seleccionada";
             this.labelTSeleccionada.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1311,7 +1316,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(1444, 642);
+            this.ClientSize = new System.Drawing.Size(1665, 642);
             this.Controls.Add(this.marcoPanelTSeleccionada);
             this.Controls.Add(this.pictureBoxESaman);
             this.Controls.Add(this.pictureBoxEBambu);
@@ -1390,7 +1395,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "formTiendas";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.formTiendas_FormClosing);
-            ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fondo)).EndInit();
             this.pnl1.ResumeLayout(false);
             this.PanelDatosTienda.ResumeLayout(false);
@@ -1411,7 +1415,6 @@
         }
 
         #endregion
-        private System.Diagnostics.EventLog eventLog1;
         private System.Windows.Forms.ComboBox comboBoxNombreTiendas;
         private System.Windows.Forms.Button buttonConfirmar;
         private System.Windows.Forms.PictureBox fondo;

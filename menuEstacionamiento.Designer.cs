@@ -72,6 +72,7 @@
             this.marcoSectorSeleccionado = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.labelSectorSeleccionado = new System.Windows.Forms.Label();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.fondo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sectorMangle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sectorPalma)).BeginInit();
@@ -103,6 +104,7 @@
             this.marcoPanelPregunta.SuspendLayout();
             this.marcoSectorSeleccionado.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // fondo
@@ -222,17 +224,19 @@
             // 
             // PanelSelectorP
             // 
+            this.PanelSelectorP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.PanelSelectorP.ColumnCount = 1;
             this.PanelSelectorP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.PanelSelectorP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.PanelSelectorP.Controls.Add(this.label1, 0, 0);
             this.PanelSelectorP.Controls.Add(this.comboBoxNPuestos, 0, 1);
-            this.PanelSelectorP.Location = new System.Drawing.Point(615, 176);
+            this.PanelSelectorP.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelSelectorP.Location = new System.Drawing.Point(6, 6);
             this.PanelSelectorP.Name = "PanelSelectorP";
             this.PanelSelectorP.RowCount = 2;
             this.PanelSelectorP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.PanelSelectorP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.PanelSelectorP.Size = new System.Drawing.Size(435, 85);
+            this.PanelSelectorP.Size = new System.Drawing.Size(423, 73);
             this.PanelSelectorP.TabIndex = 0;
             // 
             // label1
@@ -240,7 +244,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(33, 10);
+            this.label1.Location = new System.Drawing.Point(27, 7);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(368, 22);
             this.label1.TabIndex = 0;
@@ -253,7 +257,7 @@
             this.comboBoxNPuestos.DropDownHeight = 200;
             this.comboBoxNPuestos.FormattingEnabled = true;
             this.comboBoxNPuestos.IntegralHeight = false;
-            this.comboBoxNPuestos.Location = new System.Drawing.Point(185, 51);
+            this.comboBoxNPuestos.Location = new System.Drawing.Point(179, 42);
             this.comboBoxNPuestos.MaxDropDownItems = 10;
             this.comboBoxNPuestos.Name = "comboBoxNPuestos";
             this.comboBoxNPuestos.Size = new System.Drawing.Size(65, 24);
@@ -261,9 +265,10 @@
             // 
             // buttonContinuar
             // 
+            this.buttonContinuar.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonContinuar.Location = new System.Drawing.Point(1072, 199);
             this.buttonContinuar.Name = "buttonContinuar";
-            this.buttonContinuar.Size = new System.Drawing.Size(114, 52);
+            this.buttonContinuar.Size = new System.Drawing.Size(131, 52);
             this.buttonContinuar.TabIndex = 8;
             this.buttonContinuar.Text = "Continuar";
             this.buttonContinuar.UseVisualStyleBackColor = true;
@@ -587,12 +592,12 @@
             // 
             // PanelPregunta
             // 
+            this.PanelPregunta.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PanelPregunta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.PanelPregunta.ColumnCount = 1;
             this.PanelPregunta.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.PanelPregunta.Controls.Add(this.tableLayoutPanel3, 0, 1);
             this.PanelPregunta.Controls.Add(this.LabelPregunta, 0, 0);
-            this.PanelPregunta.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelPregunta.Location = new System.Drawing.Point(3, 3);
             this.PanelPregunta.Name = "PanelPregunta";
             this.PanelPregunta.Padding = new System.Windows.Forms.Padding(3);
@@ -697,12 +702,27 @@
             // 
             this.labelSectorSeleccionado.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelSectorSeleccionado.AutoSize = true;
-            this.labelSectorSeleccionado.Location = new System.Drawing.Point(13, 36);
+            this.labelSectorSeleccionado.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSectorSeleccionado.Location = new System.Drawing.Point(21, 20);
             this.labelSectorSeleccionado.Name = "labelSectorSeleccionado";
-            this.labelSectorSeleccionado.Size = new System.Drawing.Size(261, 16);
+            this.labelSectorSeleccionado.Size = new System.Drawing.Size(245, 48);
             this.labelSectorSeleccionado.TabIndex = 0;
             this.labelSectorSeleccionado.Text = "Haga click en un sector para seleccionarlo";
             this.labelSectorSeleccionado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.PanelSelectorP, 0, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(615, 177);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.Padding = new System.Windows.Forms.Padding(3);
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(435, 85);
+            this.tableLayoutPanel2.TabIndex = 29;
             // 
             // menuEstacionamiento
             // 
@@ -710,10 +730,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1665, 642);
             this.Controls.Add(this.marcoPanelPregunta);
+            this.Controls.Add(this.PanelMarcoPOcupado);
+            this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.marcoSectorSeleccionado);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.marcoTooltipSector);
-            this.Controls.Add(this.PanelMarcoPOcupado);
             this.Controls.Add(this.PanelMarcoErrorS);
             this.Controls.Add(this.PanelMarcoErrorN);
             this.Controls.Add(this.marcoSPalma);
@@ -726,7 +747,6 @@
             this.Controls.Add(this.sectorMangle);
             this.Controls.Add(this.sectorSaman);
             this.Controls.Add(this.buttonContinuar);
-            this.Controls.Add(this.PanelSelectorP);
             this.Controls.Add(this.sectorBambu2);
             this.Controls.Add(this.sectorBambu1);
             this.Controls.Add(this.sectorGuayacan);
@@ -778,6 +798,7 @@
             this.marcoSectorSeleccionado.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -827,5 +848,6 @@
         private System.Windows.Forms.TableLayoutPanel marcoSectorSeleccionado;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Label labelSectorSeleccionado;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
     }
 }

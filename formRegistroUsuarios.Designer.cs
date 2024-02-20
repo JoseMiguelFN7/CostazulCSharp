@@ -74,7 +74,7 @@ namespace Costazul
             // 
             this.textBoxNombre.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNombre.Location = new System.Drawing.Point(55, 78);
-            this.textBoxNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxNombre.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(247, 35);
             this.textBoxNombre.TabIndex = 0;
@@ -84,7 +84,7 @@ namespace Costazul
             // 
             this.textBoxApellido.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxApellido.Location = new System.Drawing.Point(55, 166);
-            this.textBoxApellido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxApellido.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxApellido.Name = "textBoxApellido";
             this.textBoxApellido.Size = new System.Drawing.Size(231, 35);
             this.textBoxApellido.TabIndex = 1;
@@ -93,7 +93,7 @@ namespace Costazul
             // 
             this.textBoxNDocumento.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNDocumento.Location = new System.Drawing.Point(125, 268);
-            this.textBoxNDocumento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxNDocumento.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxNDocumento.Name = "textBoxNDocumento";
             this.textBoxNDocumento.Size = new System.Drawing.Size(204, 35);
             this.textBoxNDocumento.TabIndex = 3;
@@ -110,7 +110,7 @@ namespace Costazul
             "G",
             "P"});
             this.comboBoxTDocumento.Location = new System.Drawing.Point(63, 268);
-            this.comboBoxTDocumento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxTDocumento.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxTDocumento.Name = "comboBoxTDocumento";
             this.comboBoxTDocumento.Size = new System.Drawing.Size(59, 36);
             this.comboBoxTDocumento.TabIndex = 2;
@@ -163,12 +163,13 @@ namespace Costazul
             // 
             this.comboBoxHoraDeSalida.DropDownHeight = 90;
             this.comboBoxHoraDeSalida.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxHoraDeSalida.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxHoraDeSalida.FormattingEnabled = true;
             this.comboBoxHoraDeSalida.IntegralHeight = false;
             this.comboBoxHoraDeSalida.Location = new System.Drawing.Point(213, 393);
-            this.comboBoxHoraDeSalida.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxHoraDeSalida.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxHoraDeSalida.Name = "comboBoxHoraDeSalida";
-            this.comboBoxHoraDeSalida.Size = new System.Drawing.Size(56, 24);
+            this.comboBoxHoraDeSalida.Size = new System.Drawing.Size(56, 29);
             this.comboBoxHoraDeSalida.TabIndex = 11;
             this.comboBoxHoraDeSalida.SelectedIndexChanged += new System.EventHandler(this.comboBoxHora_SelectedIndexChanged);
             // 
@@ -176,23 +177,24 @@ namespace Costazul
             // 
             this.comboBoxMinutoDeSalida.DropDownHeight = 90;
             this.comboBoxMinutoDeSalida.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMinutoDeSalida.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxMinutoDeSalida.FormattingEnabled = true;
             this.comboBoxMinutoDeSalida.IntegralHeight = false;
             this.comboBoxMinutoDeSalida.Location = new System.Drawing.Point(316, 393);
-            this.comboBoxMinutoDeSalida.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxMinutoDeSalida.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxMinutoDeSalida.Name = "comboBoxMinutoDeSalida";
-            this.comboBoxMinutoDeSalida.Size = new System.Drawing.Size(56, 24);
+            this.comboBoxMinutoDeSalida.Size = new System.Drawing.Size(56, 29);
             this.comboBoxMinutoDeSalida.TabIndex = 12;
             // 
             // buttonValidacionRegistro
             // 
             this.buttonValidacionRegistro.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonValidacionRegistro.Location = new System.Drawing.Point(267, 810);
+            this.buttonValidacionRegistro.Location = new System.Drawing.Point(267, 813);
             this.buttonValidacionRegistro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonValidacionRegistro.Name = "buttonValidacionRegistro";
             this.buttonValidacionRegistro.Size = new System.Drawing.Size(141, 58);
             this.buttonValidacionRegistro.TabIndex = 13;
-            this.buttonValidacionRegistro.Text = "Confirmar.";
+            this.buttonValidacionRegistro.Text = "Confirmar";
             this.buttonValidacionRegistro.UseVisualStyleBackColor = true;
             this.buttonValidacionRegistro.Click += new System.EventHandler(this.ButtonValidacionRegistro_Click);
             // 
@@ -214,7 +216,7 @@ namespace Costazul
             this.checkBoxPVehiculo.Location = new System.Drawing.Point(63, 439);
             this.checkBoxPVehiculo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBoxPVehiculo.Name = "checkBoxPVehiculo";
-            this.checkBoxPVehiculo.Size = new System.Drawing.Size(205, 38);
+            this.checkBoxPVehiculo.Size = new System.Drawing.Size(293, 38);
             this.checkBoxPVehiculo.TabIndex = 15;
             this.checkBoxPVehiculo.Text = "Posee vehículo";
             this.checkBoxPVehiculo.UseVisualStyleBackColor = false;
@@ -223,6 +225,7 @@ namespace Costazul
             // comboBoxTVehiculo
             // 
             this.comboBoxTVehiculo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxTVehiculo.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxTVehiculo.FormattingEnabled = true;
             this.comboBoxTVehiculo.Items.AddRange(new object[] {
             "Camioneta (Pick-Up)",
@@ -230,18 +233,21 @@ namespace Costazul
             "Carro pequeño (2 puertas)",
             "Moto",
             "Sedan (4 puertas)"});
-            this.comboBoxTVehiculo.Location = new System.Drawing.Point(383, 530);
+            this.comboBoxTVehiculo.Location = new System.Drawing.Point(357, 504);
             this.comboBoxTVehiculo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxTVehiculo.Name = "comboBoxTVehiculo";
-            this.comboBoxTVehiculo.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxTVehiculo.Size = new System.Drawing.Size(275, 32);
             this.comboBoxTVehiculo.TabIndex = 16;
             this.comboBoxTVehiculo.Visible = false;
             this.comboBoxTVehiculo.SelectedIndexChanged += new System.EventHandler(this.comboBoxTVehiculo_SelectedIndexChanged);
             // 
             // comboBoxMarca
             // 
+            this.comboBoxMarca.DropDownHeight = 90;
             this.comboBoxMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMarca.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxMarca.FormattingEnabled = true;
+            this.comboBoxMarca.IntegralHeight = false;
             this.comboBoxMarca.Items.AddRange(new object[] {
             "Mitsubishi",
             "Nissan",
@@ -257,16 +263,17 @@ namespace Costazul
             "Volkswagen",
             "Yamaha",
             "Otro..."});
-            this.comboBoxMarca.Location = new System.Drawing.Point(383, 628);
+            this.comboBoxMarca.Location = new System.Drawing.Point(357, 627);
             this.comboBoxMarca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxMarca.Name = "comboBoxMarca";
-            this.comboBoxMarca.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxMarca.Size = new System.Drawing.Size(275, 32);
             this.comboBoxMarca.TabIndex = 17;
             this.comboBoxMarca.Visible = false;
             // 
             // comboBoxColor
             // 
             this.comboBoxColor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxColor.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxColor.FormattingEnabled = true;
             this.comboBoxColor.Items.AddRange(new object[] {
             "Amarillo",
@@ -281,95 +288,102 @@ namespace Costazul
             "Rojo",
             "Rosa",
             "Verde"});
-            this.comboBoxColor.Location = new System.Drawing.Point(383, 674);
+            this.comboBoxColor.Location = new System.Drawing.Point(357, 692);
             this.comboBoxColor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxColor.Name = "comboBoxColor";
-            this.comboBoxColor.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxColor.Size = new System.Drawing.Size(275, 32);
             this.comboBoxColor.TabIndex = 18;
             this.comboBoxColor.Visible = false;
             // 
             // textBoxPlaca
             // 
-            this.textBoxPlaca.Location = new System.Drawing.Point(383, 718);
+            this.textBoxPlaca.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPlaca.Location = new System.Drawing.Point(357, 758);
             this.textBoxPlaca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxPlaca.Name = "textBoxPlaca";
-            this.textBoxPlaca.Size = new System.Drawing.Size(100, 22);
+            this.textBoxPlaca.Size = new System.Drawing.Size(275, 32);
             this.textBoxPlaca.TabIndex = 19;
             this.textBoxPlaca.Visible = false;
             // 
             // comboBoxNAcomp
             // 
             this.comboBoxNAcomp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxNAcomp.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxNAcomp.FormattingEnabled = true;
-            this.comboBoxNAcomp.Location = new System.Drawing.Point(379, 576);
+            this.comboBoxNAcomp.Location = new System.Drawing.Point(357, 564);
             this.comboBoxNAcomp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxNAcomp.Name = "comboBoxNAcomp";
-            this.comboBoxNAcomp.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxNAcomp.Size = new System.Drawing.Size(275, 32);
             this.comboBoxNAcomp.TabIndex = 20;
             this.comboBoxNAcomp.Visible = false;
             // 
             // labelTVehiculo
             // 
             this.labelTVehiculo.BackColor = System.Drawing.Color.Transparent;
-            this.labelTVehiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTVehiculo.Location = new System.Drawing.Point(171, 528);
+            this.labelTVehiculo.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTVehiculo.Location = new System.Drawing.Point(145, 502);
             this.labelTVehiculo.Name = "labelTVehiculo";
             this.labelTVehiculo.Size = new System.Drawing.Size(203, 34);
             this.labelTVehiculo.TabIndex = 21;
             this.labelTVehiculo.Text = "Tipo de vehículo:";
+            this.labelTVehiculo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.labelTVehiculo.Visible = false;
             // 
             // labelCAcomp
             // 
             this.labelCAcomp.BackColor = System.Drawing.Color.Transparent;
-            this.labelCAcomp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCAcomp.Location = new System.Drawing.Point(55, 576);
+            this.labelCAcomp.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCAcomp.Location = new System.Drawing.Point(10, 548);
             this.labelCAcomp.Name = "labelCAcomp";
-            this.labelCAcomp.Size = new System.Drawing.Size(319, 25);
+            this.labelCAcomp.Size = new System.Drawing.Size(336, 63);
             this.labelCAcomp.TabIndex = 22;
             this.labelCAcomp.Text = "Cantidad de acompañantes:";
+            this.labelCAcomp.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.labelCAcomp.Visible = false;
             // 
             // labelMVehiculo
             // 
             this.labelMVehiculo.BackColor = System.Drawing.Color.Transparent;
-            this.labelMVehiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMVehiculo.Location = new System.Drawing.Point(140, 628);
+            this.labelMVehiculo.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMVehiculo.Location = new System.Drawing.Point(119, 627);
             this.labelMVehiculo.Name = "labelMVehiculo";
             this.labelMVehiculo.Size = new System.Drawing.Size(229, 25);
             this.labelMVehiculo.TabIndex = 23;
             this.labelMVehiculo.Text = "Marca del vehículo:";
+            this.labelMVehiculo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.labelMVehiculo.Visible = false;
             // 
             // labelCVehiculo
             // 
             this.labelCVehiculo.BackColor = System.Drawing.Color.Transparent;
-            this.labelCVehiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCVehiculo.Location = new System.Drawing.Point(145, 676);
+            this.labelCVehiculo.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCVehiculo.Location = new System.Drawing.Point(124, 695);
             this.labelCVehiculo.Name = "labelCVehiculo";
             this.labelCVehiculo.Size = new System.Drawing.Size(224, 25);
             this.labelCVehiculo.TabIndex = 24;
             this.labelCVehiculo.Text = "Color del vehículo:";
+            this.labelCVehiculo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.labelCVehiculo.Visible = false;
             // 
             // labelPVehiculo
             // 
             this.labelPVehiculo.BackColor = System.Drawing.Color.Transparent;
-            this.labelPVehiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPVehiculo.Location = new System.Drawing.Point(149, 718);
+            this.labelPVehiculo.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPVehiculo.Location = new System.Drawing.Point(26, 752);
             this.labelPVehiculo.Name = "labelPVehiculo";
-            this.labelPVehiculo.Size = new System.Drawing.Size(209, 43);
+            this.labelPVehiculo.Size = new System.Drawing.Size(320, 43);
             this.labelPVehiculo.TabIndex = 25;
             this.labelPVehiculo.Text = "Placa del vehículo:";
+            this.labelPVehiculo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.labelPVehiculo.Visible = false;
             // 
             // labelErrorPrimerNombre
             // 
             this.labelErrorPrimerNombre.BackColor = System.Drawing.Color.Transparent;
-            this.labelErrorPrimerNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelErrorPrimerNombre.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelErrorPrimerNombre.Location = new System.Drawing.Point(311, 78);
             this.labelErrorPrimerNombre.Name = "labelErrorPrimerNombre";
-            this.labelErrorPrimerNombre.Size = new System.Drawing.Size(269, 23);
+            this.labelErrorPrimerNombre.Size = new System.Drawing.Size(312, 23);
             this.labelErrorPrimerNombre.TabIndex = 26;
             this.labelErrorPrimerNombre.Text = "CARÁCTER NO VÁLIDO";
             this.labelErrorPrimerNombre.Visible = false;
@@ -377,10 +391,10 @@ namespace Costazul
             // labelErrorApellido
             // 
             this.labelErrorApellido.BackColor = System.Drawing.Color.Transparent;
-            this.labelErrorApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelErrorApellido.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelErrorApellido.Location = new System.Drawing.Point(311, 172);
             this.labelErrorApellido.Name = "labelErrorApellido";
-            this.labelErrorApellido.Size = new System.Drawing.Size(269, 30);
+            this.labelErrorApellido.Size = new System.Drawing.Size(312, 30);
             this.labelErrorApellido.TabIndex = 27;
             this.labelErrorApellido.Text = "CARÁCTER NO VÁLIDO";
             this.labelErrorApellido.Visible = false;
@@ -389,9 +403,9 @@ namespace Costazul
             // 
             this.labelErrorPlaca.BackColor = System.Drawing.Color.Transparent;
             this.labelErrorPlaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelErrorPlaca.Location = new System.Drawing.Point(307, 761);
+            this.labelErrorPlaca.Location = new System.Drawing.Point(357, 731);
             this.labelErrorPlaca.Name = "labelErrorPlaca";
-            this.labelErrorPlaca.Size = new System.Drawing.Size(273, 25);
+            this.labelErrorPlaca.Size = new System.Drawing.Size(251, 25);
             this.labelErrorPlaca.TabIndex = 28;
             this.labelErrorPlaca.Text = "CARÁCTER NO VÁLIDO";
             this.labelErrorPlaca.Visible = false;
@@ -399,10 +413,10 @@ namespace Costazul
             // labelErrorDocumento
             // 
             this.labelErrorDocumento.BackColor = System.Drawing.Color.Transparent;
-            this.labelErrorDocumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelErrorDocumento.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelErrorDocumento.Location = new System.Drawing.Point(337, 274);
             this.labelErrorDocumento.Name = "labelErrorDocumento";
-            this.labelErrorDocumento.Size = new System.Drawing.Size(269, 25);
+            this.labelErrorDocumento.Size = new System.Drawing.Size(312, 25);
             this.labelErrorDocumento.TabIndex = 29;
             this.labelErrorDocumento.Text = "CARÁCTER NO VÁLIDO";
             this.labelErrorDocumento.Visible = false;
@@ -459,6 +473,7 @@ namespace Costazul
             // buttonSiCompra
             // 
             this.buttonSiCompra.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonSiCompra.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSiCompra.Location = new System.Drawing.Point(25, 14);
             this.buttonSiCompra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSiCompra.Name = "buttonSiCompra";
@@ -471,6 +486,7 @@ namespace Costazul
             // buttonNoCompra
             // 
             this.buttonNoCompra.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonNoCompra.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonNoCompra.Location = new System.Drawing.Point(176, 14);
             this.buttonNoCompra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonNoCompra.Name = "buttonNoCompra";
@@ -482,11 +498,12 @@ namespace Costazul
             // 
             // labelPregunta
             // 
+            this.labelPregunta.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelPregunta.AutoSize = true;
-            this.labelPregunta.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelPregunta.Location = new System.Drawing.Point(3, 0);
+            this.labelPregunta.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPregunta.Location = new System.Drawing.Point(20, 29);
             this.labelPregunta.Name = "labelPregunta";
-            this.labelPregunta.Size = new System.Drawing.Size(302, 82);
+            this.labelPregunta.Size = new System.Drawing.Size(267, 24);
             this.labelPregunta.TabIndex = 1;
             this.labelPregunta.Text = "¿Desea realizar una compra?";
             this.labelPregunta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -526,7 +543,7 @@ namespace Costazul
             this.Controls.Add(this.fondo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "formRegistroUsuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

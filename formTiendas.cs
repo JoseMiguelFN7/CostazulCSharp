@@ -1227,10 +1227,18 @@ namespace Costazul
 
         private void buttonConfirmar_Click(object sender, EventArgs e)
         {
-            buttonPressed = true;
-            formCompra c = new formCompra();
-            c.Show();
-            this.Close();
+            if (tiendaSeleccionada != null)
+            {
+                buttonPressed = true;
+                formCompra c = new formCompra();
+                c.Show();
+                this.Close();
+            }
+            else
+            {
+                marcoPanelTSeleccionada.Visible = true;
+                labelTSeleccionada.Text = "No ha seleccionado tienda.";
+            }
         }
     }
 }

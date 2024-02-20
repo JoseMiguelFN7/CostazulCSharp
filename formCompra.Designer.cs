@@ -154,11 +154,13 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(72, 256);
+            this.textBox1.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(104, 256);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.MaximumSize = new System.Drawing.Size(12, 4);
             this.textBox1.MinimumSize = new System.Drawing.Size(465, 100);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(465, 100);
             this.textBox1.TabIndex = 7;
             // 
@@ -198,18 +200,19 @@
             this.buttonCompra.Name = "buttonCompra";
             this.buttonCompra.Size = new System.Drawing.Size(312, 49);
             this.buttonCompra.TabIndex = 10;
-            this.buttonCompra.Text = "Confirmar compra.";
+            this.buttonCompra.Text = "Confirmar compra";
             this.buttonCompra.UseVisualStyleBackColor = true;
             this.buttonCompra.Click += new System.EventHandler(this.buttonCompra_Click);
             // 
             // comboBoxProductos
             // 
             this.comboBoxProductos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxProductos.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxProductos.FormattingEnabled = true;
-            this.comboBoxProductos.Location = new System.Drawing.Point(237, 186);
+            this.comboBoxProductos.Location = new System.Drawing.Point(246, 180);
             this.comboBoxProductos.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxProductos.Name = "comboBoxProductos";
-            this.comboBoxProductos.Size = new System.Drawing.Size(187, 24);
+            this.comboBoxProductos.Size = new System.Drawing.Size(243, 32);
             this.comboBoxProductos.TabIndex = 11;
             this.comboBoxProductos.SelectedIndexChanged += new System.EventHandler(this.comboBoxProductos_SelectedIndexChanged);
             // 
@@ -220,18 +223,19 @@
             this.BoxLogo2.Margin = new System.Windows.Forms.Padding(4);
             this.BoxLogo2.Name = "BoxLogo2";
             this.BoxLogo2.Size = new System.Drawing.Size(159, 118);
+            this.BoxLogo2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.BoxLogo2.TabIndex = 13;
             this.BoxLogo2.TabStop = false;
             // 
             // labelNameTienda
             // 
+            this.labelNameTienda.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelNameTienda.AutoSize = true;
-            this.labelNameTienda.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelNameTienda.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNameTienda.Location = new System.Drawing.Point(4, 0);
+            this.labelNameTienda.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNameTienda.Location = new System.Drawing.Point(15, 41);
             this.labelNameTienda.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelNameTienda.Name = "labelNameTienda";
-            this.labelNameTienda.Size = new System.Drawing.Size(243, 107);
+            this.labelNameTienda.Size = new System.Drawing.Size(221, 24);
             this.labelNameTienda.TabIndex = 15;
             this.labelNameTienda.Text = "Nombre de la tienda.";
             this.labelNameTienda.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -268,14 +272,15 @@
             // 
             // numericUpDownUnidades
             // 
-            this.numericUpDownUnidades.Location = new System.Drawing.Point(543, 442);
+            this.numericUpDownUnidades.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownUnidades.Location = new System.Drawing.Point(540, 439);
             this.numericUpDownUnidades.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
             this.numericUpDownUnidades.Name = "numericUpDownUnidades";
-            this.numericUpDownUnidades.Size = new System.Drawing.Size(99, 22);
+            this.numericUpDownUnidades.Size = new System.Drawing.Size(99, 32);
             this.numericUpDownUnidades.TabIndex = 18;
             this.numericUpDownUnidades.Value = new decimal(new int[] {
             1,
@@ -300,7 +305,7 @@
             this.radioButtonPagoMovil.AutoSize = true;
             this.radioButtonPagoMovil.Location = new System.Drawing.Point(20, 21);
             this.radioButtonPagoMovil.Name = "radioButtonPagoMovil";
-            this.radioButtonPagoMovil.Size = new System.Drawing.Size(96, 20);
+            this.radioButtonPagoMovil.Size = new System.Drawing.Size(110, 25);
             this.radioButtonPagoMovil.TabIndex = 20;
             this.radioButtonPagoMovil.TabStop = true;
             this.radioButtonPagoMovil.Text = "Pago Móvil";
@@ -312,7 +317,7 @@
             this.radioButtonZelle.AutoSize = true;
             this.radioButtonZelle.Location = new System.Drawing.Point(20, 47);
             this.radioButtonZelle.Name = "radioButtonZelle";
-            this.radioButtonZelle.Size = new System.Drawing.Size(58, 20);
+            this.radioButtonZelle.Size = new System.Drawing.Size(67, 25);
             this.radioButtonZelle.TabIndex = 21;
             this.radioButtonZelle.TabStop = true;
             this.radioButtonZelle.Text = "Zelle";
@@ -324,7 +329,7 @@
             this.radioButtonTransferencia.AutoSize = true;
             this.radioButtonTransferencia.Location = new System.Drawing.Point(20, 73);
             this.radioButtonTransferencia.Name = "radioButtonTransferencia";
-            this.radioButtonTransferencia.Size = new System.Drawing.Size(111, 20);
+            this.radioButtonTransferencia.Size = new System.Drawing.Size(132, 25);
             this.radioButtonTransferencia.TabIndex = 22;
             this.radioButtonTransferencia.TabStop = true;
             this.radioButtonTransferencia.Text = "Transferencia";
@@ -336,7 +341,7 @@
             this.radioButtonEfectivo.AutoSize = true;
             this.radioButtonEfectivo.Location = new System.Drawing.Point(17, 21);
             this.radioButtonEfectivo.Name = "radioButtonEfectivo";
-            this.radioButtonEfectivo.Size = new System.Drawing.Size(76, 20);
+            this.radioButtonEfectivo.Size = new System.Drawing.Size(90, 25);
             this.radioButtonEfectivo.TabIndex = 23;
             this.radioButtonEfectivo.TabStop = true;
             this.radioButtonEfectivo.Text = "Efectivo";
@@ -348,7 +353,7 @@
             this.radioButtonTDD.AutoSize = true;
             this.radioButtonTDD.Location = new System.Drawing.Point(17, 47);
             this.radioButtonTDD.Name = "radioButtonTDD";
-            this.radioButtonTDD.Size = new System.Drawing.Size(57, 20);
+            this.radioButtonTDD.Size = new System.Drawing.Size(65, 25);
             this.radioButtonTDD.TabIndex = 24;
             this.radioButtonTDD.TabStop = true;
             this.radioButtonTDD.Text = "TDD";
@@ -360,7 +365,7 @@
             this.radioButtonTDC.AutoSize = true;
             this.radioButtonTDC.Location = new System.Drawing.Point(17, 73);
             this.radioButtonTDC.Name = "radioButtonTDC";
-            this.radioButtonTDC.Size = new System.Drawing.Size(56, 20);
+            this.radioButtonTDC.Size = new System.Drawing.Size(63, 25);
             this.radioButtonTDC.TabIndex = 25;
             this.radioButtonTDC.TabStop = true;
             this.radioButtonTDC.Text = "TDC";
@@ -388,6 +393,7 @@
             this.groupBoxPPresencial.Controls.Add(this.radioButtonTDD);
             this.groupBoxPPresencial.Controls.Add(this.radioButtonTDC);
             this.groupBoxPPresencial.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBoxPPresencial.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxPPresencial.Location = new System.Drawing.Point(6, 6);
             this.groupBoxPPresencial.Name = "groupBoxPPresencial";
             this.groupBoxPPresencial.Size = new System.Drawing.Size(202, 100);
@@ -401,6 +407,7 @@
             this.marcoMPOnline.ColumnCount = 1;
             this.marcoMPOnline.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.marcoMPOnline.Controls.Add(this.groupBoxPOnline, 0, 0);
+            this.marcoMPOnline.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.marcoMPOnline.Location = new System.Drawing.Point(347, 688);
             this.marcoMPOnline.Name = "marcoMPOnline";
             this.marcoMPOnline.Padding = new System.Windows.Forms.Padding(3);
@@ -429,9 +436,10 @@
             // 
             this.labelAviso.AutoSize = true;
             this.labelAviso.BackColor = System.Drawing.Color.Transparent;
-            this.labelAviso.Location = new System.Drawing.Point(344, 483);
+            this.labelAviso.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAviso.Location = new System.Drawing.Point(256, 483);
             this.labelAviso.Name = "labelAviso";
-            this.labelAviso.Size = new System.Drawing.Size(306, 16);
+            this.labelAviso.Size = new System.Drawing.Size(405, 22);
             this.labelAviso.TabIndex = 30;
             this.labelAviso.Text = "Presione \"Enter\" para confirmar número ingresado";
             // 
@@ -439,9 +447,10 @@
             // 
             this.labelErrorMP.AutoSize = true;
             this.labelErrorMP.BackColor = System.Drawing.Color.Transparent;
-            this.labelErrorMP.Location = new System.Drawing.Point(350, 661);
+            this.labelErrorMP.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelErrorMP.Location = new System.Drawing.Point(350, 660);
             this.labelErrorMP.Name = "labelErrorMP";
-            this.labelErrorMP.Size = new System.Drawing.Size(217, 16);
+            this.labelErrorMP.Size = new System.Drawing.Size(265, 21);
             this.labelErrorMP.TabIndex = 31;
             this.labelErrorMP.Text = "No seleccionó un método de pago.";
             this.labelErrorMP.Visible = false;
@@ -450,9 +459,10 @@
             // 
             this.labelErrorTC.AutoSize = true;
             this.labelErrorTC.BackColor = System.Drawing.Color.Transparent;
-            this.labelErrorTC.Location = new System.Drawing.Point(350, 634);
+            this.labelErrorTC.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelErrorTC.Location = new System.Drawing.Point(350, 632);
             this.labelErrorTC.Name = "labelErrorTC";
-            this.labelErrorTC.Size = new System.Drawing.Size(204, 16);
+            this.labelErrorTC.Size = new System.Drawing.Size(251, 21);
             this.labelErrorTC.TabIndex = 32;
             this.labelErrorTC.Text = "No seleccionó el tipo de compra.\r\n";
             this.labelErrorTC.Visible = false;
@@ -506,9 +516,10 @@
             // buttonOtraCompraNo
             // 
             this.buttonOtraCompraNo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonOtraCompraNo.Location = new System.Drawing.Point(135, 18);
+            this.buttonOtraCompraNo.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonOtraCompraNo.Location = new System.Drawing.Point(135, 12);
             this.buttonOtraCompraNo.Name = "buttonOtraCompraNo";
-            this.buttonOtraCompraNo.Size = new System.Drawing.Size(75, 23);
+            this.buttonOtraCompraNo.Size = new System.Drawing.Size(75, 34);
             this.buttonOtraCompraNo.TabIndex = 0;
             this.buttonOtraCompraNo.Text = "No";
             this.buttonOtraCompraNo.UseVisualStyleBackColor = true;
@@ -517,9 +528,10 @@
             // buttonOtraCompraSi
             // 
             this.buttonOtraCompraSi.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonOtraCompraSi.Location = new System.Drawing.Point(20, 18);
+            this.buttonOtraCompraSi.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonOtraCompraSi.Location = new System.Drawing.Point(20, 12);
             this.buttonOtraCompraSi.Name = "buttonOtraCompraSi";
-            this.buttonOtraCompraSi.Size = new System.Drawing.Size(75, 23);
+            this.buttonOtraCompraSi.Size = new System.Drawing.Size(75, 34);
             this.buttonOtraCompraSi.TabIndex = 1;
             this.buttonOtraCompraSi.Text = "Sí";
             this.buttonOtraCompraSi.UseVisualStyleBackColor = true;
@@ -529,11 +541,13 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 24);
+            this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(24, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(184, 16);
+            this.label1.Size = new System.Drawing.Size(189, 48);
             this.label1.TabIndex = 1;
             this.label1.Text = "¿Desea realizar otra compra?";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // formCompra
             // 
@@ -542,9 +556,9 @@
             this.ClientSize = new System.Drawing.Size(673, 900);
             this.Controls.Add(this.marcoPregunta);
             this.Controls.Add(this.labelErrorTC);
+            this.Controls.Add(this.marcoMPPresencial);
             this.Controls.Add(this.labelErrorMP);
             this.Controls.Add(this.labelAviso);
-            this.Controls.Add(this.marcoMPPresencial);
             this.Controls.Add(this.marcoMPOnline);
             this.Controls.Add(this.groupBoxTCompra);
             this.Controls.Add(this.numericUpDownUnidades);

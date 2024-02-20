@@ -268,6 +268,7 @@ namespace Costazul
 
                 labelPVehiculo.Visible = false;
                 textBoxPlaca.Visible = false;
+                labelErrorPlaca.Visible = false;
             }
         }
 

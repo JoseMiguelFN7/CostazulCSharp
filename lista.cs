@@ -191,7 +191,7 @@ namespace Costazul
                 nodo aux = inicio;
                 while (aux != null)
                 {
-                    string persona = aux.getValorPersona().getID() + "_" + aux.getValorPersona().getNombre() + "_" + aux.getValorPersona().getApellido() + "_" + aux.getValorPersona().getTci() + "_" + aux.getValorPersona().getCi() + "_" + aux.getValorPersona().getDEntrada() + "_" + aux.getValorPersona().getHEntrada() + "_" + aux.getValorPersona().getMEntrada() + "_" + aux.getValorPersona().getHSalida() + "_" + aux.getValorPersona().getMSalida() + "_";
+                    string persona = aux.getValorPersona().getID() + "_" + aux.getValorPersona().getNombre() + "_" + aux.getValorPersona().getApellido() + "_" + aux.getValorPersona().getTci() + "_" + aux.getValorPersona().getCi() + "_" + aux.getValorPersona().getDEntrada() + "_" + aux.getValorPersona().getHEntrada() + "_" + aux.getValorPersona().getMEntrada() + "_" + aux.getValorPersona().getHSalida() + "_" + aux.getValorPersona().getMSalida();
                     
                     string vehiculo;
                     if (aux.getValorPersona().getVehiculo()==null)
@@ -200,7 +200,7 @@ namespace Costazul
                     }
                     else
                     {
-                        vehiculo = aux.getValorPersona().getVehiculo().getID() + "/" + aux.getValorPersona().getVehiculo().getTipo() + "/" + aux.getValorPersona().getVehiculo().getPlaca() + "/" + aux.getValorPersona().getVehiculo().getColor() + "/" + aux.getValorPersona().getVehiculo().getMarca() + "_";
+                        vehiculo = aux.getValorPersona().getVehiculo().getID() + "/" + aux.getValorPersona().getVehiculo().getTipo() + "/" + aux.getValorPersona().getVehiculo().getPlaca() + "/" + aux.getValorPersona().getVehiculo().getColor() + "/" + aux.getValorPersona().getVehiculo().getMarca();
                     }
 
                     string compras;
@@ -215,11 +215,11 @@ namespace Costazul
 
                     if (aux.getSiguiente() != null)
                     {
-                        s += persona + vehiculo + compras + "\n";
+                        s += persona + "_" + vehiculo + "_" + compras + "\n";
                     }
                     else
                     {
-                        s += persona + vehiculo + compras;
+                        s += persona + "_" + vehiculo + "_" + compras;
                     }
                     aux = aux.getSiguiente();
                 }

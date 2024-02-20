@@ -298,12 +298,12 @@ namespace Costazul
             // 
             this.labelTVehiculo.BackColor = System.Drawing.Color.Transparent;
             this.labelTVehiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTVehiculo.Location = new System.Drawing.Point(139, 428);
+            this.labelTVehiculo.Location = new System.Drawing.Point(128, 429);
             this.labelTVehiculo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTVehiculo.Name = "labelTVehiculo";
-            this.labelTVehiculo.Size = new System.Drawing.Size(138, 28);
+            this.labelTVehiculo.Size = new System.Drawing.Size(152, 28);
             this.labelTVehiculo.TabIndex = 21;
-            this.labelTVehiculo.Text = "Tipo de vehículo";
+            this.labelTVehiculo.Text = "Tipo de vehículo:";
             this.labelTVehiculo.Visible = false;
             // 
             // labelCAcomp
@@ -313,45 +313,45 @@ namespace Costazul
             this.labelCAcomp.Location = new System.Drawing.Point(41, 468);
             this.labelCAcomp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelCAcomp.Name = "labelCAcomp";
-            this.labelCAcomp.Size = new System.Drawing.Size(230, 20);
+            this.labelCAcomp.Size = new System.Drawing.Size(239, 20);
             this.labelCAcomp.TabIndex = 22;
-            this.labelCAcomp.Text = "Cantidad de acompañantes";
+            this.labelCAcomp.Text = "Cantidad de acompañantes:";
             this.labelCAcomp.Visible = false;
             // 
             // labelMVehiculo
             // 
             this.labelMVehiculo.BackColor = System.Drawing.Color.Transparent;
             this.labelMVehiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMVehiculo.Location = new System.Drawing.Point(108, 510);
+            this.labelMVehiculo.Location = new System.Drawing.Point(105, 510);
             this.labelMVehiculo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelMVehiculo.Name = "labelMVehiculo";
-            this.labelMVehiculo.Size = new System.Drawing.Size(161, 20);
+            this.labelMVehiculo.Size = new System.Drawing.Size(172, 20);
             this.labelMVehiculo.TabIndex = 23;
-            this.labelMVehiculo.Text = "Marca del vehículo";
+            this.labelMVehiculo.Text = "Marca del vehículo:";
             this.labelMVehiculo.Visible = false;
             // 
             // labelCVehiculo
             // 
             this.labelCVehiculo.BackColor = System.Drawing.Color.Transparent;
             this.labelCVehiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCVehiculo.Location = new System.Drawing.Point(138, 544);
+            this.labelCVehiculo.Location = new System.Drawing.Point(109, 549);
             this.labelCVehiculo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelCVehiculo.Name = "labelCVehiculo";
-            this.labelCVehiculo.Size = new System.Drawing.Size(145, 20);
+            this.labelCVehiculo.Size = new System.Drawing.Size(168, 20);
             this.labelCVehiculo.TabIndex = 24;
-            this.labelCVehiculo.Text = "Color del Vehículo";
+            this.labelCVehiculo.Text = "Color del vehículo:";
             this.labelCVehiculo.Visible = false;
             // 
             // labelPVehiculo
             // 
             this.labelPVehiculo.BackColor = System.Drawing.Color.Transparent;
             this.labelPVehiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPVehiculo.Location = new System.Drawing.Point(129, 579);
+            this.labelPVehiculo.Location = new System.Drawing.Point(112, 583);
             this.labelPVehiculo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelPVehiculo.Name = "labelPVehiculo";
-            this.labelPVehiculo.Size = new System.Drawing.Size(142, 20);
+            this.labelPVehiculo.Size = new System.Drawing.Size(157, 35);
             this.labelPVehiculo.TabIndex = 25;
-            this.labelPVehiculo.Text = "Placa del vehículo";
+            this.labelPVehiculo.Text = "Placa del vehículo:";
             this.labelPVehiculo.Visible = false;
             // 
             // labelErrorPrimerNombre
@@ -379,7 +379,7 @@ namespace Costazul
             // labelErrorPlaca
             // 
             this.labelErrorPlaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelErrorPlaca.Location = new System.Drawing.Point(220, 614);
+            this.labelErrorPlaca.Location = new System.Drawing.Point(230, 618);
             this.labelErrorPlaca.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelErrorPlaca.Name = "labelErrorPlaca";
             this.labelErrorPlaca.Size = new System.Drawing.Size(205, 20);

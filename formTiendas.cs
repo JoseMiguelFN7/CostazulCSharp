@@ -17,6 +17,7 @@ namespace Costazul
     {
         bool buttonPressed = false;
         public static tienda tiendaSeleccionada;
+        public static Image logotienda;
 
         public formTiendas()
         {
@@ -89,7 +90,7 @@ namespace Costazul
             pictureBoxEGuayacan.Parent = fondo;
             pictureBoxEBambu.Parent = fondo;
 
-            bienvenido.tiendas.llenarComboBox(comboBoxNombreTiendas);  //llena el comboBox con los nombres de las tiendas.
+            bienvenido.tiendas.llenarComboBoxNombre(comboBoxNombreTiendas);  //llena el comboBox con los nombres de las tiendas.
         }
             
         private void mostrarInfoTienda(int Local)
@@ -291,8 +292,11 @@ namespace Costazul
                     BoxLogo.Image = Resources.Glamour_Beauty;
                     break;
             }
+
+            logotienda = BoxLogo.Image;
             marcoPnl1.Visible = true;
             pnl1.Visible = true;
+            tiendaSeleccionada = t;
         }
 
         private void labelL1_MouseEnter(object sender, EventArgs e)

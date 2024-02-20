@@ -497,7 +497,7 @@ namespace Costazul
             }
         }
 
-        public void llenarComboBox(ComboBox c)
+        public void llenarComboBoxNombre(ComboBox c)
         {
             if (esVacia())
             {
@@ -513,5 +513,23 @@ namespace Costazul
                 }
             }
         }
+
+        public void llenarComboBoxProductos(ComboBox c)
+        {
+            if (esVacia())
+            {
+                return;
+            }
+            else
+            {
+                nodo aux = inicio;
+                while (aux != null)
+                {
+                    c.Items.Add(aux.getValorProducto().getNombre());
+                    aux = aux.getSiguiente();
+                }
+            }
+        }
+
     }
 }

@@ -43,11 +43,13 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.BoxUnidades = new System.Windows.Forms.TextBox();
             this.BoxLogo2 = new System.Windows.Forms.PictureBox();
-            this.pnlName = new System.Windows.Forms.Panel();
             this.labelNameTienda = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.fondo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BoxLogo2)).BeginInit();
-            this.pnlName.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // fondo
@@ -123,7 +125,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(54, 208);
-            this.textBox1.MaximumSize = new System.Drawing.Size(10, 0);
+            this.textBox1.MaximumSize = new System.Drawing.Size(10, 4);
             this.textBox1.MinimumSize = new System.Drawing.Size(350, 100);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(350, 100);
@@ -140,6 +142,7 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "ONLINE";
             this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // radioButton2
             // 
@@ -170,6 +173,7 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(141, 21);
             this.comboBox2.TabIndex = 11;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // BoxUnidades
             // 
@@ -187,30 +191,52 @@
             this.BoxLogo2.TabIndex = 13;
             this.BoxLogo2.TabStop = false;
             // 
-            // pnlName
-            // 
-            this.pnlName.Controls.Add(this.labelNameTienda);
-            this.pnlName.Location = new System.Drawing.Point(201, 40);
-            this.pnlName.Name = "pnlName";
-            this.pnlName.Size = new System.Drawing.Size(200, 61);
-            this.pnlName.TabIndex = 14;
-            // 
             // labelNameTienda
             // 
             this.labelNameTienda.AutoSize = true;
+            this.labelNameTienda.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelNameTienda.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNameTienda.Location = new System.Drawing.Point(32, 23);
+            this.labelNameTienda.Location = new System.Drawing.Point(3, 0);
             this.labelNameTienda.Name = "labelNameTienda";
-            this.labelNameTienda.Size = new System.Drawing.Size(134, 14);
+            this.labelNameTienda.Size = new System.Drawing.Size(182, 88);
             this.labelNameTienda.TabIndex = 15;
             this.labelNameTienda.Text = "Nombre de la tienda.";
+            this.labelNameTienda.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.labelNameTienda, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 6);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(188, 88);
+            this.tableLayoutPanel1.TabIndex = 16;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel1, 0, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(201, 23);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.Padding = new System.Windows.Forms.Padding(3);
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(200, 100);
+            this.tableLayoutPanel2.TabIndex = 17;
             // 
             // formCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(505, 726);
-            this.Controls.Add(this.pnlName);
+            this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.BoxLogo2);
             this.Controls.Add(this.BoxUnidades);
             this.Controls.Add(this.comboBox2);
@@ -235,8 +261,9 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.formCompra_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.fondo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BoxLogo2)).EndInit();
-            this.pnlName.ResumeLayout(false);
-            this.pnlName.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,8 +283,9 @@
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.TextBox BoxUnidades;
         private System.Windows.Forms.PictureBox BoxLogo2;
-        private System.Windows.Forms.Panel pnlName;
-        private System.Windows.Forms.Label labelNameTienda;
         internal System.Windows.Forms.PictureBox fondo;
+        private System.Windows.Forms.Label labelNameTienda;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
     }
 }

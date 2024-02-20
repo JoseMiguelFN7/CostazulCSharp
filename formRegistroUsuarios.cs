@@ -319,7 +319,7 @@ namespace Costazul
                 if (checkBoxPVehiculo.Checked)
                 {
                     vehiculoActual = new vehiculo(bienvenido.IDVehiculo, comboBoxTVehiculo.ToString(), textBoxPlaca.Text, comboBoxColor.SelectedItem.ToString(), comboBoxMarca.SelectedItem.ToString());
-                    vehiculoActual.getPasajeros().agregarPersonaAlFinal(usuariosEnSesion.verTope());
+                    //vehiculoActual.getPasajeros().agregarPersonaAlFinal(usuariosEnSesion.verTope());
                     numUsuariosEnSesion = Int32.Parse(comboBoxNAcomp.SelectedItem.ToString()) + 1;
                     if (numUsuariosEnSesion > 1)
                     {

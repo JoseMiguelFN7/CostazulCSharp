@@ -37,11 +37,30 @@ namespace Costazul
         {
             if (primerInicio)
             {
+                IDPersona = 0;
+                IDVehiculo = 0;
+                cargarTiendas();
                 cargarPersonas();
                 cargarPuestos();
                 personas.sincronizarPasajeros(); //agrega los pasajeros que corresponden a cada vehiculo en la informacion de cada persona
-                cargarTiendas();
 
+                Console.WriteLine(personas.getInicio().getValorPersona().getID());
+                Console.WriteLine(personas.getInicio().getValorPersona().getNombre());
+                Console.WriteLine(personas.getInicio().getValorPersona().getApellido());
+                Console.WriteLine(personas.getInicio().getValorPersona().getTci());
+                Console.WriteLine(personas.getInicio().getValorPersona().getCi());
+                Console.WriteLine(personas.getInicio().getValorPersona().getDEntrada());
+                Console.WriteLine(personas.getInicio().getValorPersona().getHEntrada());
+                Console.WriteLine(personas.getInicio().getValorPersona().getMEntrada());
+                Console.WriteLine(personas.getInicio().getValorPersona().getHSalida());
+                Console.WriteLine(personas.getInicio().getValorPersona().getMSalida());
+                Console.WriteLine(personas.getInicio().getValorPersona().getVehiculo().getID());
+                Console.WriteLine(personas.getInicio().getValorPersona().getVehiculo().getTipo());
+                Console.WriteLine(personas.getInicio().getValorPersona().getVehiculo().getMarca());
+                Console.WriteLine(personas.getInicio().getValorPersona().getVehiculo().getColor());
+                Console.WriteLine(personas.getInicio().getValorPersona().getVehiculo().getPlaca());
+                Console.WriteLine(personas.getInicio().getValorPersona().getVehiculo().getPasajeros().getInicio().getValorPersona().getNombre());
+                Console.WriteLine(".");
             }
             else
             {
@@ -96,6 +115,7 @@ namespace Costazul
 
             InitializeComponent();
             this.ClientSize = fondo.Size;
+            label1.Parent = fondo;
         }
 
         public void cargarPuestos()
@@ -407,7 +427,6 @@ namespace Costazul
             minuto = Int32.Parse(comboBoxMinuto.SelectedItem.ToString());
             buttonPressed = true;
             formRegistroUsuarios ru = new formRegistroUsuarios();
-            formTiendas t = new formTiendas();
             ru.Show();
             if (primerInicio)
             {
@@ -419,6 +438,5 @@ namespace Costazul
                 this.Close();
             }
         }
-        
     }
 }

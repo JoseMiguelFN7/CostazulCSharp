@@ -92,11 +92,138 @@ namespace Costazul
 
             bienvenido.tiendas.llenarComboBoxNombre(comboBoxNombreTiendas);  //llena el comboBox con los nombres de las tiendas.
         }
-            
+        
+        private Image seleccionarLogo(int Local)
+        {
+            switch (Local)
+            {
+                case 1:
+                    return Resources.Multimax;
+                case 2:
+                    return Resources.GamePlanet;
+                case 3:
+                    return Resources.Her_Him;
+                case 4:
+                    return Resources.Koko_Superstore;
+                case 5:
+                    return Resources.Blasco_Joyeria;
+                case 6:
+                    return Resources.Unilook;
+                case 7:
+                    return Resources.Blackphone;
+                case 8:
+                    return Resources.Mundo_Virtual;
+                case 9:
+                    return Resources.Ecomascotas;
+                case 10:
+                    return Resources.Rori;
+                case 11:
+                    return Resources.Aero_store;
+                case 12:
+                    return Resources.Girl_MissLulu;
+                case 13:
+                    return Resources.Baby_Love;
+                case 14:
+                    return Resources.City_movil;
+                case 15:
+                    return Resources.Carolina_Herrera;
+                case 16:
+                    return Resources.Sunglass;
+                case 17:
+                    return Resources.Fitlab;
+                case 18:
+                    return Resources.Oro_margarita;
+                case 19:
+                    return Resources.Wrangler;
+                case 20:
+                    return Resources.BANDOLERA;
+                case 21:
+                    return Resources.Champions;
+                case 22:
+                    return Resources.Mele_Divani;
+                case 23:
+                    return Resources.GSL;
+                case 24:
+                    return Resources.Tarbay;
+                case 25:
+                    return Resources.Marisol_import;
+                case 26:
+                    return Resources.lucy_lingeries;
+                case 27:
+                    return Resources.Ferremetro;
+                case 28:
+                    return Resources.Sigo;
+                case 29:
+                    return Resources.Karamba_ninos;
+                case 30:
+                    return Resources.Nivel_surf;
+                case 31:
+                    return Resources.Nice_Toys;
+                case 32:
+                    return Resources.Monikerias;
+                case 33:
+                    return Resources.cerere;
+                case 34:
+                    return Resources.Miss_lulu;
+                case 35:
+                    return Resources.Tech_Star;
+                case 36:
+                    return Resources.Go_sport;
+                case 37:
+                    return Resources.Sweet_Ice;
+                case 38:
+                    return Resources.Perfumes_factory;
+                case 39:
+                    return Resources.Alta_vision;
+                case 40:
+                    return Resources.Mario_Hernandez;
+                case 41:
+                    return Resources.DIGITEC;
+                case 42:
+                    return Resources.Isha_Accessories;
+                case 43:
+                    return Resources.McPostres;
+                case 44:
+                    return Resources.Samsung;
+                case 45:
+                    return Resources.Poker_plus;
+                case 46:
+                    return Resources.Mundo_escolar;
+                case 47:
+                    return Resources.Shoe_Box;
+                case 48:
+                    return Resources.FLB;
+                case 49:
+                    return Resources.AQUA;
+                case 50:
+                    return Resources.Grupo_Selecto_s;
+                case 51:
+                    return Resources.Galaxy;
+                case 52:
+                    return Resources.Stylo_Import;
+                case 53:
+                    return Resources.Fashion_world;
+                case 54:
+                    return Resources.Techzone;
+                case 55:
+                    return Resources.Sporty_World;
+                case 56:
+                    return Resources.Rodito;
+                case 57:
+                    return Resources.McDonald_s;
+                case 58:
+                    return Resources.Arturos;
+                case 59:
+                    return Resources.Accessories_Galore;
+                case 60:
+                    return Resources.Glamour_Beauty;
+                default:
+                    return null;
+            }
+        }
         private void mostrarInfoTienda(int Local)
         {
             tienda t = bienvenido.tiendas.buscarTiendaLocal(Local);
-            Console.WriteLine(t.getNombre());
             labelNombre.Text = "Nombre: " + t.getNombre();
             labelEncargado.Text = "Encargado: " + t.getEncargado();
             labelUbicacion.Text = "Ubicación: " + t.getUbicacion();
@@ -109,194 +236,10 @@ namespace Costazul
                 labelHorario.Text = "Horario: 11:00 - 21:00";
             }
             labelLocal.Text = "Local: " + t.getLocal();
-            switch (Local)
-            {
-                case 1:
-                    BoxLogo.Image = Resources.Multimax;
-                    break;
-                case 2:
-                    BoxLogo.Image = Resources.GamePlanet;
-                    break;
-                case 3:
-                    BoxLogo.Image = Resources.Her_Him;
-                    break;
-                case 4:
-                    BoxLogo.Image = Resources.Koko_Superstore;
-                    break;
-                case 5:
-                    BoxLogo.Image = Resources.Blasco_Joyeria;
-                    break;
-                case 6:
-                    BoxLogo.Image = Resources.Unilook;
-                    break;
-                case 7:
-                    BoxLogo.Image = Resources.Blackphone;
-                    break;
-                case 8:
-                    BoxLogo.Image = Resources.Mundo_Virtual;
-                    break;
-                case 9:
-                    BoxLogo.Image = Resources.Ecomascotas;
-                    break;
-                case 10:
-                    BoxLogo.Image = Resources.Rori;
-                    break;
-                case 11:
-                    BoxLogo.Image = Resources.Aero_store;
-                    break;
-                case 12:
-                    BoxLogo.Image = Resources.Girl_MissLulu;
-                    break;
-                case 13:
-                    BoxLogo.Image = Resources.Baby_Love;
-                    break;
-                case 14:
-                    BoxLogo.Image = Resources.City_movil;
-                    break;
-                case 15:
-                    BoxLogo.Image = Resources.Carolina_Herrera;
-                    break;
-                case 16:
-                    BoxLogo.Image = Resources.Sunglass;
-                    break;
-                case 17:
-                    BoxLogo.Image = Resources.Fitlab;
-                    break;
-                case 18:
-                    BoxLogo.Image = Resources.Oro_margarita;
-                    break;
-                case 19:
-                    BoxLogo.Image = Resources.Wrangler;
-                    break;
-                case 20:
-                    BoxLogo.Image = Resources.BANDOLERA;
-                    break;
-                case 21:
-                    BoxLogo.Image = Resources.Champions;
-                    break;
-                case 22:
-                    BoxLogo.Image = Resources.Mele_Divani;
-                    break;
-                case 23:
-                    BoxLogo.Image = Resources.GSL;
-                    break;
-                case 24:
-                    BoxLogo.Image = Resources.Tarbay;
-                    break;
-                case 25:
-                    BoxLogo.Image = Resources.Marisol_import;
-                    break;
-                case 26:
-                    BoxLogo.Image = Resources.lucy_lingeries;
-                    break;
-                case 27:
-                    BoxLogo.Image = Resources.Ferremetro;
-                    break;
-                case 28:
-                    BoxLogo.Image = Resources.Sigo;
-                    break;
-                case 29:
-                    BoxLogo.Image = Resources.Karamba_ninos;
-                    break;
-                case 30:
-                    BoxLogo.Image = Resources.Nivel_surf;
-                    break;
-                case 31:
-                    BoxLogo.Image = Resources.Nice_Toys;
-                    break;
-                case 32:
-                    BoxLogo.Image = Resources.Monikerias;
-                    break;
-                case 33:
-                    BoxLogo.Image = Resources.cerere;
-                    break;
-                case 34:
-                    BoxLogo.Image = Resources.Miss_lulu;
-                    break;
-                case 35:
-                    BoxLogo.Image = Resources.Tech_Star;
-                    break;
-                case 36:
-                    BoxLogo.Image = Resources.Go_sport;
-                    break;
-                case 37:
-                    BoxLogo.Image = Resources.Sweet_Ice;
-                    break;
-                case 38:
-                    BoxLogo.Image = Resources.Perfumes_factory;
-                    break;
-                case 39:
-                    BoxLogo.Image = Resources.Alta_vision;
-                    break;
-                case 40:
-                    BoxLogo.Image = Resources.Mario_Hernandez;
-                    break;
-                case 41:
-                    BoxLogo.Image = Resources.DIGITEC;
-                    break;
-                case 42:
-                    BoxLogo.Image = Resources.Isha_Accessories;
-                    break;
-                case 43:
-                    BoxLogo.Image = Resources.McPostres;
-                    break;
-                case 44:
-                    BoxLogo.Image = Resources.Samsung;
-                    break;
-                case 45:
-                    BoxLogo.Image = Resources.Poker_plus;
-                    break;
-                case 46:
-                    BoxLogo.Image = Resources.Mundo_escolar;
-                    break;
-                case 47:
-                    BoxLogo.Image = Resources.Shoe_Box;
-                    break;
-                case 48:
-                    BoxLogo.Image = Resources.FLB;
-                    break;
-                case 49:
-                    BoxLogo.Image = Resources.AQUA;
-                    break;
-                case 50:
-                    BoxLogo.Image = Resources.Grupo_Selecto_s;
-                    break;
-                case 51:
-                    BoxLogo.Image = Resources.Galaxy;
-                    break;
-                case 52:
-                    BoxLogo.Image = Resources.Stylo_Import;
-                    break;
-                case 53:
-                    BoxLogo.Image = Resources.Fashion_world;
-                    break;
-                case 54:
-                    BoxLogo.Image = Resources.Techzone;
-                    break;
-                case 55:
-                    BoxLogo.Image = Resources.Sporty_World;
-                    break;
-                case 56:
-                    BoxLogo.Image = Resources.Rodito;
-                    break;
-                case 57:
-                    BoxLogo.Image = Resources.McDonald_s;
-                    break;
-                case 58:
-                    BoxLogo.Image = Resources.Arturos;
-                    break;
-                case 59:
-                    BoxLogo.Image = Resources.Accessories_Galore;
-                    break;
-                case 60:
-                    BoxLogo.Image = Resources.Glamour_Beauty;
-                    break;
-            }
 
-            logotienda = BoxLogo.Image;
+            BoxLogo.Image = seleccionarLogo(Local);
             marcoPnl1.Visible = true;
             pnl1.Visible = true;
-            tiendaSeleccionada = t;
         }
 
         private void labelL1_MouseEnter(object sender, EventArgs e)
@@ -969,6 +912,7 @@ namespace Costazul
         private void seleccionarTienda(int local)
         {
             tiendaSeleccionada = bienvenido.tiendas.buscarTiendaLocal(local);
+            logotienda = seleccionarLogo(local);
             marcoPanelTSeleccionada.Visible = true;
             labelTSeleccionada.Text = tiendaSeleccionada.getNombre() + " Seleccionada.";
         }
@@ -1276,22 +1220,17 @@ namespace Costazul
         private void comboBoxNombreTiendas_SelectedIndexChanged(object sender, EventArgs e)
         {
             tiendaSeleccionada = bienvenido.tiendas.buscarTiendaNombre(comboBoxNombreTiendas.Text);
+            logotienda = seleccionarLogo(tiendaSeleccionada.getLocal());
             marcoPanelTSeleccionada.Visible = true;
             labelTSeleccionada.Text = tiendaSeleccionada.getNombre() + " Seleccionada.";
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void buttonConfirmar_Click(object sender, EventArgs e)
         {
-            formCompra AbrirCompra = new formCompra();
-            AbrirCompra.Visible = true;
-
-                this.Visible = false;
-                       
-        }
-
-        private void pnl1_Paint(object sender, PaintEventArgs e)
-        {
-
+            buttonPressed = true;
+            formCompra c = new formCompra();
+            c.Show();
+            this.Close();
         }
     }
 }

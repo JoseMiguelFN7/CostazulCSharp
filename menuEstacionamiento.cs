@@ -20,7 +20,6 @@ namespace Costazul
         public static int numeroSeleccionado;
         bool hizoSeleccion;
         static bool esMoto; //esta variable debe obtenerse del form de datos usuarios.
-        static persona usuarioActual = formRegistroUsuarios.usuariosEnSesion.verTope();
 
         public menuEstacionamiento()
         {
@@ -55,6 +54,7 @@ namespace Costazul
                 sectorPalma.Visible = true;
                 sectorBambu2.Visible = true;
                 labelErrorN.Text += "1 y 100.";
+                rellenarComboBoxMoto();
             }
             else
             {
@@ -64,6 +64,7 @@ namespace Costazul
                 sectorGuayacan.Visible = true;
                 sectorBambu1.Visible = true;
                 labelErrorN.Text += "1 y 500.";
+                rellenarComboBoxCarro();
             }
         }
 
@@ -145,7 +146,6 @@ namespace Costazul
 
         private void sectorPalma_Click(object sender, EventArgs e)
         {
-            rellenarComboBoxMoto();
             sectorSeleccionado = "P";
             marcoSPalma.Visible = true;
             marcoSMangle.Visible = false;
@@ -155,11 +155,12 @@ namespace Costazul
             marcoSB1.Visible = false;
             marcoSB2.Visible = false;
             PanelSSeleccionada.Visible = true;
+            labelSectorSeleccionado.Text = "Sector Palma seleccionado";
+            marcoSectorSeleccionado.Visible = true;
         }
 
         private void sectorMangle_Click(object sender, EventArgs e)
         {
-            rellenarComboBoxCarro();
             sectorSeleccionado = "M";
             marcoSPalma.Visible = false;
             marcoSMangle.Visible = true;
@@ -169,11 +170,11 @@ namespace Costazul
             marcoSB1.Visible = false;
             marcoSB2.Visible = false;
             PanelSSeleccionada.Visible = true;
+            labelSectorSeleccionado.Text = "Sector Mangle seleccionado";
         }
 
         private void sectorSaman_Click(object sender, EventArgs e)
         {
-            rellenarComboBoxCarro();
             sectorSeleccionado = "S";
             marcoSPalma.Visible = false;
             marcoSMangle.Visible = false;
@@ -183,11 +184,11 @@ namespace Costazul
             marcoSB1.Visible = false;
             marcoSB2.Visible = false;
             PanelSSeleccionada.Visible = true;
+            labelSectorSeleccionado.Text = "Sector Saman seleccionado";
         }
 
         private void sectorRoble_Click(object sender, EventArgs e)
         {
-            rellenarComboBoxCarro();
             sectorSeleccionado = "R";
             marcoSPalma.Visible = false;
             marcoSMangle.Visible = false;
@@ -197,11 +198,11 @@ namespace Costazul
             marcoSB1.Visible = false;
             marcoSB2.Visible = false;
             PanelSSeleccionada.Visible = true;
+            labelSectorSeleccionado.Text = "Sector Roble seleccionado";
         }
 
         private void sectorGuayacan_Click(object sender, EventArgs e)
         {
-            rellenarComboBoxCarro();
             sectorSeleccionado = "G";
             marcoSPalma.Visible = false;
             marcoSMangle.Visible = false;
@@ -211,11 +212,11 @@ namespace Costazul
             marcoSB1.Visible = false;
             marcoSB2.Visible = false;
             PanelSSeleccionada.Visible = true;
+            labelSectorSeleccionado.Text = "Sector Guayacán seleccionado";
         }
 
         private void sectorBambu1_Click(object sender, EventArgs e)
         {
-            rellenarComboBoxCarro();
             sectorSeleccionado = "B1";
             marcoSPalma.Visible = false;
             marcoSMangle.Visible = false;
@@ -225,11 +226,11 @@ namespace Costazul
             marcoSB1.Visible = true;
             marcoSB2.Visible = false;
             PanelSSeleccionada.Visible = true;
+            labelSectorSeleccionado.Text = "Sector Bambú 1 seleccionado";
         }
 
         private void sectorBambu2_Click(object sender, EventArgs e)
         {
-            rellenarComboBoxMoto();
             sectorSeleccionado = "B2";
             marcoSPalma.Visible = false;
             marcoSMangle.Visible = false;
@@ -239,6 +240,7 @@ namespace Costazul
             marcoSB1.Visible = false;
             marcoSB2.Visible = true;
             PanelSSeleccionada.Visible = true;
+            labelSectorSeleccionado.Text = "Sector Bambú 2 seleccionado";
         }
 
         private void buttonContinuar_Click(object sender, EventArgs e)
@@ -280,12 +282,11 @@ namespace Costazul
 
                     if (esMoto) 
                     {
-                        if (!bienvenido.sectoresMotos[indexSector, numeroSeleccionado - 1].getOcupantes().puestoOcupado(usuarioActual))
+                        if (!bienvenido.sectoresMotos[indexSector, numeroSeleccionado - 1].getOcupantes().puestoOcupado(formRegistroUsuarios.usuariosEnSesion.verTope()))
                         {
                             if (formRegistroUsuarios.numUsuariosEnSesion == 1)
                             {
-                                
-                                bienvenido.sectoresMotos[indexSector, numeroSeleccionado - 1].getOcupantes().agregarVehiculoAlFinal(usuarioActual.getVehiculo());
+                                bienvenido.sectoresMotos[indexSector, numeroSeleccionado - 1].getOcupantes().agregarVehiculoAlFinal(formRegistroUsuarios.usuariosEnSesion.verTope().getVehiculo());
                             }
                             marcoPanelPregunta.Visible = true;
                         }
@@ -305,11 +306,11 @@ namespace Costazul
                     }
                     else
                     {
-                        if (!bienvenido.sectoresCarros[indexSector, numeroSeleccionado - 1].getOcupantes().puestoOcupado(usuarioActual))
+                        if (!bienvenido.sectoresCarros[indexSector, numeroSeleccionado - 1].getOcupantes().puestoOcupado(formRegistroUsuarios.usuariosEnSesion.verTope()))
                         {
                             if (formRegistroUsuarios.numUsuariosEnSesion == 1)
                             {
-                                bienvenido.sectoresCarros[indexSector, numeroSeleccionado - 1].getOcupantes().agregarVehiculoAlFinal(usuarioActual.getVehiculo());
+                                bienvenido.sectoresCarros[indexSector, numeroSeleccionado - 1].getOcupantes().agregarVehiculoAlFinal(formRegistroUsuarios.usuariosEnSesion.verTope().getVehiculo());
                             }
                             marcoPanelPregunta.Visible = true;
                         }
@@ -464,6 +465,7 @@ namespace Costazul
             buttonPressed = true;
             if (formRegistroUsuarios.numUsuariosEnSesion == 1)
             {
+                bienvenido.personas.agregarPersonaAlFinal(formRegistroUsuarios.usuariosEnSesion.sacarPersonaDePila());
                 bienvenido b = new bienvenido();
                 b.Show();
                 this.Close();

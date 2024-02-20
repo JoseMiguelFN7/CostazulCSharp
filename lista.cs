@@ -191,7 +191,7 @@ namespace Costazul
                 nodo aux = inicio;
                 while (aux != null)
                 {
-                    string persona = aux.getValorPersona().getID() + "_" + aux.getValorPersona().getNombre() + "_" + aux.getValorPersona().getApellido() + "_" + aux.getValorPersona().getTci() + "_" + aux.getValorPersona().getCi() + "_" + aux.getValorPersona().getDEntrada() + "_" + aux.getValorPersona().getHEntrada() + "_" + aux.getValorPersona().getMEntrada() + "_" + aux.getValorPersona().getHSalida() + "_" + aux.getValorPersona().getMSalida();
+                    string persona = aux.getValorPersona().getID() + "_" + aux.getValorPersona().getNombre() + "_" + aux.getValorPersona().getApellido() + "_" + aux.getValorPersona().getTci() + "_" + aux.getValorPersona().getCi() + "_" + aux.getValorPersona().getDEntrada() + "_" + aux.getValorPersona().getHEntrada() + "_" + aux.getValorPersona().getMEntrada() + "_" + aux.getValorPersona().getHSalida() + "_" + aux.getValorPersona().getMSalida() + "_";
                     
                     string vehiculo;
                     if (aux.getValorPersona().getVehiculo()==null)
@@ -200,7 +200,7 @@ namespace Costazul
                     }
                     else
                     {
-                        vehiculo = aux.getValorPersona().getVehiculo().getID() + "/" + aux.getValorPersona().getVehiculo().getTipo() + "/" + aux.getValorPersona().getVehiculo().getPlaca() + "/" + aux.getValorPersona().getVehiculo().getColor() + "/" + aux.getValorPersona().getVehiculo().getMarca();
+                        vehiculo = aux.getValorPersona().getVehiculo().getID() + "/" + aux.getValorPersona().getVehiculo().getTipo() + "/" + aux.getValorPersona().getVehiculo().getPlaca() + "/" + aux.getValorPersona().getVehiculo().getColor() + "/" + aux.getValorPersona().getVehiculo().getMarca() + "_";
                     }
 
                     string compras;

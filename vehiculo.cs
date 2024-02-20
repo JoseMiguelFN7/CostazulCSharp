@@ -23,6 +23,7 @@ namespace Costazul
             this.placa = placa;
             this.color = color;
             this.marca = marca;
+            this.pasajeros = new lista();
         }
 
         public int getID()

@@ -69,6 +69,9 @@
             this.buttonNoCompra = new System.Windows.Forms.Button();
             this.LabelPregunta = new System.Windows.Forms.Label();
             this.marcoPanelPregunta = new System.Windows.Forms.TableLayoutPanel();
+            this.marcoSectorSeleccionado = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.labelSectorSeleccionado = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.fondo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sectorMangle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sectorPalma)).BeginInit();
@@ -98,6 +101,8 @@
             this.PanelPregunta.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.marcoPanelPregunta.SuspendLayout();
+            this.marcoSectorSeleccionado.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // fondo
@@ -660,12 +665,52 @@
             this.marcoPanelPregunta.TabIndex = 27;
             this.marcoPanelPregunta.Visible = false;
             // 
+            // marcoSectorSeleccionado
+            // 
+            this.marcoSectorSeleccionado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.marcoSectorSeleccionado.ColumnCount = 1;
+            this.marcoSectorSeleccionado.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.marcoSectorSeleccionado.Controls.Add(this.tableLayoutPanel4, 0, 0);
+            this.marcoSectorSeleccionado.Location = new System.Drawing.Point(678, 266);
+            this.marcoSectorSeleccionado.Name = "marcoSectorSeleccionado";
+            this.marcoSectorSeleccionado.Padding = new System.Windows.Forms.Padding(3);
+            this.marcoSectorSeleccionado.RowCount = 1;
+            this.marcoSectorSeleccionado.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.marcoSectorSeleccionado.Size = new System.Drawing.Size(300, 100);
+            this.marcoSectorSeleccionado.TabIndex = 28;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.tableLayoutPanel4.ColumnCount = 1;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Controls.Add(this.labelSectorSeleccionado, 0, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(6, 6);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(288, 88);
+            this.tableLayoutPanel4.TabIndex = 29;
+            // 
+            // labelSectorSeleccionado
+            // 
+            this.labelSectorSeleccionado.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelSectorSeleccionado.AutoSize = true;
+            this.labelSectorSeleccionado.Location = new System.Drawing.Point(13, 36);
+            this.labelSectorSeleccionado.Name = "labelSectorSeleccionado";
+            this.labelSectorSeleccionado.Size = new System.Drawing.Size(261, 16);
+            this.labelSectorSeleccionado.TabIndex = 0;
+            this.labelSectorSeleccionado.Text = "Haga click en un sector para seleccionarlo";
+            this.labelSectorSeleccionado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // menuEstacionamiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1665, 642);
             this.Controls.Add(this.marcoPanelPregunta);
+            this.Controls.Add(this.marcoSectorSeleccionado);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.marcoTooltipSector);
             this.Controls.Add(this.PanelMarcoPOcupado);
@@ -730,6 +775,9 @@
             this.PanelPregunta.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.marcoPanelPregunta.ResumeLayout(false);
+            this.marcoSectorSeleccionado.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -776,5 +824,8 @@
         private System.Windows.Forms.Button buttonNoCompra;
         private System.Windows.Forms.Label LabelPregunta;
         private System.Windows.Forms.TableLayoutPanel marcoPanelPregunta;
+        private System.Windows.Forms.TableLayoutPanel marcoSectorSeleccionado;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.Label labelSectorSeleccionado;
     }
 }

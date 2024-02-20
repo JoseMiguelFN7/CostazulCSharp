@@ -20,7 +20,7 @@ namespace Costazul
         static bool puedeVehiculo = true;
         public static pila usuariosEnSesion = new pila();
         public static int numUsuariosEnSesion = 0;
-        static vehiculo vehiculoActual = null;
+        static vehiculo vehiculoActual;
         public static bool esMoto;
 
         public formRegistroUsuarios()
@@ -313,14 +313,15 @@ namespace Costazul
 
             if (esLetra(textBoxNombre.Text) && esLetra(textBoxApellido.Text) && esNumero(textBoxNDocumento.Text) && aceptarPlaca)
             {
-                usuariosEnSesion.agregarPersonaEnLaPila(new persona(bienvenido.IDPersona, textBoxNombre.Text, textBoxApellido.Text, comboBoxTDocumento.SelectedItem.ToString(), textBoxNDocumento.Text, bienvenido.dia, bienvenido.hora, bienvenido.minuto, Int32.Parse(comboBoxHoraDeSalida.Text), Int32.Parse(comboBoxMinutoDeSalida.Text))); 
+                usuariosEnSesion.agregarPersonaEnLaPila(new persona(bienvenido.IDPersona, textBoxNombre.Text, textBoxApellido.Text, comboBoxTDocumento.SelectedItem.ToString(), textBoxNDocumento.Text, bienvenido.dia, bienvenido.hora, bienvenido.minuto, Int32.Parse(comboBoxHoraDeSalida.Text), Int32.Parse(comboBoxMinutoDeSalida.Text)));
                 bienvenido.IDPersona++;
 
                 if (checkBoxPVehiculo.Checked)
                 {
-                    vehiculoActual = new vehiculo(bienvenido.IDVehiculo, comboBoxTVehiculo.ToString(), textBoxPlaca.Text, comboBoxColor.SelectedItem.ToString(), comboBoxMarca.SelectedItem.ToString());
-                    //vehiculoActual.getPasajeros().agregarPersonaAlFinal(usuariosEnSesion.verTope());
+                    vehiculoActual = new vehiculo(bienvenido.IDVehiculo, comboBoxTVehiculo.SelectedItem.ToString(), textBoxPlaca.Text, comboBoxColor.SelectedItem.ToString(), comboBoxMarca.SelectedItem.ToString());
+                    bienvenido.IDVehiculo++;
                     numUsuariosEnSesion = Int32.Parse(comboBoxNAcomp.SelectedItem.ToString()) + 1;
+                    vehiculoActual.getPasajeros().agregarPersonaAlFinal(usuariosEnSesion.verTope());
                     if (numUsuariosEnSesion > 1)
                     {
                         puedeVehiculo = false;
@@ -344,13 +345,14 @@ namespace Costazul
                     } 
                     else
                     {
+                        vehiculoActual.getPasajeros().agregarPersonaAlFinal(usuariosEnSesion.verTope());
                         if (usuariosEnSesion.getTamanio() < numUsuariosEnSesion)
                         {
-                            vehiculoActual.getPasajeros().agregarPersonaAlFinal(usuariosEnSesion.verTope());
                             marcoPanelPregunta.Visible = true;
                         }
                         else
                         {
+                            Console.WriteLine(vehiculoActual.getPasajeros().getInicio().getSiguiente().getValorPersona().getNombre());
                             puedeVehiculo = true;
                             usuariosEnSesion.setVehiculoAPila(vehiculoActual);
                             if (esMoto)
@@ -379,8 +381,12 @@ namespace Costazul
         private void buttonNoCompra_Click(object sender, EventArgs e)
         {
             buttonPressed = true;
-            if (formRegistroUsuarios.numUsuariosEnSesion == 1)
+            if (numUsuariosEnSesion == usuariosEnSesion.getTamanio())
             {
+                while (!usuariosEnSesion.esVacia())
+                {
+                    bienvenido.personas.agregarPersonaAlFinal(usuariosEnSesion.sacarPersonaDePila());
+                }
                 bienvenido b = new bienvenido();
                 b.Show();
                 this.Close();

@@ -68,6 +68,7 @@ namespace Costazul
 
             if (!resultados.esVacia())
             {
+                panelNotif.Visible = false;
                 comboBoxCoincidencias.Visible = true;
                 arrayCoincidencias = new persona[resultados.getTamanio()];
                 for (int i = 0; i<arrayCoincidencias.Length; i++)
@@ -86,14 +87,14 @@ namespace Costazul
             }
             else
             {
-                //mensaje de no hubo resultados
+                panelNotif.Visible = true;
+                labelNotif.Text = "No se consiguieron resultados.";
             }
         }
 
         private void buttonInfoPersonal_Click(object sender, EventArgs e)
         {
             panelInfoPersonal.Visible = true;
-            //panelInfoPersonal.Location = new Point(94, 275);
             panelInfoVehiculo.Visible = false;
             panelInfoCompra.Visible = false;
 
@@ -107,8 +108,8 @@ namespace Costazul
         {
             if (registroEnEdicion.getVehiculo() != null)
             {
+                panelNotif.Visible = false;
                 panelInfoVehiculo.Visible = true;
-                panelInfoVehiculo.Location = new Point(94, 275);
                 panelInfoPersonal.Visible = false;
                 panelInfoCompra.Visible = false;
 
@@ -118,7 +119,8 @@ namespace Costazul
             }
             else
             {
-                //mostrar mensaje que no posee vehiculo
+                panelNotif.Visible = true;
+                labelNotif.Text = "Esta persona no posee vehículo.";
             }
         }
 
@@ -127,7 +129,6 @@ namespace Costazul
             if (!registroEnEdicion.getCompras().esVacia())
             {
                 panelInfoCompra.Visible = true;
-                panelInfoCompra.Location = new Point(94, 275);
                 panelInfoPersonal.Visible = false;
                 panelInfoVehiculo.Visible = false;
 
@@ -141,7 +142,8 @@ namespace Costazul
             }
             else
             {
-                //Mostrar mensaje no posee compras
+                panelNotif.Visible = true;
+                labelNotif.Text = "Esta persona no posee compras.";
             }
             
             
@@ -162,6 +164,8 @@ namespace Costazul
                 registroEnEdicion.setTci(comboBoxEditarTCI.SelectedItem.ToString());
                 registroEnEdicion.setCi(textBoxEditarCI.Text);
                 bienvenido.personas.modificarInfoPersonal(registroEnEdicion);
+                panelNotif.Visible = true;
+                labelNotif.Text = "Información actualizada.";
             }
             else
             {
@@ -197,6 +201,7 @@ namespace Costazul
         private void buttonRegresarInfoPersonal_Click(object sender, EventArgs e)
         {
             panelInfoPersonal.Visible = false;
+            panelNotif.Visible = false;
         }
 
         private void buttonRegresarAMain_Click(object sender, EventArgs e)
@@ -258,6 +263,8 @@ namespace Costazul
                         }
                     }
                 }
+                panelNotif.Visible = true;
+                labelNotif.Text = "Información actualizada.";
             }
             else
             {
@@ -268,6 +275,7 @@ namespace Costazul
         private void buttonRegresarInfoVehiculo_Click(object sender, EventArgs e)
         {
             panelInfoVehiculo.Visible = false;
+            panelNotif.Visible = false;
         }
 
         private void comboBoxNCompras_SelectedIndexChanged(object sender, EventArgs e)
@@ -352,16 +360,20 @@ namespace Costazul
                 compraEditada.setMetodoPago(comboBoxMPago.SelectedItem.ToString());
 
                 registroEnEdicion.getCompras().modificarInfoCompra(arrayCompras[comboBoxNCompras.SelectedIndex], compraEditada);
+                panelNotif.Visible = true;
+                labelNotif.Text = "Información actualizada.";
             }
             else
             {
-                //Mostrar mensaje de seleccionar compra
+                panelNotif.Visible = true;
+                labelNotif.Text = "No ha seleccionado una compra.";
             }
         }
 
         private void buttonRegresarInfoCompra_Click(object sender, EventArgs e)
         {
             panelInfoCompra.Visible = false;
+            panelNotif.Visible = false;
         }
     }
 }

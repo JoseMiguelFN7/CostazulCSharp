@@ -43,7 +43,7 @@
             // 
             this.ButtonConfirmar.Enabled = false;
             this.ButtonConfirmar.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonConfirmar.Location = new System.Drawing.Point(169, 533);
+            this.ButtonConfirmar.Location = new System.Drawing.Point(248, 531);
             this.ButtonConfirmar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ButtonConfirmar.Name = "ButtonConfirmar";
             this.ButtonConfirmar.Size = new System.Drawing.Size(150, 55);
@@ -130,11 +130,12 @@
             // 
             // buttonEditar
             // 
-            this.buttonEditar.Location = new System.Drawing.Point(39, 552);
+            this.buttonEditar.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEditar.Location = new System.Drawing.Point(75, 531);
             this.buttonEditar.Name = "buttonEditar";
-            this.buttonEditar.Size = new System.Drawing.Size(75, 23);
+            this.buttonEditar.Size = new System.Drawing.Size(143, 55);
             this.buttonEditar.TabIndex = 8;
-            this.buttonEditar.Text = "button1";
+            this.buttonEditar.Text = "Editar información";
             this.buttonEditar.UseVisualStyleBackColor = true;
             this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
             // 

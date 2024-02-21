@@ -357,5 +357,10 @@ namespace Costazul
                 //Mostrar mensaje de seleccionar compra
             }
         }
+
+        private void buttonRegresarInfoCompra_Click(object sender, EventArgs e)
+        {
+            panelInfoCompra.Visible = false;
+        }
     }
 }

@@ -67,7 +67,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.tableLayoutPanel24 = new System.Windows.Forms.TableLayoutPanel();
             this.buttonConfirmarInfoCompra = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
+            this.buttonRegresarInfoCompra = new System.Windows.Forms.Button();
             this.panelInfoCompra = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
@@ -585,7 +585,7 @@
             this.tableLayoutPanel24.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel24.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel24.Controls.Add(this.buttonConfirmarInfoCompra, 1, 0);
-            this.tableLayoutPanel24.Controls.Add(this.button11, 0, 0);
+            this.tableLayoutPanel24.Controls.Add(this.buttonRegresarInfoCompra, 0, 0);
             this.tableLayoutPanel24.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel24.Location = new System.Drawing.Point(3, 255);
             this.tableLayoutPanel24.Name = "tableLayoutPanel24";
@@ -605,15 +605,16 @@
             this.buttonConfirmarInfoCompra.UseVisualStyleBackColor = true;
             this.buttonConfirmarInfoCompra.Click += new System.EventHandler(this.buttonConfirmarInfoCompra_Click);
             // 
-            // button11
+            // buttonRegresarInfoCompra
             // 
-            this.button11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button11.Location = new System.Drawing.Point(79, 28);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(75, 23);
-            this.button11.TabIndex = 1;
-            this.button11.Text = "Regresar";
-            this.button11.UseVisualStyleBackColor = true;
+            this.buttonRegresarInfoCompra.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonRegresarInfoCompra.Location = new System.Drawing.Point(79, 28);
+            this.buttonRegresarInfoCompra.Name = "buttonRegresarInfoCompra";
+            this.buttonRegresarInfoCompra.Size = new System.Drawing.Size(75, 23);
+            this.buttonRegresarInfoCompra.TabIndex = 1;
+            this.buttonRegresarInfoCompra.Text = "Regresar";
+            this.buttonRegresarInfoCompra.UseVisualStyleBackColor = true;
+            this.buttonRegresarInfoCompra.Click += new System.EventHandler(this.buttonRegresarInfoCompra_Click);
             // 
             // panelInfoCompra
             // 
@@ -621,7 +622,7 @@
             this.panelInfoCompra.ColumnCount = 1;
             this.panelInfoCompra.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.panelInfoCompra.Controls.Add(this.tableLayoutPanel8, 0, 0);
-            this.panelInfoCompra.Location = new System.Drawing.Point(82, 382);
+            this.panelInfoCompra.Location = new System.Drawing.Point(42, 225);
             this.panelInfoCompra.Name = "panelInfoCompra";
             this.panelInfoCompra.Padding = new System.Windows.Forms.Padding(3);
             this.panelInfoCompra.RowCount = 1;
@@ -846,7 +847,7 @@
             this.panelInfoVehiculo.ColumnCount = 1;
             this.panelInfoVehiculo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.panelInfoVehiculo.Controls.Add(this.tableLayoutPanel6, 0, 0);
-            this.panelInfoVehiculo.Location = new System.Drawing.Point(585, 62);
+            this.panelInfoVehiculo.Location = new System.Drawing.Point(540, 68);
             this.panelInfoVehiculo.Name = "panelInfoVehiculo";
             this.panelInfoVehiculo.Padding = new System.Windows.Forms.Padding(3);
             this.panelInfoVehiculo.RowCount = 1;
@@ -1274,7 +1275,7 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel24;
         private System.Windows.Forms.Button buttonConfirmarInfoCompra;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button buttonRegresarInfoCompra;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel25;
         private System.Windows.Forms.TableLayoutPanel panelOpcionesEdicion;
     }

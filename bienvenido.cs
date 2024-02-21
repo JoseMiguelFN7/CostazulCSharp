@@ -46,6 +46,7 @@ namespace Costazul
             }
             else
             {
+                personas.sincronizarPasajeros();
                 //Actualizar el archivo de puestos. (sistema --> archivo)
                 String texto = "";
                 for (int i = 0; i < 5; i++)  //SECTORES DE CARROS
@@ -410,6 +411,22 @@ namespace Costazul
             buttonPressed = true;
             formRegistroUsuarios ru = new formRegistroUsuarios();
             ru.Show();
+            if (primerInicio)
+            {
+                primerInicio = false;
+                this.Hide();
+            }
+            else
+            {
+                this.Close();
+            }
+        }
+
+        private void buttonEditar_Click(object sender, EventArgs e)
+        {
+            formEditarUsuario eu = new formEditarUsuario();
+            eu.Show();
+            buttonPressed = true;
             if (primerInicio)
             {
                 primerInicio = false;

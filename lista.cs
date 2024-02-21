@@ -77,6 +77,47 @@ namespace Costazul
             }
         }
 
+        public void buscarPersonaNA(string NA, pila p)
+        {
+            if (esVacia())
+            {
+                return;
+            }
+            else
+            {
+                nodo aux = inicio;
+                while (aux != null)
+                {
+                    if ((aux.getValorPersona().getNombre() + " " + aux.getValorPersona().getApellido()).Equals(NA))
+                    {
+                        p.agregarPersonaEnLaPila(aux.getValorPersona());
+                    }
+                    aux = aux.getSiguiente();
+                }
+                return;
+            }
+        }
+
+        public void buscarPersonaCI(string CI, pila p)
+        {
+            if (esVacia())
+            {
+                return;
+            }
+            else
+            {
+                nodo aux = inicio;
+                while (aux != null)
+                {
+                    if ((aux.getValorPersona().getTci() + aux.getValorPersona().getCi()).Equals(CI))
+                    {
+                        p.agregarPersonaEnLaPila(aux.getValorPersona());
+                    }
+                    aux = aux.getSiguiente();
+                }
+            }
+        }
+
         public persona buscarPersonaID(int ID)
         { //para buscar un producto en la lista
             if (esVacia())
@@ -95,6 +136,27 @@ namespace Costazul
                     aux = aux.getSiguiente();
                 }
                 return null;
+            }
+        }
+
+        public void modificarInfoPersonal(persona p)
+        {
+            if (esVacia())
+            {
+                return;
+            }
+            else
+            {
+                nodo aux = inicio;
+                while (aux != null)
+                {
+                    if (aux.getValorPersona().getID() == p.getID())
+                    {
+                        aux.setValorPersona(p);
+                        return;
+                    }
+                    aux = aux.getSiguiente();
+                }
             }
         }
 
@@ -176,6 +238,26 @@ namespace Costazul
                     aux = aux.getSiguiente();
                 }
                 return null;
+            }
+        }
+
+        public compra[] conseguirArrayCompras()
+        {
+            if (esVacia())
+            {
+                return null;
+            }
+            else
+            {
+                compra[] compras = new compra[tamanio];
+                nodo aux = inicio;
+                int i = 0;
+                while (aux != null)
+                {
+                    compras[i++] = aux.getValorCompra();
+                    aux = aux.getSiguiente();
+                }
+                return compras;
             }
         }
 
@@ -269,6 +351,27 @@ namespace Costazul
             }
         }
 
+        public void modificarInfoVehiculo(vehiculo v)
+        {
+            if (esVacia())
+            {
+                return;
+            }
+            else
+            {
+                nodo aux = inicio;
+                while (aux != null)
+                {
+                    if (aux.getValorVehiculo().getID() == v.getID())
+                    {
+                        aux.setValorVehiculo(v);
+                        return;
+                    }
+                    aux = aux.getSiguiente();
+                }
+            }
+        }
+
         public void sincronizarPasajeros()
         {
             if (esVacia())
@@ -282,43 +385,46 @@ namespace Costazul
                 {
                     bool found = false;
                     persona personaActual = aux.getValorPersona();
-                    if (personaActual.getVehiculo().getTipo().Equals("Moto"))
+                    if (personaActual.getVehiculo() != null)
                     {
-                        for (int i = 0; i < 2; i++)
+                        if (personaActual.getVehiculo().getTipo().Equals("Moto"))
                         {
-                            for (int j = 0; j < 100; j++)
+                            for (int i = 0; i < 2; i++)
                             {
-                                if (bienvenido.sectoresMotos[i, j].getOcupantes().existeIDOcupante(personaActual.getVehiculo().getID()))
+                                for (int j = 0; j < 100; j++)
                                 {
-                                    vehiculo v = bienvenido.sectoresMotos[i, j].getOcupantes().buscarVehiculoID(personaActual.getVehiculo().getID());
-                                    personaActual.setVehiculo(v);
-                                    found = true;
+                                    if (bienvenido.sectoresMotos[i, j].getOcupantes().existeIDOcupante(personaActual.getVehiculo().getID()))
+                                    {
+                                        vehiculo v = bienvenido.sectoresMotos[i, j].getOcupantes().buscarVehiculoID(personaActual.getVehiculo().getID());
+                                        personaActual.setVehiculo(v);
+                                        found = true;
+                                        break;
+                                    }
+                                }
+                                if (found)
+                                {
                                     break;
                                 }
-                            }
-                            if (found)
-                            {
-                                break;
                             }
                         }
-                    }
-                    else
-                    {
-                        for (int i = 0; i < 2; i++)
+                        else
                         {
-                            for (int j = 0; j < 100; j++)
+                            for (int i = 0; i < 2; i++)
                             {
-                                if (bienvenido.sectoresCarros[i, j].getOcupantes().existeIDOcupante(personaActual.getVehiculo().getID()))
+                                for (int j = 0; j < 100; j++)
                                 {
-                                    vehiculo v = bienvenido.sectoresCarros[i, j].getOcupantes().buscarVehiculoID(personaActual.getVehiculo().getID());
-                                    personaActual.setVehiculo(v);
-                                    found = true;
+                                    if (bienvenido.sectoresCarros[i, j].getOcupantes().existeIDOcupante(personaActual.getVehiculo().getID()))
+                                    {
+                                        vehiculo v = bienvenido.sectoresCarros[i, j].getOcupantes().buscarVehiculoID(personaActual.getVehiculo().getID());
+                                        personaActual.setVehiculo(v);
+                                        found = true;
+                                        break;
+                                    }
+                                }
+                                if (found)
+                                {
                                     break;
                                 }
-                            }
-                            if (found)
-                            {
-                                break;
                             }
                         }
                     }
@@ -365,6 +471,27 @@ namespace Costazul
                 aux = aux.getSiguiente();
             }
             return s;
+        }
+
+        public void modificarInfoCompra(compra original, compra reemplazo)
+        {
+            if (esVacia())
+            {
+                return;
+            }
+            else
+            {
+                nodo aux = inicio;
+                while (aux != null)
+                {
+                    if (aux.getValorCompra().comprasIguales(original))
+                    {
+                        aux.setValorCompra(reemplazo);
+                        return;
+                    }
+                    aux = aux.getSiguiente();
+                }
+            }
         }
 
         public void agregarVehiculoAlFinal(vehiculo v)
@@ -533,6 +660,5 @@ namespace Costazul
                 }
             }
         }
-
     }
 }

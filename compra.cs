@@ -96,5 +96,17 @@ namespace Costazul
         {
             this.metodoPago = metodoPago;
         }
+
+        public bool comprasIguales(compra c)
+        {
+            if (tienda.getNombre().Equals(c.tienda.getNombre()) && producto.getNombre().Equals(c.producto.getNombre()) && unidades == c.unidades && precioTotal == c.precioTotal && tipocompra.Equals(c.tipocompra) && metodoPago.Equals(c.metodoPago))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

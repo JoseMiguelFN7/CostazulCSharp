@@ -71,7 +71,7 @@ namespace Costazul
             }
         }
 
-        private bool esNumero(string s)
+        public static bool esNumero(string s)
         {
             if (String.IsNullOrEmpty(s))
             {
@@ -90,7 +90,7 @@ namespace Costazul
             return true;
         }
 
-        private bool esMinus(char c)
+        public static bool esMinus(char c)
         {
             byte codAscii = (byte)c;
             if (!(codAscii >= 97 && codAscii <= 122))
@@ -100,7 +100,7 @@ namespace Costazul
             return true;
         }
 
-        private bool esMayus(char c)
+        public static bool esMayus(char c)
         {
             byte codAscii = (byte)c;
             if (!(codAscii >= 65 && codAscii <= 90))
@@ -110,7 +110,7 @@ namespace Costazul
             return true;
         }
 
-        private bool esLetra(string s)
+        public static bool esLetra(string s)
         {
             if (String.IsNullOrEmpty(s))
             {
@@ -127,7 +127,7 @@ namespace Costazul
             return true;
         }
 
-        private bool placaValida(string s)
+        public static bool placaValida(string s)
         {
             if (String.IsNullOrEmpty(s))
             {

@@ -41,71 +41,67 @@
             this.labelNombre = new System.Windows.Forms.Label();
             this.labelApellido = new System.Windows.Forms.Label();
             this.comboBoxTDoc = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxCoincidencias = new System.Windows.Forms.ComboBox();
             this.buttonBuscar = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonRegresarAMain = new System.Windows.Forms.Button();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel19 = new System.Windows.Forms.TableLayoutPanel();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.comboBoxProductos = new System.Windows.Forms.ComboBox();
+            this.comboBoxNCompras = new System.Windows.Forms.ComboBox();
+            this.comboBoxNombresTiendas = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.tableLayoutPanel20 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel21 = new System.Windows.Forms.TableLayoutPanel();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownUnidades = new System.Windows.Forms.NumericUpDown();
             this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.labelPrecio = new System.Windows.Forms.Label();
+            this.labelPTotal = new System.Windows.Forms.Label();
             this.tableLayoutPanel22 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButtonPresencial = new System.Windows.Forms.RadioButton();
+            this.radioButtonOnline = new System.Windows.Forms.RadioButton();
             this.tableLayoutPanel23 = new System.Windows.Forms.TableLayoutPanel();
-            this.comboBox9 = new System.Windows.Forms.ComboBox();
+            this.comboBoxMPago = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
             this.tableLayoutPanel24 = new System.Windows.Forms.TableLayoutPanel();
-            this.button10 = new System.Windows.Forms.Button();
+            this.buttonConfirmarInfoCompra = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
-            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.panelInfoCompra = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.comboBoxEditarMarca = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.comboBoxEditarColor = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxEditarPlaca = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel18 = new System.Windows.Forms.TableLayoutPanel();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.buttonConfirmarInfoVehiculo = new System.Windows.Forms.Button();
+            this.buttonRegresarInfoVehiculo = new System.Windows.Forms.Button();
+            this.panelInfoVehiculo = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxEditarNombre = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxEditarApellido = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.comboBoxEditarTCI = new System.Windows.Forms.ComboBox();
+            this.textBoxEditarCI = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
+            this.buttonConfirmarInfoPersonal = new System.Windows.Forms.Button();
+            this.buttonRegresarInfoPersonal = new System.Windows.Forms.Button();
+            this.panelInfoPersonal = new System.Windows.Forms.TableLayoutPanel();
+            this.buttonInfoPersonal = new System.Windows.Forms.Button();
+            this.buttonInfoVehiculo = new System.Windows.Forms.Button();
+            this.buttonInfoCompra = new System.Windows.Forms.Button();
             this.tableLayoutPanel25 = new System.Windows.Forms.TableLayoutPanel();
             this.panelOpcionesEdicion = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.fondo)).BeginInit();
@@ -116,26 +112,25 @@
             this.tableLayoutPanel19.SuspendLayout();
             this.tableLayoutPanel20.SuspendLayout();
             this.tableLayoutPanel21.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownUnidades)).BeginInit();
             this.tableLayoutPanel22.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tableLayoutPanel23.SuspendLayout();
             this.tableLayoutPanel24.SuspendLayout();
-            this.tableLayoutPanel7.SuspendLayout();
+            this.panelInfoCompra.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
-            this.tableLayoutPanel14.SuspendLayout();
             this.tableLayoutPanel15.SuspendLayout();
             this.tableLayoutPanel16.SuspendLayout();
             this.tableLayoutPanel17.SuspendLayout();
             this.tableLayoutPanel18.SuspendLayout();
-            this.tableLayoutPanel5.SuspendLayout();
+            this.panelInfoVehiculo.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
             this.tableLayoutPanel11.SuspendLayout();
             this.tableLayoutPanel13.SuspendLayout();
             this.tableLayoutPanel12.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
+            this.panelInfoPersonal.SuspendLayout();
             this.tableLayoutPanel25.SuspendLayout();
             this.panelOpcionesEdicion.SuspendLayout();
             this.SuspendLayout();
@@ -279,15 +274,16 @@
             this.comboBoxTDoc.TabIndex = 11;
             this.comboBoxTDoc.Visible = false;
             // 
-            // comboBox1
+            // comboBoxCoincidencias
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(229, 224);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(208, 24);
-            this.comboBox1.TabIndex = 12;
-            this.comboBox1.Visible = false;
+            this.comboBoxCoincidencias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCoincidencias.FormattingEnabled = true;
+            this.comboBoxCoincidencias.Location = new System.Drawing.Point(241, 208);
+            this.comboBoxCoincidencias.Name = "comboBoxCoincidencias";
+            this.comboBoxCoincidencias.Size = new System.Drawing.Size(192, 24);
+            this.comboBoxCoincidencias.TabIndex = 12;
+            this.comboBoxCoincidencias.Visible = false;
+            this.comboBoxCoincidencias.SelectedIndexChanged += new System.EventHandler(this.comboBoxCoincidencias_SelectedIndexChanged);
             // 
             // buttonBuscar
             // 
@@ -300,14 +296,15 @@
             this.buttonBuscar.Visible = false;
             this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
             // 
-            // button2
+            // buttonRegresarAMain
             // 
-            this.button2.Location = new System.Drawing.Point(27, 846);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonRegresarAMain.Location = new System.Drawing.Point(27, 846);
+            this.buttonRegresarAMain.Name = "buttonRegresarAMain";
+            this.buttonRegresarAMain.Size = new System.Drawing.Size(75, 23);
+            this.buttonRegresarAMain.TabIndex = 14;
+            this.buttonRegresarAMain.Text = "button2";
+            this.buttonRegresarAMain.UseVisualStyleBackColor = true;
+            this.buttonRegresarAMain.Click += new System.EventHandler(this.buttonRegresarAMain_Click);
             // 
             // tableLayoutPanel8
             // 
@@ -335,9 +332,9 @@
             this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutPanel19.Controls.Add(this.comboBox8, 2, 1);
-            this.tableLayoutPanel19.Controls.Add(this.comboBox6, 0, 1);
-            this.tableLayoutPanel19.Controls.Add(this.comboBox7, 1, 1);
+            this.tableLayoutPanel19.Controls.Add(this.comboBoxProductos, 2, 1);
+            this.tableLayoutPanel19.Controls.Add(this.comboBoxNCompras, 0, 1);
+            this.tableLayoutPanel19.Controls.Add(this.comboBoxNombresTiendas, 1, 1);
             this.tableLayoutPanel19.Controls.Add(this.label9, 0, 0);
             this.tableLayoutPanel19.Controls.Add(this.label10, 1, 0);
             this.tableLayoutPanel19.Controls.Add(this.label11, 2, 0);
@@ -350,35 +347,40 @@
             this.tableLayoutPanel19.Size = new System.Drawing.Size(468, 78);
             this.tableLayoutPanel19.TabIndex = 0;
             // 
-            // comboBox8
+            // comboBoxProductos
             // 
-            this.comboBox8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox8.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Location = new System.Drawing.Point(329, 46);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(121, 24);
-            this.comboBox8.TabIndex = 2;
+            this.comboBoxProductos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBoxProductos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxProductos.FormattingEnabled = true;
+            this.comboBoxProductos.Location = new System.Drawing.Point(329, 46);
+            this.comboBoxProductos.Name = "comboBoxProductos";
+            this.comboBoxProductos.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxProductos.TabIndex = 2;
+            this.comboBoxProductos.SelectedIndexChanged += new System.EventHandler(this.comboBoxProductos_SelectedIndexChanged);
             // 
-            // comboBox6
+            // comboBoxNCompras
             // 
-            this.comboBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(17, 46);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(121, 24);
-            this.comboBox6.TabIndex = 0;
+            this.comboBoxNCompras.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBoxNCompras.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxNCompras.FormattingEnabled = true;
+            this.comboBoxNCompras.Location = new System.Drawing.Point(17, 46);
+            this.comboBoxNCompras.Name = "comboBoxNCompras";
+            this.comboBoxNCompras.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxNCompras.TabIndex = 0;
+            this.comboBoxNCompras.SelectedIndexChanged += new System.EventHandler(this.comboBoxNCompras_SelectedIndexChanged);
             // 
-            // comboBox7
+            // comboBoxNombresTiendas
             // 
-            this.comboBox7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(172, 46);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(121, 24);
-            this.comboBox7.TabIndex = 1;
+            this.comboBoxNombresTiendas.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBoxNombresTiendas.DropDownHeight = 90;
+            this.comboBoxNombresTiendas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxNombresTiendas.FormattingEnabled = true;
+            this.comboBoxNombresTiendas.IntegralHeight = false;
+            this.comboBoxNombresTiendas.Location = new System.Drawing.Point(172, 46);
+            this.comboBoxNombresTiendas.Name = "comboBoxNombresTiendas";
+            this.comboBoxNombresTiendas.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxNombresTiendas.TabIndex = 1;
+            this.comboBoxNombresTiendas.SelectedIndexChanged += new System.EventHandler(this.comboBoxNombresTiendas_SelectedIndexChanged);
             // 
             // label9
             // 
@@ -417,8 +419,8 @@
             this.tableLayoutPanel20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel20.Controls.Add(this.tableLayoutPanel21, 0, 0);
-            this.tableLayoutPanel20.Controls.Add(this.label13, 1, 0);
-            this.tableLayoutPanel20.Controls.Add(this.label14, 2, 0);
+            this.tableLayoutPanel20.Controls.Add(this.labelPrecio, 1, 0);
+            this.tableLayoutPanel20.Controls.Add(this.labelPTotal, 2, 0);
             this.tableLayoutPanel20.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel20.Location = new System.Drawing.Point(3, 87);
             this.tableLayoutPanel20.Name = "tableLayoutPanel20";
@@ -431,7 +433,7 @@
             // 
             this.tableLayoutPanel21.ColumnCount = 1;
             this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel21.Controls.Add(this.numericUpDown1, 0, 1);
+            this.tableLayoutPanel21.Controls.Add(this.numericUpDownUnidades, 0, 1);
             this.tableLayoutPanel21.Controls.Add(this.label12, 0, 0);
             this.tableLayoutPanel21.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel21.Location = new System.Drawing.Point(3, 3);
@@ -442,13 +444,24 @@
             this.tableLayoutPanel21.Size = new System.Drawing.Size(150, 72);
             this.tableLayoutPanel21.TabIndex = 0;
             // 
-            // numericUpDown1
+            // numericUpDownUnidades
             // 
-            this.numericUpDown1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numericUpDown1.Location = new System.Drawing.Point(15, 43);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 22);
-            this.numericUpDown1.TabIndex = 0;
+            this.numericUpDownUnidades.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.numericUpDownUnidades.Location = new System.Drawing.Point(15, 43);
+            this.numericUpDownUnidades.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDownUnidades.Name = "numericUpDownUnidades";
+            this.numericUpDownUnidades.Size = new System.Drawing.Size(120, 22);
+            this.numericUpDownUnidades.TabIndex = 0;
+            this.numericUpDownUnidades.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDownUnidades.ValueChanged += new System.EventHandler(this.numericUpDownUnidades_ValueChanged);
             // 
             // label12
             // 
@@ -460,25 +473,25 @@
             this.label12.TabIndex = 1;
             this.label12.Text = "Unidades";
             // 
-            // label13
+            // labelPrecio
             // 
-            this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(209, 31);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(49, 16);
-            this.label13.TabIndex = 1;
-            this.label13.Text = "Precio:";
+            this.labelPrecio.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelPrecio.AutoSize = true;
+            this.labelPrecio.Location = new System.Drawing.Point(209, 31);
+            this.labelPrecio.Name = "labelPrecio";
+            this.labelPrecio.Size = new System.Drawing.Size(49, 16);
+            this.labelPrecio.TabIndex = 1;
+            this.labelPrecio.Text = "Precio:";
             // 
-            // label14
+            // labelPTotal
             // 
-            this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(369, 31);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(41, 16);
-            this.label14.TabIndex = 2;
-            this.label14.Text = "Total:";
+            this.labelPTotal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelPTotal.AutoSize = true;
+            this.labelPTotal.Location = new System.Drawing.Point(369, 31);
+            this.labelPTotal.Name = "labelPTotal";
+            this.labelPTotal.Size = new System.Drawing.Size(41, 16);
+            this.labelPTotal.TabIndex = 2;
+            this.labelPTotal.Text = "Total:";
             // 
             // tableLayoutPanel22
             // 
@@ -497,8 +510,8 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.radioButton2);
-            this.groupBox2.Controls.Add(this.radioButton1);
+            this.groupBox2.Controls.Add(this.radioButtonPresencial);
+            this.groupBox2.Controls.Add(this.radioButtonOnline);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(3, 3);
             this.groupBox2.Name = "groupBox2";
@@ -507,33 +520,35 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tipo de compra:";
             // 
-            // radioButton2
+            // radioButtonPresencial
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(16, 42);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(92, 20);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Presencial";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButtonPresencial.AutoSize = true;
+            this.radioButtonPresencial.Location = new System.Drawing.Point(16, 42);
+            this.radioButtonPresencial.Name = "radioButtonPresencial";
+            this.radioButtonPresencial.Size = new System.Drawing.Size(92, 20);
+            this.radioButtonPresencial.TabIndex = 1;
+            this.radioButtonPresencial.TabStop = true;
+            this.radioButtonPresencial.Text = "Presencial";
+            this.radioButtonPresencial.UseVisualStyleBackColor = true;
+            this.radioButtonPresencial.CheckedChanged += new System.EventHandler(this.radioButtonPresencial_CheckedChanged);
             // 
-            // radioButton1
+            // radioButtonOnline
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(16, 21);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(66, 20);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Online";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButtonOnline.AutoSize = true;
+            this.radioButtonOnline.Location = new System.Drawing.Point(16, 21);
+            this.radioButtonOnline.Name = "radioButtonOnline";
+            this.radioButtonOnline.Size = new System.Drawing.Size(66, 20);
+            this.radioButtonOnline.TabIndex = 0;
+            this.radioButtonOnline.TabStop = true;
+            this.radioButtonOnline.Text = "Online";
+            this.radioButtonOnline.UseVisualStyleBackColor = true;
+            this.radioButtonOnline.CheckedChanged += new System.EventHandler(this.radioButtonOnline_CheckedChanged);
             // 
             // tableLayoutPanel23
             // 
             this.tableLayoutPanel23.ColumnCount = 1;
             this.tableLayoutPanel23.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel23.Controls.Add(this.comboBox9, 0, 1);
+            this.tableLayoutPanel23.Controls.Add(this.comboBoxMPago, 0, 1);
             this.tableLayoutPanel23.Controls.Add(this.label15, 0, 0);
             this.tableLayoutPanel23.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel23.Location = new System.Drawing.Point(237, 3);
@@ -544,15 +559,15 @@
             this.tableLayoutPanel23.Size = new System.Drawing.Size(228, 72);
             this.tableLayoutPanel23.TabIndex = 1;
             // 
-            // comboBox9
+            // comboBoxMPago
             // 
-            this.comboBox9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox9.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Location = new System.Drawing.Point(53, 42);
-            this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(121, 24);
-            this.comboBox9.TabIndex = 1;
+            this.comboBoxMPago.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBoxMPago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMPago.FormattingEnabled = true;
+            this.comboBoxMPago.Location = new System.Drawing.Point(53, 42);
+            this.comboBoxMPago.Name = "comboBoxMPago";
+            this.comboBoxMPago.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxMPago.TabIndex = 1;
             // 
             // label15
             // 
@@ -569,7 +584,7 @@
             this.tableLayoutPanel24.ColumnCount = 2;
             this.tableLayoutPanel24.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel24.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel24.Controls.Add(this.button10, 1, 0);
+            this.tableLayoutPanel24.Controls.Add(this.buttonConfirmarInfoCompra, 1, 0);
             this.tableLayoutPanel24.Controls.Add(this.button11, 0, 0);
             this.tableLayoutPanel24.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel24.Location = new System.Drawing.Point(3, 255);
@@ -579,15 +594,16 @@
             this.tableLayoutPanel24.Size = new System.Drawing.Size(468, 80);
             this.tableLayoutPanel24.TabIndex = 3;
             // 
-            // button10
+            // buttonConfirmarInfoCompra
             // 
-            this.button10.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button10.Location = new System.Drawing.Point(297, 14);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(107, 52);
-            this.button10.TabIndex = 0;
-            this.button10.Text = "Confirmar cambios";
-            this.button10.UseVisualStyleBackColor = true;
+            this.buttonConfirmarInfoCompra.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonConfirmarInfoCompra.Location = new System.Drawing.Point(297, 14);
+            this.buttonConfirmarInfoCompra.Name = "buttonConfirmarInfoCompra";
+            this.buttonConfirmarInfoCompra.Size = new System.Drawing.Size(107, 52);
+            this.buttonConfirmarInfoCompra.TabIndex = 0;
+            this.buttonConfirmarInfoCompra.Text = "Confirmar cambios";
+            this.buttonConfirmarInfoCompra.UseVisualStyleBackColor = true;
+            this.buttonConfirmarInfoCompra.Click += new System.EventHandler(this.buttonConfirmarInfoCompra_Click);
             // 
             // button11
             // 
@@ -599,83 +615,41 @@
             this.button11.Text = "Regresar";
             this.button11.UseVisualStyleBackColor = true;
             // 
-            // tableLayoutPanel7
+            // panelInfoCompra
             // 
-            this.tableLayoutPanel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.tableLayoutPanel7.ColumnCount = 1;
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel7.Controls.Add(this.tableLayoutPanel8, 0, 0);
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(485, 384);
-            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
-            this.tableLayoutPanel7.Padding = new System.Windows.Forms.Padding(3);
-            this.tableLayoutPanel7.RowCount = 1;
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(486, 350);
-            this.tableLayoutPanel7.TabIndex = 18;
-            this.tableLayoutPanel7.Visible = false;
+            this.panelInfoCompra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panelInfoCompra.ColumnCount = 1;
+            this.panelInfoCompra.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.panelInfoCompra.Controls.Add(this.tableLayoutPanel8, 0, 0);
+            this.panelInfoCompra.Location = new System.Drawing.Point(82, 382);
+            this.panelInfoCompra.Name = "panelInfoCompra";
+            this.panelInfoCompra.Padding = new System.Windows.Forms.Padding(3);
+            this.panelInfoCompra.RowCount = 1;
+            this.panelInfoCompra.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.panelInfoCompra.Size = new System.Drawing.Size(486, 350);
+            this.panelInfoCompra.TabIndex = 18;
+            this.panelInfoCompra.Visible = false;
             // 
             // tableLayoutPanel6
             // 
             this.tableLayoutPanel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.tableLayoutPanel6.ColumnCount = 1;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel14, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel15, 0, 1);
-            this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel16, 0, 2);
-            this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel17, 0, 3);
-            this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel18, 0, 4);
+            this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel15, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel16, 0, 1);
+            this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel17, 0, 2);
+            this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel18, 0, 3);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(6, 6);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 5;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel6.RowCount = 4;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel6.Size = new System.Drawing.Size(474, 338);
             this.tableLayoutPanel6.TabIndex = 17;
-            // 
-            // tableLayoutPanel14
-            // 
-            this.tableLayoutPanel14.ColumnCount = 2;
-            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel14.Controls.Add(this.label5, 0, 0);
-            this.tableLayoutPanel14.Controls.Add(this.comboBox3, 1, 0);
-            this.tableLayoutPanel14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel14.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel14.Name = "tableLayoutPanel14";
-            this.tableLayoutPanel14.RowCount = 1;
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel14.Size = new System.Drawing.Size(468, 61);
-            this.tableLayoutPanel14.TabIndex = 0;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(62, 22);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(110, 16);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Tipo de vehículo:";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "Camioneta (Pick-Up)",
-            "Camioneta (Sport Wagon)",
-            "Carro pequeño (2 puertas)",
-            "Moto",
-            "Sedan (4 puertas)"});
-            this.comboBox3.Location = new System.Drawing.Point(290, 18);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 24);
-            this.comboBox3.TabIndex = 1;
             // 
             // tableLayoutPanel15
             // 
@@ -683,31 +657,52 @@
             this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel15.Controls.Add(this.label6, 0, 0);
-            this.tableLayoutPanel15.Controls.Add(this.comboBox4, 1, 0);
+            this.tableLayoutPanel15.Controls.Add(this.comboBoxEditarMarca, 1, 0);
             this.tableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel15.Location = new System.Drawing.Point(3, 70);
+            this.tableLayoutPanel15.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel15.Name = "tableLayoutPanel15";
             this.tableLayoutPanel15.RowCount = 1;
             this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel15.Size = new System.Drawing.Size(468, 61);
+            this.tableLayoutPanel15.Size = new System.Drawing.Size(468, 78);
             this.tableLayoutPanel15.TabIndex = 1;
             // 
             // label6
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(93, 22);
+            this.label6.Location = new System.Drawing.Point(93, 31);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(48, 16);
             this.label6.TabIndex = 0;
             this.label6.Text = "Marca:";
             // 
-            // comboBox4
+            // comboBoxEditarMarca
             // 
-            this.comboBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
+            this.comboBoxEditarMarca.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBoxEditarMarca.DropDownHeight = 90;
+            this.comboBoxEditarMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxEditarMarca.FormattingEnabled = true;
+            this.comboBoxEditarMarca.IntegralHeight = false;
+            this.comboBoxEditarMarca.Items.AddRange(new object[] {
+            "Aston Martin",
+            "Audi",
+            "Bera",
+            "BMW",
+            "Chery",
+            "Chevrolet",
+            "DFSK",
+            "Empire Keeway",
+            "Ferrari",
+            "Fiat",
+            "Ford",
+            "Honda",
+            "Hyundai",
+            "Jeep",
+            "Kawasaki",
+            "Kia",
+            "Lamborghini",
+            "Mazda",
+            "Mercedes-Benz",
             "Mitsubishi",
             "Nissan",
             "Peugeot",
@@ -722,10 +717,10 @@
             "Volkswagen",
             "Yamaha",
             "Otro..."});
-            this.comboBox4.Location = new System.Drawing.Point(290, 18);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(121, 24);
-            this.comboBox4.TabIndex = 1;
+            this.comboBoxEditarMarca.Location = new System.Drawing.Point(290, 27);
+            this.comboBoxEditarMarca.Name = "comboBoxEditarMarca";
+            this.comboBoxEditarMarca.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxEditarMarca.TabIndex = 1;
             // 
             // tableLayoutPanel16
             // 
@@ -733,31 +728,31 @@
             this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel16.Controls.Add(this.label7, 0, 0);
-            this.tableLayoutPanel16.Controls.Add(this.comboBox5, 1, 0);
+            this.tableLayoutPanel16.Controls.Add(this.comboBoxEditarColor, 1, 0);
             this.tableLayoutPanel16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel16.Location = new System.Drawing.Point(3, 137);
+            this.tableLayoutPanel16.Location = new System.Drawing.Point(3, 87);
             this.tableLayoutPanel16.Name = "tableLayoutPanel16";
             this.tableLayoutPanel16.RowCount = 1;
             this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel16.Size = new System.Drawing.Size(468, 61);
+            this.tableLayoutPanel16.Size = new System.Drawing.Size(468, 78);
             this.tableLayoutPanel16.TabIndex = 2;
             // 
             // label7
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(96, 22);
+            this.label7.Location = new System.Drawing.Point(96, 31);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(42, 16);
             this.label7.TabIndex = 0;
             this.label7.Text = "Color:";
             // 
-            // comboBox5
+            // comboBoxEditarColor
             // 
-            this.comboBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
+            this.comboBoxEditarColor.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBoxEditarColor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxEditarColor.FormattingEnabled = true;
+            this.comboBoxEditarColor.Items.AddRange(new object[] {
             "Amarillo",
             "Azul",
             "Blanco",
@@ -770,10 +765,10 @@
             "Rojo",
             "Rosa",
             "Verde"});
-            this.comboBox5.Location = new System.Drawing.Point(290, 18);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(121, 24);
-            this.comboBox5.TabIndex = 1;
+            this.comboBoxEditarColor.Location = new System.Drawing.Point(290, 27);
+            this.comboBoxEditarColor.Name = "comboBoxEditarColor";
+            this.comboBoxEditarColor.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxEditarColor.TabIndex = 1;
             // 
             // tableLayoutPanel17
             // 
@@ -781,82 +776,84 @@
             this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel17.Controls.Add(this.label8, 0, 0);
-            this.tableLayoutPanel17.Controls.Add(this.textBox4, 1, 0);
+            this.tableLayoutPanel17.Controls.Add(this.textBoxEditarPlaca, 1, 0);
             this.tableLayoutPanel17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel17.Location = new System.Drawing.Point(3, 204);
+            this.tableLayoutPanel17.Location = new System.Drawing.Point(3, 171);
             this.tableLayoutPanel17.Name = "tableLayoutPanel17";
             this.tableLayoutPanel17.RowCount = 1;
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel17.Size = new System.Drawing.Size(468, 61);
+            this.tableLayoutPanel17.Size = new System.Drawing.Size(468, 78);
             this.tableLayoutPanel17.TabIndex = 3;
             // 
             // label8
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(94, 22);
+            this.label8.Location = new System.Drawing.Point(94, 31);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(45, 16);
             this.label8.TabIndex = 0;
             this.label8.Text = "Placa:";
             // 
-            // textBox4
+            // textBoxEditarPlaca
             // 
-            this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox4.Location = new System.Drawing.Point(301, 19);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 22);
-            this.textBox4.TabIndex = 1;
+            this.textBoxEditarPlaca.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxEditarPlaca.Location = new System.Drawing.Point(301, 28);
+            this.textBoxEditarPlaca.Name = "textBoxEditarPlaca";
+            this.textBoxEditarPlaca.Size = new System.Drawing.Size(100, 22);
+            this.textBoxEditarPlaca.TabIndex = 1;
             // 
             // tableLayoutPanel18
             // 
             this.tableLayoutPanel18.ColumnCount = 2;
             this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel18.Controls.Add(this.button8, 1, 0);
-            this.tableLayoutPanel18.Controls.Add(this.button9, 0, 0);
+            this.tableLayoutPanel18.Controls.Add(this.buttonConfirmarInfoVehiculo, 1, 0);
+            this.tableLayoutPanel18.Controls.Add(this.buttonRegresarInfoVehiculo, 0, 0);
             this.tableLayoutPanel18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel18.Location = new System.Drawing.Point(3, 271);
+            this.tableLayoutPanel18.Location = new System.Drawing.Point(3, 255);
             this.tableLayoutPanel18.Name = "tableLayoutPanel18";
             this.tableLayoutPanel18.RowCount = 1;
             this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel18.Size = new System.Drawing.Size(468, 64);
+            this.tableLayoutPanel18.Size = new System.Drawing.Size(468, 80);
             this.tableLayoutPanel18.TabIndex = 4;
             // 
-            // button8
+            // buttonConfirmarInfoVehiculo
             // 
-            this.button8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button8.Location = new System.Drawing.Point(296, 9);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(109, 46);
-            this.button8.TabIndex = 0;
-            this.button8.Text = "Confirmar cambios";
-            this.button8.UseVisualStyleBackColor = true;
+            this.buttonConfirmarInfoVehiculo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonConfirmarInfoVehiculo.Location = new System.Drawing.Point(296, 17);
+            this.buttonConfirmarInfoVehiculo.Name = "buttonConfirmarInfoVehiculo";
+            this.buttonConfirmarInfoVehiculo.Size = new System.Drawing.Size(109, 46);
+            this.buttonConfirmarInfoVehiculo.TabIndex = 0;
+            this.buttonConfirmarInfoVehiculo.Text = "Confirmar cambios";
+            this.buttonConfirmarInfoVehiculo.UseVisualStyleBackColor = true;
+            this.buttonConfirmarInfoVehiculo.Click += new System.EventHandler(this.buttonConfirmarInfoVehiculo_Click);
             // 
-            // button9
+            // buttonRegresarInfoVehiculo
             // 
-            this.button9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button9.Location = new System.Drawing.Point(79, 20);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 23);
-            this.button9.TabIndex = 1;
-            this.button9.Text = "Regresar";
-            this.button9.UseVisualStyleBackColor = true;
+            this.buttonRegresarInfoVehiculo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonRegresarInfoVehiculo.Location = new System.Drawing.Point(79, 28);
+            this.buttonRegresarInfoVehiculo.Name = "buttonRegresarInfoVehiculo";
+            this.buttonRegresarInfoVehiculo.Size = new System.Drawing.Size(75, 23);
+            this.buttonRegresarInfoVehiculo.TabIndex = 1;
+            this.buttonRegresarInfoVehiculo.Text = "Regresar";
+            this.buttonRegresarInfoVehiculo.UseVisualStyleBackColor = true;
+            this.buttonRegresarInfoVehiculo.Click += new System.EventHandler(this.buttonRegresarInfoVehiculo_Click);
             // 
-            // tableLayoutPanel5
+            // panelInfoVehiculo
             // 
-            this.tableLayoutPanel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.tableLayoutPanel5.ColumnCount = 1;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel6, 0, 0);
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(563, 28);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.Padding = new System.Windows.Forms.Padding(3);
-            this.tableLayoutPanel5.RowCount = 1;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(486, 350);
-            this.tableLayoutPanel5.TabIndex = 16;
-            this.tableLayoutPanel5.Visible = false;
+            this.panelInfoVehiculo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panelInfoVehiculo.ColumnCount = 1;
+            this.panelInfoVehiculo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.panelInfoVehiculo.Controls.Add(this.tableLayoutPanel6, 0, 0);
+            this.panelInfoVehiculo.Location = new System.Drawing.Point(585, 62);
+            this.panelInfoVehiculo.Name = "panelInfoVehiculo";
+            this.panelInfoVehiculo.Padding = new System.Windows.Forms.Padding(3);
+            this.panelInfoVehiculo.RowCount = 1;
+            this.panelInfoVehiculo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.panelInfoVehiculo.Size = new System.Drawing.Size(486, 350);
+            this.panelInfoVehiculo.TabIndex = 16;
+            this.panelInfoVehiculo.Visible = false;
             // 
             // tableLayoutPanel4
             // 
@@ -884,7 +881,7 @@
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel9.Controls.Add(this.label2, 0, 0);
-            this.tableLayoutPanel9.Controls.Add(this.textBox1, 1, 0);
+            this.tableLayoutPanel9.Controls.Add(this.textBoxEditarNombre, 1, 0);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
@@ -903,13 +900,13 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Nombre:";
             // 
-            // textBox1
+            // textBoxEditarNombre
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.Location = new System.Drawing.Point(270, 28);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(161, 22);
-            this.textBox1.TabIndex = 1;
+            this.textBoxEditarNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxEditarNombre.Location = new System.Drawing.Point(270, 28);
+            this.textBoxEditarNombre.Name = "textBoxEditarNombre";
+            this.textBoxEditarNombre.Size = new System.Drawing.Size(161, 22);
+            this.textBoxEditarNombre.TabIndex = 1;
             // 
             // tableLayoutPanel10
             // 
@@ -917,7 +914,7 @@
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel10.Controls.Add(this.label3, 0, 0);
-            this.tableLayoutPanel10.Controls.Add(this.textBox2, 1, 0);
+            this.tableLayoutPanel10.Controls.Add(this.textBoxEditarApellido, 1, 0);
             this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 87);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
@@ -936,13 +933,13 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Apellido";
             // 
-            // textBox2
+            // textBoxEditarApellido
             // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox2.Location = new System.Drawing.Point(270, 28);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(161, 22);
-            this.textBox2.TabIndex = 1;
+            this.textBoxEditarApellido.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxEditarApellido.Location = new System.Drawing.Point(270, 28);
+            this.textBoxEditarApellido.Name = "textBoxEditarApellido";
+            this.textBoxEditarApellido.Size = new System.Drawing.Size(161, 22);
+            this.textBoxEditarApellido.TabIndex = 1;
             // 
             // tableLayoutPanel11
             // 
@@ -974,8 +971,8 @@
             this.tableLayoutPanel13.ColumnCount = 2;
             this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
-            this.tableLayoutPanel13.Controls.Add(this.comboBox2, 0, 0);
-            this.tableLayoutPanel13.Controls.Add(this.textBox3, 1, 0);
+            this.tableLayoutPanel13.Controls.Add(this.comboBoxEditarTCI, 0, 0);
+            this.tableLayoutPanel13.Controls.Add(this.textBoxEditarCI, 1, 0);
             this.tableLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel13.Location = new System.Drawing.Point(237, 3);
             this.tableLayoutPanel13.Name = "tableLayoutPanel13";
@@ -984,37 +981,39 @@
             this.tableLayoutPanel13.Size = new System.Drawing.Size(228, 72);
             this.tableLayoutPanel13.TabIndex = 1;
             // 
-            // comboBox2
+            // comboBoxEditarTCI
             // 
-            this.comboBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.comboBoxEditarTCI.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBoxEditarTCI.DropDownHeight = 90;
+            this.comboBoxEditarTCI.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxEditarTCI.FormattingEnabled = true;
+            this.comboBoxEditarTCI.IntegralHeight = false;
+            this.comboBoxEditarTCI.Items.AddRange(new object[] {
             "V",
             "E",
             "J",
             "G",
             "P"});
-            this.comboBox2.Location = new System.Drawing.Point(3, 24);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(51, 24);
-            this.comboBox2.TabIndex = 0;
+            this.comboBoxEditarTCI.Location = new System.Drawing.Point(3, 24);
+            this.comboBoxEditarTCI.Name = "comboBoxEditarTCI";
+            this.comboBoxEditarTCI.Size = new System.Drawing.Size(51, 24);
+            this.comboBoxEditarTCI.TabIndex = 0;
             // 
-            // textBox3
+            // textBoxEditarCI
             // 
-            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox3.Location = new System.Drawing.Point(92, 25);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 22);
-            this.textBox3.TabIndex = 1;
+            this.textBoxEditarCI.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxEditarCI.Location = new System.Drawing.Point(71, 25);
+            this.textBoxEditarCI.Name = "textBoxEditarCI";
+            this.textBoxEditarCI.Size = new System.Drawing.Size(143, 22);
+            this.textBoxEditarCI.TabIndex = 1;
             // 
             // tableLayoutPanel12
             // 
             this.tableLayoutPanel12.ColumnCount = 2;
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel12.Controls.Add(this.button6, 1, 0);
-            this.tableLayoutPanel12.Controls.Add(this.button7, 0, 0);
+            this.tableLayoutPanel12.Controls.Add(this.buttonConfirmarInfoPersonal, 1, 0);
+            this.tableLayoutPanel12.Controls.Add(this.buttonRegresarInfoPersonal, 0, 0);
             this.tableLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel12.Location = new System.Drawing.Point(3, 255);
             this.tableLayoutPanel12.Name = "tableLayoutPanel12";
@@ -1023,81 +1022,76 @@
             this.tableLayoutPanel12.Size = new System.Drawing.Size(468, 80);
             this.tableLayoutPanel12.TabIndex = 3;
             // 
-            // button6
+            // buttonConfirmarInfoPersonal
             // 
-            this.button6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button6.Location = new System.Drawing.Point(291, 12);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(119, 55);
-            this.button6.TabIndex = 3;
-            this.button6.Text = "Confirmar cambios";
-            this.button6.UseVisualStyleBackColor = true;
+            this.buttonConfirmarInfoPersonal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonConfirmarInfoPersonal.Location = new System.Drawing.Point(291, 12);
+            this.buttonConfirmarInfoPersonal.Name = "buttonConfirmarInfoPersonal";
+            this.buttonConfirmarInfoPersonal.Size = new System.Drawing.Size(119, 55);
+            this.buttonConfirmarInfoPersonal.TabIndex = 3;
+            this.buttonConfirmarInfoPersonal.Text = "Confirmar cambios";
+            this.buttonConfirmarInfoPersonal.UseVisualStyleBackColor = true;
+            this.buttonConfirmarInfoPersonal.Click += new System.EventHandler(this.buttonConfirmarInfoPersonal_Click);
             // 
-            // button7
+            // buttonRegresarInfoPersonal
             // 
-            this.button7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button7.Location = new System.Drawing.Point(59, 12);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(115, 55);
-            this.button7.TabIndex = 4;
-            this.button7.Text = "Regresar";
-            this.button7.UseVisualStyleBackColor = true;
+            this.buttonRegresarInfoPersonal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonRegresarInfoPersonal.Location = new System.Drawing.Point(59, 12);
+            this.buttonRegresarInfoPersonal.Name = "buttonRegresarInfoPersonal";
+            this.buttonRegresarInfoPersonal.Size = new System.Drawing.Size(115, 55);
+            this.buttonRegresarInfoPersonal.TabIndex = 4;
+            this.buttonRegresarInfoPersonal.Text = "Regresar";
+            this.buttonRegresarInfoPersonal.UseVisualStyleBackColor = true;
+            this.buttonRegresarInfoPersonal.Click += new System.EventHandler(this.buttonRegresarInfoPersonal_Click);
             // 
-            // tableLayoutPanel3
+            // panelInfoPersonal
             // 
-            this.tableLayoutPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.tableLayoutPanel3.ColumnCount = 1;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel4, 0, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(283, 772);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.Padding = new System.Windows.Forms.Padding(3);
-            this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 344F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(486, 350);
-            this.tableLayoutPanel3.TabIndex = 15;
-            this.tableLayoutPanel3.Visible = false;
+            this.panelInfoPersonal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panelInfoPersonal.ColumnCount = 1;
+            this.panelInfoPersonal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.panelInfoPersonal.Controls.Add(this.tableLayoutPanel4, 0, 0);
+            this.panelInfoPersonal.Location = new System.Drawing.Point(517, 725);
+            this.panelInfoPersonal.Name = "panelInfoPersonal";
+            this.panelInfoPersonal.Padding = new System.Windows.Forms.Padding(3);
+            this.panelInfoPersonal.RowCount = 1;
+            this.panelInfoPersonal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.panelInfoPersonal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 344F));
+            this.panelInfoPersonal.Size = new System.Drawing.Size(486, 350);
+            this.panelInfoPersonal.TabIndex = 15;
+            this.panelInfoPersonal.Visible = false;
             // 
-            // button3
+            // buttonInfoPersonal
             // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button3.Location = new System.Drawing.Point(39, 12);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(121, 56);
-            this.button3.TabIndex = 19;
-            this.button3.Text = "Información Personal";
-            this.button3.UseVisualStyleBackColor = true;
+            this.buttonInfoPersonal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonInfoPersonal.Location = new System.Drawing.Point(39, 25);
+            this.buttonInfoPersonal.Name = "buttonInfoPersonal";
+            this.buttonInfoPersonal.Size = new System.Drawing.Size(121, 56);
+            this.buttonInfoPersonal.TabIndex = 19;
+            this.buttonInfoPersonal.Text = "Información personal";
+            this.buttonInfoPersonal.UseVisualStyleBackColor = true;
+            this.buttonInfoPersonal.Click += new System.EventHandler(this.buttonInfoPersonal_Click);
             // 
-            // button4
+            // buttonInfoVehiculo
             // 
-            this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button4.Location = new System.Drawing.Point(41, 94);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(117, 52);
-            this.button4.TabIndex = 20;
-            this.button4.Text = "Información de vehículo";
-            this.button4.UseVisualStyleBackColor = true;
+            this.buttonInfoVehiculo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonInfoVehiculo.Location = new System.Drawing.Point(41, 134);
+            this.buttonInfoVehiculo.Name = "buttonInfoVehiculo";
+            this.buttonInfoVehiculo.Size = new System.Drawing.Size(117, 52);
+            this.buttonInfoVehiculo.TabIndex = 20;
+            this.buttonInfoVehiculo.Text = "Información de vehículo";
+            this.buttonInfoVehiculo.UseVisualStyleBackColor = true;
+            this.buttonInfoVehiculo.Click += new System.EventHandler(this.buttonInfoVehiculo_Click);
             // 
-            // button5
+            // buttonInfoCompra
             // 
-            this.button5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button5.Location = new System.Drawing.Point(41, 172);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(118, 56);
-            this.button5.TabIndex = 21;
-            this.button5.Text = "Información de Compra";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button12
-            // 
-            this.button12.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button12.Location = new System.Drawing.Point(50, 254);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(99, 54);
-            this.button12.TabIndex = 22;
-            this.button12.Text = "Eliminar registro";
-            this.button12.UseVisualStyleBackColor = true;
+            this.buttonInfoCompra.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonInfoCompra.Location = new System.Drawing.Point(41, 240);
+            this.buttonInfoCompra.Name = "buttonInfoCompra";
+            this.buttonInfoCompra.Size = new System.Drawing.Size(118, 56);
+            this.buttonInfoCompra.TabIndex = 21;
+            this.buttonInfoCompra.Text = "Información de compra";
+            this.buttonInfoCompra.UseVisualStyleBackColor = true;
+            this.buttonInfoCompra.Click += new System.EventHandler(this.buttonInfoCompra_Click);
             // 
             // tableLayoutPanel25
             // 
@@ -1118,14 +1112,12 @@
             this.panelOpcionesEdicion.BackColor = System.Drawing.Color.Transparent;
             this.panelOpcionesEdicion.ColumnCount = 1;
             this.panelOpcionesEdicion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.panelOpcionesEdicion.Controls.Add(this.button3, 0, 0);
-            this.panelOpcionesEdicion.Controls.Add(this.button4, 0, 1);
-            this.panelOpcionesEdicion.Controls.Add(this.button12, 0, 3);
-            this.panelOpcionesEdicion.Controls.Add(this.button5, 0, 2);
-            this.panelOpcionesEdicion.Location = new System.Drawing.Point(110, 268);
+            this.panelOpcionesEdicion.Controls.Add(this.buttonInfoPersonal, 0, 0);
+            this.panelOpcionesEdicion.Controls.Add(this.buttonInfoVehiculo, 0, 1);
+            this.panelOpcionesEdicion.Controls.Add(this.buttonInfoCompra, 0, 2);
+            this.panelOpcionesEdicion.Location = new System.Drawing.Point(237, 295);
             this.panelOpcionesEdicion.Name = "panelOpcionesEdicion";
-            this.panelOpcionesEdicion.RowCount = 4;
-            this.panelOpcionesEdicion.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.panelOpcionesEdicion.RowCount = 3;
             this.panelOpcionesEdicion.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.panelOpcionesEdicion.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.panelOpcionesEdicion.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -1138,20 +1130,20 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(673, 900);
-            this.Controls.Add(this.panelOpcionesEdicion);
             this.Controls.Add(this.tableLayoutPanel25);
-            this.Controls.Add(this.tableLayoutPanel7);
-            this.Controls.Add(this.tableLayoutPanel5);
-            this.Controls.Add(this.tableLayoutPanel3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.panelInfoCompra);
+            this.Controls.Add(this.panelInfoVehiculo);
+            this.Controls.Add(this.panelInfoPersonal);
+            this.Controls.Add(this.buttonRegresarAMain);
             this.Controls.Add(this.buttonBuscar);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBoxCoincidencias);
             this.Controls.Add(this.comboBoxTDoc);
             this.Controls.Add(this.labelApellido);
             this.Controls.Add(this.labelNombre);
             this.Controls.Add(this.textBoxApellido);
             this.Controls.Add(this.textBoxNombreCI);
             this.Controls.Add(this.tableLayoutPanel2);
+            this.Controls.Add(this.panelOpcionesEdicion);
             this.Controls.Add(this.fondo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1159,6 +1151,7 @@
             this.Name = "formEditarUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editar informacion de usuario";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.formEditarUsuario_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.fondo)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
@@ -1172,17 +1165,15 @@
             this.tableLayoutPanel20.PerformLayout();
             this.tableLayoutPanel21.ResumeLayout(false);
             this.tableLayoutPanel21.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownUnidades)).EndInit();
             this.tableLayoutPanel22.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.tableLayoutPanel23.ResumeLayout(false);
             this.tableLayoutPanel23.PerformLayout();
             this.tableLayoutPanel24.ResumeLayout(false);
-            this.tableLayoutPanel7.ResumeLayout(false);
+            this.panelInfoCompra.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
-            this.tableLayoutPanel14.ResumeLayout(false);
-            this.tableLayoutPanel14.PerformLayout();
             this.tableLayoutPanel15.ResumeLayout(false);
             this.tableLayoutPanel15.PerformLayout();
             this.tableLayoutPanel16.ResumeLayout(false);
@@ -1190,7 +1181,7 @@
             this.tableLayoutPanel17.ResumeLayout(false);
             this.tableLayoutPanel17.PerformLayout();
             this.tableLayoutPanel18.ResumeLayout(false);
-            this.tableLayoutPanel5.ResumeLayout(false);
+            this.panelInfoVehiculo.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel9.ResumeLayout(false);
             this.tableLayoutPanel9.PerformLayout();
@@ -1201,7 +1192,7 @@
             this.tableLayoutPanel13.ResumeLayout(false);
             this.tableLayoutPanel13.PerformLayout();
             this.tableLayoutPanel12.ResumeLayout(false);
-            this.tableLayoutPanel3.ResumeLayout(false);
+            this.panelInfoPersonal.ResumeLayout(false);
             this.tableLayoutPanel25.ResumeLayout(false);
             this.panelOpcionesEdicion.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -1223,71 +1214,67 @@
         private System.Windows.Forms.Label labelNombre;
         private System.Windows.Forms.Label labelApellido;
         private System.Windows.Forms.ComboBox comboBoxTDoc;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxCoincidencias;
         private System.Windows.Forms.Button buttonBuscar;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonRegresarAMain;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
+        private System.Windows.Forms.TableLayoutPanel panelInfoCompra;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.TableLayoutPanel panelInfoVehiculo;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TableLayoutPanel panelInfoPersonal;
+        private System.Windows.Forms.Button buttonInfoPersonal;
+        private System.Windows.Forms.Button buttonInfoVehiculo;
+        private System.Windows.Forms.Button buttonInfoCompra;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button buttonConfirmarInfoPersonal;
+        private System.Windows.Forms.Button buttonRegresarInfoPersonal;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxEditarNombre;
+        private System.Windows.Forms.TextBox textBoxEditarApellido;
+        private System.Windows.Forms.ComboBox comboBoxEditarTCI;
+        private System.Windows.Forms.TextBox textBoxEditarCI;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel13;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel14;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel15;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel16;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel17;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel18;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button buttonConfirmarInfoVehiculo;
+        private System.Windows.Forms.Button buttonRegresarInfoVehiculo;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.ComboBox comboBoxEditarMarca;
+        private System.Windows.Forms.ComboBox comboBoxEditarColor;
+        private System.Windows.Forms.TextBox textBoxEditarPlaca;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel19;
-        private System.Windows.Forms.ComboBox comboBox8;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.ComboBox comboBoxProductos;
+        private System.Windows.Forms.ComboBox comboBoxNCompras;
+        private System.Windows.Forms.ComboBox comboBoxNombresTiendas;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel20;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numericUpDownUnidades;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel21;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label labelPrecio;
+        private System.Windows.Forms.Label labelPTotal;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel22;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButtonPresencial;
+        private System.Windows.Forms.RadioButton radioButtonOnline;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel23;
-        private System.Windows.Forms.ComboBox comboBox9;
+        private System.Windows.Forms.ComboBox comboBoxMPago;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel24;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button buttonConfirmarInfoCompra;
         private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel25;
         private System.Windows.Forms.TableLayoutPanel panelOpcionesEdicion;
     }

@@ -35,6 +35,7 @@
             this.comboBoxMinuto = new System.Windows.Forms.ComboBox();
             this.fondo = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.buttonEditar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.fondo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -127,12 +128,23 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Ingrese el dia y hora actual.";
             // 
+            // buttonEditar
+            // 
+            this.buttonEditar.Location = new System.Drawing.Point(39, 552);
+            this.buttonEditar.Name = "buttonEditar";
+            this.buttonEditar.Size = new System.Drawing.Size(75, 23);
+            this.buttonEditar.TabIndex = 8;
+            this.buttonEditar.Text = "button1";
+            this.buttonEditar.UseVisualStyleBackColor = true;
+            this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
+            // 
             // bienvenido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(488, 625);
+            this.Controls.Add(this.buttonEditar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBoxMinuto);
             this.Controls.Add(this.comboBoxHora);
@@ -161,6 +173,7 @@
         private System.Windows.Forms.ComboBox comboBoxMinuto;
         private System.Windows.Forms.PictureBox fondo;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buttonEditar;
     }
 }
 

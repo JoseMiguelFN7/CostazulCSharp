@@ -145,8 +145,6 @@ namespace Costazul
                 panelNotif.Visible = true;
                 labelNotif.Text = "Esta persona no posee compras.";
             }
-            
-            
         }
 
         private void comboBoxCoincidencias_SelectedIndexChanged(object sender, EventArgs e)

@@ -18,11 +18,9 @@ namespace Costazul
         String sectorSeleccionado;
         public static int indexSector;
         public static int numeroSeleccionado;
-        bool hizoSeleccion;
 
         public menuEstacionamiento()
         {
-            hizoSeleccion = false;
             InitializeComponent();
             this.ClientSize = fondo.Size; //Hace que la ventana y el fondo tengan el mismo tamaño.
             sectorPalma.Parent = fondo;
@@ -87,28 +85,20 @@ namespace Costazul
 
         private void rellenarComboBoxCarro()
         {
-            if (!hizoSeleccion)
+            for (int i = 0; i < 500; i++)
             {
-                for (int i = 0; i < 500; i++)
-                {
-                    comboBoxNPuestos.Items.Add((i + 1).ToString());
-                }
-                comboBoxNPuestos.SelectedIndex = 0;
-                hizoSeleccion = true;
+                comboBoxNPuestos.Items.Add((i + 1).ToString());
             }
+            comboBoxNPuestos.SelectedIndex = 0;
         }
 
         private void rellenarComboBoxMoto()
         {
-            if (!hizoSeleccion)
+            for (int i = 0; i < 100; i++)
             {
-                for (int i = 0; i < 100; i++)
-                {
-                    comboBoxNPuestos.Items.Add((i + 1).ToString());
-                }
-                comboBoxNPuestos.SelectedIndex = 0;
-                hizoSeleccion = true;
+                comboBoxNPuestos.Items.Add((i + 1).ToString());
             }
+            comboBoxNPuestos.SelectedIndex = 0;
         }
 
         private void mostrarTooltip(int num)
@@ -360,9 +350,7 @@ namespace Costazul
 
         private void sleep()
         {
-            
             Thread.Sleep(2500);
-            
         }
 
         private void sectorPalma_MouseEnter(object sender, EventArgs e)

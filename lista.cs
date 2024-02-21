@@ -53,30 +53,6 @@ namespace Costazul
             tamanio++;
         }
 
-        public void eliminarPersona(persona p)
-        { //metodo para eliminar una persona de la lista.
-            if (!esVacia())
-            {
-                if (inicio.getValorPersona().getID() == p.getID())
-                {
-                    inicio = inicio.getSiguiente();
-                }
-                else
-                {
-                    nodo aux = inicio;
-                    while (aux.getSiguiente() != null)
-                    {
-                        if (aux.getSiguiente().getValorPersona().getID() == p.getID())
-                        {
-                            aux.setSiguiente(aux.getSiguiente().getSiguiente());
-                            return;
-                        }
-                        aux = aux.getSiguiente();
-                    }
-                }
-            }
-        }
-
         public void buscarPersonaNA(string NA, pila p)
         {
             if (esVacia())

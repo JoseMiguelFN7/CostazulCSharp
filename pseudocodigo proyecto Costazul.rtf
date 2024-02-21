@@ -1,0 +1,1733 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2757
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;\red14\green14\blue14;}
+{\*\expandedcolortbl;;\cssrgb\c6667\c6667\c6667;}
+\margl1440\margr1440\vieww10920\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 FORM BIENVENIDO
+\fs24 \
+\
+INICIO\
+    DECLARAR primerInicio COMO VERDADERO\
+    DECLARAR buttonPressed COMO FALSO\
+    DECLARAR sectoresCarros COMO MATRIZ DE pEstacionamiento[5, 500]\
+    DECLARAR sectoresMotos COMO MATRIZ DE pEstacionamiento[2, 100]\
+    DECLARAR personas COMO LISTA\
+    DECLARAR tiendas COMO LISTA\
+    DECLARAR IDPersona COMO ENTERO\
+    DECLARAR IDVehiculo COMO ENTERO\
+    DECLARAR dia COMO CADENA\
+    DECLARAR hora COMO ENTERO\
+    DECLARAR minuto COMO ENTERO\
+FIN\
+\
+INICIO\
+    SI primerInicio ES VERDADERO\
+        IDPersona = 0\
+        IDVehiculo = 0\
+        cargarTiendas()\
+        cargarPersonas()\
+        cargarPuestos()\
+        personas.sincronizarPasajeros() // agrega los pasajeros correspondientes a cada veh\'edculo en la informaci\'f3n de cada persona\
+    SINO\
+        // Actualizar el archivo de puestos. (sistema --> archivo)\
+        texto = ""\
+        PARA i DESDE 0 HASTA 4 // SECTORES DE CARROS\
+            PARA j DESDE 0 HASTA 499\
+                SI sectoresCarros[i, j].getOcupantes().esVacia() ENTONCES\
+                    texto += sectoresCarros[i, j].getSector() + "_" + sectoresCarros[i, j].getNumero() + "_" + "no" + "\\n"\
+                SINO\
+                    texto += sectoresCarros[i, j].getSector() + "_" + sectoresCarros[i, j].getNumero() + "_" + sectoresCarros[i, j].getOcupantes().getDatosOcupantes() + "\\n"\
+                FIN SI\
+            FIN PARA\
+            SI i NO ES 4 ENTONCES\
+                texto += "-" + "\\n"\
+            FIN SI\
+        FIN PARA\
+\
+INICIO\
+        texto += "%" + "\\n"\
+        PARA i DESDE 0 HASTA 1 // SECTORES DE MOTOS\
+            PARA j DESDE 0 HASTA 99\
+                SI sectoresMotos[i, j].getOcupantes().esVacia() ENTONCES\
+                    texto += sectoresMotos[i, j].getSector() + "_" + sectoresMotos[i, j].getNumero() + "_" + "no" + "\\n"\
+                SINO\
+                    texto += sectoresMotos[i, j].getSector() + "_" + sectoresMotos[i, j].getNumero() + "_" + sectoresMotos[i, j].getOcupantes().getDatosOcupantes() + "\\n"\
+                FIN SI\
+            FIN PARA\
+            SI i NO ES 1 ENTONCES\
+                texto += "-" + "\\n"\
+            FIN SI\
+        FIN PARA\
+FIN\
+\
+INICIO\
+    DECLARAR ruta COMO CADENA\
+    ruta = CombinarRutas(Application.StartupPath, "archivostxt\\\\Puestos.txt")\
+    texto = archivo.leerArchivo(ruta)\
+    SI texto ES NULO ENTONCES\
+        PARA i DESDE 0 HASTA 4 // SECTORES DE CARROS\
+            PARA j DESDE 0 HASTA 499\
+                SEG\'daN i\
+                    CASO 0:\
+                        texto = "M"\
+                    CASO 1:\
+                        texto = "S"\
+                    CASO 2:\
+                        texto = "R"\
+                    CASO 3:\
+                        texto = "G"\
+                    CASO 4:\
+                        texto = "B1"\
+                FIN SEG\'daN\
+            FIN PARA\
+        FIN PARA\
+    FIN SI\
+FIN\
+\
+INICIO\
+    PARA i DESDE 0 HASTA 1 // SECTORES DE MOTOS\
+        PARA j DESDE 0 HASTA 99\
+            SEG\'daN i\
+                CASO 0:\
+                    texto = "P"\
+                CASO 1:\
+                    texto = "B2"\
+            FIN SEG\'daN\
+            sectoresMotos[i, j] = NUEVO pEstacionamiento(texto, j + 1) // crea los puestos de motos vac\'edos\
+        FIN PARA\
+    FIN PARA\
+FIN\
+\
+INICIO\
+    DECLARAR texto COMO CADENA\
+    PARA i DESDE 0 HASTA 4 // SECTORES DE CARROS\
+        PARA j DESDE 0 HASTA 499\
+            texto += sectoresCarros[i, j].getSector() + "_" + sectoresCarros[i, j].getNumero() + "_" + "no" + "\\n"\
+        FIN PARA\
+        SI i NO ES 4 ENTONCES\
+            texto += "-" + "\\n"\
+        FIN SI\
+    FIN PARA\
+\
+    texto += "%" + "\\n"\
+    PARA i DESDE 0 HASTA 1 // SECTORES DE MOTOS\
+        PARA j DESDE 0 HASTA 99\
+            texto += sectoresMotos[i, j].getSector() + "_" + sectoresMotos[i, j].getNumero() + "_" + "no" + "\\n"\
+        FIN PARA\
+        SI i NO ES 1 ENTONCES\
+            texto += "-" + "\\n"\
+        FIN SI\
+    FIN PARA\
+FIN\
+\
+INICIO\
+    SI texto NO ES NULO ENTONCES\
+        DECLARAR separador1 COMO ARREGLO DE CADENA CON VALOR \{"\\n%\\n"\}\
+        DECLARAR arreglosCM COMO ARREGLO DE CADENA\
+        arreglosCM = texto.Split(separador1, StringSplitOptions.RemoveEmptyEntries)\
+        DECLARAR separador2 COMO ARREGLO DE CADENA CON VALOR \{"\\n-\\n"\}\
+        DECLARAR sectoresC COMO ARREGLO DE CADENA\
+        sectoresC = arreglosCM[0].Split(separador2, StringSplitOptions.RemoveEmptyEntries)\
+        DECLARAR sectoresM COMO ARREGLO DE CADENA\
+        sectoresM = arreglosCM[1].Split(separador2, StringSplitOptions.RemoveEmptyEntries)\
+        DECLARAR puestosM COMO ARREGLO DE CADENA\
+        puestosM = sectoresC[0].Split('\\n')\
+        DECLARAR puestosS COMO ARREGLO DE CADENA\
+        puestosS = sectoresC[1].Split('\\n')\
+        DECLARAR puestosR COMO ARREGLO DE CADENA\
+        puestosR = sectoresC[2].Split('\\n')\
+        DECLARAR puestosG COMO ARREGLO DE CADENA\
+        puestosG = sectoresC[3].Split('\\n')\
+        DECLARAR puestosB1 COMO ARREGLO DE CADENA\
+        puestosB1 = sectoresC[4].Split('\\n')\
+        DECLARAR puestosP COMO ARREGLO DE CADENA\
+        puestosP = sectoresM[0].Split('\\n')\
+        DECLARAR puestosB2 COMO ARREGLO DE CADENA\
+        puestosB2 = sectoresM[1].Split('\\n')\
+        DECLARAR pM COMO ARREGLO DE ARREGLO DE CADENA CON TAMA\'d1O 500\
+        DECLARAR pS COMO ARREGLO DE ARREGLO DE CADENA CON TAMA\'d1O 500\
+        DECLARAR pR COMO ARREGLO DE ARREGLO DE CADENA CON TAMA\'d1O 500\
+        DECLARAR pG COMO ARREGLO DE ARREGLO DE CADENA CON TAMA\'d1O 500\
+        DECLARAR pB1 COMO ARREGLO DE ARREGLO DE CADENA CON TAMA\'d1O 500\
+        // Carga de puestos de veh\'edculos al sistema\
+    FIN SI\
+FIN\
+\
+PARA i DESDE 0 HASTA 499\
+    pM[i] = puestosM[i].Split('_')\
+    pS[i] = puestosS[i].Split('_')\
+    pR[i] = puestosR[i].Split('_')\
+    pG[i] = puestosG[i].Split('_')\
+    pB1[i] = puestosB1[i].Split('_')\
+FIN PARA\
+\
+PARA CADA p EN pM // Sector Mangle\
+    sectoresCarros[0, Int32.Parse(p[1]) - 1] = NUEVO pEstacionamiento(p[0], Int32.Parse(p[1]))\
+    SI NO p[2].Equals("no") ENTONCES\
+        sectoresCarros[0, Int32.Parse(p[1]) - 1].agregarOcupantes(p[2], personas)\
+    FIN SI\
+FIN PARA\
+\
+PARA CADA p EN pS // Sector Mangle\
+    sectoresCarros[1, Int32.Parse(p[1]) - 1] = NUEVO pEstacionamiento(p[0], Int32.Parse(p[1]))\
+    SI NO p[2].Equals("no") ENTONCES\
+        sectoresCarros[1, Int32.Parse(p[1]) - 1].agregarOcupantes(p[2], personas)\
+    FIN SI\
+FIN PARA\
+\
+PARA CADA p EN pR\
+    sectoresCarros[2, Int32.Parse(p[1]) - 1] = NUEVO pEstacionamiento(p[0], Int32.Parse(p[1]))\
+    SI NO p[2].Equals("no") ENTONCES\
+        sectoresCarros[2, Int32.Parse(p[1]) - 1].agregarOcupantes(p[2], personas)\
+    FIN SI\
+FIN PARA\
+\
+PARA CADA p EN pB1\
+    sectoresCarros[4, Int32.Parse(p[1]) - 1] = NUEVO pEstacionamiento(p[0], Int32.Parse(p[1]))\
+    SI NO p[2].Equals("no") ENTONCES\
+        sectoresCarros[4, Int32.Parse(p[1]) - 1].agregarOcupantes(p[2], personas)\
+    FIN SI\
+FIN PARA\
+\
+PARA CADA p EN pB1\
+    sectoresCarros[4, Int32.Parse(p[1]) - 1] = NUEVO pEstacionamiento(p[0], Int32.Parse(p[1]))\
+    SI NO p[2].Equals("no") ENTONCES\
+        sectoresCarros[4, Int32.Parse(p[1]) - 1].agregarOcupantes(p[2], personas)\
+    FIN SI\
+FIN PARA\
+\
+INICIO\
+    DECLARAR pP COMO ARREGLO DE ARREGLO DE CADENA CON TAMA\'d1O 100\
+    DECLARAR pB2 COMO ARREGLO DE ARREGLO DE CADENA CON TAMA\'d1O 100\
+    PARA i DESDE 0 HASTA 99\
+        pP[i] = puestosP[i].Split('_')\
+        pB2[i] = puestosB2[i].Split('_')\
+    FIN PARA\
+\
+    PARA CADA p EN pP // Sector Mangle\
+        sectoresMotos[0, Int32.Parse(p[1]) - 1] = NUEVO pEstacionamiento(p[0], Int32.Parse(p[1]))\
+        SI NO p[2].Equals("no") ENTONCES\
+            sectoresMotos[0, Int32.Parse(p[1]) - 1].agregarOcupantes(p[2], personas)\
+        FIN SI\
+    FIN PARA\
+FIN\
+\
+INICIO\
+    DECLARAR ruta COMO CADENA\
+    ruta = CombinarRutas(Application.StartupPath, "archivostxt\\\\Tiendas.txt")\
+    DECLARAR texto COMO CADENA\
+    texto = archivo.leerArchivo(ruta)\
+    DECLARAR stringTiendas COMO ARREGLO DE CADENA\
+    stringTiendas = texto.Split('\\n')\
+    \
+    PARA CADA t EN stringTiendas\
+        DECLARAR datosTiendas COMO ARREGLO DE CADENA\
+        datosTiendas = t.Split('_')\
+        tiendas.agregarTiendaAlFinal(NUEVA tienda(datosTiendas[0], datosTiendas[1], datosTiendas[2], Int32.Parse(datosTiendas[3]), datosTiendas[4]))\
+    FIN PARA\
+FIN\
+\
+INICIO\
+    DECLARAR ruta COMO CADENA\
+    ruta = CombinarRutas(Application.StartupPath, "archivostxt\\\\Personas.txt")\
+    DECLARAR s COMO CADENA\
+    s = archivo.leerArchivo(ruta)\
+    SI String.IsNullOrEmpty(s) ENTONCES\
+        archivo.escribirArchivo("", ruta) // Si no existe, lo crea\
+        RETORNAR\
+    FIN SI\
+    DECLARAR arrayPersonas COMO ARREGLO DE CADENA\
+    arrayPersonas = s.Split('\\n')\
+    PARA CADA persona EN arrayPersonas\
+        DECLARAR datosPersona COMO ARREGLO DE CADENA\
+        datosPersona = persona.Split('_')\
+        DECLARAR p COMO NUEVA persona(Int32.Parse(datosPersona[0]), datosPersona[1], datosPersona[2], datosPersona[3], datosPersona[4], datosPersona[5], Int32.Parse(datosPersona[6]), Int32.Parse(datosPersona[7]), Int32.Parse(datosPersona[8]), Int32.Parse(datosPersona[9]))\
+        SI datosPersona[10].Equals("no") ENTONCES\
+            p.setVehiculo(NULO)\
+        SINO\
+            // L\'f3gica para asignar veh\'edculo a la persona\
+        FIN SI\
+    FIN PARA\
+FIN\
+\
+INICIO\
+    PARA CADA datosPersona EN arrayPersonas\
+        DECLARAR datosVehiculo COMO ARREGLO DE CADENA\
+        datosVehiculo = datosPersona[10].Split('/')\
+        p.setVehiculo(NUEVO vehiculo(Int32.Parse(datosVehiculo[0]), datosVehiculo[1], datosVehiculo[2], datosVehiculo[3], datosVehiculo[4]))\
+        SI p.getVehiculo().getID() >= bienvenido.IDVehiculo ENTONCES\
+            bienvenido.IDVehiculo = p.getVehiculo().getID() + 1\
+        FIN SI\
+\
+        SI NO datosPersona[11].Equals("no") ENTONCES\
+            DECLARAR datoscompras COMO ARREGLO DE CADENA\
+            datoscompras = datosPersona[11].Split('-')\
+            PARA CADA datoscompra EN datoscompras\
+                DECLARAR compra COMO ARREGLO DE CADENA\
+                compra = datoscompra.Split('/')\
+                DECLARAR c COMO NUEVA compra(p, bienvenido.tiendas.buscarTiendaLocal(Int32.Parse(compra[0])), bienvenido.tiendas.buscarTiendaLocal(Int32.Parse(compra[0])).getProductos().buscarProducto(compra[1]), Int32.Parse(compra[2]), Double.Parse(compra[3]), compra[4], compra[5])\
+                p.getCompras().agregarCompraAlFinal(c)\
+            FIN PARA\
+        FIN SI\
+\
+        SI p.getID() >= IDPersona ENTONCES\
+            IDPersona = p.getID() + 1\
+        FIN SI\
+\
+        personas.agregarPersonaAlFinal(p)\
+    FIN PARA\
+FIN\
+\
+INICIO\
+    SI NO buttonPressed ENTONCES\
+        Application.Exit()\
+    FIN SI\
+FIN\
+\
+INICIO\
+    PARA i DESDE 0 HASTA 59\
+        SI i < 10 ENTONCES\
+            comboBoxMinuto.AgregarItem("0" + i.ConvertirAString())\
+        SINO\
+            comboBoxMinuto.AgregarItem(i.ConvertirAString())\
+        FIN SI\
+    FIN PARA\
+    comboBoxMinuto.SeleccionarIndice(0)\
+    comboBoxMinuto.Visible = VERDADERO\
+FIN\
+\
+INICIO\
+    PARA i DESDE 12 HASTA 19\
+        comboBoxHora.AgregarItem(i.ConvertirAString())\
+    FIN PARA\
+FIN\
+\
+INICIO\
+    PARA i DESDE 11 HASTA 20\
+        comboBoxHora.AgregarItem(i.ConvertirAString())\
+    FIN PARA\
+    comboBoxHora.SeleccionarIndice(0)\
+    comboBoxHora.Visible = VERDADERO\
+FIN\
+\
+INICIO\
+    ButtonConfirmar.Habilitar = VERDADERO\
+FIN\
+\
+M\'c9TODO comboBoxMinuto_SelectedIndexChanged(par\'e1metro sender, par\'e1metro e)\
+    // El cuerpo del m\'e9todo est\'e1 vac\'edo\
+FIN M\'c9TODO\
+\
+M\'c9TODO Button2_Click(par\'e1metro sender, par\'e1metro e)\
+    dia = ObtenerTextoSeleccionado(comboBoxDia)\
+    hora = ConvertirATipoEntero(ObtenerTextoSeleccionado(comboBoxHora))\
+    minuto = ConvertirATipoEntero(ObtenerTextoSeleccionado(comboBoxMinuto))\
+    buttonPressed = verdadero\
+    Crear instancia de formRegistroUsuarios llamada ru\
+    Mostrar ru\
+    SI primerInicio es verdadero ENTONCES\
+        primerInicio = falso\
+        Ocultar este formulario\
+    SINO\
+        Cerrar este formulario\
+    FIN SI\
+FIN M\'c9TODO\
+\
+
+\fs36 FORM EDITAR USUARIOS
+\fs24 \
+\
+ESPACIO DE NOMBRES Costazul\
+    CLASE formEditarUsuario HEREDA DE Form\
+        VARIABLE resultados como pila\
+        ARREGLO arrayCoincidencias de tipo persona\
+        VARIABLE registroEnEdicion de tipo persona\
+        ARREGLO arrayCompras de tipo compra\
+        VARIABLE displayCompra como booleano\
+\
+        CONSTRUCTOR formEditarUsuario()\
+            InicializarComponentes()\
+            ESTABLECER ClienteSize al tama\'f1o de fondo\
+            ESTABLECER fondo como padre de labelNombre\
+            ESTABLECER fondo como padre de labelApellido\
+            SELECCIONAR \'edndice 0 en comboBoxTDoc\
+            ESTABLECER fondo como padre de panelOpcionesEdicion\
+        FIN CONSTRUCTOR\
+\
+        M\'c9TODO radioButtonNA_CheckedChanged(par\'e1metro sender, par\'e1metro e)\
+            SI radioButtonNA est\'e1 marcado ENTONCES\
+                HACER labelNombre visible\
+                HACER textBoxNombreCI visible\
+                HACER labelApellido visible\
+                HACER textBoxApellido visible\
+                HACER comboBoxTDoc no visible\
+                HACER buttonBuscar visible\
+            FIN SI\
+        FIN M\'c9TODO\
+\
+        M\'c9TODO radioButtonCI_CheckedChanged(par\'e1metro sender, par\'e1metro e)\
+            SI radioButtonCI est\'e1 marcado ENTONCES\
+                HACER textBoxNombreCI visible\
+                HACER comboBoxTDoc visible\
+                HACER labelNombre no visible\
+                HACER labelApellido no visible\
+                HACER textBoxApellido no visible\
+                HACER buttonBuscar visible\
+            FIN SI\
+        FIN M\'c9TODO\
+\
+        M\'c9TODO buttonBuscar_Click(par\'e1metro sender, par\'e1metro e)\
+            LIMPIAR \'edtems de comboBoxCoincidencias\
+            SI radioButtonNA est\'e1 marcado ENTONCES\
+                LLAMAR a bienvenido.personas.buscarPersonaNA con textBoxNombreCI.Text + " " + textBoxApellido.Text y resultados\
+            SINO\
+                LLAMAR a bienvenido.personas.buscarPersonaCI con comboBoxTDoc.SelectedItem.ToString() + textBoxNombreCI.Text y resultados\
+            FIN SI\
+        FIN M\'c9TODO\
+    FIN CLASE\
+FIN ESPACIO DE NOMBRES\
+\
+SI NO resultados.esVacia() ENTONCES\
+    HACER comboBoxCoincidencias visible\
+    CREAR arrayCoincidencias como nuevo arreglo de tipo persona con tama\'f1o resultados.getTamanio()\
+    PARA i = 0 HASTA arrayCoincidencias.Longitud - 1 HACER\
+        ESTABLECER arrayCoincidencias[i] a resultados.sacarPersonaDePila()\
+        SI arrayCoincidencias[i].getMEntrada() < 10 ENTONCES\
+            A\'d1ADIR al comboBoxCoincidencias los \'edtems arrayCoincidencias[i].getDEntrada() + " " + arrayCoincidencias[i].getHEntrada() + ":0" + arrayCoincidencias[i].getMEntrada()\
+        SINO\
+            A\'d1ADIR al comboBoxCoincidencias los \'edtems arrayCoincidencias[i].getDEntrada() + " " + arrayCoincidencias[i].getHEntrada() + ":" + arrayCoincidencias[i].getMEntrada()\
+        FIN SI\
+    FIN PARA\
+    SELECCIONAR \'edndice 0 en comboBoxCoincidencias\
+SINO\
+    // Mostrar mensaje de que no hubo resultados\
+FIN SI\
+\
+M\'c9TODO buttonInfoPersonal_Click(par\'e1metro sender, par\'e1metro e)\
+    HACER panelInfoPersonal visible\
+    HACER panelInfoVehiculo no visible\
+    HACER panelInfoCompra no visible\
+\
+    ESTABLECER texto de textBoxEditarNombre a registroEnEdicion.getNombre()\
+    ESTABLECER texto de textBoxEditarApellido a registroEnEdicion.getApellido()\
+    SELECCIONAR \'edtem en comboBoxEditarTCI a registroEnEdicion.getTci()\
+    ESTABLECER texto de textBoxEditarCI a registroEnEdicion.getCi()\
+FIN M\'c9TODO\
+\
+M\'c9TODO buttonInfoVehiculo_Click(par\'e1metro sender, par\'e1metro e)\
+    SI registroEnEdicion.getVehiculo() NO ES nulo ENTONCES\
+        HACER panelInfoVehiculo visible\
+        ESTABLECER posici\'f3n de panelInfoVehiculo a (94, 275)\
+        HACER panelInfoPersonal no visible\
+        HACER panelInfoCompra no visible\
+\
+        SELECCIONAR \'edtem en comboBoxEditarMarca a registroEnEdicion.getVehiculo().getMarca()\
+        SELECCIONAR \'edtem en comboBoxEditarColor a registroEnEdicion.getVehiculo().getColor()\
+        ESTABLECER texto de textBoxEditarPlaca a registroEnEdicion.getVehiculo().getPlaca()\
+    SINO\
+        // Mostrar mensaje que no posee veh\'edculo\
+    FIN SI\
+FIN M\'c9TODO\
+\
+M\'c9TODO buttonInfoCompra_Click(par\'e1metro sender, par\'e1metro e)\
+    SI NO registroEnEdicion.getCompras().esVacia() ENTONCES\
+        HACER panelInfoCompra visible\
+        ESTABLECER posici\'f3n de panelInfoCompra a (94, 275)\
+        HACER panelInfoPersonal no visible\
+        HACER panelInfoVehiculo no visible\
+\
+        LLAMAR a bienvenido.tiendas.llenarComboBoxNombre con comboBoxNombresTiendas\
+        PARA i = 0 HASTA registroEnEdicion.getCompras().getTamanio() - 1 HACER\
+            A\'d1ADIR (i + 1) como cadena al comboBoxNCompras\
+        FIN PARA\
+        ESTABLECER arrayCompras a registroEnEdicion.getCompras().conseguirArrayCompras()\
+    SINO\
+        // Mostrar mensaje no posee compras\
+    FIN SI\
+FIN M\'c9TODO\
+\
+M\'c9TODO comboBoxCoincidencias_SelectedIndexChanged(par\'e1metro sender, par\'e1metro e)\
+    HACER panelOpcionesEdicion visible\
+    ESTABLECER registroEnEdicion a arrayCoincidencias[comboBoxCoincidencias.SelectedIndex]\
+FIN M\'c9TODO\
+\
+M\'c9TODO buttonConfirmarInfoPersonal_Click(par\'e1metro sender, par\'e1metro e)\
+    SI formRegistroUsuarios.esLetra(textBoxEditarNombre.Text) Y formRegistroUsuarios.esLetra(textBoxEditarApellido.Text) Y formRegistroUsuarios.esNumero(textBoxEditarCI.Text) ENTONCES\
+        ESTABLECER nombre de registroEnEdicion a textBoxEditarNombre.Text\
+        ESTABLECER apellido de registroEnEdicion a textBoxEditarApellido.Text\
+        SELECCIONAR tipo de CI de registroEnEdicion a comboBoxEditarTCI.SelectedItem.ToString()\
+        ESTABLECER CI de registroEnEdicion a textBoxEditarCI.Text\
+        LLAMAR a bienvenido.personas.modificarInfoPersonal con registroEnEdicion\
+    SINO\
+        SI NO formRegistroUsuarios.esLetra(textBoxEditarNombre.Text) ENTONCES\
+            CAMBIAR color de fuente de textBoxEditarNombre a Rojo\
+        SINO\
+            CAMBIAR color de fuente de textBoxEditarNombre a Negro\
+        FIN SI\
+\
+        SI NO formRegistroUsuarios.esLetra(textBoxEditarApellido.Text) ENTONCES\
+            CAMBIAR color de fuente de textBoxEditarApellido a Rojo\
+        SINO\
+            CAMBIAR color de fuente de textBoxEditarApellido a Negro\
+        FIN SI\
+\
+        SI NO formRegistroUsuarios.esNumero(textBoxEditarCI.Text) ENTONCES\
+            CAMBIAR color de fuente de textBoxEditarCI a Rojo\
+        SINO\
+            CAMBIAR color de fuente de textBoxEditarCI a Negro\
+        FIN SI\
+    FIN SI\
+FIN M\'c9TODO\
+\
+M\'c9TODO buttonRegresarInfoPersonal_Click(par\'e1metro sender, par\'e1metro e)\
+    HACER panelInfoPersonal no visible\
+FIN M\'c9TODO\
+\
+M\'c9TODO buttonRegresarAMain_Click(par\'e1metro sender, par\'e1metro e)\
+    CERRAR este formulario\
+FIN M\'c9TODO\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\fs19 \cf0 \cb0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs28 \cf2 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 M\'c9TODO formEditarUsuario_FormClosing(par\'e1metro sender, par\'e1metro e)\
+    CREAR instancia de bienvenido llamada b\
+    MOSTRAR b\
+FIN M\'c9TODO\
+\
+M\'c9TODO buttonConfirmarInfoVehiculo_Click(par\'e1metro sender, par\'e1metro e)\
+    SI formRegistroUsuarios.placaValida(textBoxEditarPlaca.Text) ES VERDADERO ENTONCES\
+        CAMBIAR color de fuente de textBoxEditarPlaca a Negro\
+        ESTABLECER marca del veh\'edculo de registroEnEdicion a comboBoxEditarMarca.SelectedItem.ToString()\
+        ESTABLECER color del veh\'edculo de registroEnEdicion a comboBoxEditarColor.SelectedItem.ToString()\
+        ESTABLECER placa del veh\'edculo de registroEnEdicion a textBoxEditarPlaca.Text\
+\
+        VARIABLE found como booleano = falso\
+        SI registroEnEdicion.getVehiculo().getTipo() ES IGUAL A "Moto" ENTONCES\
+            PARA i = 0 HASTA 1 HACER\
+                PARA j = 0 HASTA 99 HACER\
+                    SI bienvenido.sectoresMotos[i, j].getOcupantes().existeIDOcupante(registroEnEdicion.getVehiculo().getID()) ENTONCES\
+                        LLAMAR a bienvenido.sectoresMotos[i, j].getOcupantes().modificarInfoVehiculo con registroEnEdicion.getVehiculo()\
+                        ESTABLECER found a verdadero\
+                        SALIR DEL BUCLE\
+                    FIN SI\
+                    SI found ES VERDADERO ENTONCES\
+                        SALIR DEL BUCLE\
+                    FIN SI\
+                FIN PARA\
+            FIN PARA\
+        SINO\
+            PARA i = 0 HASTA 4 HACER\
+                PARA j = 0 HASTA 499 HACER\
+                    SI bienvenido.sectoresCarros[i, j].getOcupantes().existeIDOcupante(registroEnEdicion.getVehiculo().getID()) ENTONCES\
+                        LLAMAR a bienvenido.sectoresCarros[i, j].getOcupantes().modificarInfoVehiculo con registroEnEdicion.getVehiculo()\
+                        ESTABLECER found a verdadero\
+                        SALIR DEL BUCLE\
+                    FIN SI\
+                    SI found ES VERDADERO ENTONCES\
+                        SALIR DEL BUCLE\
+                    FIN SI\
+                FIN PARA\
+            FIN PARA\
+        FIN SI\
+    SINO\
+        CAMBIAR color de fuente de textBoxEditarPlaca a Rojo\
+    FIN SI\
+\pard\tx1666\pardeftab720\partightenfactor0
+\cf2 FIN M\'c9TODO\
+\
+Procedimiento buttonRegresarInfoVehiculo_Click()\
+    Hacer panelInfoVehiculo.Visible = falso\
+Fin Procedimiento\
+\
+Procedimiento comboBoxNCompras_SelectedIndexChanged()\
+    Hacer displayCompra = verdadero\
+    Establecer comboBoxNombresTiendas.SelectedItem con arrayCompras[comboBoxNCompras.SelectedIndex].getTienda().getNombre()\
+    Establecer numericUpDownUnidades.Value con arrayCompras[comboBoxNCompras.SelectedIndex].getUnidades()\
+    Si arrayCompras[comboBoxNCompras.SelectedIndex].getTipoCompra() es "Online" Entonces\
+        Establecer radioButtonOnline.Checked con verdadero\
+    Sino\
+        Establecer radioButtonPresencial.Checked con verdadero\
+    Fin Si\
+    Establecer comboBoxMPago.SelectedItem con arrayCompras[comboBoxNCompras.SelectedIndex].getMetodoPago()\
+Fin Procedimiento\
+\
+Procedimiento comboBoxNombresTiendas_SelectedIndexChanged()\
+    Limpiar comboBoxProductos.Items\
+    Llamar bienvenido.tiendas.buscarTiendaNombre(comboBoxNombresTiendas.SelectedItem.ToString()).getProductos().llenarComboBoxProductos(comboBoxProductos)\
+    Si displayCompra es verdadero Entonces\
+        Establecer comboBoxProductos.SelectedItem con arrayCompras[comboBoxNCompras.SelectedIndex].getProducto().getNombre()\
+        Hacer displayCompra = falso\
+    Fin Si\
+Fin Procedimiento\
+\
+Procedimiento comboBoxProductos_SelectedIndexChanged()\
+    precio = Obtener bienvenido.tiendas.buscarTiendaNombre(comboBoxNombresTiendas.SelectedItem.ToString()).getProductos().buscarProducto(comboBoxProductos.SelectedItem.ToString()).getPrecio()\
+    Establecer labelPrecio.Text con "Precio: " + precio + "$"\
+    Establecer labelPTotal.Text con "Precio total: " + precio * numericUpDownUnidades.Value + "$"\
+Fin Procedimiento\
+\
+Procedimiento numericUpDownUnidades_ValueChanged()\
+    precio = Obtener bienvenido.tiendas.buscarTiendaNombre(comboBoxNombresTiendas.SelectedItem.ToString()).getProductos().buscarProducto(comboBoxProductos.SelectedItem.ToString()).getPrecio()\
+    Establecer labelPTotal.Text con "Precio total: " + precio * numericUpDownUnidades.Value + "$"\
+Fin Procedimiento\
+\
+Procedimiento radioButtonOnline_CheckedChanged()\
+    Limpiar comboBoxMPago.Items\
+    Si radioButtonOnline.Checked es verdadero Entonces\
+        Agregar "Zelle" a comboBoxMPago.Items\
+        Agregar "Pago M\'f3vil" a comboBoxMPago.Items\
+        Agregar "Transferencia" a comboBoxMPago.Items\
+    Fin Si\
+Fin Procedimiento\
+\
+Procedimiento radioButtonOnline_CheckedChanged()\
+    Limpiar comboBoxMPago.Items\
+    Si radioButtonOnline.Checked es verdadero Entonces\
+        Agregar "Zelle" a comboBoxMPago.Items\
+        Agregar "Pago M\'f3vil" a comboBoxMPago.Items\
+        Agregar "Transferencia" a comboBoxMPago.Items\
+    Fin Si\
+Fin Procedimiento\
+\
+Procedimiento radioButtonPresencial_CheckedChanged()\
+    Limpiar comboBoxMPago.Items\
+    Si radioButtonPresencial.Checked es verdadero Entonces\
+        Agregar "Efectivo" a comboBoxMPago.Items\
+        Agregar "TDD" a comboBoxMPago.Items\
+        Agregar "TDC" a comboBoxMPago.Items\
+    Fin Si\
+Fin Procedimiento\
+\
+Procedimiento buttonConfirmarInfoCompra_Click()\
+    Si comboBoxNCompras.SelectedIndex > -1 Entonces\
+        compraEditada = arrayCompras[comboBoxNCompras.SelectedIndex]\
+        compraEditada.setTienda(bienvenido.tiendas.buscarTiendaNombre(comboBoxNombresTiendas.SelectedItem.ToString()))\
+        compraEditada.setProducto(compraEditada.getTienda().getProductos().buscarProducto(comboBoxProductos.SelectedItem.ToString()))\
+        compraEditada.setUnidades((int)numericUpDownUnidades.Value)\
+        compraEditada.setPrecioTotal(bienvenido.tiendas.buscarTiendaNombre(comboBoxNombresTiendas.SelectedItem.ToString()).getProductos().buscarProducto(comboBoxProductos.SelectedItem.ToString()).getPrecio() * (double)numericUpDownUnidades.Value)\
+        Si radioButtonOnline.Checked es verdadero Entonces\
+            compraEditada.setTipoCompra("Online")\
+        Sino\
+            compraEditada.setTipoCompra("Presencial")\
+        Fin Si\
+        compraEditada.setMetodoPago(comboBoxMPago.SelectedItem.ToString())\
+        registroEnEdicion.getCompras().modificarInfoCompra(arrayCompras[comboBoxNCompras.SelectedIndex], compraEditada)\
+    Sino\
+        //Mostrar mensaje de seleccionar compra\
+    Fin Si\
+Fin Procedimiento\
+\
+Procedimiento buttonRegresarInfoCompra_Click()\
+    Hacer panelInfoCompra.Visible = falso\
+Fin Procedimiento\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 FORM REGISTRO USUARIOS
+\fs24 \
+\
+ESPACIO DE NOMBRES Costazul\
+    CLASE formRegistroUsuarios HEREDA DE Form\
+        VARIABLE buttonPressed = falso\
+        VARIABLE EST\'c1TICA puedeVehiculo = verdadero\
+        VARIABLE EST\'c1TICA usuariosEnSesion = nueva pila()\
+        VARIABLE EST\'c1TICA numUsuariosEnSesion = 0\
+        VARIABLE EST\'c1TICA vehiculoActual\
+        VARIABLE EST\'c1TICA esMoto\
+\
+        CONSTRUCTOR formRegistroUsuarios()\
+            InicializarComponentes()\
+            ClienteSize = tama\'f1o de fondo\
+\
+            Establecer fondo como padre de LabelPrimerNombre\
+            Establecer fondo como padre de LabelApellido\
+            Establecer fondo como padre de LabelDocumento\
+            Establecer fondo como padre de IndiqueHoraDeSalida\
+            Establecer fondo como padre de checkBoxPVehiculo\
+            Establecer fondo como padre de labelTVehiculo\
+            Establecer fondo como padre de labelCAcomp\
+            Establecer fondo como padre de labelMVehiculo\
+            Establecer fondo como padre de labelCVehiculo\
+            Establecer fondo como padre de labelPVehiculo\
+\
+            Establecer fondo como padre de labelErrorPrimerNombre\
+            Establecer fondo como padre de labelErrorApellido\
+            Establecer fondo como padre de labelErrorDocumento\
+            Establecer fondo como padre de labelErrorPlaca\
+\
+            Seleccionar \'edndice 0 en comboBoxTDocumento\
+            Seleccionar \'edndice 0 en comboBoxTVehiculo\
+            Seleccionar \'edndice 0 en comboBoxMarca\
+            Seleccionar \'edndice 0 en comboBoxColor\
+\
+            SI bienvenido.dia es igual a "Domingo" ENTONCES\
+                // Aqu\'ed ir\'eda la l\'f3gica correspondiente al d\'eda domingo\
+            FIN SI\
+    FIN CLASE\
+FIN ESPACIO DE NOMBRES\
+\
+PARA i = bienvenido.hora HASTA 20 HACER\
+    A\'d1ADIR i como cadena al comboBoxHoraDeSalida\
+FIN PARA\
+SI NO\
+    PARA i = bienvenido.hora HASTA 21 HACER\
+        A\'d1ADIR i como cadena al comboBoxHoraDeSalida\
+    FIN PARA\
+FIN SI\
+SELECCIONAR \'edndice 0 en comboBoxHoraDeSalida\
+\
+SI puedeVehiculo es falso ENTONCES\
+    ESTABLECER checkBoxPVehiculo como no habilitado\
+FIN SI\
+\
+M\'c9TODO esNumero(s como cadena)\
+    SI s es nulo o vac\'edo ENTONCES\
+        RETORNAR falso\
+    FIN SI\
+\
+    codAscii = OBTENER c\'f3digo ASCII de s\
+    PARA cada car\'e1cter en s HACER\
+        SI c\'f3digo ASCII est\'e1 fuera del rango de n\'fameros ENTONCES\
+            RETORNAR falso\
+        FIN SI\
+    FIN PARA\
+\
+    RETORNAR verdadero\
+FIN M\'c9TODO\
+\
+M\'c9TODO esMinus(c como car\'e1cter)\
+    codAscii = OBTENER c\'f3digo ASCII de c\
+    SI codAscii NO est\'e1 en el rango de letras min\'fasculas ENTONCES\
+        RETORNAR falso\
+    FIN SI\
+    RETORNAR verdadero\
+FIN M\'c9TODO\
+\
+M\'c9TODO esMinus(c como car\'e1cter)\
+    codAscii = CONVERTIR c a c\'f3digo ASCII\
+    SI codAscii NO est\'e1 en el rango de 'a' a 'z' ENTONCES\
+        RETORNAR falso\
+    FIN SI\
+    RETORNAR verdadero\
+FIN M\'c9TODO\
+\
+M\'c9TODO esMayus(c como car\'e1cter)\
+    codAscii = CONVERTIR c a c\'f3digo ASCII\
+    SI codAscii NO est\'e1 en el rango de 'A' a 'Z' ENTONCES\
+        RETORNAR falso\
+    FIN SI\
+    RETORNAR verdadero\
+FIN M\'c9TODO\
+\
+M\'c9TODO esLetra(s como cadena)\
+    SI s es nulo o vac\'edo ENTONCES\
+        RETORNAR falso\
+    FIN SI\
+    PARA cada car\'e1cter en s HACER\
+        SI car\'e1cter NO es min\'fascula Y NO es may\'fascula ENTONCES\
+            RETORNAR falso\
+        FIN SI\
+    FIN PARA\
+    RETORNAR verdadero\
+FIN M\'c9TODO\
+\
+M\'c9TODO placaValida(s como cadena)\
+    SI s es nulo o vac\'edo ENTONCES\
+        RETORNAR falso\
+    FIN SI\
+    PARA cada car\'e1cter en s HACER\
+        SI car\'e1cter NO es may\'fascula Y NO es n\'famero ENTONCES\
+            RETORNAR falso\
+        FIN SI\
+    FIN PARA\
+    RETORNAR verdadero\
+FIN M\'c9TODO\
+\
+M\'c9TODO formRegistroUsuarios_FormClosing(par\'e1metro sender, par\'e1metro e)\
+    SI buttonPressed es falso ENTONCES\
+        SALIR de la aplicaci\'f3n\
+    FIN SI\
+FIN M\'c9TODO\
+\
+M\'c9TODO comboBoxHora_SelectedIndexChanged(par\'e1metro sender, par\'e1metro e)\
+    LIMPIAR elementos de comboBoxMinutoDeSalida\
+    SI valor seleccionado en comboBoxHoraDeSalida es igual a bienvenido.hora ENTONCES\
+        PARA i = bienvenido.minuto HASTA 59 HACER\
+            SI i es menor que 10 ENTONCES\
+                A\'d1ADIR "0" + i como cadena al comboBoxMinutoDeSalida\
+            SINO\
+                A\'d1ADIR i como cadena al comboBoxMinutoDeSalida\
+            FIN SI\
+        FIN PARA\
+    SINO\
+        SI \'edndice seleccionado en comboBoxHoraDeSalida es igual al \'faltimo \'edndice ENTONCES\
+            A\'d1ADIR "00" al comboBoxMinutoDeSalida\
+        SINO\
+            PARA i = 0 HASTA 59 HACER\
+                SI i es menor que 10 ENTONCES\
+                    A\'d1ADIR "0" + i como cadena al comboBoxMinutoDeSalida\
+                SINO\
+                    A\'d1ADIR i como cadena al comboBoxMinutoDeSalida\
+                FIN SI\
+            FIN PARA\
+        FIN SI\
+    FIN SI\
+    SELECCIONAR \'edndice 0 en comboBoxMinutoDeSalida\
+FIN M\'c9TODO\
+\
+M\'c9TODO comboBoxTVehiculo_SelectedIndexChanged(par\'e1metro sender, par\'e1metro e)\
+    LIMPIAR elementos de comboBoxNAcomp\
+    nMaxAcomp = 0\
+    SEG\'daN \'edndice seleccionado en comboBoxTVehiculo HACER\
+        CASO 0:\
+            nMaxAcomp = 9\
+        CASO 1:\
+            nMaxAcomp = 7\
+        CASO 2:\
+            nMaxAcomp = 4\
+        CASO 3:\
+            nMaxAcomp = 2\
+        CASO 4:\
+            nMaxAcomp = 6\
+    FIN SEG\'daN\
+    PARA i = 0 HASTA nMaxAcomp HACER\
+        A\'d1ADIR i como cadena al comboBoxNAcomp\
+    FIN PARA\
+    SELECCIONAR \'edndice 0 en comboBoxNAcomp\
+FIN M\'c9TODO\
+\
+M\'c9TODO checkBoxPVehiculo_CheckedChanged(par\'e1metro sender, par\'e1metro e)\
+    SI checkBoxPVehiculo est\'e1 marcado ENTONCES\
+        HACER labelTVehiculo visible\
+        HACER comboBoxTVehiculo visible\
+        HACER labelCVehiculo visible\
+        HACER comboBoxColor visible\
+        HACER labelCAcomp visible\
+        HACER comboBoxNAcomp visible\
+        HACER labelMVehiculo visible\
+        HACER comboBoxMarca visible\
+        HACER labelPVehiculo visible\
+        HACER textBoxPlaca visible\
+        ESTABLECER puedeVehiculo a falso\
+    SINO\
+        HACER labelTVehiculo no visible\
+        HACER comboBoxTVehiculo no visible\
+        HACER labelCVehiculo no visible\
+        HACER comboBoxColor no visible\
+        HACER labelCAcomp no visible\
+        HACER comboBoxNAcomp no visible\
+        HACER labelMVehiculo no visible\
+        HACER comboBoxMarca no visible\
+        HACER labelPVehiculo no visible\
+        HACER textBoxPlaca no visible\
+    FIN SI\
+FIN M\'c9TODO\
+\
+M\'c9TODO ButtonValidacionRegistro_Click(par\'e1metro sender, par\'e1metro e)\
+    SI textBoxNombre.Text NO es letra ENTONCES\
+        HACER labelErrorPrimerNombre visible\
+    SINO\
+        HACER labelErrorPrimerNombre no visible\
+    FIN SI\
+\
+    SI textBoxApellido.Text NO es letra ENTONCES\
+        HACER labelErrorApellido visible\
+    SINO\
+        HACER labelErrorApellido no visible\
+    FIN SI\
+\
+    SI textBoxNDocumento.Text NO es n\'famero ENTONCES\
+        HACER labelErrorDocumento visible\
+    SINO\
+        HACER labelErrorDocumento no visible\
+    FIN SI\
+\
+    VARIABLE aceptarPlaca = verdadero\
+    SI checkBoxPVehiculo est\'e1 marcado ENTONCES\
+        SI textBoxPlaca.Text NO es placa v\'e1lida ENTONCES\
+            HACER labelErrorPlaca visible\
+            ESTABLECER aceptarPlaca a falso\
+        SINO\
+            HACER labelErrorPlaca no visible\
+            ESTABLECER aceptarPlaca a verdadero\
+        FIN SI\
+    FIN SI\
+FIN M\'c9TODO\
+\
+SI esLetra(textBoxNombre.Text) Y esLetra(textBoxApellido.Text) Y esNumero(textBoxNDocumento.Text) Y aceptarPlaca ENTONCES\
+    usuariosEnSesion.agregarPersonaEnLaPila(nueva persona(bienvenido.IDPersona, textBoxNombre.Text, textBoxApellido.Text, comboBoxTDocumento.SelectedItem.ToString(), textBoxNDocumento.Text, bienvenido.dia, bienvenido.hora, bienvenido.minuto, ConvertirATipoEntero(comboBoxHoraDeSalida.Text), ConvertirATipoEntero(comboBoxMinutoDeSalida.Text)))\
+    INCREMENTAR bienvenido.IDPersona\
+\
+    SI checkBoxPVehiculo est\'e1 marcado ENTONCES\
+        vehiculoActual = nuevo vehiculo(bienvenido.IDVehiculo, comboBoxTVehiculo.SelectedItem.ToString(), textBoxPlaca.Text, comboBoxColor.SelectedItem.ToString(), comboBoxMarca.SelectedItem.ToString())\
+        INCREMENTAR bienvenido.IDVehiculo\
+        numUsuariosEnSesion = ConvertirATipoEntero(comboBoxNAcomp.SelectedItem.ToString()) + 1\
+        vehiculoActual.getPasajeros().agregarPersonaAlFinal(usuariosEnSesion.verTope())\
+        SI numUsuariosEnSesion > 1 ENTONCES\
+            puedeVehiculo = falso\
+        SINO\
+            usuariosEnSesion.verTope().setVehiculo(vehiculoActual)\
+        FIN SI\
+        buttonPressed = verdadero\
+        CREAR instancia de menuEstacionamiento llamada me\
+        MOSTRAR me\
+        CERRAR este formulario\
+    SINO\
+        SI checkBoxPVehiculo est\'e1 habilitado ENTONCES\
+            numUsuariosEnSesion = 1\
+            usuariosEnSesion.verTope().setVehiculo(nulo)\
+            HACER marcoPanelPregunta visible\
+        SINO\
+            vehiculoActual.getPasajeros().agregarPersonaAlFinal(usuariosEnSesion.verTope())\
+            SI usuariosEnSesion.getTamanio() < numUsuariosEnSesion ENTONCES\
+                HACER marcoPanelPregunta visible\
+            SINO\
+                ESCRIBIR en consola el nombre del siguiente del inicio de los pasajeros del vehiculoActual\
+                puedeVehiculo = verdadero\
+                usuariosEnSesion.setVehiculoAPila(vehiculoActual)\
+                SI esMoto ENTONCES\
+                    bienvenido.sectoresMotos[menuEstacionamiento.indexSector, menuEstacionamiento.numeroSeleccionado].getOcupantes().agregarVehiculoAlFinal(vehiculoActual)\
+                SINO\
+                    bienvenido.sectoresCarros[menuEstacionamiento.indexSector, menuEstacionamiento.numeroSeleccionado].getOcupantes().agregarVehiculoAlFinal(vehiculoActual)\
+                FIN SI\
+                HACER marcoPanelPregunta visible\
+            FIN SI\
+        FIN SI\
+    FIN SI\
+FIN SI\
+\
+M\'c9TODO buttonSiCompra_Click(par\'e1metro sender, par\'e1metro e)\
+    buttonPressed = verdadero\
+    CREAR instancia de formTiendas llamada ft\
+    MOSTRAR ft\
+    CERRAR este formulario\
+FIN M\'c9TODO\
+\
+
+\fs36 MENU ESTACIONAMIENTO
+\fs24 \
+\
+ESPACIO DE NOMBRES Costazul\
+    CLASE menuEstacionamiento HEREDA DE Form\
+        VARIABLE buttonPressed = falso\
+        VARIABLE sectorSeleccionado como cadena\
+        VARIABLE EST\'c1TICA indexSector como entero\
+        VARIABLE EST\'c1TICA numeroSeleccionado como entero\
+        VARIABLE hizoSeleccion como booleano\
+\
+        CONSTRUCTOR menuEstacionamiento()\
+            hizoSeleccion = falso\
+            InicializarComponentes()\
+            ClienteSize = tama\'f1o de fondo\
+\
+            Establecer fondo como padre de sectorPalma\
+            Establecer sectorPalma como padre de marcoSPalma\
+            Establecer posici\'f3n de marcoSPalma a (0, 0)\
+            Establecer fondo como padre de sectorMangle\
+            Establecer sectorMangle como padre de marcoSMangle\
+            Establecer posici\'f3n de marcoSMangle a (0, 0)\
+            Establecer fondo como padre de sectorSaman\
+            Establecer sectorSaman como padre de marcoSSaman\
+            Establecer posici\'f3n de marcoSSaman a (0, 0)\
+            Establecer fondo como padre de sectorRoble\
+            Establecer sectorRoble como padre de marcoSRoble\
+            Establecer posici\'f3n de marcoSRoble a (0, 0)\
+            Establecer fondo como padre de sectorGuayacan\
+            Establecer sectorGuayacan como padre de marcoSGuayacan\
+            Establecer posici\'f3n de marcoSGuayacan a (0, 0)\
+            Establecer fondo como padre de sectorBambu1\
+            Establecer sectorBambu1 como padre de marcoSB1\
+            Establecer posici\'f3n de marcoSB1 a (0, 0)\
+            Establecer fondo como padre de sectorBambu2\
+            Establecer sectorBambu2 como padre de marcoSB2\
+            Establecer posici\'f3n de marcoSB2 a (0, 0)\
+\
+            SI formRegistroUsuarios.esMoto es verdadero ENTONCES\
+                HACER sectorPalma visible\
+                HACER sectorBambu2 visible\
+                A\'d1ADIR "1 y 100." a labelErrorN.Text\
+                LLAMAR a rellenarComboBoxMoto()\
+            SINO\
+                HACER sectorMangle visible\
+                HACER sectorSaman visible\
+                HACER sectorRoble visible\
+                HACER sectorGuayacan visible\
+                HACER sectorBambu1 visible\
+                A\'d1ADIR "1 y 500." a labelErrorN.Text\
+                LLAMAR a rellenarComboBoxCarro()\
+            FIN SI\
+        FIN CONSTRUCTOR\
+    FIN CLASE\
+FIN ESPACIO DE NOMBRES\
+\
+M\'c9TODO esNumero(s como cadena)\
+    SI s es nulo o vac\'edo ENTONCES\
+        RETORNAR falso\
+    FIN SI\
+\
+    codAscii = OBTENER c\'f3digo ASCII de s\
+    PARA cada car\'e1cter en s HACER\
+        SI c\'f3digo ASCII est\'e1 fuera del rango de n\'fameros ENTONCES\
+            RETORNAR falso\
+        FIN SI\
+    FIN PARA\
+\
+    RETORNAR verdadero\
+FIN M\'c9TODO\
+\
+M\'c9TODO rellenarComboBoxCarro()\
+    SI hizoSeleccion es falso ENTONCES\
+        PARA i = 0 HASTA 499 HACER\
+            A\'d1ADIR (i + 1) como cadena al comboBoxNPuestos\
+        FIN PARA\
+        SELECCIONAR \'edndice 0 en comboBoxNPuestos\
+        ESTABLECER hizoSeleccion a verdadero\
+    FIN SI\
+FIN M\'c9TODO\
+\
+M\'c9TODO rellenarComboBoxMoto()\
+    SI hizoSeleccion es falso ENTONCES\
+        PARA i = 0 HASTA 99 HACER\
+            A\'d1ADIR (i + 1) como cadena al comboBoxNPuestos\
+        FIN PARA\
+        SELECCIONAR \'edndice 0 en comboBoxNPuestos\
+        ESTABLECER hizoSeleccion a verdadero\
+    FIN SI\
+FIN M\'c9TODO\
+\
+M\'c9TODO mostrarTooltip(num como entero)\
+    HACER marcoTooltipSector visible\
+    HACER tooltipSector visible\
+    SEG\'daN num HACER\
+        CASO 0:\
+            ESTABLECER texto de labelNombreSector a "Sector Palma"\
+        CASO 1:\
+            ESTABLECER texto de labelNombreSector a "Sector Mangle"\
+        CASO 2:\
+            ESTABLECER texto de labelNombreSector a "Sector Saman"\
+        CASO 3:\
+            ESTABLECER texto de labelNombreSector a "Sector Roble"\
+        CASO 4:\
+            ESTABLECER texto de labelNombreSector a "Sector Guayac\'e1n"\
+        CASO 5:\
+            ESTABLECER texto de labelNombreSector a "Sector Bamb\'fa 1"\
+        CASO 6:\
+            ESTABLECER texto de labelNombreSector a "Sector Bamb\'fa 2"\
+    FIN SEG\'daN\
+FIN M\'c9TODO\
+\
+M\'c9TODO sectorPalma_Click(par\'e1metro sender, par\'e1metro e)\
+    sectorSeleccionado = "P"\
+    HACER marcoSPalma visible\
+    HACER marcoSMangle no visible\
+    HACER marcoSSaman no visible\
+    HACER marcoSRoble no visible\
+    HACER marcoSGuayacan no visible\
+    HACER marcoSB1 no visible\
+    HACER marcoSB2 no visible\
+    HACER PanelSSeleccionada visible\
+    ESTABLECER texto de labelSectorSeleccionado a "Sector Palma seleccionado"\
+    HACER marcoSectorSeleccionado visible\
+FIN M\'c9TODO\
+\
+M\'c9TODO sectorMangle_Click(par\'e1metro sender, par\'e1metro e)\
+    sectorSeleccionado = "M"\
+    HACER marcoSPalma no visible\
+    HACER marcoSMangle visible\
+    HACER marcoSSaman no visible\
+    HACER marcoSRoble no visible\
+    HACER marcoSGuayacan no visible\
+    HACER marcoSB1 no visible\
+    HACER marcoSB2 no visible\
+    HACER PanelSSeleccionada visible\
+    ESTABLECER texto de labelSectorSeleccionado a "Sector Mangle seleccionado"\
+FIN M\'c9TODO\
+\
+M\'c9TODO sectorSaman_Click(par\'e1metro sender, par\'e1metro e)\
+    sectorSeleccionado = "S"\
+    HACER marcoSPalma no visible\
+    HACER marcoSMangle no visible\
+    HACER marcoSSaman visible\
+    HACER marcoSRoble no visible\
+    HACER marcoSGuayacan no visible\
+    HACER marcoSB1 no visible\
+    HACER marcoSB2 no visible\
+    HACER PanelSSeleccionada visible\
+    ESTABLECER texto de labelSectorSeleccionado a "Sector Saman seleccionado"\
+FIN M\'c9TODO\
+\
+M\'c9TODO sectorRoble_Click(par\'e1metro sender, par\'e1metro e)\
+    sectorSeleccionado = "R"\
+    HACER marcoSPalma no visible\
+    HACER marcoSMangle no visible\
+    HACER marcoSSaman no visible\
+    HACER marcoSRoble visible\
+    HACER marcoSGuayacan no visible\
+    HACER marcoSB1 no visible\
+    HACER marcoSB2 no visible\
+    HACER PanelSSeleccionada visible\
+    ESTABLECER texto de labelSectorSeleccionado a "Sector Roble seleccionado"\
+FIN M\'c9TODO\
+\
+M\'c9TODO sectorGuayacan_Click(par\'e1metro sender, par\'e1metro e)\
+    sectorSeleccionado = "G"\
+    HACER marcoSPalma no visible\
+    HACER marcoSMangle no visible\
+    HACER marcoSSaman no visible\
+    HACER marcoSRoble no visible\
+    HACER marcoSGuayacan visible\
+    HACER marcoSB1 no visible\
+    HACER marcoSB2 no visible\
+    HACER PanelSSeleccionada visible\
+    ESTABLECER texto de labelSectorSeleccionado a "Sector Guayac\'e1n seleccionado"\
+FIN M\'c9TODO\
+\
+M\'c9TODO sectorBambu1_Click(par\'e1metro sender, par\'e1metro e)\
+    sectorSeleccionado = "B1"\
+    HACER marcoSPalma no visible\
+    HACER marcoSMangle no visible\
+    HACER marcoSSaman no visible\
+    HACER marcoSRoble no visible\
+    HACER marcoSGuayacan no visible\
+    HACER marcoSB1 visible\
+    HACER marcoSB2 no visible\
+    HACER PanelSSeleccionada visible\
+    ESTABLECER texto de labelSectorSeleccionado a "Sector Bamb\'fa 1 seleccionado"\
+FIN M\'c9TODO\
+\
+M\'c9TODO sectorBambu2_Click(par\'e1metro sender, par\'e1metro e)\
+    sectorSeleccionado = "B2"\
+    HACER marcoSPalma no visible\
+    HACER marcoSMangle no visible\
+    HACER marcoSSaman no visible\
+    HACER marcoSRoble no visible\
+    HACER marcoSGuayacan no visible\
+    HACER marcoSB1 no visible\
+    HACER marcoSB2 visible\
+    HACER PanelSSeleccionada visible\
+    ESTABLECER texto de labelSectorSeleccionado a "Sector Bamb\'fa 2 seleccionado"\
+FIN M\'c9TODO\
+\
+M\'c9TODO buttonContinuar_Click(par\'e1metro sender, par\'e1metro e)\
+    SI sectorSeleccionado NO es nulo Y esNumero(comboBoxNPuestos.Text) es verdadero ENTONCES\
+        SI (formRegistroUsuarios.esMoto Y ConvertirATipoEntero(comboBoxNPuestos.Text) > 0 Y ConvertirATipoEntero(comboBoxNPuestos.Text) <= 100) O (NO formRegistroUsuarios.esMoto Y ConvertirATipoEntero(comboBoxNPuestos.Text) > 0 Y ConvertirATipoEntero(comboBoxNPuestos.Text) <= 500) ENTONCES\
+            HACER PanelMarcoErrorS no visible\
+            HACER PanelErrorS no visible\
+            HACER PanelMarcoErrorN no visible\
+            HACER PanelErrorN no visible\
+            ESTABLECER numeroSeleccionado a ConvertirATipoEntero(comboBoxNPuestos.Text)\
+            SEG\'daN sectorSeleccionado HACER\
+                CASO "P":\
+                    ESTABLECER indexSector a 0\
+                CASO "M":\
+                    ESTABLECER indexSector a 0\
+                CASO "S":\
+                    ESTABLECER indexSector a 1\
+                CASO "R":\
+                    ESTABLECER indexSector a 2\
+                CASO "G":\
+                    ESTABLECER indexSector a 3\
+                CASO "B1":\
+                    ESTABLECER indexSector a 4\
+                CASO "B2":\
+                    ESTABLECER indexSector a 1\
+            FIN SEG\'daN\
+        FIN SI\
+    FIN SI\
+FIN M\'c9TODO\
+\
+SI formRegistroUsuarios.esMoto ES VERDADERO ENTONCES\
+    SI NO bienvenido.sectoresMotos[indexSector, numeroSeleccionado - 1].getOcupantes().puestoOcupado(formRegistroUsuarios.usuariosEnSesion.verTope()) ENTONCES\
+        SI formRegistroUsuarios.numUsuariosEnSesion ES IGUAL A 1 ENTONCES\
+            bienvenido.sectoresMotos[indexSector, numeroSeleccionado - 1].getOcupantes().agregarVehiculoAlFinal(formRegistroUsuarios.usuariosEnSesion.verTope().getVehiculo())\
+        FIN SI\
+        HACER marcoPanelPregunta visible\
+    SINO\
+        HACER PanelMarcoPOcupado visible\
+        HACER PanelPOcupado visible\
+        HACER labelPOcupado visible\
+        INICIAR nuevo hilo que ejecuta sleep()\
+        ESPERAR a que el hilo termine\
+        HACER PanelMarcoPOcupado no visible\
+        HACER PanelPOcupado no visible\
+        HACER labelPOcupado no visible\
+    FIN SI\
+SINO\
+    SI NO bienvenido.sectoresCarros[indexSector, numeroSeleccionado - 1].getOcupantes().puestoOcupado(formRegistroUsuarios.usuariosEnSesion.verTope()) ENTONCES\
+        SI formRegistroUsuarios.numUsuariosEnSesion ES IGUAL A 1 ENTONCES\
+            bienvenido.sectoresCarros[indexSector, numeroSeleccionado - 1].getOcupantes().agregarVehiculoAlFinal(formRegistroUsuarios.usuariosEnSesion.verTope().getVehiculo())\
+        FIN SI\
+        HACER marcoPanelPregunta visible\
+    SINO\
+        HACER PanelMarcoPOcupado visible\
+        HACER PanelPOcupado visible\
+        HACER labelPOcupado visible\
+        INICIAR nuevo hilo que ejecuta sleep()\
+        ESPERAR a que el hilo termine\
+        HACER PanelMarcoPOcupado no visible\
+        HACER PanelPOcupado no visible\
+        HACER labelPOcupado no visible\
+    FIN SI\
+FIN SI\
+SINO\
+    HACER PanelErrorN visible\
+    HACER PanelMarcoErrorN visible\
+FIN SI\
+SINO\
+    SI sectorSeleccionado ES NULO ENTONCES\
+        HACER PanelMarcoErrorS visible\
+        HACER PanelErrorS visible\
+    SINO\
+        HACER PanelMarcoErrorS no visible\
+        HACER PanelErrorS no visible\
+    FIN SI\
+\
+    SI NO esNumero(comboBoxNPuestos.Text) ENTONCES\
+        HACER PanelMarcoErrorN visible\
+        HACER PanelErrorN visible\
+    SINO\
+        HACER PanelMarcoErrorN no visible\
+        HACER PanelErrorN no visible\
+    FIN SI\
+FIN SI\
+\
+M\'c9TODO sleep()\
+    PAUSAR hilo actual por 2500 milisegundos\
+FIN M\'c9TODO\
+\
+M\'c9TODO sectorPalma_MouseEnter(par\'e1metro sender, par\'e1metro e)\
+    LLAMAR a mostrarTooltip con argumento 0\
+FIN M\'c9TODO\
+\
+M\'c9TODO sectorMangle_MouseEnter(par\'e1metro sender, par\'e1metro e)\
+    LLAMAR a mostrarTooltip con argumento 1\
+FIN M\'c9TODO\
+\
+M\'c9TODO sectorSaman_MouseEnter(par\'e1metro sender, par\'e1metro e)\
+    LLAMAR a mostrarTooltip con argumento 2\
+FIN M\'c9TODO\
+\
+M\'c9TODO sectorRoble_MouseEnter(par\'e1metro sender, par\'e1metro e)\
+    LLAMAR a mostrarTooltip con argumento 3\
+FIN M\'c9TODO\
+\
+M\'c9TODO sectorGuayacan_MouseEnter(par\'e1metro sender, par\'e1metro e)\
+    LLAMAR a mostrarTooltip con argumento 4\
+FIN M\'c9TODO\
+\
+M\'c9TODO sectorBambu1_MouseEnter(par\'e1metro sender, par\'e1metro e)\
+    LLAMAR a mostrarTooltip con argumento 5\
+FIN M\'c9TODO\
+\
+M\'c9TODO sectorBambu2_MouseEnter(par\'e1metro sender, par\'e1metro e)\
+    LLAMAR a mostrarTooltip con argumento 6\
+FIN M\'c9TODO\
+\
+M\'c9TODO sectorPalma_MouseLeave(par\'e1metro sender, par\'e1metro e)\
+    HACER tooltipSector no visible\
+    HACER marcoTooltipSector no visible\
+FIN M\'c9TODO\
+\
+M\'c9TODO sectorMangle_MouseLeave(par\'e1metro sender, par\'e1metro e)\
+    HACER tooltipSector no visible\
+    HACER marcoTooltipSector no visible\
+FIN M\'c9TODO\
+\
+M\'c9TODO sectorSaman_MouseLeave(par\'e1metro sender, par\'e1metro e)\
+    HACER tooltipSector no visible\
+    HACER marcoTooltipSector no visible\
+FIN M\'c9TODO\
+\
+M\'c9TODO sectorRoble_MouseLeave(par\'e1metro sender, par\'e1metro e)\
+    HACER tooltipSector no visible\
+    HACER marcoTooltipSector no visible\
+FIN M\'c9TODO\
+\
+M\'c9TODO sectorGuayacan_MouseLeave(par\'e1metro sender, par\'e1metro e)\
+    HACER tooltipSector no visible\
+    HACER marcoTooltipSector no visible\
+FIN M\'c9TODO\
+\
+M\'c9TODO sectorBambu1_MouseLeave(par\'e1metro sender, par\'e1metro e)\
+    HACER tooltipSector no visible\
+    HACER marcoTooltipSector no visible\
+FIN M\'c9TODO\
+\
+M\'c9TODO sectorBambu2_MouseLeave(par\'e1metro sender, par\'e1metro e)\
+    HACER tooltipSector no visible\
+    HACER marcoTooltipSector no visible\
+FIN M\'c9TODO\
+M\'c9TODO menuEstacionamiento_FormClosing(par\'e1metro sender, par\'e1metro e)\
+    SI NO buttonPressed ENTONCES\
+        SALIR de la aplicaci\'f3n\
+    FIN SI\
+FIN M\'c9TODO\
+\
+M\'c9TODO buttonSiCompra_Click(par\'e1metro sender, par\'e1metro e)\
+    ESTABLECER buttonPressed a verdadero\
+    CREAR instancia de formTiendas llamada ft\
+    MOSTRAR ft\
+    CERRAR este formulario\
+FIN M\'c9TODO\
+\
+M\'c9TODO buttonNoCompra_Click(par\'e1metro sender, par\'e1metro e)\
+    ESTABLECER buttonPressed a verdadero\
+    SI formRegistroUsuarios.numUsuariosEnSesion ES IGUAL A 1 ENTONCES\
+        bienvenido.personas.agregarPersonaAlFinal(formRegistroUsuarios.usuariosEnSesion.sacarPersonaDePila())\
+        CREAR instancia de bienvenido llamada b\
+        ESTABLECER formRegistroUsuarios.puedeVehiculo a verdadero\
+        MOSTRAR b\
+        CERRAR este formulario\
+    SINO\
+        CREAR instancia de formRegistroUsuarios llamada ru\
+        MOSTRAR ru\
+        CERRAR este formulario\
+    FIN SI\
+FIN M\'c9TODO\
+\
+
+\fs36 FORM DE TIENDAS
+\fs24 \
+\
+Clase formTiendas Extiende Form\
+    Variable buttonPressed como booleano = falso\
+    Variable est\'e1tica tiendaSeleccionada como tienda\
+    Variable est\'e1tica logotienda como Imagen\
+\
+    Constructor formTiendas()\
+        InicializarComponentes()\
+        Establecer ClientSize del formulario con tama\'f1o de fondo\
+        Establecer fondo como padre de labelL1 a labelL60\
+        Establecer fondo como padre de pictureBoxEPalma a pictureBoxEBambu\
+        Llamar m\'e9todo llenarComboBoxNombre de bienvenido.tiendas con comboBoxNombreTiendas como argumento\
+    Fin Constructor\
+Fin Clase\
+\
+Funci\'f3n seleccionarLogo(Local como entero) retorna Imagen\
+    Elegir Local\
+        Caso 1:\
+            Retornar Multimax\
+        Caso 2:\
+            Retornar GamePlanet\
+        ...\
+        Caso 59:\
+            Retornar Accessories_Galore\
+        Caso 60:\
+            Retornar Glamour_Beauty\
+        Caso por defecto:\
+            Retornar nulo\
+    Fin Elegir\
+Fin Funci\'f3n\
+\
+Procedimiento mostrarInfoTienda(Local como entero)\
+    t = bienvenido.tiendas.buscarTiendaLocal(Local)\
+    Establecer labelNombre.Text con "Nombre: " + t.getNombre()\
+    Establecer labelEncargado.Text con "Encargado: " + t.getEncargado()\
+    Establecer labelUbicacion.Text con "Ubicaci\'f3n: " + t.getUbicacion()\
+    Si bienvenido.dia es "Domingo" Entonces\
+        Establecer labelHorario.Text con "Horario: 12:00 - 20:00"\
+    Sino\
+        Establecer labelHorario.Text con "Horario: 11:00 - 21:00"\
+    Fin Si\
+    Establecer labelLocal.Text con "Local: " + t.getLocal()\
+    Establecer BoxLogo.Image con seleccionarLogo(Local)\
+    Hacer marcoPnl1.Visible = verdadero\
+    Hacer pnl1.Visible = verdadero\
+Fin Procedimiento\
+\
+Procedimiento labelL1_MouseEnter(sender, e)\
+    Llamar mostrarInfoTienda(1)\
+Fin Procedimiento\
+\
+Procedimiento labelL1_MouseLeave(sender, e)\
+    Hacer pnl1.Visible = falso\
+    Hacer marcoPnl1.Visible = falso\
+Fin Procedimiento\
+\
+Procedimiento labelL2_MouseEnter(sender, e)\
+    Llamar mostrarInfoTienda(2)\
+Fin Procedimiento\
+\
+Procedimiento labelL2_MouseLeave(sender, e)\
+    Hacer pnl1.Visible = falso\
+    Hacer marcoPnl1.Visible = falso\
+Fin Procedimiento\
+\
+Procedimiento labelL3_MouseEnter(sender, e)\
+    Llamar mostrarInfoTienda(3)\
+Fin Procedimiento\
+\
+Procedimiento labelL3_MouseLeave(sender, e)\
+    Hacer pnl1.Visible = falso\
+    Hacer marcoPnl1.Visible = falso\
+Fin Procedimiento\
+\
+Procedimiento labelL4_MouseEnter(sender, e)\
+    Llamar mostrarInfoTienda(4)\
+Fin Procedimiento\
+\
+Procedimiento labelL4_MouseLeave(sender, e)\
+    Hacer pnl1.Visible = falso\
+    Hacer marcoPnl1.Visible = falso\
+Fin Procedimiento\
+\
+Procedimiento labelL5_MouseEnter(sender, e)\
+    Llamar mostrarInfoTienda(5)\
+Fin Procedimiento\
+\
+Procedimiento labelL5_MouseLeave(sender, e)\
+    Hacer pnl1.Visible = falso\
+    Hacer marcoPnl1.Visible = falso\
+Fin Procedimiento\
+\
+Procedimiento labelL6_MouseEnter(sender, e)\
+    Llamar mostrarInfoTienda(6)\
+Fin Procedimiento\
+\
+Procedimiento labelL6_MouseLeave(sender, e)\
+    Hacer pnl1.Visible = falso\
+    Hacer marcoPnl1.Visible = falso\
+Fin Procedimiento\
+\
+Procedimiento labelL7_MouseEnter(sender, e)\
+    Llamar mostrarInfoTienda(7)\
+Fin Procedimiento\
+\
+Procedimiento labelL7_MouseLeave(sender, e)\
+    Hacer pnl1.Visible = falso\
+    Hacer marcoPnl1.Visible = falso\
+Fin Procedimiento\
+\
+Procedimiento labelL8_MouseEnter(sender, e)\
+    Llamar mostrarInfoTienda(8)\
+Fin Procedimiento\
+\
+Procedimiento labelL8_MouseLeave(sender, e)\
+    Hacer pnl1.Visible = falso\
+    Hacer marcoPnl1.Visible = falso\
+Fin Procedimiento\
+\
+Procedimiento labelL9_MouseEnter(sender, e)\
+    Llamar mostrarInfoTienda(9)\
+Fin Procedimiento\
+\
+Procedimiento labelL9_MouseLeave(sender, e)\
+    Hacer pnl1.Visible = falso\
+    Hacer marcoPnl1.Visible = falso\
+Fin Procedimiento\
+\
+Procedimiento labelL10_MouseEnter(sender, e)\
+    Llamar mostrarInfoTienda(10)\
+Fin Procedimiento\
+\
+Procedimiento labelL10_MouseLeave(sender, e)\
+    Hacer pnl1.Visible = falso\
+    Hacer marcoPnl1.Visible = falso\
+Fin Procedimiento\
+\
+Procedimiento labelL11_MouseEnter(sender, e)\
+    Llamar mostrarInfoTienda(11)\
+Fin Procedimiento\
+\
+Procedimiento labelL11_MouseLeave(sender, e)\
+    Hacer pnl1.Visible = falso\
+    Hacer marcoPnl1.Visible = falso\
+Fin Procedimiento\
+\
+Procedimiento labelL12_MouseEnter(sender, e)\
+    Llamar mostrarInfoTienda(12)\
+Fin Procedimiento\
+\
+Procedimiento labelL12_MouseLeave(sender, e)\
+    Hacer pnl1.Visible = falso\
+    Hacer marcoPnl1.Visible = falso\
+Fin Procedimiento\
+\
+Procedimiento labelL13_MouseEnter(sender, e)\
+    Llamar mostrarInfoTienda(13)\
+Fin Procedimiento\
+\
+Procedimiento labelL13_MouseLeave(sender, e)\
+    Hacer pnl1.Visible = falso\
+    Hacer marcoPnl1.Visible = falso\
+Fin Procedimiento\
+\
+Procedimiento labelL14_MouseEnter(sender, e)\
+    Llamar mostrarInfoTienda(14)\
+Fin Procedimiento\
+\
+Procedimiento labelL14_MouseLeave(sender, e)\
+    Hacer pnl1.Visible = falso\
+    Hacer marcoPnl1.Visible = falso\
+Fin Procedimiento\
+\
+Procedimiento labelL15_MouseEnter(sender, e)\
+    Llamar mostrarInfoTienda(15)\
+Fin Procedimiento\
+\
+Procedimiento labelL15_MouseLeave(sender, e)\
+    Hacer pnl1.Visible = falso\
+    Hacer marcoPnl1.Visible = falso\
+Fin Procedimiento\
+\
+Procedimiento labelL16_MouseEnter(sender, e)\
+    Llamar mostrarInfoTienda(16)\
+Fin Procedimiento\
+\
+Procedimiento labelL16_MouseLeave(sender, e)\
+    Hacer pnl1.Visible = falso\
+    Hacer marcoPnl1.Visible = falso\
+Fin Procedimiento\
+\
+... (contin\'faa con el mismo patr\'f3n para los eventos MouseEnter y MouseLeave de las etiquetas L17 a L60)\
+\
+Procedimiento labelL60_MouseEnter(sender, e)\
+    Llamar mostrarInfoTienda(60)\
+Fin Procedimiento\
+\
+Procedimiento labelL60_MouseLeave(sender, e)\
+    Hacer pnl1.Visible = falso\
+    Hacer marcoPnl1.Visible = falso\
+Fin Procedimiento\
+\
+Procedimiento formTiendas_FormClosing(sender, e)\
+    Si buttonPressed es falso Entonces\
+        Llamar Application.Exit()\
+    Fin Si\
+Fin Procedimiento\
+\
+Procedimiento seleccionarTienda(local como entero)\
+    tiendaSeleccionada = bienvenido.tiendas.buscarTiendaLocal(local)\
+    logotienda = seleccionarLogo(local)\
+    Hacer marcoPanelTSeleccionada.Visible = verdadero\
+    Establecer labelTSeleccionada.Text con tiendaSeleccionada.getNombre() + " Seleccionada."\
+Fin Procedimiento\
+\
+Procedimiento labelL1_Click(sender, e)\
+    Llamar seleccionarTienda(1)\
+Fin Procedimiento\
+\
+Procedimiento labelL2_Click(sender, e)\
+    Llamar seleccionarTienda(2)\
+Fin Procedimiento\
+\
+Procedimiento labelL3_Click(sender, e)\
+    Llamar seleccionarTienda(3)\
+Fin Procedimiento\
+\
+Procedimiento labelL4_Click(sender, e)\
+    Llamar seleccionarTienda(4)\
+Fin Procedimiento\
+\
+Procedimiento labelL5_Click(sender, e)\
+    Llamar seleccionarTienda(5)\
+Fin Procedimiento\
+\
+Procedimiento labelL6_Click(sender, e)\
+    Llamar seleccionarTienda(6)\
+Fin Procedimiento\
+\
+Procedimiento labelL7_Click(sender, e)\
+    Llamar seleccionarTienda(7)\
+Fin Procedimiento\
+\
+Procedimiento labelL8_Click(sender, e)\
+    Llamar seleccionarTienda(8)\
+Fin Procedimiento\
+\
+Procedimiento labelL9_Click(sender, e)\
+    Llamar seleccionarTienda(9)\
+Fin Procedimiento\
+\
+... (contin\'faa con el mismo patr\'f3n para los eventos Click de las etiquetas L10 a L60)\
+\
+Procedimiento labelL60_Click(sender, e)\
+    Llamar seleccionarTienda(60)\
+Fin Procedimiento\
+\
+Procedimiento comboBoxNombreTiendas_SelectedIndexChanged(sender, e)\
+    tiendaSeleccionada = bienvenido.tiendas.buscarTiendaNombre(comboBoxNombreTiendas.Text)\
+    logotienda = seleccionarLogo(tiendaSeleccionada.getLocal())\
+    Hacer marcoPanelTSeleccionada.Visible = verdadero\
+    Establecer labelTSeleccionada.Text con tiendaSeleccionada.getNombre() + " Seleccionada."\
+Fin Procedimiento\
+\
+Procedimiento buttonConfirmar_Click(sender, e)\
+    Si tiendaSeleccionada no es nulo Entonces\
+        buttonPressed = verdadero\
+        Crear c como nueva instancia de formCompra\
+        Llamar c.Show()\
+        Llamar this.Close()\
+    Sino\
+        Hacer marcoPanelTSeleccionada.Visible = verdadero\
+        Establecer labelTSeleccionada.Text con "No ha seleccionado tienda."\
+    Fin Si\
+Fin Procedimiento\
+\
+
+\fs36 FORM DE COMPRAS \
+\
+
+\fs24 ESPACIO DE NOMBRES Costazul\
+\
+CLASE formCompra HEREDA DE Form\
+    VARIABLE buttonPressed ES falso\
+\
+    VARIABLE tiendaSeleccionada ES formTiendas.tiendaSeleccionada\
+    VARIABLE productoSeleccionado ES producto\
+    VARIABLE unidades ES 0\
+    VARIABLE precioTotal ES n\'famero\
+    VARIABLE LogoTienda ES formTiendas.logotienda\
+    VARIABLE tipoCompra ES texto\
+    VARIABLE metodoPago ES texto\
+    VARIABLE compraRealizada ES compra\
+\
+    CONSTRUCTOR formCompra()\
+        INICIALIZAR COMPONENTES\
+        ESTABLECER ClientSize A fondo.Size\
+        ESTABLECER labelNameTienda.Text A tiendaSeleccionada.getNombre()\
+        tiendaSeleccionada.getProductos().llenarComboBoxProductos(comboBoxProductos)\
+        ESTABLECER comboBoxProductos.SelectedIndex A 0\
+        ESTABLECER BoxLogo2.Parent A fondo\
+        ESTABLECER BoxLogo2.Image A LogoTienda\
+        ESTABLECER groupBoxTCompra.Parent A fondo\
+        ESTABLECER labelPdto.Parent A fondo\
+        ESTABLECER labelPrecio.Parent A fondo\
+        ESTABLECER labelPTotal.Parent A fondo\
+        ESTABLECER labelTipoCompra.Parent A fondo\
+        ESTABLECER labelAviso.Parent A fondo\
+        unidades = (int)numericUpDownUnidades.Value\
+        precioTotal = productoSeleccionado.getPrecio() * unidades\
+        ESTABLECER labelErrorMP.Parent A fondo\
+        ESTABLECER labelErrorTC.Parent A fondo\
+FIN CLASE\
+\
+M\'c9TODO formCompra_FormClosing(sender, e)\
+    SI buttonPressed ES FALSO ENTONCES\
+        CREAR ft COMO formTiendas\
+        ft.Mostrar()\
+    FIN SI\
+FIN M\'c9TODO\
+\
+M\'c9TODO comboBoxProductos_SelectedIndexChanged(sender, e)\
+    productoSeleccionado = tiendaSeleccionada.getProductos().buscarProducto(comboBoxProductos.SelectedItem.ToString())\
+    textBox1.Texto = productoSeleccionado.getDescripcion()\
+    unidades = (int)numericUpDownUnidades.Valor\
+    precioTotal = unidades * productoSeleccionado.getPrecio()\
+    labelPrecio.Texto = "Precio: " + productoSeleccionado.getPrecio() + "$"\
+    labelPTotal.Texto = "Total a pagar: " + Formato("\{0:0.00\}", precioTotal) + "$"\
+FIN M\'c9TODO\
+\
+M\'c9TODO radioButtonPagoMovil_CheckedChanged(sender, e)\
+    metodoPago = "Pago M\'f3vil"\
+FIN M\'c9TODO\
+\
+M\'c9TODO radioButtonZelle_CheckedChanged(sender, e)\
+    metodoPago = "Zelle"\
+FIN M\'c9TODO\
+\
+M\'c9TODO radioButtonTransferencia_CheckedChanged(sender, e)\
+    metodoPago = "Transferencia"\
+FIN M\'c9TODO\
+\
+\
+M\'c9TODO radioButtonEfectivo_CheckedChanged(sender, e)\
+    metodoPago = "Efectivo"\
+FIN M\'c9TODO\
+\
+M\'c9TODO radioButtonTDD_CheckedChanged(sender, e)\
+    metodoPago = "TDD"\
+FIN M\'c9TODO\
+\
+M\'c9TODO radioButtonTDC_CheckedChanged(sender, e)\
+    metodoPago = "TDC"\
+FIN M\'c9TODO\
+\
+M\'c9TODO radioButtonOnline_CheckedChanged(sender, e)\
+    SI radioButtonOnline.EstaMarcado ENTONCES\
+        marcoMPOnline.Visible = VERDADERO\
+        marcoMPPresencial.Visible = FALSO\
+        tipoCompra = "Online"\
+        metodoPago = NULO\
+        radioButtonEfectivo.Marcar = FALSO\
+        radioButtonTDD.Marcar = FALSO\
+        radioButtonTDC.Marcar = FALSO\
+    FIN SI\
+FIN M\'c9TODO\
+\
+M\'c9TODO radioButtonPresencial_CheckedChanged(sender, e)\
+    SI radioButtonPresencial.EstaMarcado ENTONCES\
+        marcoMPPresencial.Visible = VERDADERO\
+        marcoMPOnline.Visible = FALSO\
+        tipoCompra = "Presencial"\
+        metodoPago = NULO\
+        radioButtonPagoMovil.Marcar = FALSO\
+        radioButtonTransferencia.Marcar = FALSO\
+        radioButtonZelle.Marcar = FALSO\
+    FIN SI\
+FIN M\'c9TODO\
+\
+M\'c9TODO buttonCompra_Click(sender, e)\
+    SI metodoPago NO ES NULO Y tipoCompra NO ES NULO ENTONCES\
+        ESTABLECER labelErrorMP.Visible A FALSO\
+        ESTABLECER labelErrorTC.Visible A FALSO\
+        CREAR compraRealizada COMO nueva compra(formRegistroUsuarios.usuariosEnSesion.verTope(), tiendaSeleccionada, productoSeleccionado, unidades, precioTotal, tipoCompra, metodoPago)\
+        formRegistroUsuarios.usuariosEnSesion.verTope().getCompras().agregarCompraAlFinal(compraRealizada)\
+        ESTABLECER marcoPregunta.Visible A VERDADERO\
+    SINO\
+        SI metodoPago ES NULO ENTONCES\
+            ESTABLECER labelErrorMP.Visible A VERDADERO\
+        SINO\
+            ESTABLECER labelErrorMP.Visible A FALSO\
+        FIN SI\
+\
+        SI tipoCompra ES NULO ENTONCES\
+            ESTABLECER labelErrorTC.Visible A VERDADERO\
+        SINO\
+            ESTABLECER labelErrorTC.Visible A FALSO\
+        FIN SI\
+    FIN SI\
+FIN M\'c9TODO\
+\
+M\'c9TODO numericUpDownUnidades_ValueChanged(sender, e)\
+    unidades = (int)numericUpDownUnidades.Valor\
+    precioTotal = unidades * productoSeleccionado.getPrecio()\
+    ESTABLECER labelPTotal.Texto A "Total a pagar: " + Formato("\{0:0.00\}", precioTotal) + "$"\
+FIN M\'c9TODO\
+\
+M\'c9TODO buttonOtraCompraSi_Click(sender, e)\
+    CERRAR este formulario\
+FIN M\'c9TODO\
+\
+M\'c9TODO buttonOtraCompraNo_Click(sender, e)\
+    ESTABLECER buttonPressed A VERDADERO\
+    SI formRegistroUsuarios.numUsuariosEnSesion > formRegistroUsuarios.usuariosEnSesion.getTamanio() ENTONCES\
+        CREAR ru COMO nuevo formRegistroUsuarios\
+        ru.Mostrar()\
+        CERRAR este formulario\
+    SINO\
+        MIENTRAS formRegistroUsuarios.usuariosEnSesion.NO esVacia() HACER\
+            bienvenido.personas.agregarPersonaAlFinal(formRegistroUsuarios.usuariosEnSesion.sacarPersonaDePila())\
+        FIN MIENTRAS\
+        ESTABLECER formRegistroUsuarios.puedeVehiculo A VERDADERO\
+        CREAR b COMO nuevo bienvenido\
+        b.Mostrar()\
+        CERRAR este formulario\
+    FIN SI\
+FIN M\'c9TODO\
+\
+\
+\
+\
+\
+\pard\pardeftab720\partightenfactor0
+\cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\
+}

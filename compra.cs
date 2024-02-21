@@ -13,7 +13,7 @@ namespace Costazul
         private producto producto;
         private int unidades;
         private double precioTotal;
-        private String tipocompra;
+        private String tipoCompra;
         private String metodoPago;
 
         public compra(persona comprador, tienda tienda, producto producto, int unidades, double precioTotal, String tipocompra, String metodoPago)
@@ -23,7 +23,7 @@ namespace Costazul
             this.producto = producto;
             this.unidades = unidades;
             this.precioTotal = precioTotal;
-            this.tipocompra = tipocompra;
+            this.tipoCompra = tipocompra;
             this.metodoPago = metodoPago;
         }
 
@@ -54,7 +54,7 @@ namespace Costazul
 
         public String getTipoCompra()
         {
-            return tipocompra;
+            return tipoCompra;
         }
 
         public String getMetodoPago()
@@ -89,7 +89,7 @@ namespace Costazul
 
         public void setTipoCompra(String tipocompra)
         {
-            this.tipocompra = tipocompra;
+            this.tipoCompra = tipocompra;
         }
 
         public void setMetodoPago(String metodoPago)
@@ -99,7 +99,7 @@ namespace Costazul
 
         public bool comprasIguales(compra c)
         {
-            if (tienda.getNombre().Equals(c.tienda.getNombre()) && producto.getNombre().Equals(c.producto.getNombre()) && unidades == c.unidades && precioTotal == c.precioTotal && tipocompra.Equals(c.tipocompra) && metodoPago.Equals(c.metodoPago))
+            if (tienda.getNombre().Equals(c.tienda.getNombre()) && producto.getNombre().Equals(c.producto.getNombre()) && unidades == c.unidades && precioTotal == c.precioTotal && tipoCompra.Equals(c.tipoCompra) && metodoPago.Equals(c.metodoPago))
             {
                 return true;
             }

@@ -149,9 +149,10 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 15);
+            this.label1.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(8, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 16);
+            this.label1.Size = new System.Drawing.Size(159, 21);
             this.label1.TabIndex = 1;
             this.label1.Text = "Buscar persona por:";
             // 
@@ -186,9 +187,10 @@
             // radioButtonCI
             // 
             this.radioButtonCI.AutoSize = true;
+            this.radioButtonCI.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonCI.Location = new System.Drawing.Point(19, 58);
             this.radioButtonCI.Name = "radioButtonCI";
-            this.radioButtonCI.Size = new System.Drawing.Size(71, 20);
+            this.radioButtonCI.Size = new System.Drawing.Size(81, 25);
             this.radioButtonCI.TabIndex = 5;
             this.radioButtonCI.TabStop = true;
             this.radioButtonCI.Text = "Cedula";
@@ -198,9 +200,10 @@
             // radioButtonNA
             // 
             this.radioButtonNA.AutoSize = true;
+            this.radioButtonNA.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonNA.Location = new System.Drawing.Point(19, 21);
             this.radioButtonNA.Name = "radioButtonNA";
-            this.radioButtonNA.Size = new System.Drawing.Size(140, 20);
+            this.radioButtonNA.Size = new System.Drawing.Size(166, 25);
             this.radioButtonNA.TabIndex = 4;
             this.radioButtonNA.TabStop = true;
             this.radioButtonNA.Text = "Nombre y Apellido";
@@ -222,17 +225,19 @@
             // 
             // textBoxNombreCI
             // 
-            this.textBoxNombreCI.Location = new System.Drawing.Point(147, 145);
+            this.textBoxNombreCI.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNombreCI.Location = new System.Drawing.Point(136, 146);
             this.textBoxNombreCI.Name = "textBoxNombreCI";
-            this.textBoxNombreCI.Size = new System.Drawing.Size(141, 22);
+            this.textBoxNombreCI.Size = new System.Drawing.Size(194, 32);
             this.textBoxNombreCI.TabIndex = 7;
             this.textBoxNombreCI.Visible = false;
             // 
             // textBoxApellido
             // 
-            this.textBoxApellido.Location = new System.Drawing.Point(378, 145);
+            this.textBoxApellido.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxApellido.Location = new System.Drawing.Point(423, 146);
             this.textBoxApellido.Name = "textBoxApellido";
-            this.textBoxApellido.Size = new System.Drawing.Size(151, 22);
+            this.textBoxApellido.Size = new System.Drawing.Size(165, 32);
             this.textBoxApellido.TabIndex = 8;
             this.textBoxApellido.Visible = false;
             // 
@@ -240,9 +245,10 @@
             // 
             this.labelNombre.AutoSize = true;
             this.labelNombre.BackColor = System.Drawing.Color.Transparent;
-            this.labelNombre.Location = new System.Drawing.Point(51, 148);
+            this.labelNombre.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNombre.Location = new System.Drawing.Point(45, 151);
             this.labelNombre.Name = "labelNombre";
-            this.labelNombre.Size = new System.Drawing.Size(56, 16);
+            this.labelNombre.Size = new System.Drawing.Size(72, 22);
             this.labelNombre.TabIndex = 9;
             this.labelNombre.Text = "Nombre";
             this.labelNombre.Visible = false;
@@ -251,9 +257,10 @@
             // 
             this.labelApellido.AutoSize = true;
             this.labelApellido.BackColor = System.Drawing.Color.Transparent;
-            this.labelApellido.Location = new System.Drawing.Point(308, 148);
+            this.labelApellido.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelApellido.Location = new System.Drawing.Point(336, 151);
             this.labelApellido.Name = "labelApellido";
-            this.labelApellido.Size = new System.Drawing.Size(60, 16);
+            this.labelApellido.Size = new System.Drawing.Size(78, 22);
             this.labelApellido.TabIndex = 10;
             this.labelApellido.Text = "Apellido:";
             this.labelApellido.Visible = false;
@@ -261,6 +268,7 @@
             // comboBoxTDoc
             // 
             this.comboBoxTDoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxTDoc.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxTDoc.FormattingEnabled = true;
             this.comboBoxTDoc.Items.AddRange(new object[] {
             "V",
@@ -268,19 +276,20 @@
             "J",
             "G",
             "P"});
-            this.comboBoxTDoc.Location = new System.Drawing.Point(82, 145);
+            this.comboBoxTDoc.Location = new System.Drawing.Point(71, 146);
             this.comboBoxTDoc.Name = "comboBoxTDoc";
-            this.comboBoxTDoc.Size = new System.Drawing.Size(59, 24);
+            this.comboBoxTDoc.Size = new System.Drawing.Size(59, 32);
             this.comboBoxTDoc.TabIndex = 11;
             this.comboBoxTDoc.Visible = false;
             // 
             // comboBoxCoincidencias
             // 
             this.comboBoxCoincidencias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCoincidencias.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxCoincidencias.FormattingEnabled = true;
             this.comboBoxCoincidencias.Location = new System.Drawing.Point(241, 208);
             this.comboBoxCoincidencias.Name = "comboBoxCoincidencias";
-            this.comboBoxCoincidencias.Size = new System.Drawing.Size(192, 24);
+            this.comboBoxCoincidencias.Size = new System.Drawing.Size(192, 32);
             this.comboBoxCoincidencias.TabIndex = 12;
             this.comboBoxCoincidencias.Visible = false;
             this.comboBoxCoincidencias.SelectedIndexChanged += new System.EventHandler(this.comboBoxCoincidencias_SelectedIndexChanged);
@@ -302,7 +311,7 @@
             this.buttonRegresarAMain.Name = "buttonRegresarAMain";
             this.buttonRegresarAMain.Size = new System.Drawing.Size(75, 23);
             this.buttonRegresarAMain.TabIndex = 14;
-            this.buttonRegresarAMain.Text = "button2";
+            this.buttonRegresarAMain.Text = "Volver";
             this.buttonRegresarAMain.UseVisualStyleBackColor = true;
             this.buttonRegresarAMain.Click += new System.EventHandler(this.buttonRegresarAMain_Click);
             // 
@@ -386,9 +395,10 @@
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(41, 11);
+            this.label9.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(29, 8);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(72, 16);
+            this.label9.Size = new System.Drawing.Size(97, 22);
             this.label9.TabIndex = 3;
             this.label9.Text = "N° Compra";
             // 
@@ -396,9 +406,10 @@
             // 
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(208, 11);
+            this.label10.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(201, 8);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(50, 16);
+            this.label10.Size = new System.Drawing.Size(63, 22);
             this.label10.TabIndex = 4;
             this.label10.Text = "Tienda";
             // 
@@ -406,9 +417,10 @@
             // 
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(359, 11);
+            this.label11.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(349, 8);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(61, 16);
+            this.label11.Size = new System.Drawing.Size(80, 22);
             this.label11.TabIndex = 5;
             this.label11.Text = "Producto";
             // 
@@ -467,9 +479,10 @@
             // 
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(42, 10);
+            this.label12.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(34, 7);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(66, 16);
+            this.label12.Size = new System.Drawing.Size(82, 22);
             this.label12.TabIndex = 1;
             this.label12.Text = "Unidades";
             // 
@@ -477,9 +490,10 @@
             // 
             this.labelPrecio.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelPrecio.AutoSize = true;
-            this.labelPrecio.Location = new System.Drawing.Point(209, 31);
+            this.labelPrecio.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPrecio.Location = new System.Drawing.Point(202, 28);
             this.labelPrecio.Name = "labelPrecio";
-            this.labelPrecio.Size = new System.Drawing.Size(49, 16);
+            this.labelPrecio.Size = new System.Drawing.Size(63, 22);
             this.labelPrecio.TabIndex = 1;
             this.labelPrecio.Text = "Precio:";
             // 
@@ -487,9 +501,10 @@
             // 
             this.labelPTotal.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelPTotal.AutoSize = true;
-            this.labelPTotal.Location = new System.Drawing.Point(369, 31);
+            this.labelPTotal.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPTotal.Location = new System.Drawing.Point(362, 28);
             this.labelPTotal.Name = "labelPTotal";
-            this.labelPTotal.Size = new System.Drawing.Size(41, 16);
+            this.labelPTotal.Size = new System.Drawing.Size(56, 22);
             this.labelPTotal.TabIndex = 2;
             this.labelPTotal.Text = "Total:";
             // 
@@ -513,6 +528,7 @@
             this.groupBox2.Controls.Add(this.radioButtonPresencial);
             this.groupBox2.Controls.Add(this.radioButtonOnline);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox2.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(3, 3);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(228, 72);
@@ -523,9 +539,10 @@
             // radioButtonPresencial
             // 
             this.radioButtonPresencial.AutoSize = true;
+            this.radioButtonPresencial.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonPresencial.Location = new System.Drawing.Point(16, 42);
             this.radioButtonPresencial.Name = "radioButtonPresencial";
-            this.radioButtonPresencial.Size = new System.Drawing.Size(92, 20);
+            this.radioButtonPresencial.Size = new System.Drawing.Size(108, 26);
             this.radioButtonPresencial.TabIndex = 1;
             this.radioButtonPresencial.TabStop = true;
             this.radioButtonPresencial.Text = "Presencial";
@@ -535,9 +552,10 @@
             // radioButtonOnline
             // 
             this.radioButtonOnline.AutoSize = true;
+            this.radioButtonOnline.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonOnline.Location = new System.Drawing.Point(16, 21);
             this.radioButtonOnline.Name = "radioButtonOnline";
-            this.radioButtonOnline.Size = new System.Drawing.Size(66, 20);
+            this.radioButtonOnline.Size = new System.Drawing.Size(81, 26);
             this.radioButtonOnline.TabIndex = 0;
             this.radioButtonOnline.TabStop = true;
             this.radioButtonOnline.Text = "Online";
@@ -563,19 +581,21 @@
             // 
             this.comboBoxMPago.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxMPago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMPago.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxMPago.FormattingEnabled = true;
-            this.comboBoxMPago.Location = new System.Drawing.Point(53, 42);
+            this.comboBoxMPago.Location = new System.Drawing.Point(53, 39);
             this.comboBoxMPago.Name = "comboBoxMPago";
-            this.comboBoxMPago.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxMPago.Size = new System.Drawing.Size(121, 30);
             this.comboBoxMPago.TabIndex = 1;
             // 
             // label15
             // 
             this.label15.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(60, 10);
+            this.label15.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(44, 7);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(107, 16);
+            this.label15.Size = new System.Drawing.Size(139, 22);
             this.label15.TabIndex = 2;
             this.label15.Text = "Método de pago";
             // 
@@ -597,9 +617,10 @@
             // buttonConfirmarInfoCompra
             // 
             this.buttonConfirmarInfoCompra.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonConfirmarInfoCompra.Location = new System.Drawing.Point(297, 14);
+            this.buttonConfirmarInfoCompra.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonConfirmarInfoCompra.Location = new System.Drawing.Point(294, 14);
             this.buttonConfirmarInfoCompra.Name = "buttonConfirmarInfoCompra";
-            this.buttonConfirmarInfoCompra.Size = new System.Drawing.Size(107, 52);
+            this.buttonConfirmarInfoCompra.Size = new System.Drawing.Size(114, 51);
             this.buttonConfirmarInfoCompra.TabIndex = 0;
             this.buttonConfirmarInfoCompra.Text = "Confirmar cambios";
             this.buttonConfirmarInfoCompra.UseVisualStyleBackColor = true;
@@ -608,9 +629,10 @@
             // buttonRegresarInfoCompra
             // 
             this.buttonRegresarInfoCompra.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonRegresarInfoCompra.Location = new System.Drawing.Point(79, 28);
+            this.buttonRegresarInfoCompra.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRegresarInfoCompra.Location = new System.Drawing.Point(60, 14);
             this.buttonRegresarInfoCompra.Name = "buttonRegresarInfoCompra";
-            this.buttonRegresarInfoCompra.Size = new System.Drawing.Size(75, 23);
+            this.buttonRegresarInfoCompra.Size = new System.Drawing.Size(114, 51);
             this.buttonRegresarInfoCompra.TabIndex = 1;
             this.buttonRegresarInfoCompra.Text = "Regresar";
             this.buttonRegresarInfoCompra.UseVisualStyleBackColor = true;
@@ -622,7 +644,7 @@
             this.panelInfoCompra.ColumnCount = 1;
             this.panelInfoCompra.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.panelInfoCompra.Controls.Add(this.tableLayoutPanel8, 0, 0);
-            this.panelInfoCompra.Location = new System.Drawing.Point(42, 225);
+            this.panelInfoCompra.Location = new System.Drawing.Point(71, 346);
             this.panelInfoCompra.Name = "panelInfoCompra";
             this.panelInfoCompra.Padding = new System.Windows.Forms.Padding(3);
             this.panelInfoCompra.RowCount = 1;
@@ -1064,6 +1086,7 @@
             // buttonInfoPersonal
             // 
             this.buttonInfoPersonal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonInfoPersonal.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonInfoPersonal.Location = new System.Drawing.Point(39, 25);
             this.buttonInfoPersonal.Name = "buttonInfoPersonal";
             this.buttonInfoPersonal.Size = new System.Drawing.Size(121, 56);
@@ -1075,6 +1098,7 @@
             // buttonInfoVehiculo
             // 
             this.buttonInfoVehiculo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonInfoVehiculo.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonInfoVehiculo.Location = new System.Drawing.Point(41, 134);
             this.buttonInfoVehiculo.Name = "buttonInfoVehiculo";
             this.buttonInfoVehiculo.Size = new System.Drawing.Size(117, 52);
@@ -1086,6 +1110,7 @@
             // buttonInfoCompra
             // 
             this.buttonInfoCompra.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonInfoCompra.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonInfoCompra.Location = new System.Drawing.Point(41, 240);
             this.buttonInfoCompra.Name = "buttonInfoCompra";
             this.buttonInfoCompra.Size = new System.Drawing.Size(118, 56);

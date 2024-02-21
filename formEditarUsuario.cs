@@ -137,6 +137,7 @@ namespace Costazul
                     comboBoxNCompras.Items.Add((i+1).ToString());
                 }
                 arrayCompras = registroEnEdicion.getCompras().conseguirArrayCompras();
+                comboBoxNCompras.SelectedIndex = 0;
             }
             else
             {
